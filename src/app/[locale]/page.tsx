@@ -142,6 +142,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
     features: Feature[];
     mainImage: string;
     thumbnails: string[];
+    thumbnailLinks: (string | null)[];
   };
 
   const groups: GroupDef[] = [
@@ -174,6 +175,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/concrete-mixer/cm-350-2w-4.png',
         '/images/products/concrete-mixer/cm-350-4w-1.png',
       ],
+      thumbnailLinks: ['cm-350-2w-p', 'cm-350-2w-p', 'cm-350-2w-p', 'cm-350-4w-s'],
     },
     {
       id: 'stirrup-bending',
@@ -204,6 +206,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/stirrup-bending/sbm-detail-22.png',
         '/images/products/stirrup-bending/sbm-detail-24.png',
       ],
+      thumbnailLinks: ['sbm-normal', 'sbm-servo', 'sbm-servo', 'sbm-servo'],
     },
     {
       id: 'wheelbarrow',
@@ -234,6 +237,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/wheelbarrow/wb-90l.png',
         '/images/products/wheelbarrow/wb-parts.png',
       ],
+      thumbnailLinks: ['wb-70l', 'wb-80l-big', 'wb-90l-pp', null],
     },
     {
       id: 'rice-transplanter',
@@ -264,6 +268,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/transplanter/plsp-06-5.png',
         '/images/products/transplanter/plsp-04-1.png',
       ],
+      thumbnailLinks: ['plsp-06', 'plsp-06', 'plsp-05', 'plsp-04'],
     },
     {
       id: 'paddy-thresher',
@@ -294,6 +299,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/thresher/pl800.png',
         '/images/products/thresher/warehouse.jpg',
       ],
+      thumbnailLinks: ['pl1200', 'pl2000', 'pl800', 'pl2000'],
     },
     {
       id: 'engine',
@@ -324,6 +330,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/engine/eng-elec-1.jpg',
         '/images/products/engine/eng-elec-2.jpg',
       ],
+      thumbnailLinks: ['eng-gas', 'eng-gas', 'eng-elec', 'eng-elec'],
     },
     {
       id: 'vikyno-diesel',
@@ -354,6 +361,7 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
         '/images/products/vikyno-engine/rv325na-1.png',
         '/images/products/vikyno-engine/ev2400-1.png',
       ],
+      thumbnailLinks: ['vikyno-rv70', 'vikyno-rv165-2', 'vikyno-rv325na', 'vikyno-ev2400'],
     },
   ];
 
@@ -441,20 +449,34 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
 
                 {/* 4 thumbnails */}
                 <div className="mt-2 grid grid-cols-4 gap-2">
-                  {group.thumbnails.map((thumb, ti) => (
-                    <div
-                      key={ti}
-                      className="relative aspect-square overflow-hidden rounded-lg border border-border/60 bg-surface"
-                    >
+                  {group.thumbnails.map((thumb, ti) => {
+                    const slugLink = group.thumbnailLinks[ti];
+                    const inner = (
                       <Image
                         src={thumb}
                         alt={`${name} ${ti + 2}`}
                         fill
-                        className="object-contain p-1.5"
+                        className={`object-contain p-1.5 transition-transform duration-200 ${slugLink ? 'group-hover:scale-110' : ''}`}
                         sizes="(max-width: 640px) 25vw, 10vw"
                       />
-                    </div>
-                  ))}
+                    );
+                    return slugLink ? (
+                      <Link
+                        key={ti}
+                        href={`/products/${slugLink}`}
+                        className="group relative aspect-square overflow-hidden rounded-lg border border-border/60 bg-surface hover:border-brand-orange transition-colors"
+                      >
+                        {inner}
+                      </Link>
+                    ) : (
+                      <div
+                        key={ti}
+                        className="relative aspect-square overflow-hidden rounded-lg border border-border/60 bg-surface"
+                      >
+                        {inner}
+                      </div>
+                    );
+                  })}
                 </div>
 
                 {/* CTA + view more SKUs */}
@@ -481,13 +503,12 @@ function ProductsByTypeSection({ locale }: { locale: string }) {
                         <Link
                           key={p.id}
                           href={`/products/${p.id.toLowerCase()}`}
-                          className="group flex items-center gap-1.5 rounded-md border border-border bg-surface px-2.5 py-1 text-xs transition-all hover:border-brand-orange hover:text-brand-orange"
+                          className="group flex items-center gap-2 rounded-md border border-border bg-surface px-2.5 py-1.5 text-xs transition-all hover:border-brand-orange hover:bg-brand-orange/5"
                         >
-                          <span className="font-mono text-[10px] text-brand-gray/60 group-hover:text-brand-orange/70">
+                          <span className="rounded bg-brand-orange/10 px-1.5 py-0.5 font-mono text-[11px] font-bold text-brand-orange group-hover:bg-brand-orange group-hover:text-white">
                             {p.id}
                           </span>
-                          <span className="hidden text-brand-gray sm:inline">·</span>
-                          <span className="hidden text-dark group-hover:text-brand-orange sm:inline">
+                          <span className="hidden text-dark/70 group-hover:text-brand-orange sm:inline">
                             {vi ? p.name_vi : p.name_en}
                           </span>
                         </Link>
