@@ -989,7 +989,7 @@ export const products: Product[] = [
       'Type': 'Single-cylinder diesel',
       'Power': '~7 Hp',
       'Fuel': 'Diesel',
-      'Cooling': 'Air-cooled',
+      'Cooling': 'Water-cooled',
     },
     images: [
       '/images/products/vikyno-engine/rv70-1.png',
@@ -1016,7 +1016,7 @@ export const products: Product[] = [
       'Type': 'Single-cylinder diesel',
       'Power': '~8 Hp',
       'Fuel': 'Diesel',
-      'Cooling': 'Air-cooled',
+      'Cooling': 'Water-cooled',
     },
     images: [
       '/images/products/vikyno-engine/rv80-1.png',
@@ -1043,7 +1043,7 @@ export const products: Product[] = [
       'Power': '~12.5 Hp',
       'Belt Pulley': '1',
       'Fuel': 'Diesel',
-      'Cooling': 'Air-cooled',
+      'Cooling': 'Water-cooled',
     },
     images: [
       '/images/products/vikyno-engine/rv125-1-1.png',
@@ -1069,7 +1069,7 @@ export const products: Product[] = [
       'Power': '~12.5 Hp',
       'Belt Pulley': '2',
       'Fuel': 'Diesel',
-      'Cooling': 'Air-cooled',
+      'Cooling': 'Water-cooled',
     },
     images: [
       '/images/products/vikyno-engine/rv125-2-1.png',
@@ -1097,7 +1097,7 @@ export const products: Product[] = [
       'Power': '~16.5 Hp',
       'Belt Pulley': '2',
       'Fuel': 'Diesel',
-      'Cooling': 'Air-cooled',
+      'Cooling': 'Water-cooled',
     },
     images: [
       '/images/products/vikyno-engine/rv165-2-1.png',
