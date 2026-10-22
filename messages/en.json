@@ -102,17 +102,13 @@
     },
     "feature": {
       "title": "Built around a heavy drum",
-      "text": "Every Phu Long mixer starts as flat steel in our factory and leaves as a finished machine, built to the capacity, engine and colour your market wants.",
+      "text": "Factory-built in Vietnam and made to order for your market.",
       "cta": "See all concrete mixers",
       "quote": "Ask for a price",
-      "drum": "250 – 500 L drum",
-      "drumText": "From the compact 250 L to the 500 L site mixer.",
-      "steel": "2 – 3 mm drum steel",
-      "steelText": "Upper drum 2 – 2.5 mm, lower drum 2.5 – 3 mm. Thicker on request.",
-      "engine": "Electric, gasoline or diesel",
-      "engineText": "Electric motor 2.2 – 5.5 kW, GP160 / GP200 gasoline, or diesel.",
-      "wheels": "Solid or pneumatic tyres",
-      "wheelsText": "2, 3 or 4 wheels on solid 4.00-8 or pneumatic 5.00-12 tyres."
+      "drum": "250–500 L",
+      "steel": "2–3 mm steel",
+      "engine": "Electric · Gas · Diesel",
+      "wheels": "Solid or air tyres"
     },
     "colours": {
       "title": "Your colour, your logo",

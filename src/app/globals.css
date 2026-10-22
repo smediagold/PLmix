@@ -193,6 +193,14 @@ html.motion [data-reveal].is-in {
   transform: scale(0.97);
 }
 
+/* Buttons: pill shape everywhere, except square media thumbnails */
+a.press, button.press {
+  border-radius: 9999px;
+}
+button.press.aspect-square {
+  border-radius: 12px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html.motion [data-reveal] {
     opacity: 1;

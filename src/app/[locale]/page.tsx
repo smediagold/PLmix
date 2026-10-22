@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
+import { Cylinder, Disc3, Fuel, Layers } from 'lucide-react';
 import { Link } from '@/i18n/navigation';
 import { pick } from '@/data/lines';
 import { markets, orders, testimonials } from '@/data/proof';
@@ -92,10 +93,10 @@ async function HeroSection() {
 async function FeatureSection() {
   const t = await getTranslations('home.feature');
   const spots = [
-    { x: 47, y: 30, title: t('drum'), text: t('drumText'), up: false },
-    { x: 50, y: 53, title: t('steel'), text: t('steelText'), up: false },
-    { x: 81, y: 44, title: t('engine'), text: t('engineText'), up: true },
-    { x: 82, y: 71, title: t('wheels'), text: t('wheelsText'), up: true },
+    { x: 47, y: 30, label: t('drum'), Icon: Cylinder },
+    { x: 50, y: 53, label: t('steel'), Icon: Layers },
+    { x: 81, y: 44, label: t('engine'), Icon: Fuel },
+    { x: 82, y: 71, label: t('wheels'), Icon: Disc3 },
   ];
   return (
     <section aria-labelledby="feature-title" className={`frame ${gap}`}>
@@ -104,15 +105,17 @@ async function FeatureSection() {
           <h2 id="feature-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
             {t('title')}
           </h2>
-          <p data-reveal className="mt-5 max-w-[40ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
-          <dl className="mt-8 space-y-5 lg:hidden">
-            {spots.map((s) => (
-              <div key={s.title}>
-                <dt className="text-[17px] font-semibold text-ink">{s.title}</dt>
-                <dd className="mt-1 text-[15px] leading-[1.5] text-soft">{s.text}</dd>
-              </div>
+          <p data-reveal className="mt-5 max-w-[34ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
+          <ul className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
+            {spots.map(({ label, Icon }, i) => (
+              <li key={label} data-reveal style={{ ['--d' as string]: `${i * 70}ms` }} className="flex items-center gap-3 rounded-2xl bg-stone p-3">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-orange text-ink">
+                  <Icon aria-hidden="true" className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <span className="text-[15px] font-semibold leading-snug text-ink">{label}</span>
+              </li>
             ))}
-          </dl>
+          </ul>
           <div data-reveal className="mt-9 flex flex-wrap gap-3">
             <Link
               href="/products/concrete-mixers"
@@ -130,7 +133,7 @@ async function FeatureSection() {
         </div>
 
         <div className="lg:col-span-8" data-tone="orange">
-          <div data-reveal className="tone-tile relative aspect-[938/870]">
+          <div data-reveal className="tone-tile relative aspect-[938/870] overflow-hidden rounded-3xl">
             <Image
               src="/images/mixer/feature.jpg"
               alt="Phu Long 350 L concrete mixer with pneumatic tyres and gasoline engine"
@@ -138,16 +141,19 @@ async function FeatureSection() {
               sizes="(min-width: 1024px) 62vw, 100vw"
               className="multiply object-contain"
             />
-            {spots.map((s, i) => (
-              <div key={s.title} className="absolute" style={{ left: `${s.x}%`, top: `${s.y}%` }}>
+            {spots.map(({ x, y, label, Icon }, i) => (
+              <div key={label} className="absolute" style={{ left: `${x}%`, top: `${y}%` }}>
                 <span aria-hidden="true" className="absolute -left-[9px] -top-[9px] block h-[18px] w-[18px] rounded-full bg-ink outline outline-4 outline-white/80" />
                 <div
+                  aria-hidden="true"
                   data-reveal
                   style={{ ['--d' as string]: `${200 + i * 120}ms` }}
-                  className={`absolute right-[14px] hidden w-[230px] bg-white p-3.5 lg:block ${s.up ? 'bottom-[14px]' : 'top-[14px]'}`}
+                  className="absolute right-[16px] top-0 hidden -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white py-1.5 pl-1.5 pr-4 lg:flex"
                 >
-                  <p className="text-[15px] font-semibold leading-snug text-ink">{s.title}</p>
-                  <p className="mt-1 text-[15px] leading-[1.45] text-soft">{s.text}</p>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange text-ink">
+                    <Icon className="h-4 w-4" strokeWidth={2} />
+                  </span>
+                  <span className="text-[15px] font-semibold text-ink">{label}</span>
                 </div>
               </div>
             ))}

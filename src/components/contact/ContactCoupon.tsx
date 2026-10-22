@@ -44,10 +44,10 @@ export default function ContactCoupon({ defaultProduct = '' }: { defaultProduct?
   };
 
   const field =
-    'block w-full bg-white/55 px-4 text-[17px] text-ink placeholder:text-ink/60 focus:bg-white focus:outline focus:outline-3 focus:outline-ink';
+    'block w-full rounded-xl bg-white/55 px-4 text-[17px] text-ink placeholder:text-ink/60 focus:bg-white focus:outline focus:outline-3 focus:outline-ink';
 
   return (
-    <div className="coupon relative bg-brand-orange text-ink">
+    <div className="coupon relative overflow-hidden rounded-3xl bg-brand-orange text-ink">
       <div className="grid gap-8 p-7 sm:p-10 lg:grid-cols-[46%_1fr] lg:gap-0 lg:p-0">
         <div className="flex flex-col justify-between gap-6 lg:p-12">
           <h2 className="text-[clamp(30px,3vw,44px)] font-extrabold uppercase leading-[1.02] tracking-[-0.02em]">
