@@ -1,9 +1,13 @@
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { blogPosts, getBlogPost, type BlogPost } from '@/data/blog';
+import { blogPosts, categoryLabels, categoryLine, getBlogPost } from '@/data/blog';
+import { getLine, pick } from '@/data/lines';
+import BlogCard, { BlogImage, postMeta } from '@/components/blog/BlogCard';
+import ContactCoupon from '@/components/contact/ContactCoupon';
+import { sectionGap } from '@/components/site/sections';
 
 export function generateStaticParams() {
   return blogPosts.map((p) => ({ slug: p.slug }));
@@ -22,7 +26,7 @@ export async function generateMetadata({
   const description = (vi ? post.excerpt_vi : post.excerpt_en).slice(0, 160);
   const url = `https://www.phulongglobal.com/${locale}/blog/${slug}`;
   return {
-    title,
+    title: { absolute: `${title} | Phu Long` },
     description,
     alternates: {
       canonical: url,
@@ -42,139 +46,109 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ locale: string; slug: string }>;
-}) {
+export default async function BlogPostPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 
   const post = getBlogPost(slug);
   if (!post) notFound();
 
+  const t = await getTranslations('blog');
+  const tl = await getTranslations('line');
   const vi = locale === 'vi';
   const title = vi ? post.title_vi : post.title_en;
   const content = vi ? post.content_vi : post.content_en;
-
-  const formattedDate = new Date(post.date).toLocaleDateString(vi ? 'vi-VN' : 'en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  });
+  const lineSlug = categoryLine[post.category];
+  const line = lineSlug ? getLine(lineSlug) : undefined;
+  const related = [
+    ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
+    ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
+  ].slice(0, 3);
 
   return (
-    <div className="min-h-screen bg-page-bg">
-      {/* Breadcrumb */}
-      <div className="border-b border-border bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-brand-gray">
-            <Link href="/" className="hover:text-dark transition-colors">
-              {vi ? 'Trang Chủ' : 'Home'}
-            </Link>
-            <ChevronIcon />
-            <Link href="/blog" className="hover:text-dark transition-colors">
-              {vi ? 'Blog' : 'Blog'}
-            </Link>
-            <ChevronIcon />
-            <span className="text-dark font-medium line-clamp-1">{title}</span>
-          </nav>
+    <>
+      <div className="frame pt-4">
+        <nav aria-label={tl('breadcrumb')} className="text-[15px] text-soft">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li><Link href="/" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">{tl('home')}</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/blog" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">{t('title')}</Link></li>
+            <li aria-hidden="true">/</li>
+            <li>
+              <Link href={{ pathname: '/blog', query: { category: post.category } }} className="inline-flex min-h-11 items-center hover:text-ink hover:underline">
+                {categoryLabels[post.category][vi ? 'vi' : 'en']}
+              </Link>
+            </li>
+          </ol>
+        </nav>
+
+        <header data-reveal className="mt-6 max-w-[900px]">
+          <h1 className="text-[clamp(24px,4.4vw,54px)] font-bold leading-[1.08] tracking-[-0.025em] text-ink">{title}</h1>
+          <p className="mt-4 text-[17px] text-soft">{postMeta(post, locale)}</p>
+        </header>
+
+        <div data-reveal className="group relative mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-[#FBE6C2] lg:aspect-[21/9]">
+          <BlogImage post={post} alt={title} sizes="100vw" priority />
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
-        {/* Header */}
-        <CategoryBadge post={post} locale={locale} />
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-dark sm:text-4xl">{title}</h1>
-        <div className="mt-3 flex items-center gap-4 text-sm text-brand-gray/60">
-          <span>{formattedDate}</span>
-          <span>·</span>
-          <span>{post.readTime} {vi ? 'phút đọc' : 'min read'}</span>
-        </div>
-
-        {/* Hero image */}
-        <div className="mt-8 relative aspect-video overflow-hidden rounded-2xl bg-surface">
-          <Image
-            src={post.image}
-            alt={title}
-            fill
-            className="object-contain p-6"
-            priority
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-        </div>
-
-        {/* Content rendered as markdown-like HTML */}
-        <article className="mt-10 prose-content">
+      <div className="frame mt-12 grid gap-12 lg:grid-cols-12">
+        <article data-reveal className="lg:col-span-8 xl:col-span-7">
           <BlogContent content={content} />
         </article>
 
-        {/* Back link */}
-        <div className="mt-12 border-t border-border pt-8">
-          <Link
-            href="/blog"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-brand-orange hover:text-brand-orange-dark transition-colors"
-          >
-            <svg className="h-4 w-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-            {vi ? 'Quay lại Blog' : 'Back to Blog'}
-          </Link>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-8 rounded-2xl bg-dark p-6 sm:p-8">
-          <h2 className="text-xl font-bold text-white">
-            {vi ? 'Quan tâm đến sản phẩm?' : 'Interested in our products?'}
-          </h2>
-          <p className="mt-2 text-sm text-white/60">
-            {vi
-              ? 'Liên hệ với chúng tôi để được báo giá và tư vấn.'
-              : 'Get in touch for a quote and product consultation.'}
-          </p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <Link
-              href="/products"
-              className="inline-flex h-10 items-center justify-center rounded-md border border-white/20 px-5 text-sm font-semibold text-white transition-colors hover:bg-white/10"
-            >
-              {vi ? 'Xem Sản Phẩm' : 'Browse Products'}
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex h-10 items-center justify-center rounded-md bg-brand-orange px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
-            >
-              {vi ? 'Liên Hệ' : 'Contact Us'}
-            </Link>
+        <aside className="lg:col-span-4 xl:col-start-9">
+          <div data-reveal className="space-y-4 lg:sticky lg:top-[104px]">
+            {line && (
+              <Link href={`/products/${line.slug}`} className="group block overflow-hidden rounded-3xl bg-white" data-tone={line.tone}>
+                <span className="tone-tile relative block aspect-[4/3]">
+                  <Image src={line.cover} alt={pick(line.name, locale)} fill sizes="(min-width: 1024px) 30vw, 100vw" className="multiply object-contain p-[10%]" />
+                </span>
+                <span className="block p-5">
+                  <span className="block text-[15px] text-soft">{t('relatedLine')}</span>
+                  <span className="mt-1 block text-[22px] font-bold text-ink underline-offset-4 group-hover:underline">{pick(line.name, locale)}</span>
+                  <span className="mt-1 block text-[17px] text-ink">{pick(line.tagline, locale)}</span>
+                </span>
+              </Link>
+            )}
+            <div className="rounded-3xl bg-ink p-6 text-white">
+              <p className="text-[22px] font-bold">{t('askTitle')}</p>
+              <p className="mt-2 text-[17px] text-white/85">{t('askText')}</p>
+              <div className="mt-5 flex flex-wrap gap-2">
+                <a
+                  href={`https://wa.me/84946964669?text=${encodeURIComponent(title)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="press inline-flex min-h-11 items-center bg-[#25D366] px-5 text-[17px] font-semibold text-ink hover:bg-[#3ee07a]"
+                >
+                  WhatsApp
+                </a>
+                <Link href="/contact" className="press inline-flex min-h-11 items-center bg-white/15 px-5 text-[17px] font-semibold text-white hover:bg-white/25">
+                  {tl('quote')}
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
+        </aside>
       </div>
-    </div>
-  );
-}
 
-function ChevronIcon() {
-  return (
-    <svg className="h-4 w-4 text-border" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-    </svg>
-  );
-}
+      {related.length > 0 && (
+        <section aria-labelledby="related-posts" className={`frame ${sectionGap}`}>
+          <h2 id="related-posts" className="text-[clamp(28px,2.6vw,40px)] font-bold tracking-[-0.02em] text-ink">{t('related')}</h2>
+          <ul className="mt-8 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((p) => (
+              <li key={p.slug} data-reveal>
+                <BlogCard post={p} locale={locale} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
-const categoryLabels: Record<BlogPost['category'], { en: string; vi: string }> = {
-  'concrete-mixer': { en: 'Concrete Mixer', vi: 'Máy Trộn Bê Tông' },
-  'wheelbarrow': { en: 'Wheelbarrow', vi: 'Xe Rùa' },
-  'rice-transplanter': { en: 'Rice Transplanter', vi: 'Máy Cấy Lúa' },
-  'paddy-thresher': { en: 'Paddy Thresher', vi: 'Máy Tuốt Lúa' },
-  'general': { en: 'General', vi: 'Tổng Quan' },
-};
-
-function CategoryBadge({ post, locale }: { post: BlogPost; locale: string }) {
-  const vi = locale === 'vi';
-  const label = vi ? categoryLabels[post.category].vi : categoryLabels[post.category].en;
-  return (
-    <span className="inline-block rounded-full border border-brand-orange/40 px-3 py-0.5 text-xs font-semibold uppercase tracking-widest text-brand-orange">
-      {label}
-    </span>
+      <section aria-label={tl('quote')} className={`frame ${sectionGap} pb-[clamp(64px,8vw,120px)]`}>
+        <ContactCoupon defaultProduct={line ? pick(line.name, locale) : ''} />
+      </section>
+    </>
   );
 }
 
@@ -190,12 +164,12 @@ function BlogContent({ content }: { content: string }) {
     const headers = rows[0]?.split('|').filter(Boolean).map((h) => h.trim()) ?? [];
     const dataRows = rows.slice(1);
     elements.push(
-      <div key={`table-${i}`} className="my-6 overflow-x-auto">
-        <table className="w-full text-sm border-collapse">
+      <div key={`table-${i}`} className="my-6 overflow-x-auto rounded-2xl bg-white">
+        <table className="num w-full border-collapse text-[16px]">
           <thead>
-            <tr className="bg-brand-orange/10">
+            <tr className="bg-ink text-white">
               {headers.map((h, hi) => (
-                <th key={hi} className="border border-border px-3 py-2 text-left font-semibold text-dark">{h}</th>
+                <th key={hi} className="px-4 py-3 text-left font-semibold">{h}</th>
               ))}
             </tr>
           </thead>
@@ -203,9 +177,9 @@ function BlogContent({ content }: { content: string }) {
             {dataRows.map((row, ri) => {
               const cells = row.split('|').filter(Boolean).map((c) => c.trim());
               return (
-                <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-surface'}>
+                <tr key={ri} className="border-b border-[#E5E1DA] last:border-0">{/* taste-skill-ignore: real table */}
                   {cells.map((cell, ci) => (
-                    <td key={ci} className="border border-border px-3 py-2 text-brand-gray">{cell}</td>
+                    <td key={ci} className="px-4 py-3 text-ink">{cell}</td>
                   ))}
                 </tr>
               );
@@ -230,11 +204,11 @@ function BlogContent({ content }: { content: string }) {
 
     if (line.startsWith('## ')) {
       elements.push(
-        <h2 key={i} className="mt-8 mb-3 text-xl font-bold text-dark">{line.slice(3)}</h2>
+        <h2 key={i} data-reveal className="mb-3 mt-10 text-[clamp(24px,2vw,30px)] font-bold leading-tight tracking-[-0.01em] text-ink">{line.slice(3)}</h2>
       );
     } else if (line.startsWith('### ')) {
       elements.push(
-        <h3 key={i} className="mt-6 mb-2 text-lg font-bold text-dark">{line.slice(4)}</h3>
+        <h3 key={i} className="mb-2 mt-8 text-[22px] font-bold text-ink">{line.slice(4)}</h3>
       );
     } else if (line.startsWith('- ')) {
       const items: string[] = [];
@@ -243,10 +217,10 @@ function BlogContent({ content }: { content: string }) {
         i++;
       }
       elements.push(
-        <ul key={`ul-${i}`} className="my-4 space-y-1.5 pl-4">
+        <ul key={`ul-${i}`} className="my-5 space-y-2">
           {items.map((item, ii) => (
-            <li key={ii} className="flex items-start gap-2 text-brand-gray">
-              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-orange" />
+            <li key={ii} className="flex items-start gap-3 text-[18px] leading-[1.65] text-ink">
+              <span className="mt-[11px] h-2 w-2 shrink-0 rounded-full bg-brand-orange" />
               <InlineMarkdown text={item} />
             </li>
           ))}
@@ -254,10 +228,10 @@ function BlogContent({ content }: { content: string }) {
       );
       continue;
     } else if (line.trim() === '') {
-      elements.push(<div key={i} className="h-2" />);
+      elements.push(<div key={i} className="h-3" />);
     } else {
       elements.push(
-        <p key={i} className="text-base leading-relaxed text-brand-gray">
+        <p key={i} className="text-[18px] leading-[1.7] text-ink">
           <InlineMarkdown text={line} />
         </p>
       );
@@ -275,7 +249,7 @@ function InlineMarkdown({ text }: { text: string }) {
     <>
       {parts.map((part, i) => {
         if (part.startsWith('**') && part.endsWith('**')) {
-          return <strong key={i} className="font-semibold text-dark">{part.slice(2, -2)}</strong>;
+          return <strong key={i} className="font-semibold text-ink">{part.slice(2, -2)}</strong>;
         }
         return <span key={i}>{part}</span>;
       })}

@@ -1,3 +1,15 @@
+import { extraPosts } from './blog-extra';
+
+export type BlogCategory =
+  | 'concrete-mixer'
+  | 'wheelbarrow'
+  | 'rice-transplanter'
+  | 'paddy-thresher'
+  | 'stirrup-bending'
+  | 'industrial-fan'
+  | 'engine'
+  | 'general';
+
 export interface BlogPost {
   slug: string;
   title_en: string;
@@ -6,13 +18,13 @@ export interface BlogPost {
   excerpt_vi: string;
   content_en: string;
   content_vi: string;
-  category: 'concrete-mixer' | 'wheelbarrow' | 'rice-transplanter' | 'paddy-thresher' | 'general';
+  category: BlogCategory;
   date: string;
   readTime: number;
   image: string;
 }
 
-export const blogPosts: BlogPost[] = [
+const basePosts: BlogPost[] = [
   {
     slug: 'how-to-choose-concrete-mixer',
     title_en: 'How to Choose the Right Concrete Mixer for Your Project',
@@ -169,7 +181,7 @@ Với trang trại 3 ha, 2 vụ/năm: tiết kiệm lao động hàng năm đán
     category: 'paddy-thresher',
     date: '2025-05-10',
     readTime: 4,
-    image: '/images/products/thresher/detail.jpg',
+    image: '/images/heroes/paddy-threshers.jpg',
     content_en: `A paddy thresher running at 900 RPM handles enormous loads during harvest season. These five habits prevent the most common failures.
 
 ## 1. Clean the Threshing Drum After Each Session
@@ -398,6 +410,30 @@ All Phu Long concrete mixers can be configured with any of these three engine ty
 3. **Dự án quy mô lớn hoặc xa xôi** → Diesel (CAOFONG)`,
   },
 ];
+
+export const blogPosts: BlogPost[] = [...basePosts, ...extraPosts].sort((a, b) => b.date.localeCompare(a.date));
+
+export const categoryLabels: Record<BlogCategory, { en: string; vi: string }> = {
+  'concrete-mixer': { en: 'Concrete mixers', vi: 'Máy trộn bê tông' },
+  wheelbarrow: { en: 'Wheelbarrows', vi: 'Xe rùa' },
+  'rice-transplanter': { en: 'Rice transplanters', vi: 'Máy cấy lúa' },
+  'paddy-thresher': { en: 'Paddy threshers', vi: 'Máy tuốt lúa' },
+  'stirrup-bending': { en: 'Stirrup bending', vi: 'Máy uốn đai' },
+  'industrial-fan': { en: 'Industrial fans', vi: 'Quạt công nghiệp' },
+  engine: { en: 'Engines', vi: 'Động cơ' },
+  general: { en: 'Buying guides', vi: 'Hướng dẫn mua hàng' },
+};
+
+export const categoryLine: Record<BlogCategory, string | null> = {
+  'concrete-mixer': 'concrete-mixers',
+  wheelbarrow: 'wheelbarrows',
+  'rice-transplanter': 'rice-transplanters',
+  'paddy-thresher': 'paddy-threshers',
+  'stirrup-bending': 'stirrup-bending-machines',
+  'industrial-fan': 'industrial-fans',
+  engine: 'engines',
+  general: null,
+};
 
 export const getBlogPost = (slug: string) => blogPosts.find((p) => p.slug === slug);
 

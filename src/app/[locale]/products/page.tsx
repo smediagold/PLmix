@@ -1,20 +1,19 @@
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
-import { Suspense } from 'react';
-import { products, type Category } from '@/data/products';
-import ProductCard from '@/components/products/ProductCard';
-import CategoryFilter from '@/components/products/CategoryFilter';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
+import { groups, lines, lineProducts, pick, type LineGroup } from '@/data/lines';
+import PageHero from '@/components/site/PageHero';
+import ModelGrid from '@/components/lines/ModelGrid';
+import ContactCoupon from '@/components/contact/ContactCoupon';
+import { sectionGap } from '@/components/site/sections';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const vi = locale === 'vi';
-  const title = vi
-    ? 'Sản Phẩm: Máy Trộn, Máy Nông Nghiệp, Quạt | Phú Long'
-    : 'Concrete Mixers, Farm Machines & Fans | Phu Long';
+  const title = vi ? 'Sản Phẩm: Máy Trộn, Máy Nông Nghiệp, Quạt | Phú Long' : 'Concrete Mixers, Farm Machines & Fans | Phu Long';
   const description = vi
-    ? 'Toàn bộ sản phẩm Phú Long: máy trộn bê tông 250–500L, xe rùa, máy uốn đai thép, máy cấy lúa, máy tuốt lúa, động cơ Vikyno. Đặt hàng OEM, xuất khẩu toàn cầu.'
-    : 'Full range of Phu Long products: concrete mixers 250–500L, wheelbarrows, stirrup bending machines, rice transplanters, paddy threshers, Vikyno diesel engines. OEM & export.';
+    ? 'Toàn bộ sản phẩm Phú Long: máy trộn bê tông 250–500L, máy uốn đai, xe rùa, máy cấy lúa, máy tuốt lúa, quạt công nghiệp, động cơ. Làm theo đơn OEM, xuất khẩu toàn cầu.'
+    : 'Full range of Phu Long products: concrete mixers 250–500L, stirrup benders, wheelbarrows, rice transplanters, paddy threshers, industrial fans and engines. OEM & export.';
   return {
     title: { absolute: title },
     description,
@@ -36,47 +35,74 @@ export default async function ProductsPage({
   const { locale } = await params;
   const { category } = await searchParams;
   setRequestLocale(locale);
+  const t = await getTranslations('products');
+  const tl = await getTranslations('line');
 
-  const filtered =
-    category && category !== 'all'
-      ? products.filter((p) => p.category === (category as Category))
-      : products;
+  const active = groups.some((g) => g.id === category) ? (category as LineGroup) : null;
+  const shown = lines.filter((l) => !active || l.group === active);
+  const total = shown.reduce((n, l) => n + lineProducts(l).length, 0);
+
+  const pill = (on: boolean) =>
+    `press inline-flex min-h-11 items-center px-5 text-[17px] font-semibold ${on ? 'bg-ink text-white' : 'bg-white text-ink hover:bg-stone'}`;
 
   return (
-    <div className="min-h-screen bg-page-bg">
-      <PageHeader locale={locale} total={filtered.length} />
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <Suspense>
-          <CategoryFilter locale={locale} />
-        </Suspense>
-        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filtered.map((product) => (
-            <ProductCard key={product.id} product={product} locale={locale} />
+    <>
+      <PageHero
+        image="/images/factory/warehouse.jpg"
+        alt={t('heroAlt')}
+        title={t('title')}
+        text={t('subtitle')}
+        crumbs={[{ href: '/', label: tl('home') }, { label: t('title') }]}
+        crumbLabel={tl('breadcrumb')}
+        size="compact"
+      />
+
+      <div className="frame pt-10">
+        <nav aria-label={t('filter')} className="flex flex-wrap items-center gap-2">
+          <Link href="/products" scroll={false} aria-current={!active ? 'page' : undefined} className={pill(!active)}>
+            {t('allProducts')}
+          </Link>
+          {groups.map((g) => (
+            <Link
+              key={g.id}
+              href={{ pathname: '/products', query: { category: g.id } }}
+              scroll={false}
+              aria-current={active === g.id ? 'page' : undefined}
+              className={pill(active === g.id)}
+            >
+              {pick(g.name, locale)}
+            </Link>
           ))}
-        </div>
-        {filtered.length === 0 && (
-          <div className="py-24 text-center text-brand-gray">
-            {locale === 'vi' ? 'Không tìm thấy sản phẩm.' : 'No products found.'}
-          </div>
-        )}
+          <span className="num ml-auto text-[17px] text-soft">{tl('modelsTitle', { count: total })}</span>
+        </nav>
       </div>
-    </div>
-  );
-}
 
-function PageHeader({ locale, total }: { locale: string; total: number }) {
-  const t = useTranslations('products');
-  return (
-    <div className="border-b border-border bg-white">
-      <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-          {t('title')}
-        </h1>
-        <p className="mt-2 text-base text-brand-gray">{t('subtitle')}</p>
-        <p className="mt-1 text-sm text-brand-gray/60">
-          {total} {locale === 'vi' ? 'sản phẩm' : 'products'}
-        </p>
-      </div>
-    </div>
+      {shown.map((l) => {
+        const items = lineProducts(l);
+        const name = pick(l.name, locale);
+        return (
+          <section key={l.slug} aria-labelledby={`l-${l.slug}`} className={`frame ${sectionGap}`}>
+            <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+              <div>
+                <h2 id={`l-${l.slug}`} className="text-[clamp(28px,2.6vw,40px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+                  <Link href={`/products/${l.slug}`} className="underline-offset-4 decoration-2 hover:underline">{name}</Link>
+                </h2>
+                <p className="mt-2 max-w-[64ch] text-[17px] leading-[1.5] text-ink">{pick(l.tagline, locale)}</p>
+              </div>
+              <Link href={`/products/${l.slug}`} className="press inline-flex min-h-11 items-center bg-stone px-5 text-[17px] font-semibold text-ink hover:bg-[#E0D9CE]">
+                {t('viewLine', { name })}
+              </Link>
+            </div>
+            <div className="mt-8">
+              <ModelGrid items={items} locale={locale} />
+            </div>
+          </section>
+        );
+      })}
+
+      <section aria-label={tl('quote')} className={`frame ${sectionGap} pb-[clamp(64px,8vw,120px)]`}>
+        <ContactCoupon />
+      </section>
+    </>
   );
 }

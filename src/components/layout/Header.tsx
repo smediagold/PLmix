@@ -57,9 +57,9 @@ export default function Header({ locale }: { locale: string }) {
   return (
     <header className="sticky top-0 z-50 w-full bg-ground">
       <div ref={panelRef}>
-        <div className="frame flex h-[72px] items-center justify-between gap-6">
+        <div className="frame flex h-[80px] items-center justify-between gap-6">
           <Link href="/" className="flex min-h-11 shrink-0 items-center" aria-label="Phu Long Mechanical, home">
-            <Image src="/logo.png" alt="Phu Long Mechanical" width={216} height={72} className="h-[62px] w-auto" priority />
+            <Image src="/logo-3d.png" alt="Phu Long Mechanical" width={472} height={300} className="h-[70px] w-auto" priority />
           </Link>
 
           <nav aria-label={t('main')} className="hidden items-center gap-9 lg:flex">
@@ -114,7 +114,7 @@ export default function Header({ locale }: { locale: string }) {
         </div>
 
         {productsOpen && (
-          <div id="products-panel" className="absolute inset-x-0 top-[72px] hidden bg-white shadow-[0_24px_48px_-24px_rgba(0,0,0,0.25)] lg:block">{/* taste-skill-ignore: dropdown overlay */}
+          <div id="products-panel" className="absolute inset-x-0 top-[80px] hidden bg-white shadow-[0_24px_48px_-24px_rgba(0,0,0,0.25)] lg:block">{/* taste-skill-ignore: dropdown overlay */}
             <div className="frame grid grid-cols-4 gap-10 py-10">
               {groups.map((g) => (
                 <div key={g.id}>
@@ -153,7 +153,7 @@ export default function Header({ locale }: { locale: string }) {
       </div>
 
       {menuOpen && (
-        <div id="mobile-menu" className="max-h-[calc(100svh-72px)] overflow-y-auto overscroll-contain bg-white lg:hidden">
+        <div id="mobile-menu" className="max-h-[calc(100svh-80px)] overflow-y-auto overscroll-contain bg-white lg:hidden">
           <nav aria-label={t('main')} className="frame py-4">
             {groups.map((g) => (
               <div key={g.id} className="py-3">

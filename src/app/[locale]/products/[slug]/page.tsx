@@ -70,7 +70,7 @@ export default async function SlugPage({ params }: { params: Promise<{ locale: s
   return <ProductDetail product={product} locale={locale} />;
 }
 
-const gap = 'pt-[clamp(80px,9vw,144px)]';
+const gap = 'pt-[clamp(64px,8vw,120px)]';
 
 async function ProductDetail({ product, locale }: { product: Product; locale: string }) {
   const t = await getTranslations('products');
@@ -227,7 +227,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
       )}
 
       {related.length > 0 && (
-        <section aria-labelledby="rel-title" className={`frame ${gap} pb-[clamp(96px,10vw,160px)]`}>
+        <section aria-labelledby="rel-title" className={`frame ${gap} pb-[clamp(64px,8vw,120px)]`}>
           <h2 id="rel-title" data-reveal className="text-[clamp(26px,2.4vw,36px)] font-bold tracking-[-0.01em] text-ink">{t('relatedProducts')}</h2>
           <ul className={`mt-8 grid grid-cols-2 gap-x-3 gap-y-8 ${related.length >= 3 ? 'lg:grid-cols-4' : ''}`}>
             {related.map((p, i) => {

@@ -64,13 +64,13 @@ export const testimonials: { name: string; company: string; country: Bi; product
   },
 ];
 
-export const markets: { region: Bi; countries: string[] }[] = [
-  { region: { en: 'Southeast Asia', vi: 'Đông Nam Á' }, countries: ['Indonesia', 'Philippines', 'Myanmar', 'Cambodia', 'Laos'] },
-  { region: { en: 'South Asia', vi: 'Nam Á' }, countries: ['Bangladesh', 'India', 'Pakistan', 'Sri Lanka'] },
-  { region: { en: 'Africa', vi: 'Châu Phi' }, countries: ['Ghana', 'Tanzania', 'Uganda', 'South Africa', 'Nigeria'] },
-  { region: { en: 'Middle East', vi: 'Trung Đông' }, countries: ['UAE', 'Saudi Arabia', 'Iraq', 'Yemen'] },
-  { region: { en: 'Pacific', vi: 'Thái Bình Dương' }, countries: ['Papua New Guinea', 'Australia'] },
-  { region: { en: 'Americas', vi: 'Châu Mỹ' }, countries: ['El Salvador', 'Guatemala', 'USA (Texas)'] },
+export const markets: { region: Bi; countries: { name: string; code: string }[] }[] = [
+  { region: { en: 'Southeast Asia', vi: 'Đông Nam Á' }, countries: [{ name: 'Indonesia', code: 'id' }, { name: 'Philippines', code: 'ph' }, { name: 'Myanmar', code: 'mm' }, { name: 'Cambodia', code: 'kh' }, { name: 'Laos', code: 'la' }] },
+  { region: { en: 'South Asia', vi: 'Nam Á' }, countries: [{ name: 'Bangladesh', code: 'bd' }, { name: 'India', code: 'in' }, { name: 'Pakistan', code: 'pk' }, { name: 'Sri Lanka', code: 'lk' }] },
+  { region: { en: 'Africa', vi: 'Châu Phi' }, countries: [{ name: 'Ghana', code: 'gh' }, { name: 'Tanzania', code: 'tz' }, { name: 'Uganda', code: 'ug' }, { name: 'South Africa', code: 'za' }, { name: 'Nigeria', code: 'ng' }] },
+  { region: { en: 'Middle East', vi: 'Trung Đông' }, countries: [{ name: 'UAE', code: 'ae' }, { name: 'Saudi Arabia', code: 'sa' }, { name: 'Iraq', code: 'iq' }, { name: 'Yemen', code: 'ye' }] },
+  { region: { en: 'Pacific', vi: 'Thái Bình Dương' }, countries: [{ name: 'Papua New Guinea', code: 'pg' }, { name: 'Australia', code: 'au' }] },
+  { region: { en: 'Americas', vi: 'Châu Mỹ' }, countries: [{ name: 'El Salvador', code: 'sv' }, { name: 'Guatemala', code: 'gt' }, { name: 'USA (Texas)', code: 'us' }] },
 ];
 
 export const orders: { src: string; caption: Bi; load: Bi; w: number; h: number }[] = [

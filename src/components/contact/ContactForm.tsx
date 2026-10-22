@@ -46,14 +46,14 @@ export default function ContactForm() {
 
   if (submitted) {
     return (
-      <div className="flex flex-col items-center justify-center rounded-2xl border border-green-100 bg-green-50 px-8 py-16 text-center">
+      <div className="flex flex-col items-center justify-center rounded-3xl bg-[#DCE8E1] px-8 py-16 text-center">
         <div className="flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
           <svg className="h-7 w-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h3 className="mt-4 text-xl font-bold text-dark">{t('successTitle')}</h3>
-        <p className="mt-2 text-base text-brand-gray">{t('successText')}</p>
+        <h3 className="mt-4 text-[22px] font-bold text-ink">{t('successTitle')}</h3>
+        <p className="mt-2 text-[17px] text-ink">{t('successText')}</p>
       </div>
     );
   }
@@ -63,26 +63,26 @@ export default function ContactForm() {
       {/* Name + Company */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-dark">
-            {t('name')} <span className="text-brand-orange">*</span>
+          <label className="mb-1.5 block text-[15px] font-semibold text-ink">
+            {t('name')} <span aria-hidden="true">*</span>
           </label>
           <input
             {...register('name')}
             type="text"
             placeholder={t('namePlaceholder')}
-            className="h-11 w-full rounded-lg border border-border bg-white px-4 text-base text-dark placeholder:text-brand-gray/50 focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+            className="h-12 w-full rounded-xl bg-ground px-4 text-[17px] text-ink border border-[#E0D9CE] placeholder:text-ink/50 focus:border-ink focus:outline focus:outline-2 focus:outline-ink"
           />
           {errors.name && (
-            <p className="mt-1 text-xs text-red-500">{errors.name.message}</p>
+            <p className="mt-1 text-[15px] text-red-700">{errors.name.message}</p>
           )}
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-dark">{t('company')}</label>
+          <label className="mb-1.5 block text-[15px] font-semibold text-ink">{t('company')}</label>
           <input
             {...register('company')}
             type="text"
             placeholder={t('companyPlaceholder')}
-            className="h-11 w-full rounded-lg border border-border bg-white px-4 text-base text-dark placeholder:text-brand-gray/50 focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+            className="h-12 w-full rounded-xl bg-ground px-4 text-[17px] text-ink border border-[#E0D9CE] placeholder:text-ink/50 focus:border-ink focus:outline focus:outline-2 focus:outline-ink"
           />
         </div>
       </div>
@@ -90,65 +90,65 @@ export default function ContactForm() {
       {/* Email + Phone */}
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-dark">
-            {t('email')} <span className="text-brand-orange">*</span>
+          <label className="mb-1.5 block text-[15px] font-semibold text-ink">
+            {t('email')} <span aria-hidden="true">*</span>
           </label>
           <input
             {...register('email')}
             type="email"
             placeholder={t('emailPlaceholder')}
-            className="h-11 w-full rounded-lg border border-border bg-white px-4 text-base text-dark placeholder:text-brand-gray/50 focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+            className="h-12 w-full rounded-xl bg-ground px-4 text-[17px] text-ink border border-[#E0D9CE] placeholder:text-ink/50 focus:border-ink focus:outline focus:outline-2 focus:outline-ink"
           />
           {errors.email && (
-            <p className="mt-1 text-xs text-red-500">{errors.email.message}</p>
+            <p className="mt-1 text-[15px] text-red-700">{errors.email.message}</p>
           )}
         </div>
         <div>
-          <label className="mb-1.5 block text-sm font-medium text-dark">{t('phone')}</label>
+          <label className="mb-1.5 block text-[15px] font-semibold text-ink">{t('phone')}</label>
           <input
             {...register('phone')}
             type="tel"
             placeholder={t('phonePlaceholder')}
-            className="h-11 w-full rounded-lg border border-border bg-white px-4 text-base text-dark placeholder:text-brand-gray/50 focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+            className="h-12 w-full rounded-xl bg-ground px-4 text-[17px] text-ink border border-[#E0D9CE] placeholder:text-ink/50 focus:border-ink focus:outline focus:outline-2 focus:outline-ink"
           />
         </div>
       </div>
 
       {/* Product of interest */}
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-dark">{t('product')}</label>
+        <label className="mb-1.5 block text-[15px] font-semibold text-ink">{t('product')}</label>
         <input
           {...register('product')}
           type="text"
           placeholder={t('productPlaceholder')}
-          className="h-11 w-full rounded-lg border border-border bg-white px-4 text-base text-dark placeholder:text-brand-gray/50 focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+          className="h-12 w-full rounded-xl bg-ground px-4 text-[17px] text-ink border border-[#E0D9CE] placeholder:text-ink/50 focus:border-ink focus:outline focus:outline-2 focus:outline-ink"
         />
       </div>
 
       {/* Message */}
       <div>
-        <label className="mb-1.5 block text-sm font-medium text-dark">
-          {t('message')} <span className="text-brand-orange">*</span>
+        <label className="mb-1.5 block text-[15px] font-semibold text-ink">
+          {t('message')} <span aria-hidden="true">*</span>
         </label>
         <textarea
           {...register('message')}
           rows={5}
           placeholder={t('messagePlaceholder')}
-          className="w-full resize-none rounded-lg border border-border bg-white px-4 py-3 text-base text-dark placeholder:text-brand-gray/50 focus:border-brand-orange focus:outline-none focus:ring-2 focus:ring-brand-orange/20"
+          className="w-full resize-none rounded-xl bg-ground px-4 py-3 text-[17px] text-ink border border-[#E0D9CE] placeholder:text-ink/50 focus:border-ink focus:outline focus:outline-2 focus:outline-ink"
         />
         {errors.message && (
-          <p className="mt-1 text-xs text-red-500">{errors.message.message}</p>
+          <p className="mt-1 text-[15px] text-red-700">{errors.message.message}</p>
         )}
       </div>
 
       {serverError && (
-        <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-600">{serverError}</p>
+        <p className="rounded-xl bg-red-50 px-4 py-3 text-[15px] text-red-700">{serverError}</p>
       )}
 
       <button
         type="submit"
         disabled={isSubmitting}
-        className="h-12 w-full rounded-lg bg-brand-orange text-base font-semibold text-white transition-colors hover:bg-brand-orange-dark disabled:opacity-60 sm:w-auto sm:px-10"
+        className="press h-14 w-full bg-ink text-[17px] font-semibold text-white hover:bg-black disabled:opacity-60 sm:w-auto sm:px-10"
       >
         {isSubmitting ? t('submitting') : t('submit')}
       </button>

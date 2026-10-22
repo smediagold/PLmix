@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
-import { setRequestLocale } from 'next-intl/server';
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
-import { Link } from '@/i18n/navigation';
+import { BadgeCheck, Container, Factory, Fuel, Handshake, Palette, Settings2, ShieldCheck } from 'lucide-react';
+import PageHero from '@/components/site/PageHero';
+import ContactCoupon from '@/components/contact/ContactCoupon';
+import { CertificatesSection, MarketsSection, VideoSection, sectionGap } from '@/components/site/sections';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -11,8 +13,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     ? 'Về Phú Long – Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam'
     : 'About Phu Long – Concrete Mixer Manufacturer in Vietnam';
   const description = vi
-    ? 'Phú Long Global Investment — nhà sản xuất máy móc xây dựng và nông nghiệp tại Việt Nam từ năm 2004. Một nhà máy, 70+ khách hàng, 20 quốc gia xuất khẩu.'
-    : 'Phu Long Global Investment — Vietnam machinery manufacturer since 2004. One factory, 70+ global clients, exported to 20 countries. Custom OEM orders available.';
+    ? 'Phú Long Global Investment — nhà sản xuất máy xây dựng, máy nông nghiệp và quạt công nghiệp tại Việt Nam. Một nhà máy, 70+ khách hàng, 20 quốc gia xuất khẩu.'
+    : 'Phu Long Global Investment — Vietnam manufacturer of construction and farm machinery and industrial fans. One factory, 70+ clients, exported to 20 countries.';
   return {
     title: { absolute: title },
     description,
@@ -24,379 +26,128 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-export default async function AboutPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+const h2 = 'text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink';
+
+export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations('about');
+  const tf = await getTranslations('home.factory');
+  const tl = await getTranslations('line');
 
-  return (
-    <div className="min-h-screen bg-page-bg">
-      <AboutHero />
-      <StorySection />
-      <StatsSection />
-      <FactorySection />
-      <CapabilitiesSection />
-      <ExportsSection />
-      <ValuesSection />
-      <CtaSection />
-    </div>
-  );
-}
-
-/* ─── Hero ──────────────────────────────────────────────────── */
-function AboutHero() {
-  const t = useTranslations('about');
-  return (
-    <div className="relative overflow-hidden bg-dark">
-      <div className="absolute inset-0">
-        <Image
-          src="/images/factory/factory-aerial.jpg"
-          alt="Phu Long factory aerial view"
-          fill
-          className="object-cover opacity-25"
-          priority
-        />
-      </div>
-      <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
-        <div className="max-w-2xl">
-          <span className="inline-block rounded-full bg-brand-orange/20 px-3 py-1 text-xs font-semibold uppercase tracking-widest text-brand-orange">
-            Phu Long Global Investment Co., Ltd
-          </span>
-          <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            {t('title')}
-          </h1>
-          <p className="mt-4 text-lg text-white/70 max-w-xl">{t('subtitle')}</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ─── Story ─────────────────────────────────────────────────── */
-function StorySection() {
-  const t = useTranslations('about');
-  return (
-    <section className="py-20 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
-              {t('storyTitle')}
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-              From Workshop to Global Manufacturer
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-brand-gray">{t('storyText')}</p>
-            <p className="mt-4 text-base leading-relaxed text-brand-gray">{t('storyText2')}</p>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            <div className="relative h-56 overflow-hidden rounded-xl sm:h-64">
-              <Image
-                src="/images/factory/factory-1.jpg"
-                alt="Phu Long factory exterior"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-            <div className="relative h-56 overflow-hidden rounded-xl sm:h-64 mt-8">
-              <Image
-                src="/images/factory/factory-3.jpg"
-                alt="Phu Long factory"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-            <div className="relative h-56 overflow-hidden rounded-xl sm:h-64 -mt-8">
-              <Image
-                src="/images/factory/warehouse.jpg"
-                alt="Phu Long warehouse"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-            <div className="relative h-56 overflow-hidden rounded-xl sm:h-64">
-              <Image
-                src="/images/factory/showroom.jpg"
-                alt="Phu Long showroom"
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 50vw, 25vw"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Stats ─────────────────────────────────────────────────── */
-function StatsSection() {
+  const photos = [
+    { src: '/images/factory/factory-1.jpg', alt: tf('aerial') },
+    { src: '/images/factory/factory-3.jpg', alt: tf('hall') },
+    { src: '/images/factory/warehouse.jpg', alt: tf('warehouseNote') },
+    { src: '/images/factory/showroom.jpg', alt: tf('showroom') },
+  ];
   const stats = [
-    { value: '20+', labelEn: 'Years of Experience', labelVi: 'Năm Kinh Nghiệm' },
-    { value: '20', labelEn: 'Countries Exported', labelVi: 'Quốc Gia Xuất Khẩu' },
-    { value: '70+', labelEn: 'Global Customers', labelVi: 'Khách Hàng Toàn Cầu' },
-    { value: '1', labelEn: 'Dedicated Factory', labelVi: 'Nhà Máy Chuyên Dụng' },
+    { value: '20+', label: tf('years') },
+    { value: '20', label: tf('countries') },
+    { value: '70+', label: tf('customers') },
+    { value: '1', label: tf('factory') },
   ];
-
-  return (
-    <section className="bg-brand-orange py-14">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-8 sm:grid-cols-4">
-          {stats.map((s) => (
-            <div key={s.value} className="text-center">
-              <p className="text-4xl font-bold text-white sm:text-5xl">{s.value}</p>
-              <p className="mt-2 text-sm font-medium text-white/80">{s.labelEn}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Factory ───────────────────────────────────────────────── */
-function FactorySection() {
-  const t = useTranslations('about');
-  return (
-    <section className="py-20 bg-page-bg">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto">
-          <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
-            {t('factoryTitle')}
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-            One Factory. Full Control.
-          </h2>
-          <p className="mt-4 text-base leading-relaxed text-brand-gray">{t('factoryText')}</p>
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
-          <div className="relative h-64 overflow-hidden rounded-2xl sm:col-span-2 sm:h-80">
-            <Image
-              src="/images/factory/factory-aerial.jpg"
-              alt="Phu Long factory aerial view"
-              fill
-              className="object-cover"
-              sizes="(max-width: 640px) 100vw, 66vw"
-            />
-          </div>
-          <div className="grid grid-rows-2 gap-6">
-            <div className="relative overflow-hidden rounded-2xl">
-              <Image
-                src="/images/factory/loading-fcl.jpg"
-                alt="Loading FCL container"
-                fill
-                className="object-cover"
-                sizes="33vw"
-              />
-            </div>
-            <div className="relative overflow-hidden rounded-2xl">
-              <Image
-                src="/images/factory/loading-lcl.jpg"
-                alt="Loading LCL container"
-                fill
-                className="object-cover"
-                sizes="33vw"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Capabilities ──────────────────────────────────────────── */
-function CapabilitiesSection() {
-  const t = useTranslations('about');
-  const caps = [t('cap1'), t('cap2'), t('cap3'), t('cap4'), t('cap5')];
-
-  const icons = [
-    <path key="1" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />,
-    <path key="2" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />,
-    <path key="3" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />,
-    <path key="4" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
-    <path key="5" strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />,
+  const caps = [
+    { Icon: Factory, text: t('cap1') },
+    { Icon: Palette, text: t('cap2') },
+    { Icon: Fuel, text: t('cap3') },
+    { Icon: ShieldCheck, text: t('cap4') },
+    { Icon: Container, text: t('cap5') },
+    { Icon: Settings2, text: t('cap6') },
   ];
-
-  return (
-    <section className="py-20 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
-            {t('capabilitiesTitle')}
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-            What We Can Do
-          </h2>
-        </div>
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {caps.map((cap, i) => (
-            <div
-              key={i}
-              className="flex gap-4 rounded-xl border border-border bg-page-bg p-5"
-            >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-orange/10">
-                <svg className="h-5 w-5 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  {icons[i]}
-                </svg>
-              </div>
-              <p className="text-sm leading-relaxed text-dark pt-1.5">{cap}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Exports ───────────────────────────────────────────────── */
-function ExportsSection() {
-  const t = useTranslations('about');
-  const regions = [
-    { region: 'Southeast Asia', countries: ['Vietnam', 'Cambodia', 'Laos', 'Myanmar', 'Thailand', 'Philippines'] },
-    { region: 'South Asia', countries: ['Bangladesh', 'Sri Lanka', 'Nepal'] },
-    { region: 'Africa', countries: ['Ghana', 'Nigeria', 'Tanzania', 'Kenya'] },
-    { region: 'Others', countries: ['Haiti', 'Papua New Guinea', 'Pacific Islands'] },
-  ];
-
-  return (
-    <section className="py-20 bg-page-bg">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-start">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
-              {t('exportsTitle')}
-            </span>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-              Trusted in Nearly 20 Countries
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-brand-gray">{t('exportsText')}</p>
-            <div className="mt-6 flex items-center gap-3">
-              <div className="flex -space-x-1">
-                {['🇰🇭', '🇧🇩', '🇬🇭', '🇵🇭', '🇳🇵'].map((flag, i) => (
-                  <span key={i} className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-gray-100 text-base shadow-sm">
-                    {flag}
-                  </span>
-                ))}
-              </div>
-              <span className="text-sm text-brand-gray">+ 15 more countries</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-4">
-            {regions.map((r) => (
-              <div key={r.region} className="rounded-xl bg-white border border-border p-4">
-                <p className="text-xs font-semibold uppercase tracking-wider text-brand-orange">{r.region}</p>
-                <ul className="mt-2 space-y-1">
-                  {r.countries.map((c) => (
-                    <li key={c} className="flex items-center gap-2 text-sm text-dark">
-                      <span className="h-1.5 w-1.5 rounded-full bg-brand-orange/50 shrink-0" />
-                      {c}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ─── Values ────────────────────────────────────────────────── */
-function ValuesSection() {
-  const t = useTranslations('about');
   const values = [
-    {
-      title: t('value1Title'),
-      text: t('value1Text'),
-      icon: (
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-      ),
-    },
-    {
-      title: t('value2Title'),
-      text: t('value2Text'),
-      icon: (
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      ),
-    },
-    {
-      title: t('value3Title'),
-      text: t('value3Text'),
-      icon: (
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5}
-          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-      ),
-    },
+    { Icon: BadgeCheck, title: t('value1Title'), text: t('value1Text') },
+    { Icon: Palette, title: t('value2Title'), text: t('value2Text') },
+    { Icon: Handshake, title: t('value3Title'), text: t('value3Text') },
   ];
 
   return (
-    <section className="py-20 bg-dark">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <span className="text-xs font-semibold uppercase tracking-widest text-brand-orange">
-            {t('valuesTitle')}
-          </span>
-          <h2 className="mt-3 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            What Drives Us
-          </h2>
+    <>
+      <PageHero
+        image="/images/factory/factory-aerial.jpg"
+        alt={tf('aerial')}
+        title={t('title')}
+        text={t('subtitle')}
+        crumbs={[{ href: '/', label: tl('home') }, { label: t('title') }]}
+        crumbLabel={tl('breadcrumb')}
+        size="compact"
+      />
+
+      <section aria-labelledby="story-title" className={`frame ${sectionGap}`}>
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-center">
+          <div className="lg:col-span-6">
+            <h2 id="story-title" data-reveal className={h2}>{t('storyTitle')}</h2>
+            <p data-reveal className="mt-6 max-w-[64ch] text-[17px] leading-[1.55] text-ink">{t('storyText')}</p>
+            <p data-reveal className="mt-4 max-w-[64ch] text-[17px] leading-[1.55] text-ink">{t('storyText2')}</p>
+          </div>
+          <ul className="grid grid-cols-2 gap-3 lg:col-span-6">
+            {photos.map((p, i) => (
+              <li key={p.src} data-reveal style={{ ['--d' as string]: `${i * 80}ms` }} className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-stone">
+                <Image src={p.src} alt={p.alt} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
+              </li>
+            ))}
+          </ul>
         </div>
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-3">
-          {values.map((v) => (
-            <div key={v.title} className="text-center">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-orange/15">
-                <svg className="h-7 w-7 text-brand-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  {v.icon}
-                </svg>
-              </div>
-              <h3 className="mt-5 text-lg font-semibold text-white">{v.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-white/60">{v.text}</p>
+      </section>
+
+      <section aria-label={t('statsLabel')} className={`frame ${sectionGap}`}>
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-10 rounded-3xl bg-brand-orange px-6 py-10 text-ink md:grid-cols-4 md:px-12">
+          {stats.map((s) => (
+            <div key={s.label} data-reveal>
+              <dt className="sr-only">{s.label}</dt>
+              <dd className="num text-[clamp(48px,6vw,96px)] font-bold leading-[0.9] tracking-[-0.04em]">{s.value}</dd>
+              <dd className="mt-2 text-[17px] font-semibold">{s.label}</dd>
             </div>
           ))}
-        </div>
-      </div>
-    </section>
-  );
-}
+        </dl>
+      </section>
 
-/* ─── CTA ───────────────────────────────────────────────────── */
-function CtaSection() {
-  return (
-    <section className="py-20 bg-page-bg">
-      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-        <h2 className="text-3xl font-bold tracking-tight text-dark sm:text-4xl">
-          Ready to work together?
-        </h2>
-        <p className="mt-4 text-base text-brand-gray">
-          Message us on WhatsApp for full specifications, or send an inquiry to discuss your requirements.
-        </p>
-        <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Link
-            href="/contact"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-brand-orange px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-orange-dark"
-          >
-            Contact Us
-          </Link>
-          <a
-            href="https://wa.me/84946964669"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-11 items-center justify-center rounded-md bg-[#25D366] px-6 text-sm font-semibold text-white transition-opacity hover:opacity-90"
-          >
-            WhatsApp
-          </a>
-        </div>
+      <div className="mt-[clamp(64px,8vw,128px)]">
+        <VideoSection />
       </div>
-    </section>
+
+      <section aria-labelledby="caps-title" className={`frame ${sectionGap}`}>
+        <div className="grid gap-10 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <h2 id="caps-title" data-reveal className={h2}>{t('capabilitiesTitle')}</h2>
+            <p data-reveal className="mt-5 max-w-[56ch] text-[17px] leading-[1.55] text-ink">{t('factoryText')}</p>
+          </div>
+          <ul className="grid gap-x-8 gap-y-6 sm:grid-cols-2 lg:col-span-8">
+            {caps.map(({ Icon, text }, i) => (
+              <li key={text} data-reveal style={{ ['--d' as string]: `${(i % 2) * 80}ms` }} className="flex items-start gap-4">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-orange text-ink">
+                  <Icon aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <span className="pt-2.5 text-[17px] leading-[1.5] text-ink">{text}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <MarketsSection locale={locale} />
+      <CertificatesSection />
+
+      <section aria-labelledby="values-title" className="mt-[clamp(64px,8vw,128px)] bg-stone">
+        <div className="frame py-[clamp(56px,7vw,104px)]">
+          <h2 id="values-title" data-reveal className={h2}>{t('valuesTitle')}</h2>
+          <ul className="mt-10 grid gap-8 md:grid-cols-3">
+            {values.map(({ Icon, title, text }, i) => (
+              <li key={title} data-reveal style={{ ['--d' as string]: `${i * 90}ms` }}>
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-ink text-white">
+                  <Icon aria-hidden="true" className="h-6 w-6" />
+                </span>
+                <h3 className="mt-5 text-[22px] font-bold text-ink">{title}</h3>
+                <p className="mt-2 max-w-[44ch] text-[17px] leading-[1.55] text-ink">{text}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <section aria-label={tl('quote')} className={`frame ${sectionGap} pb-[clamp(64px,8vw,120px)]`}>
+        <ContactCoupon />
+      </section>
+    </>
   );
 }

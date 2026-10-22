@@ -145,7 +145,7 @@
   },
   "products": {
     "title": "Products",
-    "subtitle": "Quality machinery for construction and agriculture — built to export standards.",
+    "subtitle": "Concrete mixers, stirrup benders, wheelbarrows, rice transplanters, threshers, industrial fans and engines, built to export standards.",
     "allProducts": "All Products",
     "filter": "Filter by category",
     "construction": "Construction",
@@ -161,18 +161,20 @@
     "moq": "Min. Order",
     "weight": "Weight",
     "dimensions": "Dimensions",
-    "capacity": "Capacity"
+    "capacity": "Capacity",
+    "heroAlt": "Paddy threshers in the Phu Long warehouse",
+    "viewLine": "View {name}"
   },
   "about": {
     "title": "About Phu Long",
-    "subtitle": "20 years of manufacturing excellence, trusted by partners across 20 countries.",
+    "subtitle": "More than 20 years of building machines in one Vietnamese factory, for partners in 20 countries.",
     "storyTitle": "Our Story",
     "storyText": "Founded over two decades ago, Phu Long Global Investment Co., Ltd has grown from a local mechanical workshop into a trusted export manufacturer with a global footprint. Operating from a single, modern production facility in Vietnam, our team of experienced engineers, designers, and technicians manufactures a full range of construction and agricultural machinery — all under one roof.",
     "storyText2": "We take pride in our ability to customize: from drum capacity and color to engine type and branding, every machine can be tailored to meet the specific requirements of our international partners. Today, our products serve customers in nearly 20 countries, backed by more than 70 satisfied clients worldwide.",
     "factoryTitle": "Our Factory",
     "factoryText": "Our production facility is equipped with modern machinery and staffed by skilled engineers and technicians. From metal fabrication and welding to assembly and quality control, every step of manufacturing happens under one roof — giving us full control over product quality and delivery timelines.",
     "capabilitiesTitle": "What We Can Do",
-    "cap1": "Full-range manufacturing: construction & agricultural machinery",
+    "cap1": "Full-range manufacturing: construction machinery, farm machinery and industrial fans",
     "cap2": "OEM & custom orders: colors, logos, specifications",
     "cap3": "Engine compatibility: Electric, Gasoline, Diesel",
     "cap4": "Strict quality control before every shipment",
@@ -185,7 +187,9 @@
     "value2Title": "Customization",
     "value2Text": "We adapt to your market's needs — colors, engines, specs.",
     "value3Title": "Reliability",
-    "value3Text": "20 years of on-time delivery and after-sales support."
+    "value3Text": "20 years of on-time delivery and after-sales support.",
+    "cap6": "Industrial fans built to your airflow, pressure and material",
+    "statsLabel": "Phu Long in numbers"
   },
   "contact": {
     "title": "Contact Us",
@@ -214,11 +218,25 @@
     "officeAddress": "Office Address",
     "officeAddressValue": "115 Ke Ve Street, Dong Ngac Ward, Hanoi",
     "factoryAddress": "Factory Address",
-    "factoryAddressValue": "Giao Thuy Commune, Ninh Binh Province, Vietnam"
+    "factoryAddressValue": "Giao Thuy Commune, Ninh Binh Province, Vietnam",
+    "showroomAlt": "Phu Long showroom with concrete mixers",
+    "formNote": "Fields marked * are required. We reply within 24 hours.",
+    "galleryHall": "Assembly hall",
+    "galleryLoading": "Mixer drums ready for loading",
+    "galleryContainer": "A container loaded for export"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Tips, guides and technical insights on construction and agricultural machinery."
+    "subtitle": "Buying guides, maintenance tips and technical notes on our machines, written by the people who build them.",
+    "heroAlt": "Assembly hall at the Phu Long factory",
+    "filter": "Filter articles by topic",
+    "all": "All topics",
+    "latest": "Latest article",
+    "more": "More articles",
+    "related": "Keep reading",
+    "relatedLine": "Related products",
+    "askTitle": "Questions about this?",
+    "askText": "Message our sales team for specifications, prices and shipping times."
   },
   "footer": {
     "tagline": "Manufacturing excellence for a growing world.",

@@ -145,7 +145,7 @@
   },
   "products": {
     "title": "Sản Phẩm",
-    "subtitle": "Máy móc chất lượng cao phục vụ xây dựng và nông nghiệp — đạt tiêu chuẩn xuất khẩu.",
+    "subtitle": "Máy trộn bê tông, máy uốn đai, xe rùa, máy cấy lúa, máy tuốt lúa, quạt công nghiệp và động cơ, đạt chuẩn xuất khẩu.",
     "allProducts": "Tất Cả Sản Phẩm",
     "filter": "Lọc theo danh mục",
     "construction": "Xây Dựng",
@@ -161,18 +161,20 @@
     "moq": "Đơn Hàng Tối Thiểu",
     "weight": "Trọng Lượng",
     "dimensions": "Kích Thước",
-    "capacity": "Dung Tích"
+    "capacity": "Dung Tích",
+    "heroAlt": "Máy tuốt lúa trong kho nhà máy Phú Long",
+    "viewLine": "Xem {name}"
   },
   "about": {
     "title": "Về Phú Long",
-    "subtitle": "20 năm sản xuất chất lượng cao, được tin tưởng bởi đối tác tại 20 quốc gia.",
+    "subtitle": "Hơn 20 năm làm máy tại một nhà máy ở Việt Nam, cho đối tác tại 20 quốc gia.",
     "storyTitle": "Câu Chuyện Của Chúng Tôi",
     "storyText": "Được thành lập hơn hai thập kỷ trước, Công ty TNHH Đầu Tư Phú Long Global đã phát triển từ một xưởng cơ khí địa phương thành nhà sản xuất xuất khẩu đáng tin cậy với dấu ấn toàn cầu. Hoạt động từ một nhà máy sản xuất hiện đại tại Việt Nam, đội ngũ kỹ sư, nhà thiết kế và kỹ thuật viên giàu kinh nghiệm của chúng tôi sản xuất đầy đủ các dòng máy móc xây dựng và nông nghiệp — tất cả dưới một mái nhà.",
     "storyText2": "Chúng tôi tự hào về khả năng tùy chỉnh: từ dung tích tang trống và màu sắc đến loại động cơ và thương hiệu, mọi sản phẩm đều có thể được điều chỉnh để đáp ứng yêu cầu cụ thể của đối tác quốc tế. Hiện nay, sản phẩm của chúng tôi phục vụ khách hàng tại gần 20 quốc gia, được hỗ trợ bởi hơn 70 khách hàng hài lòng trên toàn thế giới.",
     "factoryTitle": "Nhà Máy Của Chúng Tôi",
     "factoryText": "Cơ sở sản xuất của chúng tôi được trang bị máy móc hiện đại và vận hành bởi đội ngũ kỹ sư và kỹ thuật viên lành nghề. Từ gia công kim loại và hàn đến lắp ráp và kiểm soát chất lượng, mọi bước sản xuất đều diễn ra dưới một mái nhà.",
     "capabilitiesTitle": "Năng Lực Sản Xuất",
-    "cap1": "Sản xuất đa dòng: máy xây dựng & máy nông nghiệp",
+    "cap1": "Sản xuất đủ dòng: máy xây dựng, máy nông nghiệp và quạt công nghiệp",
     "cap2": "Đơn hàng OEM & tùy chỉnh: màu sắc, logo, thông số",
     "cap3": "Tương thích động cơ: Điện, Xăng, Diesel",
     "cap4": "Kiểm soát chất lượng nghiêm ngặt trước mỗi lô hàng",
@@ -185,7 +187,9 @@
     "value2Title": "Tùy Chỉnh",
     "value2Text": "Chúng tôi thích nghi với nhu cầu thị trường của bạn — màu sắc, động cơ, thông số.",
     "value3Title": "Độ Tin Cậy",
-    "value3Text": "20 năm giao hàng đúng hẹn và hỗ trợ sau bán hàng."
+    "value3Text": "20 năm giao hàng đúng hẹn và hỗ trợ sau bán hàng.",
+    "cap6": "Quạt công nghiệp làm theo lưu lượng, áp suất và vật liệu bạn cần",
+    "statsLabel": "Phú Long qua những con số"
   },
   "contact": {
     "title": "Liên Hệ",
@@ -214,11 +218,25 @@
     "officeAddress": "Địa Chỉ Văn Phòng",
     "officeAddressValue": "115 Đường Kẻ Vẽ, Phường Đông Ngạc, Hà Nội",
     "factoryAddress": "Địa Chỉ Nhà Máy",
-    "factoryAddressValue": "Xã Giao Thủy, Tỉnh Ninh Bình"
+    "factoryAddressValue": "Xã Giao Thủy, Tỉnh Ninh Bình",
+    "showroomAlt": "Phòng trưng bày máy trộn bê tông Phú Long",
+    "formNote": "Các ô có dấu * là bắt buộc. Chúng tôi phản hồi trong 24 giờ.",
+    "galleryHall": "Xưởng lắp ráp",
+    "galleryLoading": "Thùng trộn chờ đóng hàng",
+    "galleryContainer": "Container đóng hàng xuất khẩu"
   },
   "blog": {
     "title": "Blog",
-    "subtitle": "Mẹo, hướng dẫn và thông tin kỹ thuật về máy móc xây dựng và nông nghiệp."
+    "subtitle": "Hướng dẫn chọn mua, mẹo bảo dưỡng và ghi chú kỹ thuật về máy móc, do chính người làm ra máy viết.",
+    "heroAlt": "Xưởng lắp ráp tại nhà máy Phú Long",
+    "filter": "Lọc bài viết theo chủ đề",
+    "all": "Tất cả chủ đề",
+    "latest": "Bài mới nhất",
+    "more": "Bài viết khác",
+    "related": "Đọc tiếp",
+    "relatedLine": "Sản phẩm liên quan",
+    "askTitle": "Cần tư vấn thêm?",
+    "askText": "Nhắn bộ phận kinh doanh để nhận thông số, giá và thời gian giao hàng."
   },
   "footer": {
     "tagline": "Sản xuất chất lượng cao cho thế giới đang phát triển.",

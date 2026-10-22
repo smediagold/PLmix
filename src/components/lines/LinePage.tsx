@@ -6,7 +6,7 @@ import ModelGrid from './ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 import ContactCoupon from '@/components/contact/ContactCoupon';
 
-const gap = 'pt-[clamp(96px,12vw,192px)]';
+const gap = 'pt-[clamp(64px,8vw,128px)]';
 export default async function LinePage({ line, locale }: { line: ProductLine; locale: string }) {
   const t = await getTranslations('line');
   const items = lineProducts(line);
@@ -23,7 +23,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
     <>
       <section
         aria-labelledby="line-title"
-        className="relative isolate flex min-h-[620px] flex-col overflow-hidden bg-ink text-white lg:h-[calc(100svh-72px)]"
+        className="relative isolate flex min-h-[620px] flex-col overflow-hidden bg-ink text-white lg:h-[calc(100svh-80px)]"
       >
         <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority sizes="100vw" className="-z-10 object-cover" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.7)_0%,rgba(28,28,30,0.3)_45%,rgba(28,28,30,0)_100%)]" />
@@ -44,7 +44,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
           <h1 id="line-title" className="max-w-[18ch] text-[clamp(36px,5vw,76px)] font-bold leading-[1.02] tracking-[-0.03em]">
             {name}
           </h1>
-          <p className="mt-5 max-w-[56ch] text-[22px] leading-[1.4] text-white/90">{pick(line.tagline, locale)}</p>
+          <p className="mt-5 max-w-[56ch] text-[18px] leading-[1.45] text-white/90 md:text-[22px] md:leading-[1.4]">{pick(line.tagline, locale)}</p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
               href={{ pathname: '/contact', query: { products: name } }}
@@ -169,7 +169,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
       )}
 
       {custom && (
-        <section aria-labelledby="custom-title" className={`mt-[clamp(96px,12vw,192px)] bg-stone`}>
+        <section aria-labelledby="custom-title" className={`mt-[clamp(64px,8vw,128px)] bg-stone`}>
           <div className="frame grid gap-10 py-[clamp(64px,8vw,120px)] lg:grid-cols-12">
             <div className="lg:col-span-5">
               <h2 id="custom-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
@@ -219,7 +219,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
         </ul>
       </section>
 
-      <section aria-label={t('quote')} className={`frame ${gap} pb-[clamp(96px,10vw,160px)]`}>
+      <section aria-label={t('quote')} className={`frame ${gap} pb-[clamp(64px,8vw,120px)]`}>
         <ContactCoupon defaultProduct={name} />
       </section>
     </>
