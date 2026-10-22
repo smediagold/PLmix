@@ -2,18 +2,17 @@
 
 import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { getProductById } from '@/data/products';
 import { useInquiry } from './InquiryContext';
 
-export default function InquiryBar() {
+export default function InquiryBar({ skuNames }: { skuNames: Record<string, { en: string; vi: string }> }) {
   const t = useTranslations('inquiry');
   const locale = useLocale();
   const { skus, clear } = useInquiry();
   if (skus.length === 0) return null;
 
   const names = skus.map((s) => {
-    const p = getProductById(s);
-    return p ? `${p.id} (${locale === 'vi' ? p.name_vi : p.name_en})` : s;
+    const n = skuNames[s];
+    return n ? `${s} (${locale === 'vi' ? n.vi : n.en})` : s;
   });
   const message = `${t('waIntro')}\n${names.map((n) => `- ${n}`).join('\n')}`;
   const wa = `https://wa.me/84946964669?text=${encodeURIComponent(message)}`;

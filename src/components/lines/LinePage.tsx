@@ -23,14 +23,16 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
     <>
       <section
         aria-labelledby="line-title"
-        className="relative isolate flex min-h-[620px] flex-col overflow-hidden bg-ink text-white lg:h-[calc(100svh-80px)]"
+        className="relative isolate bg-ink text-white lg:flex lg:h-[min(calc(100svh-80px),56.25vw)] lg:min-h-[560px] lg:flex-col lg:overflow-hidden"
       >
-        <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority sizes="100vw" className="-z-10 object-cover" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.7)_0%,rgba(28,28,30,0.3)_45%,rgba(28,28,30,0)_100%)]" />
-        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[linear-gradient(0deg,rgba(28,28,30,0.92)_0%,rgba(28,28,30,0.55)_45%,rgba(28,28,30,0)_100%)]" />
-        <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-28 bg-[linear-gradient(180deg,rgba(28,28,30,0.55)_0%,rgba(28,28,30,0)_100%)]" />
+        <div className="relative aspect-[16/9] lg:absolute lg:inset-0 lg:-z-10 lg:aspect-auto">
+          <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority sizes="100vw" className="object-cover" />
+          <div aria-hidden="true" className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(28,28,30,0.7)_0%,rgba(28,28,30,0.3)_45%,rgba(28,28,30,0)_100%)] lg:block" />
+          <div aria-hidden="true" className="absolute inset-x-0 bottom-0 hidden h-2/3 bg-[linear-gradient(0deg,rgba(28,28,30,0.92)_0%,rgba(28,28,30,0.55)_45%,rgba(28,28,30,0)_100%)] lg:block" />
+          <div aria-hidden="true" className="absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(28,28,30,0.6)_0%,rgba(28,28,30,0)_100%)]" />
+        </div>
 
-        <nav aria-label={t('breadcrumb')} className="frame pt-4 text-[15px] text-white/80">
+        <nav aria-label={t('breadcrumb')} className="frame absolute inset-x-0 top-0 pt-2 text-[15px] text-white/85 lg:static lg:pt-4">
           <ol className="flex flex-wrap items-center gap-2">
             <li><Link href="/" className="inline-flex min-h-11 items-center hover:text-white hover:underline">{t('home')}</Link></li>
             <li aria-hidden="true">/</li>
@@ -40,7 +42,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
           </ol>
         </nav>
 
-        <div className="frame mt-auto pb-[clamp(40px,6vh,72px)] pt-24">
+        <div className="frame pb-[clamp(40px,6vh,72px)] pt-8 lg:mt-auto lg:pt-24">
           <h1 id="line-title" className="max-w-[18ch] text-[clamp(36px,5vw,76px)] font-bold leading-[1.02] tracking-[-0.03em]">
             {name}
           </h1>
@@ -79,8 +81,8 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
               <li key={b.src} data-reveal style={{ ['--d' as string]: `${i * 90}ms` }} className={b.wide ? 'md:col-span-7' : line.banner!.some((x) => x.wide) ? 'md:col-span-5' : 'md:col-span-6'}>
                 <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-stone md:aspect-auto md:h-[min(62svh,560px)]">
                   <Image src={b.src} alt={pick(b.caption, locale)} fill sizes="(min-width: 768px) 58vw, 100vw" className="drift object-cover" />
+                  <p className="absolute bottom-3 left-3 right-3 w-fit max-w-[calc(100%-24px)] rounded-full bg-ink/75 px-3.5 py-1.5 text-[15px] font-semibold text-white">{pick(b.caption, locale)}</p>
                 </div>
-                <p className="mt-2.5 text-[15px] text-soft">{pick(b.caption, locale)}</p>
               </li>
             ))}
           </ul>
@@ -145,21 +147,20 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
               </Link>
             </div>
             <div className="min-w-0 lg:col-span-9">
-              <ul className="grid grid-cols-2 gap-x-2 gap-y-6 lg:grid-cols-4 lg:gap-x-1.5">
+              <ul className="grid grid-cols-2 gap-2 lg:grid-cols-4">
                 {line.video && (
                   <li className="col-span-2 lg:row-span-2" data-reveal>
-                    <div className="aspect-[4/5] bg-stone">
+                    <div className="aspect-[4/5] overflow-hidden rounded-2xl bg-stone">
                       <LoopVideo src={line.video} poster={line.poster} label={t('video', { name })} className="h-full" />
                     </div>
-                    <p className="mt-2 text-[15px] font-semibold text-ink">{t('video', { name })}</p>
                   </li>
                 )}
                 {line.photos.slice(0, line.video ? 4 : 8).map((ph, i) => (
                   <li key={ph.src} data-reveal style={{ ['--d' as string]: `${(i + 1) * 70}ms` }}>
-                    <div className="relative aspect-[4/5] overflow-hidden bg-white">
+                    <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-white">
                       <Image src={ph.src} alt={pick(ph.caption, locale)} fill sizes="(min-width: 1024px) 18vw, 50vw" className="object-cover" />
+                      <p className="absolute bottom-3 left-3 right-3 w-fit max-w-[calc(100%-24px)] rounded-full bg-ink/75 px-3.5 py-1.5 text-[15px] font-semibold text-white">{pick(ph.caption, locale)}</p>
                     </div>
-                    <p className="mt-2 text-[15px] text-ink">{pick(ph.caption, locale)}</p>
                   </li>
                 ))}
               </ul>

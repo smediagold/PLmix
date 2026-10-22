@@ -5,7 +5,10 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ['image/avif', 'image/webp'],
+    formats: ['image/webp'],
+    minimumCacheTTL: 2678400,
+    deviceSizes: [640, 828, 1080, 1440, 1920, 2560],
+    imageSizes: [64, 96, 128, 256, 384],
   },
 };
 

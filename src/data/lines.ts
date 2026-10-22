@@ -1,10 +1,11 @@
 import { products, type Product, type Subcategory } from './products';
+import { groups, pick, type Bi, type LineGroup, type NavLine, type Tone } from './nav';
 
-export type LineGroup = 'construction' | 'agriculture' | 'industrial' | 'engine';
-type Bi = { en: string; vi: string };
+export { groups, pick };
+export type { LineGroup, Tone };
+
 type Fact = { label: Bi; value: Bi };
 
-export type Tone = 'orange' | 'graphite' | 'field' | 'rust' | 'ink';
 
 export interface ProductLine {
   slug: string;
@@ -59,7 +60,7 @@ export const lines: ProductLine[] = [
       { src: '/images/products/concrete-mixer/cm-500-3.jpg', caption: { en: '500 L mixer', vi: 'Máy trộn 500 L' } },
     ],
     video: '/videos/cm-350l.mp4',
-    poster: '/images/products/concrete-mixer/cm-350-2w-p-2.png',
+    poster: '/images/posters/concrete-mixers.jpg',
     banner: [
       { src: '/images/factory/showroom.jpg', caption: { en: 'Our showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' }, wide: true },
       { src: '/images/banners/mixer-outdoor.jpg', caption: { en: 'Ready to work, gasoline engine', vi: 'Sẵn sàng làm việc, động cơ xăng' } },
@@ -95,7 +96,7 @@ export const lines: ProductLine[] = [
       { src: '/images/products/stirrup-bending/sbm-detail-26.png', caption: { en: 'Servo model, rear view', vi: 'Bản servo, nhìn sau' } },
     ],
     video: '/videos/sbm.mp4',
-    poster: '/images/products/stirrup-bending/sbm-detail-21.png',
+    poster: '/images/posters/stirrup-bending-machines.jpg',
     tone: 'graphite',
   },
   {
@@ -159,7 +160,7 @@ export const lines: ProductLine[] = [
       { src: '/images/products/thresher/pl1200-1.jpg', caption: { en: 'PL1200', vi: 'PL1200' } },
     ],
     video: '/videos/thresher.mp4',
-    poster: '/images/products/thresher/detail.jpg',
+    poster: '/images/posters/paddy-threshers.jpg',
     banner: [
       { src: '/images/banners/threshing-field.jpg', caption: { en: 'Harvest day with a Phu Long thresher', vi: 'Ngày thu hoạch với máy tuốt Phú Long' } },
       { src: '/images/banners/threshers-yard.jpg', caption: { en: 'Threshers ready for delivery', vi: 'Máy tuốt chờ giao hàng' } },
@@ -196,7 +197,7 @@ export const lines: ProductLine[] = [
       { src: '/images/products/industrial-fan/plax-204-photo-6.jpg', caption: { en: 'Duct axial fans', vi: 'Quạt hướng trục ống tròn' } },
     ],
     video: '/videos/axial-fan-1.mp4',
-    poster: '/images/products/industrial-fan/axial-fan-1-poster.jpg',
+    poster: '/images/posters/industrial-fans.jpg',
     banner: [
       { src: '/images/products/industrial-fan/plax-204-photo-1.jpg', caption: { en: 'Axial fan PLAX 204 in our workshop', vi: 'Quạt hướng trục PLAX 204 tại xưởng' } },
       { src: '/images/products/industrial-fan/plcf-121-photo-2.jpg', caption: { en: 'Centrifugal fans ready to ship', vi: 'Quạt ly tâm chờ xuất hàng' } },
@@ -287,12 +288,6 @@ export const lines: ProductLine[] = [
   },
 ];
 
-export const groups: { id: LineGroup; name: Bi }[] = [
-  { id: 'construction', name: { en: 'Construction', vi: 'Xây dựng' } },
-  { id: 'agriculture', name: { en: 'Agriculture', vi: 'Nông nghiệp' } },
-  { id: 'industrial', name: { en: 'Industrial', vi: 'Công nghiệp' } },
-  { id: 'engine', name: { en: 'Engines', vi: 'Động cơ' } },
-];
 
 export const mainLines = lines.filter((l) => l.main);
 export const otherLines = lines.filter((l) => !l.main);
@@ -304,4 +299,9 @@ export const lineProducts = (line: ProductLine): Product[] =>
 
 export const lineOfProduct = (p: Product) => lines.find((l) => l.subcategories.includes(p.subcategory));
 
-export const pick = (b: Bi, locale: string) => (locale === 'vi' ? b.vi : b.en);
+
+export const navLines = (): NavLine[] =>
+  lines.map((l) => ({ slug: l.slug, group: l.group, tone: l.tone, cover: l.cover, name: l.name, count: lineProducts(l).length }));
+
+export const skuNames = (): Record<string, Bi> =>
+  Object.fromEntries(products.map((p) => [p.id, { en: p.name_en, vi: p.name_vi }]));

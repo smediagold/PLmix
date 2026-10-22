@@ -7,6 +7,23 @@ export default function LoopVideo({ src, poster, label, className = '' }: { src:
   const t = useTranslations('media');
   const ref = useRef<HTMLVideoElement>(null);
   const [playing, setPlaying] = useState(false);
+  const [near, setNear] = useState(false);
+
+  useEffect(() => {
+    const v = ref.current;
+    if (!v) return;
+    const nearIo = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setNear(true);
+          nearIo.disconnect();
+        }
+      },
+      { rootMargin: '400px 0px' },
+    );
+    nearIo.observe(v);
+    return () => nearIo.disconnect();
+  }, []);
 
   useEffect(() => {
     const v = ref.current;
@@ -38,7 +55,7 @@ export default function LoopVideo({ src, poster, label, className = '' }: { src:
       <video
         ref={ref}
         src={src}
-        poster={poster}
+        poster={near ? poster : undefined}
         muted
         loop
         playsInline

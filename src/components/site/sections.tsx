@@ -1,5 +1,6 @@
 import { getTranslations } from 'next-intl/server';
 import Image from 'next/image';
+import LazyVideo from './LazyVideo';
 import { pick } from '@/data/lines';
 import { markets, testimonials } from '@/data/proof';
 
@@ -18,15 +19,7 @@ export async function VideoSection() {
           <p data-reveal className="max-w-[68ch] text-[17px] leading-[1.55] text-white/85 lg:col-span-7">{t('text')}</p>
         </div>
         <div data-reveal className="mt-10 aspect-video bg-black">
-          <video
-            src="/videos/company.mp4"
-            poster="/images/factory/company-poster.jpg"
-            controls
-            playsInline
-            preload="none"
-            aria-label={t('label')}
-            className="h-full w-full object-cover"
-          />
+          <LazyVideo src="/videos/company.mp4" poster="/images/factory/company-poster.jpg" label={t('label')} />
         </div>
       </div>
     </section>

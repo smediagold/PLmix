@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
-import { groups, lines, lineProducts, pick } from '@/data/lines';
+import { groups, pick, type NavLine } from '@/data/nav';
 
-export default function Header({ locale }: { locale: string }) {
+export default function Header({ locale, lines }: { locale: string; lines: NavLine[] }) {
   const t = useTranslations('nav');
   const pathname = usePathname();
   const router = useRouter();
@@ -26,7 +26,7 @@ export default function Header({ locale }: { locale: string }) {
     const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
     if (w.requestIdleCallback) w.requestIdleCallback(warm);
     else setTimeout(warm, 1500);
-  }, [router]);
+  }, [router, lines]);
 
   useEffect(() => {
     if (!productsOpen) return;
@@ -59,7 +59,7 @@ export default function Header({ locale }: { locale: string }) {
       <div ref={panelRef}>
         <div className="frame flex h-[80px] items-center justify-between gap-6">
           <Link href="/" className="flex min-h-11 shrink-0 items-center" aria-label="Phu Long Mechanical, home">
-            <Image src="/logo-3d.png" alt="Phu Long Mechanical" width={472} height={300} className="h-[70px] w-auto" priority />
+            <Image src="/logo-3d.png" alt="Phu Long Mechanical" width={472} height={300} sizes="110px" className="h-[70px] w-auto" priority />
           </Link>
 
           <nav aria-label={t('main')} className="hidden items-center gap-9 lg:flex">
@@ -133,7 +133,7 @@ export default function Header({ locale }: { locale: string }) {
                                 {pick(l.name, locale)}
                               </span>
                               <span className="num block text-[15px] text-soft">
-                                {t('models', { count: lineProducts(l).length })}
+                                {t('models', { count: l.count })}
                               </span>
                             </span>
                           </Link>
