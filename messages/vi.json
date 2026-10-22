@@ -57,14 +57,14 @@
       "countries": "Quốc gia xuất khẩu",
       "customers": "Khách hàng doanh nghiệp",
       "factory": "Nhà máy chuyên biệt",
-      "weld": "Hàn thùng trộn",
-      "weldNote": "Quay tại xưởng lắp ráp",
       "aerial": "Nhà máy nhìn từ trên cao",
       "aerialNote": "Giao Thủy, Ninh Bình",
       "hall": "Xưởng lắp ráp",
       "hallNote": "Máy trộn chờ lắp động cơ",
       "warehouse": "Chờ đóng container",
-      "warehouseNote": "Thùng trộn trước khi đóng container FCL"
+      "warehouseNote": "Thùng trộn trước khi đóng container FCL",
+      "showroom": "Phòng trưng bày",
+      "showroomNote": "Máy trộn bốn màu"
     },
     "customization": {
       "title": "Tùy Chỉnh Theo Yêu Cầu",
@@ -100,8 +100,51 @@
       "title": "Nhà nhập khẩu nói gì",
       "text": "Hơn 70 khách hàng doanh nghiệp tại 20 quốc gia. Một vài người trong số họ chia sẻ."
     },
-    "mixers": {
-      "compare": "So sánh {count} model"
+    "feature": {
+      "title": "Thiết kế quanh một thùng trộn chắc chắn",
+      "text": "Mỗi máy trộn Phú Long bắt đầu từ tấm thép phẳng tại nhà máy và xuất xưởng thành máy hoàn chỉnh, đúng dung tích, động cơ và màu sắc thị trường của bạn cần.",
+      "cta": "Xem tất cả máy trộn bê tông",
+      "quote": "Hỏi giá",
+      "drum": "Thùng 250 – 500 L",
+      "drumText": "Từ loại 250 L nhỏ gọn tới máy công trình 500 L.",
+      "steel": "Thép thùng 2 – 3 mm",
+      "steelText": "Thùng trên 2 – 2,5 mm, thùng dưới 2,5 – 3 mm. Có thể làm dày hơn.",
+      "engine": "Điện, xăng hoặc diesel",
+      "engineText": "Động cơ điện 2,2 – 5,5 kW, xăng GP160 / GP200, hoặc diesel.",
+      "wheels": "Bánh đặc hoặc bánh hơi",
+      "wheelsText": "2, 3 hoặc 4 bánh, lốp đặc 4.00-8 hoặc lốp hơi 5.00-12."
+    },
+    "colours": {
+      "title": "Màu của bạn, logo của bạn",
+      "text": "Vàng, cam, đỏ, xanh dương, xanh lá, xám hoặc màu thương hiệu của bạn, kèm logo và tem nhãn. Có thể ghép nhiều màu trong một container.",
+      "yellow": "Vàng",
+      "orange": "Cam",
+      "red": "Đỏ",
+      "blackRed": "Đỏ và đen",
+      "blue": "Xanh dương"
+    },
+    "video": {
+      "title": "Bên trong nhà máy",
+      "text": "Hai phút tham quan nhà máy Phú Long tại Giao Thủy, Ninh Bình: phòng trưng bày, các xưởng sản xuất, khu gia công và toàn cảnh nhà máy từ trên cao.",
+      "label": "Video tham quan nhà máy Phú Long"
+    },
+    "process": {
+      "title": "Một máy trộn được làm ra thế nào",
+      "text": "Mọi công đoạn đều diễn ra trong một nhà máy, nên chúng tôi kiểm soát thép, mối hàn và độ hoàn thiện của từng máy xuất xưởng.",
+      "cutting": "Cắt thép",
+      "cuttingText": "Tấm thép thùng và chi tiết khung được cắt trên bàn cắt CNC.",
+      "machining": "Gia công cơ khí",
+      "machiningText": "Trục, bạc và chi tiết bánh răng được tiện trên máy tiện.",
+      "welding": "Hàn",
+      "weldingText": "Hàn robot và hàn tay liên kết thùng trộn với khung máy.",
+      "finishing": "Mài và hoàn thiện",
+      "finishingText": "Mọi mối hàn được mài phẳng trước khi sơn.",
+      "assembly": "Lắp ráp",
+      "assemblyText": "Thùng, khung, động cơ và bánh xe được lắp ráp tại xưởng chính.",
+      "finished": "Kiểm tra và sẵn sàng",
+      "finishedText": "Máy thành phẩm được chạy thử và xếp hàng chờ đóng gói.",
+      "loading": "Đóng container xuất khẩu",
+      "loadingText": "Đóng hàng FCL hoặc LCL ngay tại bãi nhà máy và xuất đi từ Việt Nam."
     }
   },
   "products": {

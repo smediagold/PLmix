@@ -57,14 +57,14 @@
       "countries": "Countries exported to",
       "customers": "Business customers",
       "factory": "Dedicated factory",
-      "weld": "Drum welding",
-      "weldNote": "Filmed in our assembly hall",
       "aerial": "Our plant from the air",
       "aerialNote": "Giao Thuy, Ninh Binh",
       "hall": "Assembly hall",
       "hallNote": "Mixers waiting for engines",
       "warehouse": "Ready for loading",
-      "warehouseNote": "Mixer drums before an FCL load"
+      "warehouseNote": "Mixer drums before an FCL load",
+      "showroom": "Showroom",
+      "showroomNote": "Mixers in four colours"
     },
     "customization": {
       "title": "Customized to Your Need",
@@ -100,8 +100,51 @@
       "title": "What importers tell us",
       "text": "More than 70 business customers in 20 countries. A few of them, in their own words."
     },
-    "mixers": {
-      "compare": "Compare all {count} models"
+    "feature": {
+      "title": "Built around a heavy drum",
+      "text": "Every Phu Long mixer starts as flat steel in our factory and leaves as a finished machine, built to the capacity, engine and colour your market wants.",
+      "cta": "See all concrete mixers",
+      "quote": "Ask for a price",
+      "drum": "250 – 500 L drum",
+      "drumText": "From the compact 250 L to the 500 L site mixer.",
+      "steel": "2 – 3 mm drum steel",
+      "steelText": "Upper drum 2 – 2.5 mm, lower drum 2.5 – 3 mm. Thicker on request.",
+      "engine": "Electric, gasoline or diesel",
+      "engineText": "Electric motor 2.2 – 5.5 kW, GP160 / GP200 gasoline, or diesel.",
+      "wheels": "Solid or pneumatic tyres",
+      "wheelsText": "2, 3 or 4 wheels on solid 4.00-8 or pneumatic 5.00-12 tyres."
+    },
+    "colours": {
+      "title": "Your colour, your logo",
+      "text": "Yellow, orange, red, blue, green, grey or your brand colour, with your logo and decals. Several colours can share one container.",
+      "yellow": "Yellow",
+      "orange": "Orange",
+      "red": "Red",
+      "blackRed": "Red and black",
+      "blue": "Blue"
+    },
+    "video": {
+      "title": "Inside our factory",
+      "text": "A two-minute tour of the Phu Long plant in Giao Thuy, Ninh Binh: the showroom, the production halls, the machine shop and the site from the air.",
+      "label": "Phu Long factory tour video"
+    },
+    "process": {
+      "title": "How a mixer is made",
+      "text": "Every step happens in one factory, so we control the steel, the welds and the finish of each machine we ship.",
+      "cutting": "Cutting the steel",
+      "cuttingText": "Drum plates and frame parts are cut on our CNC cutting table.",
+      "machining": "Machining",
+      "machiningText": "Shafts, bushings and gear parts are turned on the lathe.",
+      "welding": "Welding",
+      "weldingText": "Robot and manual welding join the drum and the frame.",
+      "finishing": "Grinding and finishing",
+      "finishingText": "Every weld is ground smooth before the machine is painted.",
+      "assembly": "Assembly",
+      "assemblyText": "Drums, frames, engines and wheels come together in the main hall.",
+      "finished": "Checked and ready",
+      "finishedText": "Finished mixers are test-run and lined up for packing.",
+      "loading": "Loaded for export",
+      "loadingText": "Packed into FCL or LCL containers in our yard and shipped from Vietnam."
     }
   },
   "products": {

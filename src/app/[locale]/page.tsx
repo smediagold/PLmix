@@ -2,9 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { getLine, lineProducts, pick } from '@/data/lines';
+import { pick } from '@/data/lines';
 import { markets, orders, testimonials } from '@/data/proof';
-import ModelGrid from '@/components/lines/ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 import ContactCoupon from '@/components/contact/ContactCoupon';
 
@@ -37,7 +36,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   return (
     <>
       <HeroSection />
-      <MixersSection locale={locale} />
+      <FeatureSection />
+      <ColoursSection />
+      <VideoSection />
+      <ProcessSection />
       <FactorySection />
       <MarketsSection locale={locale} />
       <CertificatesSection />
@@ -87,28 +89,167 @@ async function HeroSection() {
   );
 }
 
-async function MixersSection({ locale }: { locale: string }) {
-  const t = await getTranslations('home.mixers');
-  const line = getLine('concrete-mixers')!;
-  const items = lineProducts(line);
+async function FeatureSection() {
+  const t = await getTranslations('home.feature');
+  const spots = [
+    { x: 47, y: 30, title: t('drum'), text: t('drumText'), up: false },
+    { x: 50, y: 53, title: t('steel'), text: t('steelText'), up: false },
+    { x: 81, y: 44, title: t('engine'), text: t('engineText'), up: true },
+    { x: 82, y: 71, title: t('wheels'), text: t('wheelsText'), up: true },
+  ];
   return (
-    <section aria-labelledby="mixers-title" className={`frame ${gap}`}>
-      <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
-        <div className="lg:col-span-5">
-          <h2 id="mixers-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
-            {pick(line.name, locale)}
+    <section aria-labelledby="feature-title" className={`frame ${gap}`}>
+      <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+        <div className="lg:col-span-4">
+          <h2 id="feature-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+            {t('title')}
           </h2>
-          <p data-reveal className="mt-4 max-w-[40ch] text-[22px] leading-[1.45] text-ink">{pick(line.tagline, locale)}</p>
+          <p data-reveal className="mt-5 max-w-[40ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
+          <dl className="mt-8 space-y-5 lg:hidden">
+            {spots.map((s) => (
+              <div key={s.title}>
+                <dt className="text-[17px] font-semibold text-ink">{s.title}</dt>
+                <dd className="mt-1 text-[15px] leading-[1.5] text-soft">{s.text}</dd>
+              </div>
+            ))}
+          </dl>
+          <div data-reveal className="mt-9 flex flex-wrap gap-3">
+            <Link
+              href="/products/concrete-mixers"
+              className="press inline-flex min-h-12 items-center bg-brand-orange px-6 text-[17px] font-semibold text-ink hover:bg-[#FFB840]"
+            >
+              {t('cta')}
+            </Link>
+            <Link
+              href={{ pathname: '/contact', query: { products: 'Concrete mixer' } }}
+              className="press inline-flex min-h-12 items-center bg-stone px-6 text-[17px] font-semibold text-ink hover:bg-[#E0D9CE]"
+            >
+              {t('quote')}
+            </Link>
+          </div>
         </div>
-        <div className="lg:col-span-7">
-          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-ink">{pick(line.intro, locale)}</p>
-          <Link href="/products/concrete-mixers" className="mt-4 inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
-            {t('compare', { count: items.length })}
-          </Link>
+
+        <div className="lg:col-span-8" data-tone="orange">
+          <div data-reveal className="tone-tile relative aspect-[938/870]">
+            <Image
+              src="/images/mixer/feature.jpg"
+              alt="Phu Long 350 L concrete mixer with pneumatic tyres and gasoline engine"
+              fill
+              sizes="(min-width: 1024px) 62vw, 100vw"
+              className="multiply object-contain"
+            />
+            {spots.map((s, i) => (
+              <div key={s.title} className="absolute" style={{ left: `${s.x}%`, top: `${s.y}%` }}>
+                <span aria-hidden="true" className="absolute -left-[9px] -top-[9px] block h-[18px] w-[18px] rounded-full bg-ink outline outline-4 outline-white/80" />
+                <div
+                  data-reveal
+                  style={{ ['--d' as string]: `${200 + i * 120}ms` }}
+                  className={`absolute right-[14px] hidden w-[230px] bg-white p-3.5 lg:block ${s.up ? 'bottom-[14px]' : 'top-[14px]'}`}
+                >
+                  <p className="text-[15px] font-semibold leading-snug text-ink">{s.title}</p>
+                  <p className="mt-1 text-[15px] leading-[1.45] text-soft">{s.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-      <div className="mt-12">
-        <ModelGrid items={items} locale={locale} />
+    </section>
+  );
+}
+
+async function ColoursSection() {
+  const t = await getTranslations('home.colours');
+  const colours = [
+    { src: '/images/mixer/colour-yellow.jpg', name: t('yellow'), w: 980 },
+    { src: '/images/mixer/colour-orange.jpg', name: t('orange'), w: 1116 },
+    { src: '/images/mixer/colour-red.jpg', name: t('red'), w: 980 },
+    { src: '/images/mixer/colour-black-red.jpg', name: t('blackRed'), w: 980 },
+    { src: '/images/mixer/colour-blue.jpg', name: t('blue'), w: 1152 },
+  ];
+  return (
+    <section aria-labelledby="colours-title" className="mt-[clamp(96px,12vw,192px)] bg-stone">
+      <div className="frame py-[clamp(64px,8vw,120px)]">
+        <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <h2 id="colours-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink lg:col-span-5">
+            {t('title')}
+          </h2>
+          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-ink lg:col-span-7">{t('text')}</p>
+        </div>
+        <ul className="mt-12 grid grid-cols-2 gap-x-3 gap-y-8 lg:grid-cols-5">
+          {colours.map((c, i) => (
+            <li key={c.src} data-reveal style={{ ['--d' as string]: `${i * 80}ms` }} className={i === 0 ? 'col-span-2 lg:col-span-1' : ''}>
+              <div className="relative aspect-square bg-stone">
+                <Image src={c.src} alt={`${c.name} concrete mixer`} fill sizes="(min-width: 1024px) 20vw, 50vw" className="multiply object-contain" />
+              </div>
+              <p className="mt-2 text-center text-[17px] font-semibold text-ink">{c.name}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
+
+async function VideoSection() {
+  const t = await getTranslations('home.video');
+  return (
+    <section aria-labelledby="video-title" className="bg-ink text-white">
+      <div className="frame py-[clamp(72px,8vw,128px)]">
+        <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+          <h2 id="video-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] lg:col-span-5">
+            {t('title')}
+          </h2>
+          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-white/85 lg:col-span-7">{t('text')}</p>
+        </div>
+        <div data-reveal className="mt-10 aspect-video bg-black">
+          <video
+            src="/videos/company.mp4"
+            poster="/images/factory/company-poster.jpg"
+            controls
+            playsInline
+            preload="none"
+            aria-label={t('label')}
+            className="h-full w-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
+
+async function ProcessSection() {
+  const t = await getTranslations('home.process');
+  const steps = ['cutting', 'machining', 'welding', 'finishing', 'assembly', 'finished'] as const;
+  return (
+    <section aria-labelledby="process-title" className={`frame ${gap}`}>
+      <div className="grid gap-12 lg:grid-cols-12">
+        <div className="lg:col-span-4">
+          <div className="lg:sticky lg:top-[112px]">
+            <h2 id="process-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+              {t('title')}
+            </h2>
+            <p data-reveal className="mt-5 max-w-[40ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
+          </div>
+        </div>
+        <ol className="grid gap-x-3 gap-y-12 sm:grid-cols-2 lg:col-span-8">
+          {steps.map((s, i) => (
+            <li key={s} data-reveal style={{ ['--d' as string]: `${(i % 2) * 90}ms` }}>
+              <div className="aspect-video bg-stone">
+                <LoopVideo src={`/videos/process/${s}.mp4`} poster={`/images/process/${s}.jpg`} label={t(s)} className="h-full" />
+              </div>
+              <h3 className="mt-3 text-[22px] font-bold leading-tight text-ink">{t(s)}</h3>
+              <p className="mt-1.5 max-w-[44ch] text-[17px] leading-[1.55] text-ink">{t(`${s}Text`)}</p>
+            </li>
+          ))}
+          <li data-reveal className="sm:col-span-2">
+            <div className="relative aspect-[21/9] overflow-hidden bg-stone">
+              <Image src="/images/factory/loading-lcl.jpg" alt={t('loading')} fill sizes="(min-width: 1024px) 66vw, 100vw" className="drift object-cover" />
+            </div>
+            <h3 className="mt-3 text-[22px] font-bold leading-tight text-ink">{t('loading')}</h3>
+            <p className="mt-1.5 max-w-[56ch] text-[17px] leading-[1.55] text-ink">{t('loadingText')}</p>
+          </li>
+        </ol>
       </div>
     </section>
   );
@@ -126,6 +267,7 @@ async function FactorySection() {
     { src: '/images/factory/factory-1.jpg', name: t('aerial'), note: t('aerialNote') },
     { src: '/images/factory/factory-3.jpg', name: t('hall'), note: t('hallNote') },
     { src: '/images/factory/loading-fcl.jpg', name: t('warehouse'), note: t('warehouseNote') },
+    { src: '/images/factory/showroom.png', name: t('showroom'), note: t('showroomNote') },
   ];
   return (
     <section aria-labelledby="factory-title" className={`frame ${gap}`}>
@@ -149,15 +291,8 @@ async function FactorySection() {
       </div>
 
       <ul className="mt-16 grid grid-cols-2 gap-3 lg:grid-cols-4">
-        <li data-reveal>
-          <div className="aspect-[4/5] overflow-hidden bg-[#F3DCC7]">
-            <LoopVideo src="/videos/factory-loop.mp4" poster="/images/factory/factory-loop-poster.jpg" label={t('weld')} className="h-full" />
-          </div>
-          <p className="mt-2.5 text-[15px] font-semibold text-ink">{t('weld')}</p>
-          <p className="text-[15px] text-soft">{t('weldNote')}</p>
-        </li>
         {tiles.map((tile, i) => (
-          <li key={tile.src} data-reveal style={{ ['--d' as string]: `${(i + 1) * 80}ms` }}>
+          <li key={tile.src} data-reveal style={{ ['--d' as string]: `${i * 80}ms` }}>
             <div className="relative aspect-[4/5] overflow-hidden bg-stone">
               <Image src={tile.src} alt={tile.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="drift object-cover" />
             </div>
