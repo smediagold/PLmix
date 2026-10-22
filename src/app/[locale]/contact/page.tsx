@@ -170,23 +170,6 @@ function ContactInfo({ locale }: { locale: string }) {
         </div>
       </div>
 
-      {/* Catalog downloads */}
-      <div className="rounded-2xl border border-border bg-white p-6">
-        <h2 className="mb-2 text-lg font-bold text-dark">{t('catalogTitle')}</h2>
-        <p className="mb-5 text-sm text-brand-gray">{t('catalogDesc')}</p>
-        <div className="space-y-3">
-          <CatalogLink
-            href="/catalog-construction.pdf"
-            label={t('catalogConstruction')}
-            color="construction"
-          />
-          <CatalogLink
-            href="/catalog-agriculture.pdf"
-            label={t('catalogAgriculture')}
-            color="agriculture"
-          />
-        </div>
-      </div>
     </div>
   );
 }
@@ -228,33 +211,3 @@ function InfoItem({
   );
 }
 
-function CatalogLink({
-  href,
-  label,
-  color,
-}: {
-  href: string;
-  label: string;
-  color: 'construction' | 'agriculture';
-}) {
-  const accent = color === 'construction' ? 'text-construction' : 'text-agriculture';
-  const bg = color === 'construction' ? 'bg-amber-50' : 'bg-green-50';
-  const border = color === 'construction' ? 'border-amber-100' : 'border-green-100';
-
-  return (
-    <a
-      href={href}
-      download
-      className={`flex items-center gap-3 rounded-lg border ${border} ${bg} px-4 py-3 transition-opacity hover:opacity-80`}
-    >
-      <svg className={`h-5 w-5 shrink-0 ${accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-          d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-      </svg>
-      <span className={`text-sm font-medium ${accent}`}>{label}</span>
-      <svg className={`ml-auto h-4 w-4 shrink-0 ${accent}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-      </svg>
-    </a>
-  );
-}

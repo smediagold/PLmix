@@ -8,14 +8,28 @@
     "construction": "Máy Xây Dựng",
     "agriculture": "Máy Nông Nghiệp",
     "engines": "Động Cơ",
-    "spareParts": "Phụ Kiện"
+    "spareParts": "Phụ Kiện",
+    "main": "Chính",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "models": "{count} model",
+    "allProducts": "Tất cả sản phẩm"
   },
   "home": {
     "hero": {
       "headline": "20 Năm Sản Xuất Máy Móc Chất Lượng Cao",
       "subtext": "Được tin tưởng bởi đối tác tại 20 quốc gia — máy móc xây dựng và nông nghiệp bền vững, hiệu quả.",
       "ctaProducts": "Xem Sản Phẩm",
-      "ctaQuote": "Yêu Cầu Báo Giá"
+      "ctaQuote": "Yêu Cầu Báo Giá",
+      "title": "Sản xuất tại Việt Nam cho 20 nước",
+      "text": "Hơn 20 năm qua, Cơ khí Phú Long sản xuất máy trộn bê tông, máy uốn đai, máy cấy lúa, máy tuốt lúa và quạt công nghiệp tại một nhà máy, làm theo đúng yêu cầu của nhà nhập khẩu.",
+      "cta": "Nhận báo giá",
+      "all": "Xem tất cả sản phẩm",
+      "models": "{count} model",
+      "view": "Xem {count} model",
+      "quote": "Hỏi giá",
+      "specs": "Xem thông số chi tiết qua WhatsApp",
+      "waText": "Chào Phú Long, vui lòng gửi tôi thông số chi tiết của {name}."
     },
     "stats": {
       "years": "Năm Kinh Nghiệm",
@@ -43,9 +57,23 @@
       "requestQuote": "Yêu Cầu Báo Giá"
     },
     "factory": {
-      "title": "Sản Xuất Tại Nhà Máy",
+      "title": "Một nhà máy, đủ mọi dòng máy",
       "description": "Hoạt động từ một nhà máy sản xuất hiện đại tại Việt Nam, đội ngũ kỹ sư và kỹ thuật viên của chúng tôi sản xuất đầy đủ các dòng máy móc xây dựng và nông nghiệp — tất cả dưới một mái nhà. Mỗi sản phẩm đều được kiểm tra chất lượng trước khi xuất xưởng.",
-      "link": "Tìm hiểu thêm"
+      "link": "Về công ty",
+      "text": "Phú Long khởi đầu từ một xưởng cơ khí địa phương hơn hai mươi năm trước. Ngày nay, một cơ sở sản xuất tại Giao Thủy, Ninh Bình đảm nhận mọi khâu: cắt, cuốn thép, hàn, sơn, lắp ráp và chạy thử từng máy trước khi đóng gói.",
+      "text2": "Vì mọi khâu đều trong một nhà máy, chúng tôi có thể đổi dung tích thùng, màu sơn, động cơ hay logo cho từng đơn hàng, và ghép nhiều model trong một container.",
+      "years": "Năm kinh nghiệm",
+      "countries": "Quốc gia xuất khẩu",
+      "customers": "Khách hàng doanh nghiệp",
+      "factory": "Nhà máy chuyên biệt",
+      "weld": "Hàn thùng trộn",
+      "weldNote": "Quay tại xưởng lắp ráp",
+      "aerial": "Nhà máy nhìn từ trên cao",
+      "aerialNote": "Giao Thủy, Ninh Bình",
+      "hall": "Xưởng lắp ráp",
+      "hallNote": "Máy trộn chờ lắp động cơ",
+      "warehouse": "Kho thành phẩm",
+      "warehouseNote": "Máy tuốt lúa trước khi đóng gói"
     },
     "customization": {
       "title": "Tùy Chỉnh Theo Yêu Cầu",
@@ -60,6 +88,30 @@
       "title": "Sẵn Sàng Đặt Hàng?",
       "subtitle": "Hãy liên hệ để thảo luận về yêu cầu của bạn. Chúng tôi phản hồi trong vòng 24 giờ.",
       "button": "Liên Hệ Ngay"
+    },
+    "markets": {
+      "title": "Xuất khẩu tới 20 quốc gia",
+      "text": "Nhà nhập khẩu, nhà phân phối và nhà thầu tại châu Á, châu Phi, Trung Đông, Thái Bình Dương và châu Mỹ."
+    },
+    "certs": {
+      "title": "Chứng nhận và kiểm định",
+      "text": "Hệ thống quản lý chất lượng của chúng tôi được Hiệp hội Chứng nhận Việt Nam chứng nhận ISO 9001:2015, và máy trộn bê tông đã được SGS Việt Nam thử nghiệm.",
+      "iso": "Chứng nhận ISO 9001:2015",
+      "isoNote": "Hiệp hội Chứng nhận Việt Nam (VCA), cấp tháng 3/2022",
+      "sgs": "Báo cáo thử nghiệm SGS",
+      "sgsNote": "Mẫu máy trộn bê tông, tháng 2/2023"
+    },
+    "orders": {
+      "title": "Những container gần đây",
+      "text": "Hàng FCL và LCL, đóng tại bãi nhà máy và kiểm tra trước khi đóng cửa container."
+    },
+    "reviews": {
+      "title": "Nhà nhập khẩu nói gì",
+      "text": "Hơn 70 khách hàng doanh nghiệp tại 20 quốc gia. Một vài người trong số họ chia sẻ."
+    },
+    "index": {
+      "title": "Tất cả sản phẩm",
+      "models": "{count} model"
     }
   },
   "products": {
@@ -133,11 +185,7 @@
     "officeAddress": "Địa Chỉ Văn Phòng",
     "officeAddressValue": "115 Đường Kẻ Vẽ, Phường Đông Ngạc, Hà Nội",
     "factoryAddress": "Địa Chỉ Nhà Máy",
-    "factoryAddressValue": "Xã Giao Thủy, Tỉnh Ninh Bình",
-    "catalogTitle": "Tải Catalog",
-    "catalogDesc": "Tải catalog sản phẩm đầy đủ dạng PDF.",
-    "catalogConstruction": "Catalog Máy Xây Dựng",
-    "catalogAgriculture": "Catalog Máy Nông Nghiệp"
+    "factoryAddressValue": "Xã Giao Thủy, Tỉnh Ninh Bình"
   },
   "blog": {
     "title": "Blog",
@@ -157,9 +205,61 @@
     "blog": "Blog",
     "about": "Về Chúng Tôi",
     "contact": "Liên Hệ",
-    "catalog": "Tải Catalog",
     "officeAddress": "115 Đường Kẻ Vẽ, Phường Đông Ngạc, Hà Nội",
     "factoryAddress": "Nhà máy: Xã Giao Thủy, Tỉnh Ninh Bình",
-    "rights": "Bảo lưu mọi quyền."
+    "rights": "Bảo lưu mọi quyền.",
+    "top": "Lên đầu trang"
+  },
+  "inquiry": {
+    "add": "Thêm vào báo giá",
+    "added": "Đã thêm",
+    "remove": "Bỏ khỏi báo giá",
+    "region": "Danh sách báo giá",
+    "count": "{count} model trong danh sách báo giá",
+    "whatsapp": "Gửi qua WhatsApp",
+    "form": "Gửi bằng form",
+    "clear": "Xóa",
+    "waIntro": "Chào Phú Long, vui lòng báo giá các model sau:"
+  },
+  "coupon": {
+    "title": "Nhận báo giá",
+    "text": "Cho chúng tôi biết model, số lượng và cảng đến. Bộ phận kinh doanh phản hồi trong 24 giờ với báo giá FOB hoặc CIF.",
+    "name": "Họ tên",
+    "namePh": "Họ tên của bạn",
+    "email": "Email",
+    "emailPh": "ban@congty.com",
+    "product": "Model",
+    "productPh": "Model và số lượng, ví dụ CM-350-2W-P × 40",
+    "message": "Nội dung",
+    "messagePh": "Cảng đến, màu sắc, động cơ, logo…",
+    "submit": "Gửi yêu cầu",
+    "sending": "Đang gửi…",
+    "sentTitle": "Đã nhận yêu cầu.",
+    "sentText": "Chúng tôi sẽ phản hồi trong 24 giờ. Việc gấp, vui lòng nhắn WhatsApp +84 946 964 669.",
+    "error": "Chưa gửi được yêu cầu. Vui lòng thử lại hoặc email Andy@phulongglobal.com.",
+    "errName": "Nhập họ tên để chúng tôi biết phản hồi cho ai.",
+    "errEmail": "Nhập email dạng ten@congty.com.",
+    "errMessage": "Ghi vài dòng về nhu cầu của bạn (từ 10 ký tự)."
+  },
+  "media": {
+    "play": "Phát video",
+    "pause": "Tạm dừng video"
+  },
+  "line": {
+    "home": "Trang chủ",
+    "products": "Sản phẩm",
+    "breadcrumb": "Đường dẫn",
+    "quote": "Yêu cầu báo giá",
+    "modelsTitle": "{count} model",
+    "details": "Chi tiết",
+    "compareTitle": "So sánh các model",
+    "model": "Model",
+    "factoryTitle": "Sản xuất tại nhà máy",
+    "video": "{name} tại nhà máy",
+    "customTitle": "Làm theo đơn hàng của bạn",
+    "customText": "Mọi máy trong dòng này đều có thể làm theo thị trường của bạn. Cho chúng tôi biết yêu cầu, chúng tôi xác nhận cùng báo giá.",
+    "moreTitle": "Các dòng sản phẩm khác",
+    "specs": "Xem thông số chi tiết qua WhatsApp",
+    "waText": "Chào Phú Long, vui lòng gửi tôi thông số chi tiết của {name}."
   }
 }

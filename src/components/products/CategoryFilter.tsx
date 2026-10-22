@@ -7,6 +7,7 @@ const filters = [
   { id: 'all', en: 'All Products', vi: 'Tất Cả' },
   { id: 'construction', en: 'Construction', vi: 'Xây Dựng' },
   { id: 'agriculture', en: 'Agriculture', vi: 'Nông Nghiệp' },
+  { id: 'industrial', en: 'Industrial Fans', vi: 'Quạt Công Nghiệp' },
   { id: 'engine', en: 'Engines', vi: 'Động Cơ' },
   { id: 'spare-part', en: 'Spare Parts', vi: 'Phụ Kiện' },
 ];

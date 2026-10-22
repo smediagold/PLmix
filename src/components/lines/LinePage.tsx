@@ -1,0 +1,264 @@
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
+import { lines, lineProducts, pick, type ProductLine } from '@/data/lines';
+import type { Product } from '@/data/products';
+import InquiryToggle from '@/components/inquiry/InquiryToggle';
+import LoopVideo from '@/components/site/LoopVideo';
+import ContactCoupon from '@/components/contact/ContactCoupon';
+
+const gap = 'pt-[clamp(96px,12vw,192px)]';
+const tileTones = ['orange', 'graphite', 'field', 'rust'] as const;
+const keyFacts = ['Mixing Volume', 'Air Flow', 'Output Capacity', 'Productivity', 'Capacity', 'Power', 'Steel Diameter', 'Operation'];
+
+export const keyFact = (p: Product) => {
+  const k = keyFacts.find((key) => p.specifications[key]);
+  return k ? p.specifications[k] : '';
+};
+
+export default async function LinePage({ line, locale }: { line: ProductLine; locale: string }) {
+  const t = await getTranslations('line');
+  const items = lineProducts(line);
+  const name = pick(line.name, locale);
+  const vi = locale === 'vi';
+
+  const specKeys = Array.from(new Set(items.flatMap((p) => Object.keys(p.specifications)))).filter(
+    (k) => items.filter((p) => p.specifications[k]).length > 1 || items.length === 1,
+  );
+
+  const custom = items.find((p) => p.customization_options)?.customization_options;
+
+  return (
+    <>
+      <section aria-labelledby="line-title" data-tone={line.tone} className="lg:grid lg:min-h-[calc(100svh-72px)] lg:grid-cols-2">
+        <div className="tone-field flex h-[44svh] items-center justify-center md:h-[60svh] lg:order-2 lg:h-auto lg:items-start lg:pt-8">
+          <div className="w-[min(64vw,36svh)] md:w-[min(72vw,50svh)] lg:w-[min(46vw,74svh)]">
+            <div className="tone-tile relative aspect-square">
+              <Image src={line.cover} alt={name} fill priority sizes="(min-width: 1024px) 46vw, 72vw" className="multiply object-contain p-[9%]" />
+            </div>
+            <p className="mt-3 hidden justify-between gap-4 text-[15px] lg:flex">
+              <span className="font-semibold">{name}</span>
+              <span className="num">{t('modelsTitle', { count: items.length })}</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="flex flex-col justify-between gap-12 px-[clamp(16px,3.4vw,48px)] pb-12 pt-6 lg:order-1 lg:pb-16 lg:pr-[6vw]">
+          <nav aria-label={t('breadcrumb')} className="text-[15px] text-soft">
+            <ol className="flex flex-wrap items-center gap-2">
+              <li><Link href="/" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">{t('home')}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li><Link href="/products" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">{t('products')}</Link></li>
+              <li aria-hidden="true">/</li>
+              <li aria-current="page" className="text-ink">{name}</li>
+            </ol>
+          </nav>
+          <div>
+            <h1 id="line-title" className="text-[clamp(36px,4.4vw,68px)] font-bold leading-[1.02] tracking-[-0.03em] text-ink">
+              {name}
+            </h1>
+            <p className="mt-7 max-w-[40ch] text-[22px] leading-[1.45] text-ink">{pick(line.tagline, locale)}</p>
+            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+              <Link
+                href={{ pathname: '/contact', query: { products: name } }}
+                className="press inline-flex min-h-12 w-full items-center justify-center bg-brand-orange px-7 text-[17px] font-semibold text-ink hover:bg-[#FFB840] sm:w-auto"
+              >
+                {t('quote')}
+              </Link>
+              <a
+                href={`https://wa.me/84946964669?text=${encodeURIComponent(t('waText', { name }))}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="min-h-11 py-2 text-[17px] font-semibold text-ink underline underline-offset-4"
+              >
+                {t('specs')}
+              </a>
+            </div>
+            <dl className="mt-10 grid max-w-[600px] grid-cols-2 gap-x-8 gap-y-5">
+              {line.facts.map((f) => (
+                <div key={f.label.en}>
+                  <dt className="text-[15px] text-soft">{pick(f.label, locale)}</dt>
+                  <dd className="num mt-1 text-[17px] font-semibold text-ink">{pick(f.value, locale)}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="models-title" className={`frame ${gap}`}>
+        <div className="grid gap-6 lg:grid-cols-12">
+          <h2 id="models-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink lg:col-span-5">
+            {t('modelsTitle', { count: items.length })}
+          </h2>
+          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-ink lg:col-span-7">{pick(line.intro, locale)}</p>
+        </div>
+        <ul className={`mt-12 grid grid-cols-1 gap-x-3 gap-y-10 sm:grid-cols-2 ${items.length > 2 ? 'lg:grid-cols-3' : ''} ${items.length > 6 ? 'xl:grid-cols-4' : ''}`}>
+          {items.map((p, i) => {
+            const pname = vi ? p.name_vi : p.name_en;
+            const lifted = i === 0 && items.length >= 5;
+            return (
+              <li
+                key={p.id}
+                data-reveal
+                data-tone={tileTones[i % tileTones.length]}
+                style={{ ['--d' as string]: `${(i % 4) * 70}ms` }}
+                className={lifted ? 'sm:col-span-2 sm:row-span-2' : ''}
+              >
+                <Link href={`/products/${p.id.toLowerCase()}`} className="group block">
+                  <span className="tone-tile relative block aspect-square overflow-hidden">
+                    {p.images[0] && (
+                      <Image
+                        src={p.images[0]}
+                        alt={pname}
+                        fill
+                        sizes={lifted ? '(min-width: 1024px) 50vw, 100vw' : '(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'}
+                        className="multiply object-contain p-[10%] transition-transform duration-500 group-hover:scale-[1.04]"
+                      />
+                    )}
+                  </span>
+                  <span className="mt-3 flex items-baseline justify-between gap-4">
+                    <span className={`${lifted ? 'text-[22px]' : 'text-[17px]'} font-semibold leading-snug text-ink underline-offset-4 group-hover:underline`}>
+                      {pname}
+                    </span>
+                  </span>
+                  <span className="num mt-1 block text-[17px] text-soft">
+                    <span translate="no">{p.id}</span>
+                    {keyFact(p) && <> · {keyFact(p)}</>}
+                  </span>
+                </Link>
+                <div className="mt-3">
+                  <InquiryToggle sku={p.id} name={pname} />
+                </div>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      {items.length > 1 && (
+        <section aria-labelledby="compare-title" className={`frame ${gap}`}>
+          <h2 id="compare-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+            {t('compareTitle')}
+          </h2>
+          <div className="mt-10 overflow-x-auto overscroll-x-contain bg-white" data-reveal>
+            <table className="num w-full min-w-[720px] border-collapse text-left text-[17px]">
+              <thead>
+                <tr className="bg-ink text-white">
+                  <th scope="col" className="sticky left-0 bg-ink px-4 py-3 font-semibold">{t('model')}</th>
+                  {specKeys.map((k) => (
+                    <th key={k} scope="col" className="whitespace-nowrap px-4 py-3 font-semibold">{k}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {items.map((p) => (
+                  <tr key={p.id} className="border-b border-[#E5E1DA] last:border-0">{/* taste-skill-ignore: real table */}
+                    <th scope="row" className="sticky left-0 whitespace-nowrap bg-white px-4 py-3 font-semibold text-ink">
+                      <Link href={`/products/${p.id.toLowerCase()}`} className="underline-offset-4 hover:underline" translate="no">
+                        {p.id}
+                      </Link>
+                    </th>
+                    {specKeys.map((k) => (
+                      <td key={k} className="whitespace-nowrap px-4 py-3 text-ink">{p.specifications[k] ?? '—'}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      )}
+
+      {(line.photos.length > 0 || line.video) && (
+        <section aria-labelledby="made-title" className={`frame ${gap}`}>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
+            <div className="lg:col-span-3">
+              <h2 id="made-title" data-reveal className="text-[clamp(26px,2.2vw,32px)] font-bold leading-[1.1] tracking-[-0.01em] text-ink">
+                {t('factoryTitle')}
+              </h2>
+              <Link href="/about" className="mt-3 inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
+                {vi ? 'Về nhà máy' : 'About the factory'}
+              </Link>
+            </div>
+            <div className="min-w-0 lg:col-span-9">
+              <ul className="grid grid-cols-2 gap-x-2 gap-y-6 lg:grid-cols-4 lg:gap-x-1.5">
+                {line.video && (
+                  <li className="col-span-2 lg:row-span-2" data-reveal>
+                    <div className="aspect-[4/5] bg-stone">
+                      <LoopVideo src={line.video} poster={line.poster} label={t('video', { name })} className="h-full" />
+                    </div>
+                    <p className="mt-2 text-[15px] font-semibold text-ink">{t('video', { name })}</p>
+                  </li>
+                )}
+                {line.photos.slice(0, line.video ? 4 : 8).map((ph, i) => (
+                  <li key={ph.src} data-reveal style={{ ['--d' as string]: `${(i + 1) * 70}ms` }}>
+                    <div className="relative aspect-[4/5] overflow-hidden bg-white">
+                      <Image src={ph.src} alt={pick(ph.caption, locale)} fill sizes="(min-width: 1024px) 18vw, 50vw" className="object-cover" />
+                    </div>
+                    <p className="mt-2 text-[15px] text-ink">{pick(ph.caption, locale)}</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {custom && (
+        <section aria-labelledby="custom-title" className={`mt-[clamp(96px,12vw,192px)] bg-stone`}>
+          <div className="frame grid gap-10 py-[clamp(64px,8vw,120px)] lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <h2 id="custom-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+                {t('customTitle')}
+              </h2>
+              <p data-reveal className="mt-5 max-w-[44ch] text-[17px] leading-[1.6] text-ink">{t('customText')}</p>
+            </div>
+            <dl className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-7">
+              {Object.entries(custom).map(([k, vals]) => (
+                <div key={k} data-reveal>
+                  <dt className="text-[22px] font-bold text-ink">{k}</dt>
+                  <dd className="mt-2 text-[17px] leading-[1.6] text-ink">{vals.join(' · ')}</dd>
+                </div>
+              ))}
+              <div data-reveal>
+                <dt className="text-[22px] font-bold text-ink">{vi ? 'Thương hiệu' : 'Branding'}</dt>
+                <dd className="mt-2 text-[17px] leading-[1.6] text-ink">{vi ? 'Logo và tem nhãn riêng (OEM)' : 'Your logo and decals (OEM)'}</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+      )}
+
+      <section aria-labelledby="more-title" className={`frame ${gap}`}>
+        <h2 id="more-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+          {t('moreTitle')}
+        </h2>
+        <ul className="mt-10 grid gap-x-16 gap-y-8 md:grid-cols-2">
+          {lines
+            .filter((l) => l.slug !== line.slug)
+            .map((l, i) => (
+              <li key={l.slug} data-tone={l.tone} data-reveal style={{ ['--d' as string]: `${(i % 2) * 80}ms` }}>
+                <Link href={`/products/${l.slug}`} className="group flex gap-5">
+                  <span className="tone-tile relative block h-16 w-16 shrink-0">
+                    <Image src={l.cover} alt="" fill sizes="64px" className="multiply object-contain p-1" />
+                  </span>
+                  <span className="min-w-0 flex-1">
+                    <span className="flex items-baseline justify-between gap-4">
+                      <span className="text-[17px] font-bold text-ink underline-offset-4 group-hover:underline">{pick(l.name, locale)}</span>
+                      <span className="num shrink-0 text-[15px] text-soft">{t('modelsTitle', { count: lineProducts(l).length })}</span>
+                    </span>
+                    <span className="mt-1 block max-w-[46ch] text-[15px] leading-[1.5] text-soft">{pick(l.tagline, locale)}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+        </ul>
+      </section>
+
+      <section aria-label={t('quote')} className={`frame ${gap} pb-[clamp(96px,10vw,160px)]`}>
+        <ContactCoupon defaultProduct={name} />
+      </section>
+    </>
+  );
+}

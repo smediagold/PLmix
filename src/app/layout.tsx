@@ -1,20 +1,21 @@
-import type { Metadata } from 'next';
-import { Geist } from 'next/font/google';
+import type { Metadata, Viewport } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css';
 
-const geist = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin', 'vietnamese'],
+  display: 'swap',
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://phulongglobal.com'),
   title: {
     template: '%s | Phu Long Mechanical',
-    default: 'Phu Long Mechanical — Concrete Mixers & Agricultural Machinery Vietnam',
+    default: 'Phu Long Mechanical — Concrete Mixers, Agricultural Machinery & Industrial Fans, Vietnam',
   },
   description:
-    'Vietnam-based manufacturer of concrete mixers, rice transplanters and paddy threshers. 20+ years, exported to 20 countries. OEM orders available.',
+    'Vietnam-based manufacturer of concrete mixers, stirrup bending machines, rice transplanters, paddy threshers and industrial fans. 20+ years, exported to 20 countries. OEM orders available.',
   openGraph: {
     type: 'website',
     siteName: 'Phu Long Mechanical',
@@ -24,9 +25,13 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+export const viewport: Viewport = {
+  themeColor: '#F8F5F1',
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${geist.variable} h-full`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} h-full`} suppressHydrationWarning>
       <body className="min-h-full antialiased bg-page-bg">{children}</body>
     </html>
   );

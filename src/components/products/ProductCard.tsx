@@ -5,6 +5,7 @@ import type { Product } from '@/data/products';
 const categoryColors: Record<string, string> = {
   construction: 'bg-amber-100 text-amber-800',
   agriculture: 'bg-green-100 text-green-800',
+  industrial: 'bg-stone text-ink',
   engine: 'bg-blue-100 text-blue-800',
   'spare-part': 'bg-orange-100 text-orange-800',
 };
@@ -12,6 +13,7 @@ const categoryColors: Record<string, string> = {
 const categoryLabels: Record<string, { en: string; vi: string }> = {
   construction: { en: 'Construction', vi: 'Xây Dựng' },
   agriculture: { en: 'Agriculture', vi: 'Nông Nghiệp' },
+  industrial: { en: 'Industrial Fan', vi: 'Quạt Công Nghiệp' },
   engine: { en: 'Engine', vi: 'Động Cơ' },
   'spare-part': { en: 'Spare Part', vi: 'Phụ Kiện' },
 };
@@ -29,6 +31,7 @@ export default function ProductCard({
     product.specifications['Mixing Volume'] ||
     product.specifications['Output Capacity'] ||
     product.specifications['Productivity'] ||
+    product.specifications['Air Flow'] ||
     product.specifications['Power'] ||
     null;
   const mainSpecKey =
@@ -38,6 +41,8 @@ export default function ProductCard({
       ? 'Output'
       : product.specifications['Productivity']
       ? 'Productivity'
+      : product.specifications['Air Flow']
+      ? 'Air flow'
       : product.specifications['Power']
       ? 'Power'
       : null;
@@ -47,7 +52,7 @@ export default function ProductCard({
   return (
     <Link
       href={`/products/${slug}`}
-      className="group flex flex-col rounded-xl border border-border bg-white overflow-hidden transition-all hover:-translate-y-1 hover:shadow-lg"
+      className="group flex flex-col rounded-xl border border-border bg-white overflow-hidden transition-[transform,box-shadow] hover:-translate-y-1 hover:shadow-lg"
     >
       {/* Image */}
       <div className="relative h-52 bg-gray-50 overflow-hidden shrink-0">
@@ -85,9 +90,9 @@ export default function ProductCard({
         )}
         <div className="mt-4 flex items-center justify-between border-t border-border pt-3">
           <span className="text-xs text-brand-gray">
-            MOQ: {product.moq} {product.moq === 1 ? 'unit' : 'units'}
+            {product.moq ? `MOQ: ${product.moq} ${product.moq === 1 ? 'unit' : 'units'}` : product.id}
           </span>
-          <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-orange group-hover:gap-2 transition-all">
+          <span className="inline-flex items-center gap-1 text-xs font-semibold text-brand-orange group-hover:gap-2 transition-[gap]">
             {locale === 'vi' ? 'Chi tiết' : 'Details'}
             <svg className="h-3.5 w-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

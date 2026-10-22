@@ -1,132 +1,88 @@
-import { useTranslations } from 'next-intl';
-import Image from 'next/image';
+import { useLocale, useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
+import { lines, pick } from '@/data/lines';
+
+const blocks = [
+  { ch: 'P', h: 100, c: '#F5A623', ink: '#1C1C1E' },
+  { ch: 'H', h: 78, c: '#5A5A5A', ink: '#F8F5F1' },
+  { ch: 'U', h: 90, c: '#1C1C1E', ink: '#F8F5F1' },
+  { ch: 'L', h: 64, c: '#B45309', ink: '#F8F5F1' },
+  { ch: 'O', h: 96, c: '#F5A623', ink: '#1C1C1E' },
+  { ch: 'N', h: 72, c: '#1A6B4A', ink: '#F8F5F1' },
+  { ch: 'G', h: 86, c: '#5A5A5A', ink: '#F8F5F1' },
+];
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
+  const linkCls = 'text-[15px] text-ink underline-offset-4 hover:underline';
+
   return (
-    <footer className="border-t border-border bg-dark text-white">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <Image
-              src="/logo.png"
-              alt="Phu Long Mechanical"
-              width={144}
-              height={48}
-              className="h-[43px] w-auto object-contain brightness-0 invert"
-            />
-            <p className="mt-4 text-sm text-white/60 leading-relaxed max-w-xs">
-              {t('tagline')}
-            </p>
-            <div className="mt-4 flex flex-col gap-2 text-sm text-white/60">
-              <a href="tel:+84946964669" className="hover:text-brand-orange transition-colors">
-                (+84) 946 964 669
-              </a>
-              <a href="mailto:Andy@phulongglobal.com" className="hover:text-brand-orange transition-colors">
-                Andy@phulongglobal.com
-              </a>
-              <a
-                href="https://maps.google.com/?q=115+Ke+Ve+Dong+Ngac+Ha+Noi+Vietnam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-brand-orange transition-colors leading-snug"
-              >
-                {t('officeAddress')}
-              </a>
-              <a
-                href="https://maps.google.com/?q=Giao+Thuy+Ninh+Binh+Vietnam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-brand-orange transition-colors leading-snug"
-              >
-                {t('factoryAddress')}
-              </a>
+    <footer className="bg-stone pt-20 text-ink">
+      <div className="frame">
+        <p className="sr-only">Phu Long Mechanical</p>
+        <div aria-hidden="true" className="flex h-[22svh] items-end gap-1 sm:h-[34svh]">
+          {blocks.map((b, i) => (
+            <div
+              key={i}
+              data-reveal
+              style={{ height: `${b.h}%`, backgroundColor: b.c, color: b.ink, ['--d' as string]: `${i * 60}ms` }}
+              className={`flex flex-1 items-end justify-center overflow-hidden font-bold leading-[0.8] tracking-[-0.04em] ${i === 3 ? 'ml-2 sm:ml-4' : ''}`}
+            >
+              <span className="pb-[0.05em] text-[clamp(44px,11vw,190px)]">{b.ch}</span>
             </div>
-          </div>
+          ))}
+        </div>
 
-          {/* Products */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/40">
-              {t('productsTitle')}
-            </h3>
-            <ul className="mt-4 flex flex-col gap-3">
-              {[
-                { href: '/products/construction', label: t('construction') },
-                { href: '/products/agriculture', label: t('agriculture') },
-                { href: '/products?category=construction#stirrup-bending', label: t('stirrupBending') },
-                { href: '/products/engines', label: t('engines') },
-                { href: '/products?category=engine#vikyno-diesel', label: t('vikynoDiesel') },
-                { href: '/products/spare-parts', label: t('spareParts') },
-              ].map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors"
-                  >
-                    {item.label}
+        <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <h2 className="text-[15px] font-semibold text-soft">{t('productsTitle')}</h2>
+            <ul className="mt-4 space-y-2">
+              {lines.map((l) => (
+                <li key={l.slug}>
+                  <Link href={`/products/${l.slug}`} className={linkCls}>
+                    {pick(l.name, locale)}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/40">
-              {t('companyTitle')}
-            </h3>
-            <ul className="mt-4 flex flex-col gap-3">
-              {[
-                { href: '/blog', label: t('blog') },
-                { href: '/about', label: t('about') },
-                { href: '/contact', label: t('contact') },
-                { href: '/catalog', label: t('catalog') },
-              ].map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-white/60 hover:text-white transition-colors"
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
+          <div className="lg:col-span-3">
+            <h2 className="text-[15px] font-semibold text-soft">{t('companyTitle')}</h2>
+            <ul className="mt-4 space-y-2">
+              <li><Link href="/about" className={linkCls}>{t('about')}</Link></li>
+              <li><Link href="/blog" className={linkCls}>{t('blog')}</Link></li>
+              <li><Link href="/contact" className={linkCls}>{t('contact')}</Link></li>
             </ul>
           </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-white/40">
-              {t('contactTitle')}
-            </h3>
-            <ul className="mt-4 flex flex-col gap-3 text-sm text-white/60">
+          <div className="col-span-2 lg:col-span-5">
+            <h2 className="text-[15px] font-semibold text-soft">{t('contactTitle')}</h2>
+            <ul className="mt-4 space-y-2 text-[15px]">
+              <li><a href="https://wa.me/84946964669" target="_blank" rel="noopener noreferrer" className={linkCls}>WhatsApp (+84) 946 964 669</a></li>
+              <li><a href="mailto:Andy@phulongglobal.com" className={linkCls} translate="no">Andy@phulongglobal.com</a></li>
               <li>
-                <a href="https://wa.me/84946964669" target="_blank" rel="noopener noreferrer"
-                  className="hover:text-white transition-colors">
-                  WhatsApp: (+84) 946 964 669
+                <a href="https://maps.google.com/?q=115+Ke+Ve+Dong+Ngac+Ha+Noi+Vietnam" target="_blank" rel="noopener noreferrer" className={linkCls}>
+                  {t('officeAddress')}
                 </a>
               </li>
               <li>
-                <a href="mailto:Andy@phulongglobal.com" className="hover:text-white transition-colors">
-                  Andy@phulongglobal.com
-                </a>
-              </li>
-              <li>
-                <a href="https://phulongglobal.com" target="_blank" rel="noopener noreferrer"
-                  className="hover:text-white transition-colors">
-                  phulongglobal.com
+                <a href="https://maps.google.com/?q=Giao+Thuy+Ninh+Binh+Vietnam" target="_blank" rel="noopener noreferrer" className={linkCls}>
+                  {t('factoryAddress')}
                 </a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-center text-xs text-white/30">
-          © {year} Phu Long Global Investment Co., Ltd. {t('rights')}
+        <div className="mt-14 flex flex-wrap items-center justify-between gap-4 pb-28 sm:pb-10">
+          <p className="text-[15px] text-soft">
+            © {year} Phu Long Global Investment Co., Ltd. {t('rights')}
+          </p>
+          <a href="#top" className="press inline-flex min-h-11 items-center bg-ink px-4 text-[15px] font-semibold text-white hover:bg-black">
+            {t('top')}
+          </a>
         </div>
       </div>
     </footer>

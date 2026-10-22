@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { submitContact } from '@/app/actions/contact';
 
 const schema = z.object({
@@ -22,6 +23,7 @@ export default function ContactForm() {
   const t = useTranslations('contact');
   const [submitted, setSubmitted] = useState(false);
   const [serverError, setServerError] = useState('');
+  const searchParams = useSearchParams();
 
   const {
     register,
@@ -29,6 +31,7 @@ export default function ContactForm() {
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(schema),
+    defaultValues: { product: searchParams.get('products') ?? '' },
   });
 
   const onSubmit = async (data: FormData) => {

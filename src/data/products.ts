@@ -1,4 +1,4 @@
-export type Category = 'construction' | 'agriculture' | 'engine' | 'spare-part';
+export type Category = 'construction' | 'agriculture' | 'industrial' | 'engine' | 'spare-part';
 export type Subcategory =
   | 'concrete-mixer'
   | 'wheelbarrow'
@@ -6,6 +6,7 @@ export type Subcategory =
   | 'stirrup-bending-machine'
   | 'rice-transplanter'
   | 'paddy-thresher'
+  | 'industrial-fan'
   | 'electric-motor'
   | 'gasoline-engine'
   | 'diesel-engine'
@@ -24,7 +25,7 @@ export interface Product {
   customization_options?: Record<string, string[]>;
   images: string[];
   video?: string;
-  moq: number;
+  moq?: number;
   tags: string[];
   related_skus: string[];
   featured?: boolean;
@@ -731,6 +732,178 @@ export const products: Product[] = [
     featured: false,
   },
 
+  /* ── INDUSTRIAL FANS ──────────────────────────────────────── */
+  {
+    id: 'PLCF-101',
+    name_en: 'Centrifugal Fan PLCF 101 — Forward-Curved Blades',
+    name_vi: 'Quạt Ly Tâm PLCF 101 — Cánh Cong Tiến',
+    category: 'industrial',
+    subcategory: 'industrial-fan',
+    description_en: 'Centrifugal fan with forward-curved blades for high airflow and pressure at low noise. Built for ventilation and odour extraction in hotels, restaurants, factories and public buildings.',
+    description_vi: 'Quạt ly tâm cánh cong tiến, lưu lượng và áp suất cao, độ ồn thấp, tiết kiệm điện. Dùng cho thông gió và hút mùi tại khách sạn, nhà hàng, nhà xưởng và công trình công cộng.',
+    specifications: {
+      'Power': '0.25 – 55 kW',
+      'Speed': '500 – 2,800 RPM',
+      'Voltage': '380V, 3-phase',
+      'Air Pressure': '210 – 2,960 Pa',
+      'Air Flow': '650 – 57,600 m³/h',
+      'Drive': 'Direct / Belt drive',
+      'Material': 'SS400 steel, SUS 304',
+    },
+    images: [
+      '/images/products/industrial-fan/plcf-101-cutout-1.jpg',
+      '/images/products/industrial-fan/plcf-101-cutout-2.jpg',
+      '/images/products/industrial-fan/plcf-101-cutout-3.jpg',
+      '/images/products/industrial-fan/plcf-101-photo-1.jpg',
+      '/images/products/industrial-fan/plcf-101-photo-2.jpg',
+      '/images/products/industrial-fan/plcf-101-photo-3.jpg',
+    ],
+    video: '/videos/centrifugal-fan-1.mp4',
+    tags: ['industrial fan', 'centrifugal fan', 'ventilation', 'odour extraction'],
+    related_skus: ['PLCF-121', 'PLCF-152', 'PLAX-204'],
+    featured: true,
+  },
+  {
+    id: 'PLCF-121',
+    name_en: 'Centrifugal Fan PLCF 121 — Heavy-Duty Flat Blades',
+    name_vi: 'Quạt Ly Tâm PLCF 121 — Cánh Phẳng Hạng Nặng',
+    category: 'industrial',
+    subcategory: 'industrial-fan',
+    description_en: 'Heavy-duty centrifugal fan with large flat blades and a bolted housing that opens for maintenance. Used for air recirculation and fire and smoke ventilation in buildings and factories.',
+    description_vi: 'Quạt ly tâm hạng nặng cánh phẳng lớn, vỏ lắp bulong dễ bảo trì. Dùng cho tuần hoàn không khí và hút khói, thông gió PCCC tại tòa nhà và nhà xưởng.',
+    specifications: {
+      'Power': '0.37 – 37 kW',
+      'Speed': '725 – 2,800 RPM',
+      'Voltage': '380V, 3-phase',
+      'Air Pressure': '120 – 3,187 Pa',
+      'Air Flow': '400 – 80,000 m³/h',
+      'Drive': 'Direct / Belt drive',
+      'Material': 'SS400 steel, SUS 304',
+    },
+    images: [
+      '/images/products/industrial-fan/plcf-121-cutout-1.jpg',
+      '/images/products/industrial-fan/plcf-121-cutout-2.jpg',
+      '/images/products/industrial-fan/plcf-121-cutout-3.jpg',
+      '/images/products/industrial-fan/plcf-121-photo-1.jpg',
+      '/images/products/industrial-fan/plcf-121-photo-2.jpg',
+      '/images/products/industrial-fan/plcf-121-photo-3.jpg',
+    ],
+    video: '/videos/centrifugal-fan-2.mp4',
+    tags: ['industrial fan', 'centrifugal fan', 'smoke extraction', 'heavy duty'],
+    related_skus: ['PLCF-101', 'PLCF-152'],
+    featured: false,
+  },
+  {
+    id: 'PLCF-152',
+    name_en: 'Centrifugal Fan PLCF 152 — High Pressure',
+    name_vi: 'Quạt Ly Tâm PLCF 152 — Cao Áp',
+    category: 'industrial',
+    subcategory: 'industrial-fan',
+    description_en: 'High-pressure centrifugal fan with high-speed operation and strong suction. Forced draught for furnaces, glass and electroplating lines and mining tunnels, and pneumatic conveying of grain, slag and coal.',
+    description_vi: 'Quạt ly tâm cao áp, tốc độ cao, lực hút mạnh. Cấp gió cưỡng bức cho lò đốt, lò thủy tinh, lò mạ, hầm mỏ và vận chuyển vật liệu dạng hạt, bột (lúa, xỉ, than).',
+    specifications: {
+      'Power': '0.75 – 410 kW',
+      'Speed': '960 – 2,800 RPM',
+      'Voltage': '380V, 3-phase',
+      'Air Pressure': '1,308 – 15,034 Pa',
+      'Air Flow': '292 – 63,305 m³/h',
+      'Drive': 'Direct / Belt drive',
+      'Material': 'SS400 steel, SUS 304',
+    },
+    images: [
+      '/images/products/industrial-fan/plcf-152-cutout-1.jpg',
+      '/images/products/industrial-fan/plcf-152-cutout-2.jpg',
+      '/images/products/industrial-fan/plcf-152-cutout-3.jpg',
+    ],
+    tags: ['industrial fan', 'centrifugal fan', 'high pressure', 'pneumatic conveying'],
+    related_skus: ['PLCF-121', 'PLCF-101'],
+    featured: false,
+  },
+  {
+    id: 'PLAX-204',
+    name_en: 'Axial Fan PLAX 204',
+    name_vi: 'Quạt Hướng Trục PLAX 204',
+    category: 'industrial',
+    subcategory: 'industrial-fan',
+    description_en: 'Axial fan for high airflow with low noise and low power draw. Fresh-air supply, hot-air extraction and ventilation in warehouses and on construction sites, and in oil refining, rubber, drying and pharmaceutical plants. Available in round duct, stand-mounted and box housings.',
+    description_vi: 'Quạt hướng trục lưu lượng lớn, êm, tiết kiệm điện. Cấp gió tươi, hút khí nóng, thông gió kho bãi và công trường, dùng trong lọc dầu, cao su, sấy và dược phẩm. Có loại ống tròn, chân đứng và hộp vuông.',
+    specifications: {
+      'Power': '0.25 – 22 kW',
+      'Speed': '960 – 2,900 RPM',
+      'Voltage': '380V, 3-phase',
+      'Air Pressure': '80 – 877 Pa',
+      'Air Flow': '3,900 – 90,075 m³/h',
+      'Drive': 'Direct / Belt drive',
+      'Material': 'SS400 steel, SUS 304',
+    },
+    images: [
+      '/images/products/industrial-fan/plax-204-cutout-1.jpg',
+      '/images/products/industrial-fan/plax-204-cutout-2.jpg',
+      '/images/products/industrial-fan/plax-204-cutout-3.jpg',
+      '/images/products/industrial-fan/plax-204-cutout-4.jpg',
+      '/images/products/industrial-fan/plax-204-photo-1.jpg',
+      '/images/products/industrial-fan/plax-204-photo-2.jpg',
+      '/images/products/industrial-fan/plax-204-photo-4.jpg',
+      '/images/products/industrial-fan/plax-204-photo-5.jpg',
+    ],
+    video: '/videos/axial-fan-1.mp4',
+    tags: ['industrial fan', 'axial fan', 'ventilation', 'warehouse'],
+    related_skus: ['PLQF', 'PLPF', 'PLCF-101'],
+    featured: true,
+  },
+  {
+    id: 'PLPF',
+    name_en: 'Portable Fan PLPF — 1.5–2 m Blades',
+    name_vi: 'Quạt Di Động PLPF — Cánh 1,5–2 m',
+    category: 'industrial',
+    subcategory: 'industrial-fan',
+    description_en: 'Large portable fan on castors with aluminium-alloy blades of 1,500–2,000 mm. Moves 41,500–80,200 m³/h over 5–20 m on single-phase 220V, for warehouses, workshops and construction sites.',
+    description_vi: 'Quạt di động cỡ lớn có bánh xe, cánh hợp kim nhôm 1.500–2.000 mm. Lưu lượng 41.500–80.200 m³/h, tầm thổi 5–20 m, điện 220V một pha, dùng cho kho, xưởng và công trường.',
+    specifications: {
+      'Power': '450 – 550 W',
+      'Speed': '0 – 400 RPM',
+      'Voltage': '220V, single phase',
+      'Coverage': '5 – 20 m',
+      'Air Flow': '41,500 – 80,200 m³/h',
+      'Blade Diameter': '1,500 – 2,000 mm',
+      'Material': 'Aluminium alloy blades, steel frame',
+    },
+    images: [
+      '/images/products/industrial-fan/plpf-cutout-1.jpg',
+      '/images/products/industrial-fan/plpf-cutout-2.jpg',
+      '/images/products/industrial-fan/plpf-cutout-3.jpg',
+      '/images/products/industrial-fan/plpf-photo-1.jpg',
+      '/images/products/industrial-fan/plpf-photo-2.jpg',
+      '/images/products/industrial-fan/plpf-photo-3.jpg',
+    ],
+    tags: ['industrial fan', 'portable fan', 'big fan', 'warehouse cooling'],
+    related_skus: ['PLAX-204', 'PLQF'],
+    featured: false,
+  },
+  {
+    id: 'PLQF',
+    name_en: 'Square Ventilation Fan PLQF',
+    name_vi: 'Quạt Thông Gió Vuông PLQF',
+    category: 'industrial',
+    subcategory: 'industrial-fan',
+    description_en: 'Wall-mounted square ventilation fan with shutters, 400–1,380 mm. Air circulation and exhaust for warehouses, factories and other industrial buildings at low running cost.',
+    description_vi: 'Quạt thông gió vuông gắn tường có lá chớp, cỡ 400–1.380 mm. Tuần hoàn và hút khí cho kho, nhà xưởng và công trình công nghiệp, chi phí vận hành thấp.',
+    specifications: {
+      'Power': '180 – 1,100 W',
+      'Voltage': '380V, 3-phase',
+      'Air Flow': '5,000 – 44,500 m³/h',
+      'Diameter': '400 – 1,380 mm',
+      'Material': 'Aluminium / stainless steel',
+    },
+    images: [
+      '/images/products/industrial-fan/plqf-cutout-1.jpg',
+      '/images/products/industrial-fan/plqf-cutout-2.jpg',
+    ],
+    tags: ['industrial fan', 'exhaust fan', 'ventilation fan', 'factory'],
+    related_skus: ['PLAX-204', 'PLPF'],
+    featured: false,
+  },
+
   /* ── ELECTRIC & GASOLINE ENGINES ─────────────────────────── */
   {
     id: 'ENG-ELEC',
@@ -1051,6 +1224,7 @@ export const getProductById = (id: string) =>
 export const categories = [
   { id: 'construction', label_en: 'Construction Machinery', label_vi: 'Máy Xây Dựng' },
   { id: 'agriculture', label_en: 'Agricultural Machinery', label_vi: 'Máy Nông Nghiệp' },
+  { id: 'industrial', label_en: 'Industrial Fans', label_vi: 'Quạt Công Nghiệp' },
   { id: 'engine', label_en: 'Engines & Motors', label_vi: 'Động Cơ' },
   { id: 'spare-part', label_en: 'Spare Parts', label_vi: 'Phụ Kiện' },
 ] as const;

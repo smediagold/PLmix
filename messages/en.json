@@ -8,14 +8,28 @@
     "construction": "Construction Machinery",
     "agriculture": "Agricultural Machinery",
     "engines": "Engines & Motors",
-    "spareParts": "Spare Parts"
+    "spareParts": "Spare Parts",
+    "main": "Main",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "models": "{count, plural, one {# model} other {# models}}",
+    "allProducts": "All products"
   },
   "home": {
     "hero": {
       "headline": "20 Years of Manufacturing Excellence",
       "subtext": "Trusted by partners in 20 countries — construction and agricultural machinery built to last.",
       "ctaProducts": "Browse Products",
-      "ctaQuote": "Get a Quote"
+      "ctaQuote": "Get a Quote",
+      "title": "Built in Vietnam for 20 countries",
+      "text": "For more than 20 years Phu Long Mechanical has made concrete mixers, stirrup benders, rice transplanters, threshers and industrial fans in one factory, each built to the importer’s spec.",
+      "cta": "Get a quote",
+      "all": "See every product",
+      "models": "{count, plural, one {# model} other {# models}}",
+      "view": "See the {count} models",
+      "quote": "Ask for a price",
+      "specs": "Full specs on WhatsApp",
+      "waText": "Hello Phu Long, please send me the full specifications of your {name}."
     },
     "stats": {
       "years": "Years of Experience",
@@ -43,9 +57,23 @@
       "requestQuote": "Request Quote"
     },
     "factory": {
-      "title": "Built in Our Factory",
+      "title": "One factory, every machine",
       "description": "Operating from a single, modern production facility in Vietnam, our team of engineers and technicians manufactures a full range of construction and agricultural machinery — all under one roof. Every machine is quality-checked before leaving the factory.",
-      "link": "Learn about us"
+      "link": "About the company",
+      "text": "Phu Long began as a local mechanical workshop more than twenty years ago. Today one production site in Giao Thuy, Ninh Binh, does everything from cutting and rolling steel to welding, painting, assembly and a test run before each machine is packed.",
+      "text2": "Because it all happens under one roof, we can change the drum size, the colour, the engine or the logo for each order, and mix several models in one container.",
+      "years": "Years of experience",
+      "countries": "Countries exported to",
+      "customers": "Business customers",
+      "factory": "Dedicated factory",
+      "weld": "Drum welding",
+      "weldNote": "Filmed in our assembly hall",
+      "aerial": "Our plant from the air",
+      "aerialNote": "Giao Thuy, Ninh Binh",
+      "hall": "Assembly hall",
+      "hallNote": "Mixers waiting for engines",
+      "warehouse": "Finished-goods store",
+      "warehouseNote": "Paddy threshers before packing"
     },
     "customization": {
       "title": "Customized to Your Need",
@@ -60,6 +88,30 @@
       "title": "Ready to place an order?",
       "subtitle": "Let's talk about your requirements. Our team responds within 24 hours.",
       "button": "Contact Us"
+    },
+    "markets": {
+      "title": "Shipped to 20 countries",
+      "text": "Importers, distributors and contractors in Asia, Africa, the Middle East, the Pacific and the Americas."
+    },
+    "certs": {
+      "title": "Certified and tested",
+      "text": "Our quality management system was certified to ISO 9001:2015 by the Vietnam Certification Association, and our concrete mixers were tested by SGS Vietnam.",
+      "iso": "ISO 9001:2015 certificate",
+      "isoNote": "Vietnam Certification Association (VCA), issued March 2022",
+      "sgs": "SGS test report",
+      "sgsNote": "Concrete mixer samples, February 2023"
+    },
+    "orders": {
+      "title": "Recent containers",
+      "text": "FCL and LCL loads, packed in our yard and checked before the doors close."
+    },
+    "reviews": {
+      "title": "What importers tell us",
+      "text": "More than 70 business customers in 20 countries. A few of them, in their own words."
+    },
+    "index": {
+      "title": "Everything we make",
+      "models": "{count, plural, one {# model} other {# models}}"
     }
   },
   "products": {
@@ -133,11 +185,7 @@
     "officeAddress": "Office Address",
     "officeAddressValue": "115 Ke Ve Street, Dong Ngac Ward, Hanoi",
     "factoryAddress": "Factory Address",
-    "factoryAddressValue": "Giao Thuy Commune, Ninh Binh Province, Vietnam",
-    "catalogTitle": "Download Catalog",
-    "catalogDesc": "Get our full product catalog in PDF format.",
-    "catalogConstruction": "Construction Machinery Catalog",
-    "catalogAgriculture": "Agricultural Machinery Catalog"
+    "factoryAddressValue": "Giao Thuy Commune, Ninh Binh Province, Vietnam"
   },
   "blog": {
     "title": "Blog",
@@ -157,9 +205,61 @@
     "blog": "Blog",
     "about": "About Us",
     "contact": "Contact",
-    "catalog": "Download Catalog",
     "officeAddress": "115 Ke Ve Street, Dong Ngac Ward, Hanoi",
     "factoryAddress": "Factory: Giao Thuy Commune, Ninh Binh Province",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "top": "Back to top"
+  },
+  "inquiry": {
+    "add": "Add to quote",
+    "added": "In your quote",
+    "remove": "Remove from quote",
+    "region": "Your quote list",
+    "count": "{count, plural, one {# model} other {# models}} in your quote",
+    "whatsapp": "Send on WhatsApp",
+    "form": "Send with the form",
+    "clear": "Clear",
+    "waIntro": "Hello Phu Long, please quote these models:"
+  },
+  "coupon": {
+    "title": "Ask for a price",
+    "text": "Tell us the models, quantities and your destination port. Our sales team replies within 24 hours with an FOB or CIF quote.",
+    "name": "Name",
+    "namePh": "Your name",
+    "email": "Email",
+    "emailPh": "you@company.com",
+    "product": "Models",
+    "productPh": "Models and quantity, e.g. CM-350-2W-P × 40",
+    "message": "Message",
+    "messagePh": "Destination port, colour, engine, logo…",
+    "submit": "Send request",
+    "sending": "Sending…",
+    "sentTitle": "Request received.",
+    "sentText": "We will reply within 24 hours. For anything urgent, message us on WhatsApp at +84 946 964 669.",
+    "error": "The request did not go through. Please try again, or email Andy@phulongglobal.com.",
+    "errName": "Enter your name so we know who to reply to.",
+    "errEmail": "Enter an email address like name@company.com.",
+    "errMessage": "Add a few words about what you need (10 characters or more)."
+  },
+  "media": {
+    "play": "Play video",
+    "pause": "Pause video"
+  },
+  "line": {
+    "home": "Home",
+    "products": "Products",
+    "breadcrumb": "Breadcrumb",
+    "quote": "Request a quote",
+    "modelsTitle": "{count, plural, one {# model} other {# models}}",
+    "details": "Details",
+    "compareTitle": "Compare models",
+    "model": "Model",
+    "factoryTitle": "Made in our factory",
+    "video": "{name} in our factory",
+    "customTitle": "Built to your order",
+    "customText": "Every machine in this line can be built to your market. Tell us what you need and we will confirm it with the quote.",
+    "moreTitle": "Other product lines",
+    "specs": "Full specs on WhatsApp",
+    "waText": "Hello Phu Long, please send me the full specifications of your {name}."
   }
 }

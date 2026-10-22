@@ -378,7 +378,7 @@ function CtaSection() {
           Ready to work together?
         </h2>
         <p className="mt-4 text-base text-brand-gray">
-          Download our product catalog or get in touch to discuss your requirements.
+          Message us on WhatsApp for full specifications, or send an inquiry to discuss your requirements.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <Link
@@ -388,14 +388,12 @@ function CtaSection() {
             Contact Us
           </Link>
           <a
-            href="/catalog-construction.pdf"
+            href="https://wa.me/84946964669"
             target="_blank"
-            className="inline-flex h-11 items-center justify-center gap-2 rounded-md border border-border bg-white px-6 text-sm font-medium text-dark transition-colors hover:border-brand-orange hover:text-brand-orange"
+            rel="noopener noreferrer"
+            className="inline-flex h-11 items-center justify-center rounded-md bg-[#25D366] px-6 text-sm font-semibold text-white transition-opacity hover:opacity-90"
           >
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-            Download Catalog
+            WhatsApp
           </a>
         </div>
       </div>

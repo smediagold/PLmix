@@ -2,84 +2,70 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 import type { Product } from '@/data/products';
 
 export default function ProductGallery({ product, name }: { product: Product; name: string }) {
+  const t = useTranslations('media');
   const [activeIndex, setActiveIndex] = useState(0);
   const [showVideo, setShowVideo] = useState(false);
 
-  const images = product.images.length > 0 ? product.images : [];
+  const images = product.images;
   const hasVideo = Boolean(product.video);
+  const thumbs = images.slice(0, 7);
 
   return (
-    <div className="space-y-3">
-      {/* Main display */}
-      <div className="relative aspect-square overflow-hidden rounded-2xl bg-white border border-border">
+    <div>
+      <div className="tone-tile relative aspect-square overflow-hidden">
         {showVideo && hasVideo ? (
-          <video
-            src={product.video}
-            controls
-            autoPlay
-            muted
-            loop
-            className="h-full w-full object-contain"
-          />
+          <video src={product.video} controls autoPlay muted loop playsInline className="h-full w-full bg-ink object-contain" aria-label={name} />
         ) : images[activeIndex] ? (
           <Image
             src={images[activeIndex]}
-            alt={`${name} — image ${activeIndex + 1}`}
+            alt={`${name}, ${activeIndex + 1}/${images.length}`}
             fill
-            className="object-contain p-8"
+            className="multiply object-contain p-[8%]"
             priority={activeIndex === 0}
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         ) : (
-          <div className="flex h-full items-center justify-center">
-            <svg className="h-24 w-24 text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1}
-                d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
+          <div className="flex h-full items-center justify-center text-[17px] text-soft">{name}</div>
         )}
       </div>
 
-      {/* Thumbnail row: up to 4 images + optional video thumbnail */}
-      {(images.length > 1 || hasVideo) && (
-        <div className="grid grid-cols-5 gap-2">
-          {images.slice(0, 4).map((src, i) => (
-            <button
-              key={i}
-              onClick={() => { setActiveIndex(i); setShowVideo(false); }}
-              className={`relative aspect-square overflow-hidden rounded-lg border transition-all ${
-                !showVideo && activeIndex === i
-                  ? 'border-brand-orange ring-1 ring-brand-orange'
-                  : 'border-border hover:border-brand-orange/50'
-              } bg-surface`}
-            >
-              <Image
-                src={src}
-                alt={`${name} ${i + 1}`}
-                fill
-                className="object-contain p-1.5"
-                sizes="10vw"
-              />
-            </button>
-          ))}
-
-          {/* Video thumbnail */}
+      {(thumbs.length > 1 || hasVideo) && (
+        <div className="mt-2 grid grid-cols-4 gap-2 sm:grid-cols-8">
+          {thumbs.map((src, i) => {
+            const on = !showVideo && activeIndex === i;
+            return (
+              <button
+                key={src}
+                type="button"
+                aria-label={`${name}, ${i + 1}`}
+                aria-pressed={on}
+                onClick={() => {
+                  setActiveIndex(i);
+                  setShowVideo(false);
+                }}
+                className={`press relative aspect-square overflow-hidden bg-white ${on ? 'outline outline-3 -outline-offset-3 outline-ink' : 'hover:opacity-80'}`}
+              >
+                <Image src={src} alt="" fill className="object-contain p-1" sizes="96px" />
+              </button>
+            );
+          })}
           {hasVideo && (
             <button
+              type="button"
               onClick={() => setShowVideo(true)}
-              className={`relative aspect-square overflow-hidden rounded-lg border transition-all flex flex-col items-center justify-center gap-1 ${
-                showVideo
-                  ? 'border-brand-orange ring-1 ring-brand-orange bg-brand-orange/5'
-                  : 'border-border hover:border-brand-orange/50 bg-surface'
+              aria-pressed={showVideo}
+              className={`press flex aspect-square flex-col items-center justify-center gap-1 text-[15px] font-semibold ${
+                showVideo ? 'bg-ink text-white' : 'bg-white text-ink hover:bg-stone'
               }`}
             >
-              <svg className="h-6 w-6 text-brand-orange" fill="currentColor" viewBox="0 0 24 24">
+              <svg aria-hidden="true" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
               </svg>
-              <span className="text-[10px] font-semibold text-brand-gray/70 uppercase tracking-wide">Video</span>
+              {t('play')}
             </button>
           )}
         </div>
