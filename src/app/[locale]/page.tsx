@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: title },
     description,
     alternates: {
-      canonical: `https://phulongglobal.com/${locale}`,
-      languages: { en: 'https://phulongglobal.com/en', vi: 'https://phulongglobal.com/vi' },
+      canonical: `https://www.phulongglobal.com/${locale}`,
+      languages: { en: 'https://www.phulongglobal.com/en', vi: 'https://www.phulongglobal.com/vi' },
     },
-    openGraph: { title, description, url: `https://phulongglobal.com/${locale}` },
+    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}` },
   };
 }
 
@@ -58,7 +58,7 @@ async function HeroSection() {
   return (
     <section aria-labelledby="hero-title" className="relative isolate flex min-h-[560px] items-end overflow-hidden bg-ink lg:h-[calc(100svh-72px)]">
       <Image
-        src="/images/hero-cover.png"
+        src="/images/hero-cover.jpg"
         alt="Phu Long concrete mixers on a construction site"
         fill
         priority
@@ -273,7 +273,7 @@ async function FactorySection() {
     { src: '/images/factory/factory-1.jpg', name: t('aerial'), note: t('aerialNote') },
     { src: '/images/factory/factory-3.jpg', name: t('hall'), note: t('hallNote') },
     { src: '/images/factory/loading-fcl.jpg', name: t('warehouse'), note: t('warehouseNote') },
-    { src: '/images/factory/showroom.png', name: t('showroom'), note: t('showroomNote') },
+    { src: '/images/factory/showroom.jpg', name: t('showroom'), note: t('showroomNote') },
   ];
   return (
     <section aria-labelledby="factory-title" className={`frame ${gap}`}>

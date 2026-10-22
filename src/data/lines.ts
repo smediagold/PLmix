@@ -51,7 +51,7 @@ export const lines: ProductLine[] = [
     ],
     cover: '/images/lines/concrete-mixers.jpg',
     photos: [
-      { src: '/images/factory/showroom.png', caption: { en: 'Showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' } },
+      { src: '/images/factory/showroom.jpg', caption: { en: 'Showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' } },
       { src: '/images/factory/factory-3.jpg', caption: { en: 'Assembly hall', vi: 'Xưởng lắp ráp' } },
       { src: '/images/factory/loading-fcl.jpg', caption: { en: 'Drums ready for an FCL load', vi: 'Thùng trộn chờ đóng container FCL' } },
       { src: '/images/orders/order-1.jpg', caption: { en: 'Container loaded for export', vi: 'Container đã đóng hàng xuất khẩu' } },
@@ -61,7 +61,7 @@ export const lines: ProductLine[] = [
     video: '/videos/cm-350l.mp4',
     poster: '/images/products/concrete-mixer/cm-350-2w-p-2.png',
     banner: [
-      { src: '/images/factory/showroom.png', caption: { en: 'Our showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' }, wide: true },
+      { src: '/images/factory/showroom.jpg', caption: { en: 'Our showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' }, wide: true },
       { src: '/images/banners/mixer-outdoor.jpg', caption: { en: 'Ready to work, gasoline engine', vi: 'Sẵn sàng làm việc, động cơ xăng' } },
     ],
     tone: 'orange',

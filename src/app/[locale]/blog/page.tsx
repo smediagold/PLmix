@@ -18,10 +18,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: title },
     description,
     alternates: {
-      canonical: `https://phulongglobal.com/${locale}/blog`,
-      languages: { en: 'https://phulongglobal.com/en/blog', vi: 'https://phulongglobal.com/vi/blog' },
+      canonical: `https://www.phulongglobal.com/${locale}/blog`,
+      languages: { en: 'https://www.phulongglobal.com/en/blog', vi: 'https://www.phulongglobal.com/vi/blog' },
     },
-    openGraph: { title, description, url: `https://phulongglobal.com/${locale}/blog` },
+    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/blog` },
   };
 }
 

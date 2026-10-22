@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: title },
     description,
     alternates: {
-      canonical: `https://phulongglobal.com/${locale}/contact`,
-      languages: { en: 'https://phulongglobal.com/en/contact', vi: 'https://phulongglobal.com/vi/contact' },
+      canonical: `https://www.phulongglobal.com/${locale}/contact`,
+      languages: { en: 'https://www.phulongglobal.com/en/contact', vi: 'https://www.phulongglobal.com/vi/contact' },
     },
-    openGraph: { title, description, url: `https://phulongglobal.com/${locale}/contact` },
+    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/contact` },
   };
 }
 
@@ -114,7 +114,7 @@ function ContactInfo({ locale }: { locale: string }) {
             }
             label={t('website')}
             value="phulongglobal.com"
-            href="https://phulongglobal.com"
+            href="https://www.phulongglobal.com"
             external
           />
           <InfoItem

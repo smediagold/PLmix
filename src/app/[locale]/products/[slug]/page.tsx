@@ -15,7 +15,7 @@ export function generateStaticParams() {
   return [...lines.map((l) => ({ slug: l.slug })), ...products.map((p) => ({ slug: p.id.toLowerCase() }))];
 }
 
-const base = 'https://phulongglobal.com';
+const base = 'https://www.phulongglobal.com';
 
 export async function generateMetadata({
   params,

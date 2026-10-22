@@ -20,15 +20,15 @@ export async function generateMetadata({
   const vi = locale === 'vi';
   const title = vi ? post.title_vi : post.title_en;
   const description = (vi ? post.excerpt_vi : post.excerpt_en).slice(0, 160);
-  const url = `https://phulongglobal.com/${locale}/blog/${slug}`;
+  const url = `https://www.phulongglobal.com/${locale}/blog/${slug}`;
   return {
     title,
     description,
     alternates: {
       canonical: url,
       languages: {
-        en: `https://phulongglobal.com/en/blog/${slug}`,
-        vi: `https://phulongglobal.com/vi/blog/${slug}`,
+        en: `https://www.phulongglobal.com/en/blog/${slug}`,
+        vi: `https://www.phulongglobal.com/vi/blog/${slug}`,
       },
     },
     openGraph: {

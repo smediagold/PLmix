@@ -26,8 +26,9 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
         className="relative isolate flex min-h-[620px] flex-col overflow-hidden bg-ink text-white lg:h-[calc(100svh-72px)]"
       >
         <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority sizes="100vw" className="-z-10 object-cover" />
-        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.9)_0%,rgba(28,28,30,0.65)_45%,rgba(28,28,30,0.15)_100%)]" />
-        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-[linear-gradient(0deg,rgba(28,28,30,0.85)_0%,rgba(28,28,30,0)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.7)_0%,rgba(28,28,30,0.3)_45%,rgba(28,28,30,0)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[linear-gradient(0deg,rgba(28,28,30,0.92)_0%,rgba(28,28,30,0.55)_45%,rgba(28,28,30,0)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-28 bg-[linear-gradient(180deg,rgba(28,28,30,0.55)_0%,rgba(28,28,30,0)_100%)]" />
 
         <nav aria-label={t('breadcrumb')} className="frame pt-4 text-[15px] text-white/80">
           <ol className="flex flex-wrap items-center gap-2">

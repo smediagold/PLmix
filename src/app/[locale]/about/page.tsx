@@ -17,10 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     title: { absolute: title },
     description,
     alternates: {
-      canonical: `https://phulongglobal.com/${locale}/about`,
-      languages: { en: 'https://phulongglobal.com/en/about', vi: 'https://phulongglobal.com/vi/about' },
+      canonical: `https://www.phulongglobal.com/${locale}/about`,
+      languages: { en: 'https://www.phulongglobal.com/en/about', vi: 'https://www.phulongglobal.com/vi/about' },
     },
-    openGraph: { title, description, url: `https://phulongglobal.com/${locale}/about` },
+    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/about` },
   };
 }
 
@@ -53,7 +53,7 @@ function AboutHero() {
     <div className="relative overflow-hidden bg-dark">
       <div className="absolute inset-0">
         <Image
-          src="/images/factory/factory-aerial.png"
+          src="/images/factory/factory-aerial.jpg"
           alt="Phu Long factory aerial view"
           fill
           className="object-cover opacity-25"
@@ -122,7 +122,7 @@ function StorySection() {
             </div>
             <div className="relative h-56 overflow-hidden rounded-xl sm:h-64">
               <Image
-                src="/images/factory/showroom.png"
+                src="/images/factory/showroom.jpg"
                 alt="Phu Long showroom"
                 fill
                 className="object-cover"
@@ -179,7 +179,7 @@ function FactorySection() {
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3">
           <div className="relative h-64 overflow-hidden rounded-2xl sm:col-span-2 sm:h-80">
             <Image
-              src="/images/factory/factory-aerial.png"
+              src="/images/factory/factory-aerial.jpg"
               alt="Phu Long factory aerial view"
               fill
               className="object-cover"

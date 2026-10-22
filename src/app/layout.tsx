@@ -9,7 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://phulongglobal.com'),
+  metadataBase: new URL('https://www.phulongglobal.com'),
   title: {
     template: '%s | Phu Long',
     default: 'Concrete Mixer Manufacturer in Vietnam | Phu Long Mechanical',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     siteName: 'Phu Long Mechanical',
-    images: [{ url: '/images/hero-cover.png', width: 1200, height: 630, alt: 'Phu Long Mechanical factory — concrete mixers' }],
+    images: [{ url: '/images/hero-cover.jpg', width: 1200, height: 630, alt: 'Phu Long Mechanical factory — concrete mixers' }],
   },
   twitter: { card: 'summary_large_image' },
   robots: { index: true, follow: true },

@@ -20,6 +20,15 @@ export default function Header({ locale }: { locale: string }) {
   }, [pathname]);
 
   useEffect(() => {
+    const warm = () => {
+      ['/products', '/contact', '/about', ...lines.map((l) => `/products/${l.slug}`)].forEach((href) => router.prefetch(href));
+    };
+    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
+    if (w.requestIdleCallback) w.requestIdleCallback(warm);
+    else setTimeout(warm, 1500);
+  }, [router]);
+
+  useEffect(() => {
     if (!productsOpen) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setProductsOpen(false);
     const onClick = (e: MouseEvent) => {
@@ -50,7 +59,7 @@ export default function Header({ locale }: { locale: string }) {
       <div ref={panelRef}>
         <div className="frame flex h-[72px] items-center justify-between gap-6">
           <Link href="/" className="flex min-h-11 shrink-0 items-center" aria-label="Phu Long Mechanical, home">
-            <Image src="/logo.png" alt="Phu Long Mechanical" width={216} height={72} className="h-[52px] w-auto" priority />
+            <Image src="/logo.png" alt="Phu Long Mechanical" width={216} height={72} className="h-[62px] w-auto" priority />
           </Link>
 
           <nav aria-label={t('main')} className="hidden items-center gap-9 lg:flex">
