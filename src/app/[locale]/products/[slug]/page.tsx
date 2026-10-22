@@ -7,7 +7,8 @@ import { lines, getLine, lineOfProduct, pick } from '@/data/lines';
 import { Link } from '@/i18n/navigation';
 import ProductGallery from '@/components/products/ProductGallery';
 import InquiryToggle from '@/components/inquiry/InquiryToggle';
-import LinePage, { keyFact } from '@/components/lines/LinePage';
+import LinePage from '@/components/lines/LinePage';
+import { keyFact } from '@/components/lines/ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 
 export function generateStaticParams() {
@@ -27,13 +28,13 @@ export async function generateMetadata({
 
   const line = getLine(slug);
   if (line) {
-    const title = locale === 'vi' ? `${line.name.vi} — Nhà sản xuất Việt Nam` : `${line.name.en} — Manufacturer in Vietnam`;
+    const title = locale === 'vi' ? `${line.name.vi} – Nhà Sản Xuất Việt Nam | Phú Long` : `${line.name.en} Manufacturer in Vietnam | Phu Long`;
     const description = `${pick(line.tagline, locale)} ${pick(line.intro, locale)}`.slice(0, 160);
     return {
-      title,
+      title: { absolute: title },
       description,
       alternates: { canonical: url, languages },
-      openGraph: { title: `${title} | Phu Long Mechanical`, description, url, images: [{ url: line.cover }] },
+      openGraph: { title, description, url, images: [{ url: line.cover }] },
     };
   }
 
@@ -45,7 +46,7 @@ export async function generateMetadata({
   const moqLine = product.moq ? (vi ? ` MOQ ${product.moq} chiếc.` : ` MOQ ${product.moq} units.`) : '';
   const description = `${desc}${moqLine}`.slice(0, 160);
   return {
-    title: name,
+    title: { absolute: `${name.split(' — ')[0]} | Phu Long` },
     description,
     alternates: { canonical: url, languages },
     openGraph: {

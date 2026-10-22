@@ -11,8 +11,8 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://phulongglobal.com'),
   title: {
-    template: '%s | Phu Long Mechanical',
-    default: 'Phu Long Mechanical — Concrete Mixers, Agricultural Machinery & Industrial Fans, Vietnam',
+    template: '%s | Phu Long',
+    default: 'Concrete Mixer Manufacturer in Vietnam | Phu Long Mechanical',
   },
   description:
     'Vietnam-based manufacturer of concrete mixers, stirrup bending machines, rice transplanters, paddy threshers and industrial fans. 20+ years, exported to 20 countries. OEM orders available.',

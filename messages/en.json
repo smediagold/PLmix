@@ -17,19 +17,10 @@
   },
   "home": {
     "hero": {
-      "headline": "20 Years of Manufacturing Excellence",
-      "subtext": "Trusted by partners in 20 countries — construction and agricultural machinery built to last.",
+      "headline": "Concrete Mixer Manufacturer in Vietnam",
+      "subtext": "20 years of manufacturing excellence. Concrete mixers from 250 to 500 L, built to your colour, engine and logo, and trusted by partners in 20 countries.",
       "ctaProducts": "Browse Products",
-      "ctaQuote": "Get a Quote",
-      "title": "Built in Vietnam for 20 countries",
-      "text": "For more than 20 years Phu Long Mechanical has made concrete mixers, stirrup benders, rice transplanters, threshers and industrial fans in one factory, each built to the importer’s spec.",
-      "cta": "Get a quote",
-      "all": "See every product",
-      "models": "{count, plural, one {# model} other {# models}}",
-      "view": "See the {count} models",
-      "quote": "Ask for a price",
-      "specs": "Full specs on WhatsApp",
-      "waText": "Hello Phu Long, please send me the full specifications of your {name}."
+      "ctaQuote": "Get a Quote"
     },
     "stats": {
       "years": "Years of Experience",
@@ -72,8 +63,8 @@
       "aerialNote": "Giao Thuy, Ninh Binh",
       "hall": "Assembly hall",
       "hallNote": "Mixers waiting for engines",
-      "warehouse": "Finished-goods store",
-      "warehouseNote": "Paddy threshers before packing"
+      "warehouse": "Ready for loading",
+      "warehouseNote": "Mixer drums before an FCL load"
     },
     "customization": {
       "title": "Customized to Your Need",
@@ -109,9 +100,8 @@
       "title": "What importers tell us",
       "text": "More than 70 business customers in 20 countries. A few of them, in their own words."
     },
-    "index": {
-      "title": "Everything we make",
-      "models": "{count, plural, one {# model} other {# models}}"
+    "mixers": {
+      "compare": "Compare all {count} models"
     }
   },
   "products": {

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { groups, lines, mainLines, lineProducts, pick } from '@/data/lines';
+import { getLine, lineProducts, pick } from '@/data/lines';
 import { markets, orders, testimonials } from '@/data/proof';
-import CatalogueHero, { type HeroEntry } from '@/components/home/CatalogueHero';
+import ModelGrid from '@/components/lines/ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 import ContactCoupon from '@/components/contact/ContactCoupon';
 
@@ -12,13 +12,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const vi = locale === 'vi';
   const title = vi
-    ? 'Nhà Sản Xuất Máy Trộn Bê Tông, Máy Nông Nghiệp & Quạt Công Nghiệp | Phú Long'
-    : 'Concrete Mixer, Agricultural Machinery & Industrial Fan Manufacturer Vietnam | Phu Long';
+    ? 'Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam | Phú Long'
+    : 'Concrete Mixer Manufacturer in Vietnam | Phu Long Mechanical';
   const description = vi
     ? 'Phú Long — nhà sản xuất máy trộn bê tông, máy uốn đai, máy cấy lúa, máy tuốt lúa và quạt công nghiệp tại Việt Nam. 20 năm kinh nghiệm, xuất khẩu 20 quốc gia.'
     : 'Phu Long — Vietnam manufacturer of concrete mixers, stirrup bending machines, rice transplanters, paddy threshers and industrial fans. 20+ years, 20 countries. OEM orders welcome.';
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://phulongglobal.com/${locale}`,
@@ -34,29 +34,83 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   setRequestLocale(locale);
 
-  const entries: HeroEntry[] = mainLines.map((l) => ({
-    slug: l.slug,
-    tone: l.tone,
-    name: pick(l.name, locale),
-    tagline: pick(l.tagline, locale),
-    cover: l.cover,
-    count: lineProducts(l).length,
-    facts: l.facts.map((f) => ({ label: pick(f.label, locale), value: pick(f.value, locale) })),
-  }));
-
   return (
     <>
-      <CatalogueHero entries={entries} />
+      <HeroSection />
+      <MixersSection locale={locale} />
       <FactorySection />
       <MarketsSection locale={locale} />
       <CertificatesSection />
       <OrdersSection locale={locale} />
       <TestimonialsSection locale={locale} />
-      <IndexSection locale={locale} />
       <section aria-label="Contact" className={`frame ${gap} pb-[clamp(96px,10vw,160px)]`}>
         <ContactCoupon />
       </section>
     </>
+  );
+}
+
+async function HeroSection() {
+  const t = await getTranslations('home.hero');
+  return (
+    <section aria-labelledby="hero-title" className="relative isolate flex min-h-[560px] items-end overflow-hidden bg-ink lg:h-[calc(100svh-72px)]">
+      <Image
+        src="/images/hero-cover.png"
+        alt="Phu Long concrete mixers on a construction site"
+        fill
+        priority
+        sizes="100vw"
+        className="-z-10 object-cover object-[72%_center] lg:object-center"
+      />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.88)_0%,rgba(28,28,30,0.6)_45%,rgba(28,28,30,0.1)_100%)]" />
+      <div className="frame pb-[clamp(48px,8vh,96px)] pt-32">
+        <h1 id="hero-title" className="max-w-[20ch] text-[clamp(30px,5vw,76px)] font-bold leading-[1.02] tracking-[-0.03em] text-white">
+          {t('headline')}
+        </h1>
+        <p className="mt-6 max-w-[48ch] text-[17px] leading-[1.6] text-white/90 md:text-[22px] md:leading-[1.5]">{t('subtext')}</p>
+        <div className="mt-9 flex flex-wrap gap-3">
+          <Link
+            href="/products/concrete-mixers"
+            className="press inline-flex min-h-12 items-center bg-brand-orange px-7 text-[17px] font-semibold text-ink hover:bg-[#FFB840]"
+          >
+            {t('ctaProducts')}
+          </Link>
+          <Link
+            href="/contact"
+            className="press inline-flex min-h-12 items-center bg-white/15 px-7 text-[17px] font-semibold text-white hover:bg-white/25"
+          >
+            {t('ctaQuote')}
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+async function MixersSection({ locale }: { locale: string }) {
+  const t = await getTranslations('home.mixers');
+  const line = getLine('concrete-mixers')!;
+  const items = lineProducts(line);
+  return (
+    <section aria-labelledby="mixers-title" className={`frame ${gap}`}>
+      <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
+        <div className="lg:col-span-5">
+          <h2 id="mixers-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
+            {pick(line.name, locale)}
+          </h2>
+          <p data-reveal className="mt-4 max-w-[40ch] text-[22px] leading-[1.45] text-ink">{pick(line.tagline, locale)}</p>
+        </div>
+        <div className="lg:col-span-7">
+          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-ink">{pick(line.intro, locale)}</p>
+          <Link href="/products/concrete-mixers" className="mt-4 inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
+            {t('compare', { count: items.length })}
+          </Link>
+        </div>
+      </div>
+      <div className="mt-12">
+        <ModelGrid items={items} locale={locale} />
+      </div>
+    </section>
   );
 }
 
@@ -71,7 +125,7 @@ async function FactorySection() {
   const tiles = [
     { src: '/images/factory/factory-1.jpg', name: t('aerial'), note: t('aerialNote') },
     { src: '/images/factory/factory-3.jpg', name: t('hall'), note: t('hallNote') },
-    { src: '/images/factory/warehouse.jpg', name: t('warehouse'), note: t('warehouseNote') },
+    { src: '/images/factory/loading-fcl.jpg', name: t('warehouse'), note: t('warehouseNote') },
   ];
   return (
     <section aria-labelledby="factory-title" className={`frame ${gap}`}>
@@ -139,7 +193,7 @@ async function MarketsSection({ locale }: { locale: string }) {
                 <p className="text-[clamp(17px,1.5vw,22px)] leading-[1.6] text-ink">
                   {m.countries.map((c, i) => (
                     <span key={c}>
-                      {i > 0 && <span aria-hidden="true">{' · '}</span>}
+                      {i > 0 && <span aria-hidden="true">{' · '}</span>}
                       <span className="sm:whitespace-nowrap">{c}</span>
                     </span>
                   ))}
@@ -254,49 +308,6 @@ async function TestimonialsSection({ locale }: { locale: string }) {
           ))}
         </ul>
       </div>
-    </section>
-  );
-}
-
-async function IndexSection({ locale }: { locale: string }) {
-  const t = await getTranslations('home.index');
-  return (
-    <section aria-labelledby="index-title" className={`frame ${gap}`}>
-      <h2 id="index-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
-        {t('title')}
-      </h2>
-      {groups.map((g) => {
-        const gl = lines.filter((l) => l.group === g.id);
-        const count = gl.reduce((n, l) => n + lineProducts(l).length, 0);
-        return (
-          <div key={g.id} className="mt-16">
-            <div className="flex items-baseline justify-between gap-4">
-              <h3 data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-none tracking-[-0.02em] text-ink">
-                {pick(g.name, locale)}
-              </h3>
-              <p className="num text-[17px] text-soft">{t('models', { count })}</p>
-            </div>
-            <ul className="mt-10 grid gap-x-16 gap-y-9 md:grid-cols-2">
-              {gl.map((l, i) => (
-                <li key={l.slug} data-reveal style={{ ['--d' as string]: `${(i % 2) * 80}ms` }} data-tone={l.tone}>
-                  <Link href={`/products/${l.slug}`} className="group flex gap-5">
-                    <span className="tone-tile relative block h-16 w-16 shrink-0">
-                      <Image src={l.cover} alt="" fill sizes="64px" className="multiply object-contain p-1" />
-                    </span>
-                    <span className="min-w-0 flex-1">
-                      <span className="flex items-baseline justify-between gap-4">
-                        <span className="text-[17px] font-bold text-ink underline-offset-4 group-hover:underline">{pick(l.name, locale)}</span>
-                        <span className="num shrink-0 text-[15px] text-soft">{t('models', { count: lineProducts(l).length })}</span>
-                      </span>
-                      <span className="mt-1 block max-w-[46ch] text-[15px] leading-[1.5] text-soft">{pick(l.tagline, locale)}</span>
-                    </span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        );
-      })}
     </section>
   );
 }

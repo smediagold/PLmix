@@ -8,13 +8,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const vi = locale === 'vi';
   const title = vi
-    ? 'Về Phú Long — 20 Năm Sản Xuất Máy Móc Xuất Khẩu Tại Việt Nam'
-    : 'About Phu Long — 20 Years Manufacturing Excellence in Vietnam';
+    ? 'Về Phú Long – Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam'
+    : 'About Phu Long – Concrete Mixer Manufacturer in Vietnam';
   const description = vi
     ? 'Phú Long Global Investment — nhà sản xuất máy móc xây dựng và nông nghiệp tại Việt Nam từ năm 2004. Một nhà máy, 70+ khách hàng, 20 quốc gia xuất khẩu.'
     : 'Phu Long Global Investment — Vietnam machinery manufacturer since 2004. One factory, 70+ global clients, exported to 20 countries. Custom OEM orders available.';
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://phulongglobal.com/${locale}/about`,

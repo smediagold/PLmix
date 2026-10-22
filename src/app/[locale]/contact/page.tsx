@@ -8,13 +8,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const vi = locale === 'vi';
   const title = vi
-    ? 'Liên Hệ & Yêu Cầu Báo Giá Máy Móc Xuất Khẩu — Phú Long'
-    : 'Contact Phu Long — Request a Quote for Export Machinery';
+    ? 'Liên Hệ & Nhận Báo Giá | Phú Long'
+    : 'Contact & Request a Quote | Phu Long';
   const description = vi
     ? 'Liên hệ Phú Long để được tư vấn và báo giá máy trộn bê tông, máy nông nghiệp, động cơ. Phản hồi trong 24 giờ. WhatsApp: (+84) 946 964 669.'
     : 'Contact Phu Long for product inquiries, export quotes and OEM orders. Concrete mixers, agricultural machinery, engines. We respond within 24 hours.';
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://phulongglobal.com/${locale}/contact`,

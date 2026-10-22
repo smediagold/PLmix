@@ -9,13 +9,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const vi = locale === 'vi';
   const title = vi
-    ? 'Blog — Hướng Dẫn & Kiến Thức Kỹ Thuật Máy Móc Xây Dựng & Nông Nghiệp'
-    : 'Blog — Machinery Buying Guides & Technical Insights';
+    ? 'Hướng Dẫn Chọn Mua Máy Móc | Phú Long'
+    : 'Machinery Buying Guides & Tips | Phu Long';
   const description = vi
     ? 'Hướng dẫn chọn máy trộn bê tông, máy cấy lúa, máy tuốt lúa — kinh nghiệm thực tế từ nhà sản xuất Phú Long 20 năm kinh nghiệm xuất khẩu.'
     : 'Practical guides on choosing concrete mixers, rice transplanters, paddy threshers and more — from a manufacturer with 20+ years of export experience.';
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://phulongglobal.com/${locale}/blog`,

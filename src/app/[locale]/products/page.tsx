@@ -10,13 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   const vi = locale === 'vi';
   const title = vi
-    ? 'Sản Phẩm — Máy Xây Dựng & Máy Nông Nghiệp Xuất Khẩu'
-    : 'Products — Construction & Agricultural Machinery for Export';
+    ? 'Sản Phẩm: Máy Trộn, Máy Nông Nghiệp, Quạt | Phú Long'
+    : 'Concrete Mixers, Farm Machines & Fans | Phu Long';
   const description = vi
     ? 'Toàn bộ sản phẩm Phú Long: máy trộn bê tông 250–500L, xe rùa, máy uốn đai thép, máy cấy lúa, máy tuốt lúa, động cơ Vikyno. Đặt hàng OEM, xuất khẩu toàn cầu.'
     : 'Full range of Phu Long products: concrete mixers 250–500L, wheelbarrows, stirrup bending machines, rice transplanters, paddy threshers, Vikyno diesel engines. OEM & export.';
   return {
-    title,
+    title: { absolute: title },
     description,
     alternates: {
       canonical: `https://phulongglobal.com/${locale}/products`,

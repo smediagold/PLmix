@@ -17,19 +17,10 @@
   },
   "home": {
     "hero": {
-      "headline": "20 Năm Sản Xuất Máy Móc Chất Lượng Cao",
-      "subtext": "Được tin tưởng bởi đối tác tại 20 quốc gia — máy móc xây dựng và nông nghiệp bền vững, hiệu quả.",
+      "headline": "Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam",
+      "subtext": "20 năm kinh nghiệm sản xuất. Máy trộn bê tông 250–500 lít, làm theo màu, động cơ và logo của bạn, được đối tác tại 20 quốc gia tin dùng.",
       "ctaProducts": "Xem Sản Phẩm",
-      "ctaQuote": "Yêu Cầu Báo Giá",
-      "title": "Sản xuất tại Việt Nam cho 20 nước",
-      "text": "Hơn 20 năm qua, Cơ khí Phú Long sản xuất máy trộn bê tông, máy uốn đai, máy cấy lúa, máy tuốt lúa và quạt công nghiệp tại một nhà máy, làm theo đúng yêu cầu của nhà nhập khẩu.",
-      "cta": "Nhận báo giá",
-      "all": "Xem tất cả sản phẩm",
-      "models": "{count} model",
-      "view": "Xem {count} model",
-      "quote": "Hỏi giá",
-      "specs": "Xem thông số chi tiết qua WhatsApp",
-      "waText": "Chào Phú Long, vui lòng gửi tôi thông số chi tiết của {name}."
+      "ctaQuote": "Yêu Cầu Báo Giá"
     },
     "stats": {
       "years": "Năm Kinh Nghiệm",
@@ -72,8 +63,8 @@
       "aerialNote": "Giao Thủy, Ninh Bình",
       "hall": "Xưởng lắp ráp",
       "hallNote": "Máy trộn chờ lắp động cơ",
-      "warehouse": "Kho thành phẩm",
-      "warehouseNote": "Máy tuốt lúa trước khi đóng gói"
+      "warehouse": "Chờ đóng container",
+      "warehouseNote": "Thùng trộn trước khi đóng container FCL"
     },
     "customization": {
       "title": "Tùy Chỉnh Theo Yêu Cầu",
@@ -109,9 +100,8 @@
       "title": "Nhà nhập khẩu nói gì",
       "text": "Hơn 70 khách hàng doanh nghiệp tại 20 quốc gia. Một vài người trong số họ chia sẻ."
     },
-    "index": {
-      "title": "Tất cả sản phẩm",
-      "models": "{count} model"
+    "mixers": {
+      "compare": "So sánh {count} model"
     }
   },
   "products": {
