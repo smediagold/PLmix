@@ -21,59 +21,53 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
 
   return (
     <>
-      <section aria-labelledby="line-title" data-tone={line.tone} className="lg:grid lg:min-h-[calc(100svh-72px)] lg:grid-cols-2">
-        <div className="tone-field flex h-[44svh] items-center justify-center md:h-[60svh] lg:order-2 lg:h-auto lg:items-start lg:pt-8">
-          <div className="w-[min(64vw,36svh)] md:w-[min(72vw,50svh)] lg:w-[min(46vw,74svh)]">
-            <div className="tone-tile relative aspect-square">
-              <Image src={line.cover} alt={name} fill priority sizes="(min-width: 1024px) 46vw, 72vw" className="multiply object-contain p-[9%]" />
-            </div>
-            <p className="mt-3 hidden justify-between gap-4 text-[15px] lg:flex">
-              <span className="font-semibold">{name}</span>
-              <span className="num">{t('modelsTitle', { count: items.length })}</span>
-            </p>
-          </div>
-        </div>
+      <section
+        aria-labelledby="line-title"
+        className="relative isolate flex min-h-[620px] flex-col overflow-hidden bg-ink text-white lg:h-[calc(100svh-72px)]"
+      >
+        <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority sizes="100vw" className="-z-10 object-cover" />
+        <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.9)_0%,rgba(28,28,30,0.65)_45%,rgba(28,28,30,0.15)_100%)]" />
+        <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-1/2 bg-[linear-gradient(0deg,rgba(28,28,30,0.85)_0%,rgba(28,28,30,0)_100%)]" />
 
-        <div className="flex flex-col justify-between gap-12 px-[clamp(16px,3.4vw,48px)] pb-12 pt-6 lg:order-1 lg:pb-16 lg:pr-[6vw]">
-          <nav aria-label={t('breadcrumb')} className="text-[15px] text-soft">
-            <ol className="flex flex-wrap items-center gap-2">
-              <li><Link href="/" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">{t('home')}</Link></li>
-              <li aria-hidden="true">/</li>
-              <li><Link href="/products" className="inline-flex min-h-11 items-center hover:text-ink hover:underline">{t('products')}</Link></li>
-              <li aria-hidden="true">/</li>
-              <li aria-current="page" className="text-ink">{name}</li>
-            </ol>
-          </nav>
-          <div>
-            <h1 id="line-title" className="text-[clamp(36px,4.4vw,68px)] font-bold leading-[1.02] tracking-[-0.03em] text-ink">
-              {name}
-            </h1>
-            <p className="mt-7 max-w-[56ch] text-[22px] leading-[1.45] text-ink">{pick(line.tagline, locale)}</p>
-            <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
-              <Link
-                href={{ pathname: '/contact', query: { products: name } }}
-                className="press inline-flex min-h-12 w-full items-center justify-center bg-brand-orange px-7 text-[17px] font-semibold text-ink hover:bg-[#FFB840] sm:w-auto"
-              >
-                {t('quote')}
-              </Link>
-              <a
-                href={`https://wa.me/84946964669?text=${encodeURIComponent(t('waText', { name }))}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="min-h-11 py-2 text-[17px] font-semibold text-ink underline underline-offset-4"
-              >
-                {t('specs')}
-              </a>
-            </div>
-            <dl className="mt-10 grid max-w-[600px] grid-cols-2 gap-x-8 gap-y-5">
-              {line.facts.map((f) => (
-                <div key={f.label.en}>
-                  <dt className="text-[15px] text-soft">{pick(f.label, locale)}</dt>
-                  <dd className="num mt-1 text-[17px] font-semibold text-ink">{pick(f.value, locale)}</dd>
-                </div>
-              ))}
-            </dl>
+        <nav aria-label={t('breadcrumb')} className="frame pt-4 text-[15px] text-white/80">
+          <ol className="flex flex-wrap items-center gap-2">
+            <li><Link href="/" className="inline-flex min-h-11 items-center hover:text-white hover:underline">{t('home')}</Link></li>
+            <li aria-hidden="true">/</li>
+            <li><Link href="/products" className="inline-flex min-h-11 items-center hover:text-white hover:underline">{t('products')}</Link></li>
+            <li aria-hidden="true">/</li>
+            <li aria-current="page" className="text-white">{name}</li>
+          </ol>
+        </nav>
+
+        <div className="frame mt-auto pb-[clamp(40px,6vh,72px)] pt-24">
+          <h1 id="line-title" className="max-w-[18ch] text-[clamp(36px,5vw,76px)] font-bold leading-[1.02] tracking-[-0.03em]">
+            {name}
+          </h1>
+          <p className="mt-5 max-w-[56ch] text-[22px] leading-[1.4] text-white/90">{pick(line.tagline, locale)}</p>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <Link
+              href={{ pathname: '/contact', query: { products: name } }}
+              className="press inline-flex min-h-12 w-full items-center justify-center bg-brand-orange px-7 text-[17px] font-semibold text-ink hover:bg-[#FFB840] sm:w-auto"
+            >
+              {t('quote')}
+            </Link>
+            <a
+              href={`https://wa.me/84946964669?text=${encodeURIComponent(t('waText', { name }))}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="press inline-flex min-h-12 w-full items-center justify-center whitespace-nowrap bg-white/15 px-7 text-[17px] font-semibold text-white hover:bg-white/25 sm:w-auto"
+            >
+              {t('specs')}
+            </a>
           </div>
+          <dl className="mt-10 grid max-w-[1000px] grid-cols-2 gap-x-8 gap-y-5 md:grid-cols-4">
+            {line.facts.map((f) => (
+              <div key={f.label.en}>
+                <dt className="text-[15px] text-white/70">{pick(f.label, locale)}</dt>
+                <dd className="num mt-1 text-[17px] font-semibold">{pick(f.value, locale)}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 

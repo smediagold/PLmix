@@ -61,7 +61,7 @@ export const lines: ProductLine[] = [
     video: '/videos/cm-350l.mp4',
     poster: '/images/products/concrete-mixer/cm-350-2w-p-2.png',
     banner: [
-      { src: '/images/hero-cover.png', caption: { en: 'Phu Long mixers on a building site', vi: 'Máy trộn Phú Long tại công trường' }, wide: true },
+      { src: '/images/factory/showroom.png', caption: { en: 'Our showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' }, wide: true },
       { src: '/images/banners/mixer-outdoor.jpg', caption: { en: 'Ready to work, gasoline engine', vi: 'Sẵn sàng làm việc, động cơ xăng' } },
     ],
     tone: 'orange',
@@ -127,8 +127,8 @@ export const lines: ProductLine[] = [
       { src: '/images/products/transplanter/plsp-31.png', caption: { en: 'PLSP-04, four rows', vi: 'PLSP-04, bốn hàng' } },
     ],
     banner: [
-      { src: '/images/banners/rice-field.jpg', caption: { en: 'Rice fields in northern Vietnam', vi: 'Cánh đồng lúa miền Bắc Việt Nam' }, wide: true },
       { src: '/images/banners/transplanter-field.jpg', caption: { en: 'Transplanting with a Phu Long machine', vi: 'Cấy lúa bằng máy Phú Long' } },
+      { src: '/images/banners/transplanters-yard.jpg', caption: { en: 'Transplanters ready for delivery', vi: 'Máy cấy chờ giao hàng' }, wide: true },
     ],
     tone: 'field',
   },
