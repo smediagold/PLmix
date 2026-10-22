@@ -17,6 +17,7 @@ export interface ProductLine {
   facts: Fact[];
   cover: string;
   photos: { src: string; caption: Bi }[];
+  banner?: { src: string; caption: Bi; wide?: boolean }[];
   video?: string;
   poster?: string;
   tone: Tone;
@@ -59,6 +60,10 @@ export const lines: ProductLine[] = [
     ],
     video: '/videos/cm-350l.mp4',
     poster: '/images/products/concrete-mixer/cm-350-2w-p-2.png',
+    banner: [
+      { src: '/images/hero-cover.png', caption: { en: 'Phu Long mixers on a building site', vi: 'Máy trộn Phú Long tại công trường' }, wide: true },
+      { src: '/images/banners/mixer-outdoor.jpg', caption: { en: 'Ready to work, gasoline engine', vi: 'Sẵn sàng làm việc, động cơ xăng' } },
+    ],
     tone: 'orange',
   },
   {
@@ -121,6 +126,10 @@ export const lines: ProductLine[] = [
       { src: '/images/products/transplanter/plsp-28.png', caption: { en: 'Planting claws', vi: 'Mấu cấy' } },
       { src: '/images/products/transplanter/plsp-31.png', caption: { en: 'PLSP-04, four rows', vi: 'PLSP-04, bốn hàng' } },
     ],
+    banner: [
+      { src: '/images/banners/rice-field.jpg', caption: { en: 'Rice fields in northern Vietnam', vi: 'Cánh đồng lúa miền Bắc Việt Nam' }, wide: true },
+      { src: '/images/banners/transplanter-field.jpg', caption: { en: 'Transplanting with a Phu Long machine', vi: 'Cấy lúa bằng máy Phú Long' } },
+    ],
     tone: 'field',
   },
   {
@@ -148,10 +157,13 @@ export const lines: ProductLine[] = [
       { src: '/images/factory/warehouse.jpg', caption: { en: 'Threshers in our warehouse', vi: 'Máy tuốt trong kho nhà máy' } },
       { src: '/images/products/thresher/detail.jpg', caption: { en: 'Threshing drum', vi: 'Trống tuốt' } },
       { src: '/images/products/thresher/pl1200-1.jpg', caption: { en: 'PL1200', vi: 'PL1200' } },
-      { src: '/images/products/thresher/pl800-1.png', caption: { en: 'PL800', vi: 'PL800' } },
     ],
     video: '/videos/thresher.mp4',
     poster: '/images/products/thresher/detail.jpg',
+    banner: [
+      { src: '/images/banners/threshing-field.jpg', caption: { en: 'Harvest day with a Phu Long thresher', vi: 'Ngày thu hoạch với máy tuốt Phú Long' } },
+      { src: '/images/banners/threshers-yard.jpg', caption: { en: 'Threshers ready for delivery', vi: 'Máy tuốt chờ giao hàng' } },
+    ],
     tone: 'rust',
   },
   {
@@ -185,6 +197,10 @@ export const lines: ProductLine[] = [
     ],
     video: '/videos/axial-fan-1.mp4',
     poster: '/images/products/industrial-fan/axial-fan-1-poster.jpg',
+    banner: [
+      { src: '/images/products/industrial-fan/plax-204-photo-1.jpg', caption: { en: 'Axial fan PLAX 204 in our workshop', vi: 'Quạt hướng trục PLAX 204 tại xưởng' } },
+      { src: '/images/products/industrial-fan/plcf-121-photo-2.jpg', caption: { en: 'Centrifugal fans ready to ship', vi: 'Quạt ly tâm chờ xuất hàng' } },
+    ],
     tone: 'ink',
   },
   {

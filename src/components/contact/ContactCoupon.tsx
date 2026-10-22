@@ -53,7 +53,7 @@ export default function ContactCoupon({ defaultProduct = '' }: { defaultProduct?
           <h2 className="text-[clamp(30px,3vw,44px)] font-extrabold uppercase leading-[1.02] tracking-[-0.02em]">
             {t('title')}
           </h2>
-          <p className="max-w-[40ch] text-[17px] leading-[1.55]">{t('text')}</p>
+          <p className="max-w-[56ch] text-[17px] leading-[1.55]">{t('text')}</p>
         </div>
 
         <div className="coupon-perf lg:p-12">

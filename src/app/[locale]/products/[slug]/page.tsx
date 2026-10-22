@@ -112,7 +112,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
             <ProductGallery product={product} name={name} />
           </div>
           <div className="flex flex-col lg:col-start-2 lg:row-start-2">
-            <p className="max-w-[56ch] text-[17px] leading-[1.6] text-ink">{description}</p>
+            <p className="max-w-[68ch] text-[17px] leading-[1.55] text-ink">{description}</p>
 
             <dl className="mt-8 grid grid-cols-2 gap-x-8 gap-y-5">
               {Object.entries(product.specifications).slice(0, 4).map(([k, v]) => (
@@ -156,7 +156,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <h2 id="spec-title" data-reveal className="text-[clamp(26px,2.4vw,36px)] font-bold tracking-[-0.01em] text-ink">{t('specifications')}</h2>
-            <p data-reveal className="mt-4 max-w-[40ch] text-[17px] leading-[1.6] text-ink">
+            <p data-reveal className="mt-4 max-w-[56ch] text-[17px] leading-[1.55] text-ink">
               {vi ? 'Thông số tiêu chuẩn. Mọi máy có thể điều chỉnh theo đơn hàng.' : 'Standard specification. Every machine can be adjusted to your order.'}
             </p>
             <a
@@ -212,13 +212,13 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
           <div className="grid gap-10 bg-stone p-[clamp(24px,4vw,56px)] lg:grid-cols-12">
             <div className="lg:col-span-4">
               <h2 id="opt-title" data-reveal className="text-[clamp(26px,2.4vw,36px)] font-bold tracking-[-0.01em] text-ink">{t('customizationOptions')}</h2>
-              <p className="mt-4 text-[17px] leading-[1.6] text-ink">{tl('customText')}</p>
+              <p className="mt-4 text-[17px] leading-[1.55] text-ink">{tl('customText')}</p>
             </div>
             <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:col-span-8">
               {Object.entries(product.customization_options).map(([k, vals]) => (
                 <div key={k}>
                   <dt className="text-[17px] font-bold text-ink">{k}</dt>
-                  <dd className="mt-1.5 text-[17px] leading-[1.6] text-ink">{vals.join(' · ')}</dd>
+                  <dd className="mt-1.5 text-[17px] leading-[1.55] text-ink">{vals.join(' · ')}</dd>
                 </div>
               ))}
             </dl>

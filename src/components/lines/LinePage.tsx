@@ -48,7 +48,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
             <h1 id="line-title" className="text-[clamp(36px,4.4vw,68px)] font-bold leading-[1.02] tracking-[-0.03em] text-ink">
               {name}
             </h1>
-            <p className="mt-7 max-w-[40ch] text-[22px] leading-[1.45] text-ink">{pick(line.tagline, locale)}</p>
+            <p className="mt-7 max-w-[56ch] text-[22px] leading-[1.45] text-ink">{pick(line.tagline, locale)}</p>
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
               <Link
                 href={{ pathname: '/contact', query: { products: name } }}
@@ -77,12 +77,27 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
         </div>
       </section>
 
+      {line.banner && (
+        <section aria-label={name} className="frame pt-[clamp(48px,6vw,96px)]">
+          <ul className="grid grid-cols-1 gap-3 md:grid-cols-12">
+            {line.banner.map((b, i) => (
+              <li key={b.src} data-reveal style={{ ['--d' as string]: `${i * 90}ms` }} className={b.wide ? 'md:col-span-7' : line.banner!.some((x) => x.wide) ? 'md:col-span-5' : 'md:col-span-6'}>
+                <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-stone md:aspect-auto md:h-[min(62svh,560px)]">
+                  <Image src={b.src} alt={pick(b.caption, locale)} fill sizes="(min-width: 768px) 58vw, 100vw" className="drift object-cover" />
+                </div>
+                <p className="mt-2.5 text-[15px] text-soft">{pick(b.caption, locale)}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       <section aria-labelledby="models-title" className={`frame ${gap}`}>
         <div className="grid gap-6 lg:grid-cols-12">
           <h2 id="models-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink lg:col-span-5">
             {t('modelsTitle', { count: items.length })}
           </h2>
-          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-ink lg:col-span-7">{pick(line.intro, locale)}</p>
+          <p data-reveal className="max-w-[68ch] text-[17px] leading-[1.55] text-ink lg:col-span-7">{pick(line.intro, locale)}</p>
         </div>
         <div className="mt-12">
           <ModelGrid items={items} locale={locale} />
@@ -165,18 +180,18 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
               <h2 id="custom-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
                 {t('customTitle')}
               </h2>
-              <p data-reveal className="mt-5 max-w-[44ch] text-[17px] leading-[1.6] text-ink">{t('customText')}</p>
+              <p data-reveal className="mt-5 max-w-[60ch] text-[17px] leading-[1.55] text-ink">{t('customText')}</p>
             </div>
             <dl className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-7">
               {Object.entries(custom).map(([k, vals]) => (
                 <div key={k} data-reveal>
                   <dt className="text-[22px] font-bold text-ink">{k}</dt>
-                  <dd className="mt-2 text-[17px] leading-[1.6] text-ink">{vals.join(' · ')}</dd>
+                  <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{vals.join(' · ')}</dd>
                 </div>
               ))}
               <div data-reveal>
                 <dt className="text-[22px] font-bold text-ink">{vi ? 'Thương hiệu' : 'Branding'}</dt>
-                <dd className="mt-2 text-[17px] leading-[1.6] text-ink">{vi ? 'Logo và tem nhãn riêng (OEM)' : 'Your logo and decals (OEM)'}</dd>
+                <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{vi ? 'Logo và tem nhãn riêng (OEM)' : 'Your logo and decals (OEM)'}</dd>
               </div>
             </dl>
           </div>
@@ -201,7 +216,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
                       <span className="text-[17px] font-bold text-ink underline-offset-4 group-hover:underline">{pick(l.name, locale)}</span>
                       <span className="num shrink-0 text-[15px] text-soft">{t('modelsTitle', { count: lineProducts(l).length })}</span>
                     </span>
-                    <span className="mt-1 block max-w-[46ch] text-[15px] leading-[1.5] text-soft">{pick(l.tagline, locale)}</span>
+                    <span className="mt-1 block max-w-[62ch] text-[15px] leading-[1.5] text-soft">{pick(l.tagline, locale)}</span>
                   </span>
                 </Link>
               </li>

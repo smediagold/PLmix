@@ -70,7 +70,7 @@ async function HeroSection() {
         <h1 id="hero-title" className="max-w-[20ch] text-[clamp(30px,5vw,76px)] font-bold leading-[1.02] tracking-[-0.03em] text-white">
           {t('headline')}
         </h1>
-        <p className="mt-6 max-w-[48ch] text-[17px] leading-[1.6] text-white/90 md:text-[22px] md:leading-[1.5]">{t('subtext')}</p>
+        <p className="mt-6 max-w-[60ch] text-[17px] leading-[1.55] text-white/90 md:text-[22px] md:leading-[1.5]">{t('subtext')}</p>
         <div className="mt-9 flex flex-wrap gap-3">
           <Link
             href="/products/concrete-mixers"
@@ -101,11 +101,11 @@ async function FeatureSection() {
   return (
     <section aria-labelledby="feature-title" className={`frame ${gap}`}>
       <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-5">
           <h2 id="feature-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
             {t('title')}
           </h2>
-          <p data-reveal className="mt-5 max-w-[34ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
+          <p data-reveal className="mt-5 max-w-[54ch] text-[17px] leading-[1.55] text-ink">{t('text')}</p>
           <ul className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
             {spots.map(({ label, Icon }, i) => (
               <li key={label} data-reveal style={{ ['--d' as string]: `${i * 70}ms` }} className="flex items-center gap-3 rounded-2xl bg-stone p-3">
@@ -132,7 +132,7 @@ async function FeatureSection() {
           </div>
         </div>
 
-        <div className="lg:col-span-8" data-tone="orange">
+        <div className="lg:col-span-7" data-tone="orange">
           <div data-reveal className="tone-tile relative aspect-[938/870] overflow-hidden rounded-3xl">
             <Image
               src="/images/mixer/feature.jpg"
@@ -180,7 +180,7 @@ async function ColoursSection() {
           <h2 id="colours-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink lg:col-span-5">
             {t('title')}
           </h2>
-          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-ink lg:col-span-7">{t('text')}</p>
+          <p data-reveal className="max-w-[68ch] text-[17px] leading-[1.55] text-ink lg:col-span-7">{t('text')}</p>
         </div>
         <ul className="mt-12 grid grid-cols-2 gap-x-3 gap-y-8 lg:grid-cols-5">
           {colours.map((c, i) => (
@@ -206,7 +206,7 @@ async function VideoSection() {
           <h2 id="video-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] lg:col-span-5">
             {t('title')}
           </h2>
-          <p data-reveal className="max-w-[56ch] text-[17px] leading-[1.6] text-white/85 lg:col-span-7">{t('text')}</p>
+          <p data-reveal className="max-w-[68ch] text-[17px] leading-[1.55] text-white/85 lg:col-span-7">{t('text')}</p>
         </div>
         <div data-reveal className="mt-10 aspect-video bg-black">
           <video
@@ -235,7 +235,7 @@ async function ProcessSection() {
             <h2 id="process-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
               {t('title')}
             </h2>
-            <p data-reveal className="mt-5 max-w-[40ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
+            <p data-reveal className="mt-5 max-w-[56ch] text-[17px] leading-[1.55] text-ink">{t('text')}</p>
           </div>
         </div>
         <ol className="grid gap-x-3 gap-y-12 sm:grid-cols-2 lg:col-span-8">
@@ -245,7 +245,7 @@ async function ProcessSection() {
                 <LoopVideo src={`/videos/process/${s}.mp4`} poster={`/images/process/${s}.jpg`} label={t(s)} className="h-full" />
               </div>
               <h3 className="mt-3 text-[22px] font-bold leading-tight text-ink">{t(s)}</h3>
-              <p className="mt-1.5 max-w-[44ch] text-[17px] leading-[1.55] text-ink">{t(`${s}Text`)}</p>
+              <p className="mt-1.5 max-w-[60ch] text-[17px] leading-[1.55] text-ink">{t(`${s}Text`)}</p>
             </li>
           ))}
           <li data-reveal className="sm:col-span-2">
@@ -253,7 +253,7 @@ async function ProcessSection() {
               <Image src="/images/factory/loading-lcl.jpg" alt={t('loading')} fill sizes="(min-width: 1024px) 66vw, 100vw" className="drift object-cover" />
             </div>
             <h3 className="mt-3 text-[22px] font-bold leading-tight text-ink">{t('loading')}</h3>
-            <p className="mt-1.5 max-w-[56ch] text-[17px] leading-[1.55] text-ink">{t('loadingText')}</p>
+            <p className="mt-1.5 max-w-[68ch] text-[17px] leading-[1.55] text-ink">{t('loadingText')}</p>
           </li>
         </ol>
       </div>
@@ -282,8 +282,8 @@ async function FactorySection() {
       </h2>
       <div className="mt-10 grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-6" data-reveal style={{ ['--d' as string]: '80ms' }}>
-          <p className="max-w-[56ch] text-[17px] leading-[1.6] text-ink">{t('text')}</p>
-          <p className="mt-5 max-w-[56ch] text-[17px] leading-[1.6] text-ink">{t('text2')}</p>
+          <p className="max-w-[68ch] text-[17px] leading-[1.55] text-ink">{t('text')}</p>
+          <p className="mt-5 max-w-[68ch] text-[17px] leading-[1.55] text-ink">{t('text2')}</p>
         </div>
         <dl className="grid grid-cols-2 gap-x-8 gap-y-10 lg:col-span-6" data-reveal style={{ ['--d' as string]: '160ms' }}>
           {stats.map((s) => (
@@ -326,12 +326,12 @@ async function MarketsSection({ locale }: { locale: string }) {
           <h2 id="markets-title" className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
             {t('title')}
           </h2>
-          <p className="mx-auto mt-3 max-w-[40ch] text-[17px] leading-[1.55] text-soft">{t('text')}</p>
+          <p className="mx-auto mt-3 max-w-[56ch] text-[17px] leading-[1.55] text-soft">{t('text')}</p>
           <ul className="mt-8 space-y-5">
             {markets.map((m) => (
               <li key={m.region.en}>
                 <p className="text-[15px] font-semibold text-soft">{pick(m.region, locale)}</p>
-                <p className="text-[clamp(17px,1.5vw,22px)] leading-[1.6] text-ink">
+                <p className="text-[clamp(17px,1.5vw,22px)] leading-[1.55] text-ink">
                   {m.countries.map((c, i) => (
                     <span key={c}>
                       {i > 0 && <span aria-hidden="true">{' · '}</span>}
@@ -361,7 +361,7 @@ async function CertificatesSection() {
           <h2 id="certs-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
             {t('title')}
           </h2>
-          <p data-reveal style={{ ['--d' as string]: '80ms' }} className="mt-5 max-w-[40ch] text-[17px] leading-[1.6] text-ink">
+          <p data-reveal style={{ ['--d' as string]: '80ms' }} className="mt-5 max-w-[56ch] text-[17px] leading-[1.55] text-ink">
             {t('text')}
           </p>
         </div>
@@ -396,7 +396,7 @@ async function OrdersSection({ locale }: { locale: string }) {
         <h2 id="orders-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
           {t('title')}
         </h2>
-        <p data-reveal className="max-w-[46ch] text-[17px] leading-[1.55] text-ink">{t('text')}</p>
+        <p data-reveal className="max-w-[62ch] text-[17px] leading-[1.55] text-ink">{t('text')}</p>
       </div>
       <ul className="mt-10 grid grid-cols-2 gap-x-2 gap-y-7 sm:gap-x-3 lg:grid-cols-3">
         {orders.map((o, i) => (
@@ -424,7 +424,7 @@ async function TestimonialsSection({ locale }: { locale: string }) {
         <h2 id="reviews-title" data-reveal className="text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-white">
           {t('title')}
         </h2>
-        <p data-reveal className="mt-4 max-w-[52ch] text-[17px] leading-[1.55] text-white/85">{t('text')}</p>
+        <p data-reveal className="mt-4 max-w-[64ch] text-[17px] leading-[1.55] text-white/85">{t('text')}</p>
         <ul className="mt-14 grid gap-y-6 pb-[clamp(72px,8vw,128px)] sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-0 lg:px-[4%]">
           {testimonials.map((q, i) => (
             <li
@@ -441,7 +441,7 @@ async function TestimonialsSection({ locale }: { locale: string }) {
                   </p>
                   <p className="mt-1 text-[15px] font-semibold text-ink">{q.product}</p>
                 </figcaption>
-                <blockquote className="mt-5 text-[17px] leading-[1.6] text-ink">
+                <blockquote className="mt-5 text-[17px] leading-[1.55] text-ink">
                   <p>“{pick(q.text, locale)}”</p>
                 </blockquote>
               </figure>
