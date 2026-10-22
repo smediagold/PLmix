@@ -34,7 +34,7 @@ export default function BlogCard({ post, locale, large = false }: { post: BlogPo
         <BlogImage post={post} alt={title} sizes={large ? '(min-width: 1024px) 58vw, 100vw' : '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'} priority={large} />
       </span>
       <span className={`block ${large ? 'lg:col-span-5' : 'mt-4'}`}>
-        <span className={`block font-bold leading-[1.15] tracking-[-0.01em] text-ink underline-offset-4 group-hover:underline ${large ? 'text-[clamp(22px,2.6vw,40px)]' : 'text-[20px] md:text-[22px]'}`}>
+        <span className={`block font-bold leading-[1.15] tracking-[-0.01em] text-ink underline-offset-4 group-hover:underline ${large ? 'text-[clamp(22px,2.2vw,32px)]' : 'text-[20px] md:text-[22px]'}`}>
           {title}
         </span>
         <span className="mt-2 block text-[15px] text-soft">{postMeta(post, locale)}</span>

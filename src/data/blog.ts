@@ -312,7 +312,7 @@ Chúng tôi hỗ trợ đơn hàng container hỗn hợp SKU. Container 20ft ti�
     category: 'general',
     date: '2025-07-20',
     readTime: 5,
-    image: '/images/factory/showroom.jpg',
+    image: '/images/heroes/engines.jpg',
     content_en: `When configuring a Phu Long concrete mixer for export, the engine is the single most market-specific choice. Here is a framework for making that decision.
 
 ## Electric Motors (ENG-ELEC)

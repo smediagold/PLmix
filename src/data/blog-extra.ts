@@ -242,7 +242,7 @@ Gửi thông tin qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi
     category: 'industrial-fan',
     date: '2026-01-13',
     readTime: 6,
-    image: '/images/factory/warehouse.jpg',
+    image: '/images/products/industrial-fan/plpf-photo-1.jpg',
     content_en: `Hot, stuffy buildings slow people down, damage stock and shorten the life of motors and electronics. Good ventilation does not have to be complicated. With a tape measure and a little arithmetic you can size a fan system that makes a real difference.
 
 ## Step 1: Work Out the Volume
@@ -797,5 +797,1123 @@ Dù chọn điều kiện nào, bạn vẫn chịu trách nhiệm thuế nhập 
 - Lên kế hoạch phụ tùng cho mùa vụ đầu tiên
 
 Sẵn sàng lên kế hoạch container đầu tiên? Gửi danh sách sản phẩm và cảng đích qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ gửi báo giá FOB hoặc CIF.`,
+  },
+  {
+    slug: 'drum-mixer-batch-size-mix-ratios',
+    title_en: 'Drum Mixer Batch Size, Mix Ratios and Mixing Time',
+    title_vi: 'Mẻ Trộn, Tỷ Lệ Cấp Phối Và Thời Gian Trộn Bê Tông',
+    excerpt_en: 'How much concrete a drum mixer really makes per batch, common site mix ratios, the right loading order and how long to mix.',
+    excerpt_vi: 'Một mẻ máy trộn thực tế được bao nhiêu bê tông, các tỷ lệ cấp phối phổ biến, thứ tự nạp liệu đúng và thời gian trộn hợp lý.',
+    category: 'concrete-mixer',
+    date: '2025-09-16',
+    readTime: 6,
+    image: '/images/mixer/feature.jpg',
+    content_en: `A drum mixer's capacity is printed on the brochure, but the concrete that comes out of each batch is a different number. Understanding the gap — and loading the drum the right way — gives you stronger concrete, less waste and a machine that lasts longer.
+
+## Drum Capacity Is Not Batch Size
+
+The litre figure in a mixer's name, such as 350 L, describes the drum. A tilting drum mixer cannot be filled to the brim: the material needs room to fall and fold as the drum turns, and the mouth must not spill when tilted.
+
+As a practical guide, the usable batch of mixed concrete is roughly **60–65% of the drum capacity**. For our range that means approximately:
+
+- **250 L drum** → about 150–160 L per batch
+- **350 L drum** → about 210–225 L per batch
+- **450 L drum** → about 270–290 L per batch
+- **500 L drum** → about 300–325 L per batch
+
+Plan the day around this figure. One cubic metre is 1,000 L, so a 350 L mixer needs around five batches per cubic metre.
+
+## Common Site Mix Ratios
+
+Small sites often use nominal mixes measured by volume, written as **cement : sand : coarse aggregate**. Typical examples you will see in site practice:
+
+- **1 : 1.5 : 3** — a richer mix, often used for structural members such as slabs, beams and columns
+- **1 : 2 : 4** — a general-purpose mix for footings, floors and paths
+- **1 : 3 : 6** — a lean mix for blinding layers and mass fill
+
+These are general rules of thumb, not a design. For anything structural, follow the mix specified by your engineer or local standard, which also sets the water–cement ratio.
+
+Measure with the same container every time — a bucket or a gauge box — rather than counting shovels. Shovel loads vary from person to person and from one end of the day to the other.
+
+## Watch the Water
+
+Extra water makes concrete easier to place but weaker and more prone to cracking and shrinkage. Add water gradually and stop when the mix reaches the workability you need. If the concrete is too stiff, add a little at a time; it is easy to add water and impossible to take it out.
+
+Remember that wet sand already carries water. On a rainy day, you will need less water in the drum.
+
+## The Right Loading Order
+
+Load with the drum already turning. A sequence that works well with tilting drum mixers:
+
+- Add **about half of the water** first, so the drum surface is wet and cement does not stick to the back.
+- Add the **coarse aggregate**. It scours the drum and breaks up any lumps.
+- Add the **sand**, then the **cement**.
+- Add the **remaining water** slowly until the mix looks right.
+
+Loading cement into an empty, dry drum causes it to cake on the blades and at the bottom of the drum, and the batch comes out uneven.
+
+## How Long to Mix
+
+Once the last material is in, mix until the colour and consistency are uniform — typically a few minutes for a small drum mixer. Too short and you get streaks of dry cement or pockets of sand; much longer is not better and can lead to segregation and loss of workability in hot weather. Keep the time consistent from batch to batch so every load is the same.
+
+## Tips for a Better Day on Site
+
+- Set the mixer level and close to the pour to reduce carrying time.
+- Keep cement bags dry and off the ground.
+- Discharge fully between batches; leftover concrete changes the next mix.
+- Clean the drum at breaks and at the end of the day while it is still wet.
+
+## Matching Mixer Size to the Job
+
+If your crew regularly waits for the mixer, step up a size. If the mixer waits for wheelbarrows, a bigger drum will not help — add labour or shorten the carry. Our range runs from 250 L to 500 L, with electric, gasoline or diesel power.
+
+Need help choosing a size for your typical pours? Send us your daily volume and site conditions on WhatsApp at +84 946 964 669 or through our quote form.`,
+    content_vi: `Dung tích máy trộn được in trên catalogue, nhưng lượng bê tông thực tế ra mỗi mẻ lại là con số khác. Hiểu rõ khoảng chênh này — và nạp liệu đúng cách — giúp bê tông chắc hơn, ít hao hụt và máy bền hơn.
+
+## Dung Tích Thùng Không Phải Là Mẻ Trộn
+
+Con số lít trong tên máy, ví dụ 350 L, là dung tích thùng. Máy trộn thùng lật không thể đổ đầy tới miệng: vật liệu cần khoảng trống để rơi và đảo khi thùng quay, và miệng thùng không được tràn khi nghiêng.
+
+Theo kinh nghiệm thực tế, mẻ bê tông dùng được vào khoảng **60–65% dung tích thùng**. Với dòng máy của chúng tôi, tương đương:
+
+- **Thùng 250 L** → khoảng 150–160 L mỗi mẻ
+- **Thùng 350 L** → khoảng 210–225 L mỗi mẻ
+- **Thùng 450 L** → khoảng 270–290 L mỗi mẻ
+- **Thùng 500 L** → khoảng 300–325 L mỗi mẻ
+
+Hãy lên kế hoạch ngày làm việc theo con số này. Một khối bê tông là 1.000 L, nên máy 350 L cần khoảng năm mẻ cho mỗi khối.
+
+## Các Tỷ Lệ Cấp Phối Phổ Biến Tại Công Trường
+
+Công trình nhỏ thường dùng cấp phối định mức theo thể tích, ghi theo thứ tự **xi măng : cát : đá**. Các ví dụ thường gặp:
+
+- **1 : 1,5 : 3** — cấp phối giàu xi măng hơn, thường dùng cho kết cấu như sàn, dầm, cột
+- **1 : 2 : 4** — cấp phối thông dụng cho móng, nền và lối đi
+- **1 : 3 : 6** — cấp phối nghèo cho lớp lót và bê tông khối
+
+Đây chỉ là quy tắc kinh nghiệm, không phải thiết kế cấp phối. Với hạng mục kết cấu, hãy theo cấp phối do kỹ sư hoặc tiêu chuẩn địa phương quy định, bao gồm cả tỷ lệ nước/xi măng.
+
+Đong bằng cùng một dụng cụ mỗi lần — xô hoặc thùng đong — thay vì đếm xẻng. Mỗi xẻng mỗi người xúc khác nhau, và khác nhau giữa đầu ca với cuối ca.
+
+## Cẩn Thận Với Lượng Nước
+
+Thừa nước giúp đổ bê tông dễ hơn nhưng làm bê tông yếu đi, dễ nứt và co ngót. Cho nước từ từ và dừng lại khi hỗn hợp đạt độ sệt cần thiết. Nếu bê tông quá khô, thêm từng ít một; thêm nước thì dễ, bớt nước thì không thể.
+
+Lưu ý cát ướt đã chứa sẵn nước. Vào ngày mưa, lượng nước cho vào thùng sẽ ít hơn.
+
+## Thứ Tự Nạp Liệu Đúng
+
+Nạp liệu khi thùng đã quay. Trình tự phù hợp với máy trộn thùng lật:
+
+- Cho **khoảng một nửa lượng nước** trước, để thành thùng ướt và xi măng không bám vào đáy.
+- Cho **đá**. Đá cọ thành thùng và đánh tan vón cục.
+- Cho **cát**, sau đó **xi măng**.
+- Cho **phần nước còn lại** từ từ đến khi hỗn hợp đạt yêu cầu.
+
+Cho xi măng vào thùng khô và rỗng sẽ khiến xi măng bám cứng vào cánh và đáy thùng, mẻ trộn ra không đều.
+
+## Trộn Trong Bao Lâu
+
+Sau khi cho vật liệu cuối cùng, trộn đến khi màu sắc và độ sệt đồng đều — với máy trộn nhỏ thường chỉ vài phút. Trộn quá ngắn sẽ còn vệt xi măng khô hoặc túi cát; trộn quá lâu không tốt hơn và có thể gây phân tầng, mất độ dẻo khi trời nóng. Giữ thời gian trộn ổn định giữa các mẻ để mẻ nào cũng như nhau.
+
+## Mẹo Cho Một Ngày Làm Việc Hiệu Quả
+
+- Đặt máy thăng bằng và gần vị trí đổ để giảm quãng vận chuyển.
+- Giữ bao xi măng khô ráo, kê cao khỏi mặt đất.
+- Xả hết bê tông giữa các mẻ; bê tông còn sót làm thay đổi mẻ sau.
+- Rửa thùng khi nghỉ giữa ca và cuối ngày khi bê tông còn ướt.
+
+## Chọn Cỡ Máy Theo Công Việc
+
+Nếu đội thợ thường phải chờ máy trộn, hãy nâng lên một cỡ. Nếu máy trộn phải chờ xe rùa, thùng to hơn cũng không giúp được — hãy thêm người hoặc rút ngắn quãng chở. Dòng máy của chúng tôi từ 250 L đến 500 L, chạy điện, xăng hoặc diesel.
+
+Cần tư vấn chọn cỡ máy theo khối lượng đổ thường ngày? Gửi khối lượng bê tông mỗi ngày và điều kiện công trình qua WhatsApp +84 946 964 669 hoặc form báo giá.`,
+  },
+  {
+    slug: 'concrete-mixer-tyres-and-wheel-layouts',
+    title_en: 'Concrete Mixer Tyres: Solid vs Pneumatic, 2 to 4 Wheels',
+    title_vi: 'Lốp Máy Trộn Bê Tông: Lốp Đặc Hay Lốp Hơi, 2 Đến 4 Bánh',
+    excerpt_en: 'Solid or pneumatic tyres, two, three or four wheels — how terrain, moving the mixer and local repair options should guide your choice.',
+    excerpt_vi: 'Lốp đặc hay lốp hơi, hai, ba hay bốn bánh — địa hình, cách di chuyển máy và khả năng sửa chữa tại chỗ quyết định lựa chọn của bạn.',
+    category: 'concrete-mixer',
+    date: '2025-11-11',
+    readTime: 5,
+    image: '/images/heroes/concrete-mixers.jpg',
+    content_en: `Wheels and tyres look like a minor detail on a concrete mixer. On site they decide how easily the machine moves, how stable it stands while mixing, and how often someone has to stop work to fix a flat. For importers, they also decide which markets a model will sell in.
+
+## Solid Tyres
+
+Solid tyres are made of rubber all the way through. On our mixers the standard solid size is **4.00-8**, fitted to models such as the CM-250-2W, CM-350-2W-S, CM-385, CM-420 and CM-450.
+
+**Advantages:**
+- Never go flat — no punctures from rebar offcuts, nails or sharp stone
+- No pressure checks, no inner tubes, no repair kits
+- Lower cost and simple to replace
+
+**Limitations:**
+- Less shock absorption, so the machine bounces more on rough ground
+- Harder to push across soft soil, mud or sand
+- More vibration is passed to the frame when moving
+
+Solid tyres are a strong choice for markets where tyre repair is hard to find, for sites littered with sharp debris, and for mixers that stay mostly in one place.
+
+## Pneumatic Tyres
+
+Pneumatic tyres hold air, like a car or wheelbarrow tyre. Our mixers use **5.00-12** pneumatic tyres on models such as the CM-350-2W-P and CM-500, and **5.00-10** on the CM-350-4W-P.
+
+**Advantages:**
+- Better grip and flotation on soft, muddy or sandy ground
+- Smoother ride, which protects the frame, engine mounts and drum bearings when the mixer is moved often
+- The larger diameter rolls more easily over ruts and kerbs
+
+**Limitations:**
+- Can puncture on sites full of nails and steel offcuts
+- Need regular pressure checks — keep them at the pressure marked on the sidewall
+- Higher cost than solid tyres
+
+Pneumatic tyres suit sites with rough or soft ground and contractors who move the mixer between work areas several times a day.
+
+## Two, Three or Four Wheels
+
+**Two wheels** — the classic layout. The mixer rests on two wheels and a stand or legs. It is lighter, cheaper and easy to tilt and turn by hand in tight spaces such as house plots and narrow streets.
+
+**Three wheels** — adds a front wheel for easier steering and moving without lifting the front of the machine. Our CM-450 uses a three-wheel layout.
+
+**Four wheels** — the most stable platform. The machine stands square on uneven or sloping ground and is easier to move a long distance across a site. Our CM-250-4W, CM-350-4W and CM-500 use four wheels.
+
+Across the range, wheels can be specified as 2, 3 or 4, solid or pneumatic, so one model can be adapted to the conditions in your market.
+
+## Moving the Mixer Safely
+
+- Site mixers are designed to be moved around the site, not towed at road speed. Check your local rules before using any mixer on public roads, and transport it on a truck or trailer when in doubt.
+- Always empty the drum before moving the machine; a loaded drum shifts the centre of gravity.
+- Lock the drum and chock the wheels once in position.
+
+## Questions to Ask Before You Order
+
+- What ground do your customers work on — compacted, muddy, sandy or rocky?
+- How often is the mixer moved during the day?
+- Is tyre repair easy to find in your market?
+- Do your customers prefer lighter machines they can push by hand, or stability on slopes?
+
+## A Practical Starting Point
+
+Many importers stock both: a solid-tyre two-wheel model as the low-maintenance, price-friendly option, and a pneumatic four-wheel model for contractors who need mobility and stability. Because tyres and wheel layout are configurable, you can test both in a mixed container.
+
+Tell us about the sites your customers work on via WhatsApp at +84 946 964 669 or our quote form, and we will suggest the right wheel and tyre setup.`,
+    content_vi: `Bánh và lốp trông như một chi tiết nhỏ trên máy trộn bê tông. Nhưng tại công trường, chúng quyết định máy di chuyển dễ hay khó, đứng vững ra sao khi trộn và bao lâu lại phải dừng việc để vá lốp. Với nhà nhập khẩu, chúng còn quyết định model nào bán được ở thị trường nào.
+
+## Lốp Đặc
+
+Lốp đặc làm hoàn toàn bằng cao su. Trên máy trộn của chúng tôi, cỡ lốp đặc tiêu chuẩn là **4.00-8**, lắp trên các model như CM-250-2W, CM-350-2W-S, CM-385, CM-420 và CM-450.
+
+**Ưu điểm:**
+- Không bao giờ xẹp — không lo đinh, đầu thép vụn hay đá sắc
+- Không cần kiểm tra áp suất, không săm, không cần bộ vá
+- Giá thấp hơn và thay thế đơn giản
+
+**Hạn chế:**
+- Giảm chấn kém hơn, máy xóc nhiều hơn trên nền gồ ghề
+- Khó đẩy qua đất mềm, bùn hoặc cát
+- Rung truyền lên khung nhiều hơn khi di chuyển
+
+Lốp đặc là lựa chọn tốt cho thị trường khó tìm chỗ sửa lốp, công trường nhiều vật sắc nhọn, và máy chủ yếu đặt cố định một chỗ.
+
+## Lốp Hơi
+
+Lốp hơi chứa khí như lốp ô tô hay xe rùa. Máy trộn của chúng tôi dùng lốp hơi **5.00-12** trên các model như CM-350-2W-P và CM-500, và **5.00-10** trên CM-350-4W-P.
+
+**Ưu điểm:**
+- Bám đường và nổi tốt hơn trên nền mềm, bùn hoặc cát
+- Êm hơn, bảo vệ khung, bệ động cơ và ổ đỡ thùng khi máy di chuyển nhiều
+- Đường kính lớn lăn dễ qua rãnh và gờ
+
+**Hạn chế:**
+- Có thể thủng ở công trường nhiều đinh và đầu thép
+- Cần kiểm tra áp suất thường xuyên — giữ đúng áp suất ghi trên thành lốp
+- Giá cao hơn lốp đặc
+
+Lốp hơi phù hợp công trường nền gồ ghề hoặc mềm, và nhà thầu cần di chuyển máy giữa các khu vực nhiều lần trong ngày.
+
+## Hai, Ba Hay Bốn Bánh
+
+**Hai bánh** — cấu hình truyền thống. Máy đứng trên hai bánh và chân chống. Nhẹ hơn, rẻ hơn, dễ nghiêng và xoay bằng tay ở chỗ hẹp như lô đất nhà ở hay hẻm nhỏ.
+
+**Ba bánh** — thêm bánh trước giúp lái và di chuyển dễ mà không phải nhấc đầu máy. Model CM-450 của chúng tôi dùng cấu hình ba bánh.
+
+**Bốn bánh** — ổn định nhất. Máy đứng vững trên nền không bằng phẳng hoặc dốc, dễ di chuyển quãng dài trong công trường. Các model CM-250-4W, CM-350-4W và CM-500 dùng bốn bánh.
+
+Trên toàn dòng sản phẩm, số bánh có thể chọn 2, 3 hoặc 4, lốp đặc hoặc lốp hơi, nên một model có thể điều chỉnh theo điều kiện thị trường của bạn.
+
+## Di Chuyển Máy An Toàn
+
+- Máy trộn công trường được thiết kế để di chuyển trong công trường, không phải để kéo trên đường ở tốc độ cao. Hãy kiểm tra quy định địa phương trước khi đưa máy ra đường công cộng, và chở bằng xe tải hoặc rơ-moóc khi không chắc chắn.
+- Luôn xả hết bê tông trước khi di chuyển máy; thùng đầy làm lệch trọng tâm.
+- Khóa thùng và chèn bánh khi đã vào vị trí.
+
+## Câu Hỏi Cần Trả Lời Trước Khi Đặt Hàng
+
+- Khách hàng của bạn làm việc trên nền gì — đầm chặt, bùn, cát hay đá?
+- Máy được di chuyển bao nhiêu lần trong ngày?
+- Ở thị trường của bạn có dễ tìm chỗ sửa lốp không?
+- Khách hàng ưu tiên máy nhẹ đẩy tay, hay sự ổn định trên dốc?
+
+## Điểm Xuất Phát Thực Tế
+
+Nhiều nhà nhập khẩu nhập cả hai: model hai bánh lốp đặc làm lựa chọn ít bảo dưỡng, giá dễ chịu, và model bốn bánh lốp hơi cho nhà thầu cần cơ động và ổn định. Vì bánh và lốp có thể tùy chỉnh, bạn có thể thử cả hai trong một container ghép.
+
+Hãy cho chúng tôi biết điều kiện công trường của khách hàng qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ đề xuất cấu hình bánh và lốp phù hợp.`,
+  },
+  {
+    slug: 'selling-concrete-mixers-dealer-guide',
+    title_en: 'Selling Concrete Mixers: A Practical Guide for Dealers',
+    title_vi: 'Kinh Doanh Máy Trộn Bê Tông: Hướng Dẫn Cho Đại Lý',
+    excerpt_en: 'Building a mixer range, using OEM colour and logo, choosing spare parts to stock and planning mixed containers — a practical dealer guide.',
+    excerpt_vi: 'Xây dựng dải sản phẩm, tận dụng OEM màu và logo, chọn phụ tùng dự trữ và lên kế hoạch container ghép — hướng dẫn thực tế cho đại lý.',
+    category: 'concrete-mixer',
+    date: '2025-12-09',
+    readTime: 6,
+    image: '/images/factory/showroom.jpg',
+    content_en: `Concrete mixers are a steady product for construction equipment dealers: builders, small contractors and rental shops all need them, and they come back for parts and replacements. The dealers who do well with mixers usually get a few decisions right from the start.
+
+## Start with a Focused Range
+
+You do not need every model on day one. A focused range is easier to explain, stock and service. A common structure:
+
+- **Entry model (250 L)** — for house builders, repairs and price-sensitive buyers
+- **Core model (350 L)** — the all-rounder for small and medium contractors
+- **Heavy model (420–500 L)** — for larger contractors and higher daily volumes
+
+Across our range, drum capacity runs from 250 L to 500 L, with drum steel of 2–3 mm depending on the model. Within each size, you can offer the wheel and tyre setup your market prefers — solid tyres for low maintenance, pneumatic tyres for rough ground, and 2, 3 or 4 wheels.
+
+## Choose the Engine Your Market Can Support
+
+The best engine is the one your customers can fuel and repair locally.
+
+- **Electric (2.2–5.5 kW, 220 V)** — for cities and sites with reliable mains power
+- **Gasoline (GP160 / GP200)** — portable and widely serviceable
+- **Diesel** — for heavier use and areas where diesel is the common fuel
+
+Ask local mechanics which engines they already know. A machine that can be fixed in town sells better than one that cannot.
+
+## Make It Your Brand with OEM
+
+Selling under your own brand builds customer loyalty to you rather than to a factory name. On our mixers you can specify:
+
+- **Colour** — yellow, orange, red, dark red, blue, green, grey, or a custom colour
+- **Logo and decals** — your brand on the drum and frame
+- **Engine, wheels and tyres** — matched to your market
+- **Drum thickness** — for customers who want a heavier-duty drum
+
+A consistent colour across your range makes your machines recognisable on every site in your area. Send your logo file and colour reference early so samples can be confirmed before production.
+
+## Stock the Right Spare Parts
+
+Fast parts support is often what separates a one-time sale from a long-term customer. Parts worth keeping on the shelf:
+
+- **Gear ring and pinion** — they wear over time, especially when greasing is neglected
+- **Mixing blades** — wear from abrasive aggregate
+- **Bearings** — for the drum and pivot points
+- **Drive belts** — consumable on belt-driven models
+- **Tyres and wheels** — both solid and pneumatic if you sell both
+- **Drums** — for customers whose drum is damaged by hammering or accidents
+- **Engine service parts** — filters, spark plugs, starter cords
+
+Order a starter parts kit with your first container. It costs little extra in freight and avoids urgent shipments later.
+
+## Plan Mixed Containers
+
+You can mix models, colours and engines in one container. MOQs on our mixers are 2–5 units per model depending on size, so a single container can carry your entire starter range plus spare parts. If you also sell wheelbarrows, adding them to the same container fills the space around the mixers.
+
+## Support Your Customers After the Sale
+
+- Give every buyer a simple daily care sheet: clean the drum while wet, grease the gear ring, check belt tension and engine oil.
+- Train your shop staff to recognise common issues — slipping belts, worn pinions, low engine oil.
+- Keep a record of what each customer bought so you can suggest parts and upgrades.
+
+## Display and Demonstration
+
+Mixers sell better when buyers can see them. Keep at least one machine assembled in your yard, show the drum thickness and gear, and run it so customers can hear the engine. A clean, branded display machine says more than a brochure.
+
+Ready to build your range? Tell us your market, power supply and typical customers on WhatsApp at +84 946 964 669 or via our quote form, and we will suggest a starter mix of models and parts.`,
+    content_vi: `Máy trộn bê tông là sản phẩm ổn định cho đại lý thiết bị xây dựng: thợ xây, nhà thầu nhỏ và cửa hàng cho thuê đều cần, và họ quay lại mua phụ tùng, thay máy mới. Những đại lý kinh doanh tốt mặt hàng này thường làm đúng vài quyết định ngay từ đầu.
+
+## Bắt Đầu Với Dải Sản Phẩm Gọn
+
+Bạn không cần đủ mọi model ngay ngày đầu. Dải sản phẩm gọn dễ tư vấn, dễ trữ hàng và dễ bảo hành. Một cơ cấu thường gặp:
+
+- **Model phổ thông (250 L)** — cho thợ xây nhà, sửa chữa và khách nhạy cảm về giá
+- **Model chủ lực (350 L)** — đa năng cho nhà thầu nhỏ và vừa
+- **Model hạng nặng (420–500 L)** — cho nhà thầu lớn và khối lượng mỗi ngày cao
+
+Dòng máy của chúng tôi có dung tích thùng từ 250 L đến 500 L, thép thùng dày 2–3 mm tùy model. Với mỗi cỡ, bạn có thể chọn cấu hình bánh và lốp mà thị trường ưa chuộng — lốp đặc ít bảo dưỡng, lốp hơi cho nền gồ ghề, và 2, 3 hoặc 4 bánh.
+
+## Chọn Động Cơ Thị Trường Có Thể Phục Vụ
+
+Động cơ tốt nhất là loại khách hàng có thể mua nhiên liệu và sửa chữa tại địa phương.
+
+- **Điện (2,2–5,5 kW, 220 V)** — cho đô thị và công trường có điện lưới ổn định
+- **Xăng (GP160 / GP200)** — cơ động, dễ sửa chữa ở nhiều nơi
+- **Diesel** — cho công việc nặng và vùng dùng diesel phổ biến
+
+Hãy hỏi thợ máy địa phương họ quen sửa loại động cơ nào. Máy sửa được ngay trong thị trấn sẽ bán chạy hơn máy không sửa được.
+
+## Xây Dựng Thương Hiệu Riêng Với OEM
+
+Bán dưới thương hiệu riêng giúp khách hàng trung thành với bạn thay vì với tên nhà máy. Với máy trộn của chúng tôi, bạn có thể chọn:
+
+- **Màu sắc** — vàng, cam, đỏ, đỏ đậm, xanh dương, xanh lá, xám hoặc màu theo yêu cầu
+- **Logo và tem nhãn** — thương hiệu của bạn trên thùng và khung
+- **Động cơ, bánh và lốp** — phù hợp thị trường
+- **Độ dày thùng** — cho khách hàng cần thùng chịu tải nặng hơn
+
+Một màu thống nhất cho cả dải sản phẩm giúp máy của bạn dễ nhận ra ở mọi công trường trong khu vực. Hãy gửi file logo và mã màu sớm để xác nhận mẫu trước khi sản xuất.
+
+## Dự Trữ Đúng Phụ Tùng
+
+Hỗ trợ phụ tùng nhanh thường là điều biến một lần bán thành khách hàng lâu dài. Các phụ tùng nên có sẵn:
+
+- **Vành răng và bánh răng nhỏ** — mòn theo thời gian, nhất là khi không bôi mỡ
+- **Cánh trộn** — mòn do cốt liệu mài mòn
+- **Vòng bi** — cho thùng và các điểm xoay
+- **Dây đai** — vật tư tiêu hao ở model truyền động dây đai
+- **Lốp và bánh xe** — cả lốp đặc và lốp hơi nếu bạn bán cả hai
+- **Thùng trộn** — cho khách có thùng bị móp do gõ búa hoặc tai nạn
+- **Phụ tùng bảo dưỡng động cơ** — lọc, bugi, dây giật
+
+Hãy đặt một bộ phụ tùng khởi đầu cùng container đầu tiên. Cước phí thêm không đáng kể mà tránh được việc gửi hàng gấp về sau.
+
+## Lên Kế Hoạch Container Ghép
+
+Bạn có thể ghép nhiều model, màu sắc và động cơ trong một container. MOQ máy trộn của chúng tôi là 2–5 chiếc mỗi model tùy cỡ, nên một container có thể chở đủ dải sản phẩm khởi đầu cùng phụ tùng. Nếu bạn bán cả xe rùa, cho thêm vào cùng container sẽ lấp đầy khoảng trống quanh máy trộn.
+
+## Hỗ Trợ Khách Hàng Sau Bán Hàng
+
+- Gửi mỗi khách hàng một tờ hướng dẫn chăm sóc hằng ngày: rửa thùng khi còn ướt, bôi mỡ vành răng, kiểm tra độ căng dây đai và dầu động cơ.
+- Đào tạo nhân viên cửa hàng nhận biết các lỗi thường gặp — dây đai trượt, bánh răng mòn, thiếu dầu máy.
+- Ghi lại khách hàng đã mua gì để gợi ý phụ tùng và nâng cấp.
+
+## Trưng Bày Và Chạy Thử
+
+Máy trộn bán tốt hơn khi người mua được tận mắt xem. Hãy để ít nhất một máy lắp sẵn tại bãi, cho khách xem độ dày thùng và bánh răng, và chạy thử để khách nghe tiếng động cơ. Một chiếc máy trưng bày sạch sẽ, mang thương hiệu của bạn có sức thuyết phục hơn catalogue.
+
+Sẵn sàng xây dựng dải sản phẩm? Cho chúng tôi biết thị trường, nguồn điện và khách hàng chính qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ đề xuất cơ cấu model và phụ tùng khởi đầu.`,
+  },
+  {
+    slug: 'automatic-vs-manual-stirrup-bending-costs',
+    title_en: 'Automatic vs Manual Stirrup Bending: Cost Calculator',
+    title_vi: 'Uốn Đai Tự Động Và Thủ Công: Cách Tính Chi Phí',
+    excerpt_en: 'A simple framework to compare labour and steel costs of manual and automatic stirrup bending, using your own wages, volumes and waste rates.',
+    excerpt_vi: 'Cách tính đơn giản để so sánh chi phí nhân công và thép giữa uốn đai thủ công và tự động, dựa trên tiền công, sản lượng và hao hụt của bạn.',
+    category: 'stirrup-bending',
+    date: '2026-02-10',
+    readTime: 6,
+    image: '/images/products/stirrup-bending/sbm-detail-22.png',
+    content_en: `"Will an automatic stirrup bender pay for itself?" The honest answer depends on your wages, your volumes and how much steel you lose today. Instead of quoting someone else's numbers, this guide gives you a simple calculation you can fill in with your own.
+
+## Step 1: Count Your Stirrups
+
+Start with the quantity. From your drawings or past projects, estimate:
+
+- **N** = number of stirrups per month (or per project)
+- **L** = average cut length of bar per stirrup, in metres (perimeter plus hooks)
+- **d** = bar diameter, in mm
+
+You can convert length to weight with the standard formula for steel bar: **weight per metre (kg/m) ≈ d² ÷ 162**. That gives roughly:
+
+- **6 mm** → 0.222 kg/m
+- **8 mm** → 0.395 kg/m
+- **10 mm** → 0.617 kg/m
+
+So steel used per stirrup = L × kg/m. For example, a stirrup with a 0.7 m cut length in 8 mm bar weighs about 0.7 × 0.395 = 0.28 kg.
+
+## Step 2: Manual Labour Cost
+
+Time your own crew. Measure how many finished stirrups one worker produces in a full day, including measuring, cutting, bending and stacking.
+
+- **Pm** = stirrups per worker per day (manual)
+- **W** = daily cost per worker (wage plus any meals, transport, insurance)
+
+**Manual labour cost per month = (N ÷ Pm) × W**
+
+Use a realistic figure for Pm, measured over a whole day rather than a fast half hour.
+
+## Step 3: Machine Labour Cost
+
+Our normal-motor machine is rated at **14–15 stirrups per minute** on a 14 × 14 cm stirrup; the servo model is rated at **2.5–5 tons per day**. Real output on your site will be lower than the rated speed once you include changing coils, setting programs and breaks, so estimate conservatively.
+
+- **Pa** = stirrups per day you expect from the machine on your site
+- **K** = number of people needed to run it (operator plus helper, if any)
+
+**Machine labour cost per month = (N ÷ Pa) × K × W**
+
+## Step 4: Steel Waste
+
+Manual bending produces offcuts and rejected pieces; automatic machines cut to programmed length and reduce mistakes. Estimate:
+
+- **Wm** = waste rate with manual bending (%)
+- **Wa** = waste rate with the machine (%)
+- **S** = steel price per kg
+
+**Steel saving per month = N × L × kg/m × (Wm − Wa) × S**
+
+Measure Wm from your own scrap pile if you can: weigh the offcuts from one week and compare them with the steel issued.
+
+## Step 5: Running Costs
+
+Do not forget what the machine costs to run:
+
+- **Electricity** — the normal-motor model uses three 1.5 kW motors; your actual consumption depends on duty cycle
+- **Maintenance and wear parts** — cutting blades, rollers, lubrication
+- **Operator training** time at the start
+
+**Monthly running cost = electricity + maintenance**
+
+## Step 6: Put It Together
+
+- **Monthly saving = (manual labour − machine labour) + steel saving − running cost**
+- **Payback (months) = machine price landed on site ÷ monthly saving**
+
+Run the numbers for your busiest month and for an average month. If payback is short even in an average month, the decision is easy.
+
+## Benefits That Are Harder to Price
+
+Some gains do not fit neatly into the formula but are real:
+
+- **Consistent dimensions** — faster fixing of cages and fewer problems at inspection
+- **Less dependence on skilled benders** — useful when experienced workers are scarce
+- **Lower injury risk** from repetitive hand bending
+- **Capacity to take on bigger jobs** without hiring a large bending crew
+
+## Choosing the Version
+
+If your work is mostly standard column and beam stirrups in large quantities, the normal-motor model usually gives the fastest payback. If you need stirrups up to 1,200 mm, many shapes or tight tolerances, the servo PLC model with stored programs is the better fit. Both handle 6–10 mm plain and deformed bar.
+
+Send us your N, L, bar sizes and wage level on WhatsApp at +84 946 964 669 or through our quote form, and we will help you check the numbers and quote the right machine.`,
+    content_vi: `"Máy uốn đai tự động có hoàn vốn được không?" Câu trả lời thật sự phụ thuộc vào tiền công, sản lượng và lượng thép bạn đang hao hụt. Thay vì đưa ra con số của người khác, bài viết này cung cấp một cách tính đơn giản để bạn tự điền số liệu của mình.
+
+## Bước 1: Đếm Số Lượng Đai
+
+Bắt đầu từ số lượng. Từ bản vẽ hoặc công trình trước, hãy ước tính:
+
+- **N** = số đai mỗi tháng (hoặc mỗi công trình)
+- **L** = chiều dài cắt trung bình của mỗi đai, tính bằng mét (chu vi cộng móc)
+- **d** = đường kính thép, mm
+
+Quy đổi chiều dài sang khối lượng bằng công thức chuẩn cho thép thanh: **khối lượng mỗi mét (kg/m) ≈ d² ÷ 162**. Ta có khoảng:
+
+- **6 mm** → 0,222 kg/m
+- **8 mm** → 0,395 kg/m
+- **10 mm** → 0,617 kg/m
+
+Thép dùng cho mỗi đai = L × kg/m. Ví dụ, đai có chiều dài cắt 0,7 m bằng thép 8 mm nặng khoảng 0,7 × 0,395 = 0,28 kg.
+
+## Bước 2: Chi Phí Nhân Công Thủ Công
+
+Hãy bấm giờ đội thợ của bạn. Đo số đai hoàn chỉnh một người làm được trong cả ngày, bao gồm đo, cắt, uốn và xếp.
+
+- **Pm** = số đai mỗi người mỗi ngày (thủ công)
+- **W** = chi phí mỗi người mỗi ngày (lương cộng ăn uống, đi lại, bảo hiểm)
+
+**Chi phí nhân công thủ công mỗi tháng = (N ÷ Pm) × W**
+
+Dùng con số Pm thực tế, đo trong cả ngày chứ không phải nửa giờ làm nhanh nhất.
+
+## Bước 3: Chi Phí Nhân Công Khi Dùng Máy
+
+Máy động cơ thường của chúng tôi đạt **14–15 đai/phút** với đai 14 × 14 cm; bản servo đạt **2,5–5 tấn/ngày**. Năng suất thực tế tại công trường sẽ thấp hơn tốc độ danh định khi tính cả thời gian thay cuộn thép, cài chương trình và nghỉ, nên hãy ước tính thận trọng.
+
+- **Pa** = số đai mỗi ngày bạn kỳ vọng máy làm được tại công trường
+- **K** = số người cần để vận hành (thợ đứng máy và phụ, nếu có)
+
+**Chi phí nhân công khi dùng máy mỗi tháng = (N ÷ Pa) × K × W**
+
+## Bước 4: Hao Hụt Thép
+
+Uốn thủ công sinh ra đầu thừa và đai lỗi; máy tự động cắt theo chiều dài lập trình và giảm sai sót. Hãy ước tính:
+
+- **Wm** = tỷ lệ hao hụt khi uốn thủ công (%)
+- **Wa** = tỷ lệ hao hụt khi dùng máy (%)
+- **S** = giá thép mỗi kg
+
+**Tiết kiệm thép mỗi tháng = N × L × kg/m × (Wm − Wa) × S**
+
+Nếu được, hãy đo Wm từ đống thép vụn của chính bạn: cân đầu thừa trong một tuần và so với lượng thép đã xuất kho.
+
+## Bước 5: Chi Phí Vận Hành
+
+Đừng quên chi phí chạy máy:
+
+- **Điện** — bản động cơ thường dùng ba động cơ 1,5 kW; điện năng thực tế phụ thuộc thời gian chạy
+- **Bảo dưỡng và phụ tùng hao mòn** — dao cắt, con lăn, dầu mỡ
+- **Thời gian đào tạo** người vận hành ban đầu
+
+**Chi phí vận hành mỗi tháng = điện + bảo dưỡng**
+
+## Bước 6: Tổng Hợp
+
+- **Tiết kiệm mỗi tháng = (nhân công thủ công − nhân công dùng máy) + tiết kiệm thép − chi phí vận hành**
+- **Thời gian hoàn vốn (tháng) = giá máy về tới công trường ÷ tiết kiệm mỗi tháng**
+
+Hãy tính cho tháng cao điểm và tháng trung bình. Nếu thời gian hoàn vốn ngắn ngay cả trong tháng trung bình, quyết định rất dễ dàng.
+
+## Những Lợi Ích Khó Quy Ra Tiền
+
+Một số lợi ích không nằm gọn trong công thức nhưng là có thật:
+
+- **Kích thước đồng đều** — buộc lồng thép nhanh hơn, ít vướng khi nghiệm thu
+- **Ít phụ thuộc thợ uốn lành nghề** — hữu ích khi khó tìm thợ giỏi
+- **Giảm nguy cơ chấn thương** do động tác uốn tay lặp lại
+- **Đủ năng lực nhận công trình lớn hơn** mà không cần thuê đội uốn thép đông người
+
+## Chọn Phiên Bản
+
+Nếu công việc chủ yếu là đai cột, đai dầm tiêu chuẩn số lượng lớn, bản động cơ thường thường hoàn vốn nhanh nhất. Nếu cần đai tới 1.200 mm, nhiều hình dạng hoặc dung sai chặt, bản servo PLC lưu được chương trình sẽ phù hợp hơn. Cả hai đều uốn thép trơn và thép gai 6–10 mm.
+
+Gửi cho chúng tôi N, L, cỡ thép và mức tiền công qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ cùng bạn kiểm tra con số và báo giá máy phù hợp.`,
+  },
+  {
+    slug: 'stirrup-bending-machine-operation-safety-maintenance',
+    title_en: 'Stirrup Bender Operation, Safety and Maintenance Guide',
+    title_vi: 'Vận Hành, An Toàn Và Bảo Dưỡng Máy Uốn Đai Thép',
+    excerpt_en: 'Feeding rollers, cutting blade, bending head, lubrication and electrics — how to run an automatic stirrup bender safely and keep it accurate.',
+    excerpt_vi: 'Con lăn nạp, dao cắt, đầu uốn, bôi trơn và điện — cách vận hành máy uốn đai tự động an toàn và giữ máy luôn chính xác.',
+    category: 'stirrup-bending',
+    date: '2026-04-14',
+    readTime: 6,
+    image: '/images/products/stirrup-bending/sbm-detail-23.png',
+    content_en: `An automatic stirrup bender is a robust machine, but it works with steel under force: rollers grip the bar, a blade shears it and a bending head swings it around. Good habits keep operators safe and keep every stirrup on size. This guide covers the routines we recommend to customers.
+
+## Know the Main Parts
+
+- **Feeding and straightening rollers** — grip the bar, pull it from the coil or rack and straighten it
+- **Cutting unit** — shears the finished stirrup from the bar
+- **Bending head** — rotates to form each angle
+- **Control panel** — touchscreen on the normal-motor model; PLC with HMI touchscreen on the servo model
+- **Motors and electrical cabinet** — the normal-motor model uses three 1.5 kW motors for feeding, cutting and bending
+
+## Safe Operation
+
+**Before starting:**
+- Place the machine on firm, level ground and keep the area around the feed and output clear.
+- Check that guards and covers are fitted and the emergency stop works.
+- Confirm the bar diameter is within the machine's range — **6 to 10 mm** for both our models. Never force a larger bar through.
+- Wear gloves, eye protection and safety boots; avoid loose sleeves, scarves or anything that can be caught.
+
+**While running:**
+- Keep hands away from the rollers, cutting point and bending head. Never reach in while the machine is running.
+- Stand clear of the bending arc — the bar end swings as the stirrup forms.
+- Do not straighten or clear a jammed bar with the power on. Stop, isolate and then clear it.
+- Only trained operators should change programs or run the machine.
+
+**After work:**
+- Switch off and isolate the power supply before cleaning or adjusting anything.
+
+## Daily Checks
+
+- **Clean** scale, rust flakes and dust from the rollers, bending head and cutting area. Steel scale is abrasive and speeds up wear.
+- **Check the first piece**: after start-up, and every time you change bar size or shape, measure a test stirrup and adjust if needed.
+- **Listen and look** for unusual noise, slipping bar or burrs on the cut end.
+- **Check the auto-stop** on the servo model, which stops the machine when the steel runs out.
+
+## Feeding and Straightening Rollers
+
+Rollers that are worn or set with the wrong pressure let the bar slip, which shows up as stirrups that are too short or not square. Check roller grooves for wear and flat spots, set the pressure to match the bar size, and replace worn rollers in pairs so they grip evenly.
+
+## Cutting Blade
+
+A sharp blade gives a clean, square cut. A dull blade leaves burrs, needs more force and stresses the cutting motor. Inspect the cutting edge regularly, rotate or regrind it if the design allows, and replace it when chipped. Keep a spare blade on site so a worn one never stops production.
+
+## Bending Head
+
+Check the bending pin and mandrel for wear and looseness. Worn parts change the bend radius and angle, so stirrups drift out of shape even though the program has not changed. Tighten fixing bolts and replace worn pins.
+
+## Lubrication
+
+Lubricate moving parts — gear trains, bearings, slides and pivot points — according to the machine's manual. Wipe away old grease mixed with scale before applying fresh grease; dirty grease acts like grinding paste. Do not over-grease parts near the rollers, where grease can make the bar slip.
+
+## Electrical Care
+
+- Keep the electrical cabinet closed and dry, especially on outdoor sites.
+- Inspect cables for cuts and crushed sections, particularly where they cross the ground.
+- Make sure the machine is properly earthed.
+- Check the supply voltage. Both our models run on 220 V single phase (the normal-motor model also has a 3-phase option); long extension cables and weak supplies cause voltage drop and motor overheating.
+- Leave electrical repairs to a qualified electrician.
+
+## A Simple Maintenance Schedule
+
+- **Daily** — clean, test piece, visual check, guards in place
+- **Weekly** — lubrication, roller and blade inspection, bolt check
+- **Monthly** — inspect bending head wear, electrical connections and cables
+- **As needed** — replace blade, rollers and pins when worn
+
+## Spare Parts to Keep
+
+Cutting blades, feed rollers, bending pins and a set of fuses or contactors cover most stoppages. Ordering them with your machine avoids waiting for an urgent shipment.
+
+For spare parts, operator training questions or a quote on either model, contact us on WhatsApp at +84 946 964 669 or through our quote form.`,
+    content_vi: `Máy uốn đai tự động là thiết bị bền chắc, nhưng làm việc với thép dưới lực lớn: con lăn kẹp thép, dao cắt thép và đầu uốn quay thép thành hình. Thói quen tốt giúp người vận hành an toàn và mọi chiếc đai đều đúng kích thước. Bài viết này tóm tắt các quy trình chúng tôi khuyến nghị cho khách hàng.
+
+## Hiểu Các Bộ Phận Chính
+
+- **Con lăn nạp và nắn thép** — kẹp thép, kéo từ cuộn hoặc giá và nắn thẳng
+- **Cụm cắt** — cắt đai hoàn chỉnh khỏi thanh thép
+- **Đầu uốn** — quay để tạo từng góc
+- **Bảng điều khiển** — màn hình cảm ứng ở bản động cơ thường; PLC với màn hình HMI ở bản servo
+- **Động cơ và tủ điện** — bản động cơ thường dùng ba động cơ 1,5 kW cho nạp, cắt và uốn
+
+## Vận Hành An Toàn
+
+**Trước khi chạy:**
+- Đặt máy trên nền chắc, phẳng, giữ khu vực đầu nạp và đầu ra thông thoáng.
+- Kiểm tra nắp che, tấm chắn đã lắp đủ và nút dừng khẩn cấp hoạt động.
+- Xác nhận đường kính thép nằm trong khả năng của máy — **6 đến 10 mm** cho cả hai model. Không ép thép lớn hơn.
+- Đeo găng tay, kính bảo hộ và giày bảo hộ; tránh tay áo rộng, khăn hoặc bất cứ thứ gì có thể bị cuốn vào.
+
+**Khi máy đang chạy:**
+- Giữ tay tránh xa con lăn, điểm cắt và đầu uốn. Không thò tay vào khi máy đang chạy.
+- Đứng ngoài vòng quay của đầu thép — đầu thanh thép quét theo khi đai được uốn.
+- Không gỡ thép kẹt khi máy còn điện. Dừng máy, ngắt nguồn rồi mới xử lý.
+- Chỉ người đã được đào tạo mới được thay đổi chương trình hoặc vận hành máy.
+
+**Sau ca làm:**
+- Tắt máy và ngắt nguồn điện trước khi vệ sinh hoặc điều chỉnh bất cứ bộ phận nào.
+
+## Kiểm Tra Hằng Ngày
+
+- **Vệ sinh** vảy cán, gỉ và bụi trên con lăn, đầu uốn và khu vực cắt. Vảy thép có tính mài mòn, làm máy mòn nhanh.
+- **Kiểm tra chiếc đầu tiên**: sau khi khởi động và mỗi khi đổi cỡ thép hoặc hình dạng, đo một chiếc đai thử và hiệu chỉnh nếu cần.
+- **Quan sát và lắng nghe** tiếng động lạ, thép bị trượt hoặc ba via ở đầu cắt.
+- **Kiểm tra chức năng tự dừng** ở bản servo, giúp máy dừng khi hết thép.
+
+## Con Lăn Nạp Và Nắn Thép
+
+Con lăn mòn hoặc chỉnh lực ép sai làm thép bị trượt, dẫn đến đai bị ngắn hoặc không vuông. Kiểm tra rãnh con lăn xem có mòn hay bị phẳng, chỉnh lực ép theo cỡ thép, và thay con lăn theo cặp để kẹp đều.
+
+## Dao Cắt
+
+Dao sắc cho vết cắt sạch, vuông. Dao cùn để lại ba via, cần lực lớn hơn và gây quá tải cho động cơ cắt. Kiểm tra lưỡi cắt định kỳ, xoay hoặc mài lại nếu thiết kế cho phép, và thay khi bị mẻ. Luôn có sẵn dao dự phòng tại công trường để dao mòn không làm dừng sản xuất.
+
+## Đầu Uốn
+
+Kiểm tra chốt uốn và trục tâm uốn xem có mòn hoặc lỏng. Chi tiết mòn làm thay đổi bán kính và góc uốn, khiến đai dần sai hình dù chương trình không đổi. Siết lại bulong cố định và thay chốt đã mòn.
+
+## Bôi Trơn
+
+Bôi trơn các bộ phận chuyển động — bánh răng, vòng bi, rãnh trượt và điểm xoay — theo sách hướng dẫn của máy. Lau sạch mỡ cũ lẫn vảy thép trước khi bôi mỡ mới; mỡ bẩn hoạt động như bột mài. Không bôi quá nhiều mỡ gần con lăn, vì mỡ có thể làm thép bị trượt.
+
+## Chăm Sóc Hệ Thống Điện
+
+- Giữ tủ điện đóng kín và khô ráo, nhất là ở công trường ngoài trời.
+- Kiểm tra dây cáp xem có bị cắt hoặc dập, đặc biệt đoạn chạy trên mặt đất.
+- Đảm bảo máy được nối đất đúng cách.
+- Kiểm tra điện áp nguồn. Cả hai model chạy điện 220 V một pha (bản động cơ thường có thêm tùy chọn ba pha); dây nối dài và nguồn yếu gây sụt áp, làm động cơ quá nhiệt.
+- Việc sửa chữa điện nên để thợ điện có chuyên môn thực hiện.
+
+## Lịch Bảo Dưỡng Đơn Giản
+
+- **Hằng ngày** — vệ sinh, chạy đai thử, kiểm tra bằng mắt, nắp che đầy đủ
+- **Hằng tuần** — bôi trơn, kiểm tra con lăn và dao cắt, kiểm tra bulong
+- **Hằng tháng** — kiểm tra độ mòn đầu uốn, các đầu nối điện và dây cáp
+- **Khi cần** — thay dao, con lăn và chốt uốn khi đã mòn
+
+## Phụ Tùng Nên Dự Trữ
+
+Dao cắt, con lăn nạp, chốt uốn và một bộ cầu chì hoặc khởi động từ giải quyết được phần lớn sự cố dừng máy. Đặt kèm cùng máy giúp tránh phải chờ hàng gửi gấp.
+
+Cần phụ tùng, hỏi về đào tạo vận hành hoặc báo giá cho hai model, hãy liên hệ WhatsApp +84 946 964 669 hoặc form báo giá.`,
+  },
+  {
+    slug: 'industrial-fan-maintenance-guide',
+    title_en: 'Industrial Fan Maintenance: Bearings, Belts and Balance',
+    title_vi: 'Bảo Dưỡng Quạt Công Nghiệp: Vòng Bi, Dây Đai, Cân Bằng',
+    excerpt_en: 'Bearings, belts and pulleys, impeller cleaning, vibration and motor checks — a practical maintenance schedule for industrial fans.',
+    excerpt_vi: 'Vòng bi, dây đai và pu-li, vệ sinh cánh, độ rung và kiểm tra động cơ — lịch bảo dưỡng thực tế cho quạt công nghiệp.',
+    category: 'industrial-fan',
+    date: '2026-06-09',
+    readTime: 6,
+    image: '/images/products/industrial-fan/plcf-121-photo-1.jpg',
+    content_en: `Industrial fans often run for thousands of hours a year, frequently out of sight on a roof or behind a wall. Because they keep working until something fails, maintenance is easy to forget. A simple routine prevents most breakdowns and keeps airflow and electricity costs where they should be.
+
+## Safety First
+
+Before any inspection inside the fan, switch off, isolate and lock out the power, and wait until the impeller has stopped completely. A fan can freewheel in a draught even when switched off, so secure the impeller before reaching in.
+
+## Bearings
+
+Bearings carry the full weight and force of the rotating impeller. Most fan failures start here.
+
+- **Listen** for grinding, rumbling or squealing.
+- **Feel or measure temperature** on the bearing housings during routine rounds. A bearing that runs noticeably hotter than usual needs attention.
+- **Grease correctly** — use the grease type and interval given by the bearing or fan manual. More grease is not better: over-greasing causes heat and can push seals out.
+- **Replace** bearings that show play, noise or heat that does not settle after lubrication.
+
+## Belts and Pulleys
+
+Belt-driven fans let you set speed by changing pulleys, and many of our fans — PLCF 101, PLCF 121, PLCF 152 and PLAX 204 — can be built for direct or belt drive. If yours is belt-driven:
+
+- **Check tension**: a loose belt slips, squeals and reduces airflow; an over-tight belt overloads bearings.
+- **Check alignment** with a straight edge across both pulley faces. Misalignment wears belts on one side and causes vibration.
+- **Inspect belts** for cracks, glazing and fraying. On multi-belt drives, replace the whole set together so all belts share the load.
+- **Check pulleys** for worn grooves and loose set screws or bushes.
+
+## Impeller Cleaning and Balance
+
+Dust, grease and fibre build up on impeller blades unevenly. Even a thin, uneven layer puts the impeller out of balance, raises vibration and shortens bearing life. Build-up also changes the blade shape and reduces airflow.
+
+- Clean the impeller and housing on a schedule that matches the air being handled — far more often on dusty or greasy duties than on clean-air supply fans.
+- Use scrapers, brushes or low-pressure washing. Avoid bending blades.
+- After cleaning, check for cracks, erosion and corrosion, especially at blade roots and welds.
+- If vibration remains high after cleaning, the impeller may need rebalancing by a specialist.
+
+## Vibration
+
+Vibration is the best early warning a fan gives you. Common causes:
+
+- Dirt on the impeller or lost balance
+- Worn bearings
+- Belt or shaft misalignment
+- Loose foundation bolts, mounts or anti-vibration pads
+
+Record vibration readings at the same points each time if you have a meter; a rising trend matters more than a single number. Without a meter, put a hand on the bearing housing and compare it with how the fan felt when new.
+
+## Motor Checks
+
+- Keep motor cooling fins and fan covers clean so the motor can shed heat.
+- Measure running current and compare it with the nameplate. High current points to a problem with the fan, belt or supply.
+- Check terminal connections for tightness and signs of overheating.
+- Have an electrician test insulation resistance periodically, especially on fans in humid or outdoor locations.
+- Our PLCF and PLAX fans run on 380 V, 3-phase; make sure all three phases are balanced.
+
+## Housing, Dampers and Structure
+
+Check the housing for leaks, cracks and corrosion; tighten flange bolts; and make sure inlet guards are intact and free of debris. Dampers and shutters, such as those on PLQF wall fans, should open and close freely.
+
+## A Practical Schedule
+
+- **Weekly** — listen, look, feel for heat and vibration; check guards
+- **Monthly** — belt tension and condition; clean motor surfaces; check bolts
+- **Quarterly** — lubricate bearings as per manual; inspect and clean the impeller (more often for dusty or greasy air)
+- **Yearly** — full inspection of impeller, bearings, housing and motor insulation
+
+Need spare impellers, bearings or belts, or advice on a fan in service? Message us on WhatsApp at +84 946 964 669 or use our quote form.`,
+    content_vi: `Quạt công nghiệp thường chạy hàng nghìn giờ mỗi năm, nhiều khi khuất trên mái hoặc sau tường. Vì quạt vẫn chạy cho đến khi hỏng, việc bảo dưỡng rất dễ bị quên. Một quy trình đơn giản ngăn được phần lớn sự cố và giữ lưu lượng gió, chi phí điện ở mức hợp lý.
+
+## An Toàn Trước Tiên
+
+Trước khi kiểm tra bên trong quạt, hãy tắt máy, ngắt và khóa nguồn điện, chờ đến khi cánh quạt dừng hẳn. Quạt có thể tự quay do gió lùa ngay cả khi đã tắt, vì vậy hãy cố định cánh trước khi đưa tay vào.
+
+## Vòng Bi
+
+Vòng bi chịu toàn bộ trọng lượng và lực của cánh quạt đang quay. Phần lớn hỏng hóc của quạt bắt đầu từ đây.
+
+- **Lắng nghe** tiếng rít, tiếng ù hoặc tiếng kêu ken két.
+- **Sờ hoặc đo nhiệt độ** gối đỡ vòng bi trong các lần kiểm tra định kỳ. Vòng bi nóng hơn bình thường rõ rệt cần được xử lý.
+- **Bôi mỡ đúng cách** — dùng loại mỡ và chu kỳ theo hướng dẫn của vòng bi hoặc quạt. Nhiều mỡ không có nghĩa là tốt hơn: thừa mỡ gây nóng và có thể đẩy bung phớt.
+- **Thay** vòng bi có độ rơ, tiếng ồn hoặc nóng không giảm sau khi bôi mỡ.
+
+## Dây Đai Và Pu-li
+
+Quạt truyền động dây đai cho phép đổi tốc độ bằng cách thay pu-li, và nhiều quạt của chúng tôi — PLCF 101, PLCF 121, PLCF 152 và PLAX 204 — có thể làm theo kiểu truyền động trực tiếp hoặc dây đai. Nếu quạt của bạn dùng dây đai:
+
+- **Kiểm tra độ căng**: dây lỏng gây trượt, kêu rít và giảm lưu lượng; dây quá căng gây quá tải vòng bi.
+- **Kiểm tra độ thẳng hàng** bằng thước thẳng đặt ngang mặt hai pu-li. Lệch tâm làm mòn một bên dây và gây rung.
+- **Kiểm tra dây đai** xem có nứt, chai bóng hoặc sờn. Với bộ truyền nhiều dây, thay cả bộ cùng lúc để các dây chịu tải đều.
+- **Kiểm tra pu-li** xem rãnh có mòn, vít hãm hoặc bạc côn có lỏng không.
+
+## Vệ Sinh Và Cân Bằng Cánh Quạt
+
+Bụi, dầu mỡ và sợi bám không đều lên cánh quạt. Chỉ một lớp mỏng không đều cũng làm mất cân bằng, tăng rung và giảm tuổi thọ vòng bi. Chất bám còn làm thay đổi biên dạng cánh và giảm lưu lượng.
+
+- Vệ sinh cánh và vỏ quạt theo lịch phù hợp với loại khí: thường xuyên hơn nhiều khi hút bụi hoặc khí nhiều dầu mỡ so với quạt cấp khí sạch.
+- Dùng dao cạo, bàn chải hoặc rửa áp lực thấp. Tránh làm cong cánh.
+- Sau khi vệ sinh, kiểm tra vết nứt, mòn và gỉ, nhất là ở chân cánh và mối hàn.
+- Nếu độ rung vẫn cao sau khi vệ sinh, cánh quạt có thể cần được cân bằng lại bởi đơn vị chuyên môn.
+
+## Độ Rung
+
+Độ rung là tín hiệu cảnh báo sớm tốt nhất của quạt. Nguyên nhân thường gặp:
+
+- Cánh bám bẩn hoặc mất cân bằng
+- Vòng bi mòn
+- Lệch dây đai hoặc lệch trục
+- Bulong móng, chân đế hoặc đệm chống rung bị lỏng
+
+Nếu có máy đo, hãy ghi độ rung tại cùng các điểm mỗi lần; xu hướng tăng quan trọng hơn một con số đơn lẻ. Nếu không có máy đo, đặt tay lên gối đỡ vòng bi và so sánh với cảm giác khi quạt còn mới.
+
+## Kiểm Tra Động Cơ
+
+- Giữ sạch cánh tản nhiệt và nắp quạt làm mát của động cơ để động cơ tản nhiệt tốt.
+- Đo dòng điện khi chạy và so với thông số trên nhãn. Dòng cao cho thấy có vấn đề ở quạt, dây đai hoặc nguồn điện.
+- Kiểm tra độ chặt và dấu hiệu quá nhiệt ở các đầu cực.
+- Nhờ thợ điện đo điện trở cách điện định kỳ, nhất là quạt đặt ở nơi ẩm hoặc ngoài trời.
+- Quạt PLCF và PLAX của chúng tôi chạy điện 380 V ba pha; hãy đảm bảo ba pha cân bằng.
+
+## Vỏ Quạt, Van Gió Và Kết Cấu
+
+Kiểm tra vỏ quạt xem có rò, nứt hoặc gỉ; siết lại bulong mặt bích; đảm bảo lưới bảo vệ cửa hút còn nguyên và không bị rác chắn. Van gió và lá chớp, như trên quạt gắn tường PLQF, phải đóng mở trơn tru.
+
+## Lịch Bảo Dưỡng Thực Tế
+
+- **Hằng tuần** — nghe, nhìn, sờ kiểm tra nhiệt và rung; kiểm tra lưới bảo vệ
+- **Hằng tháng** — độ căng và tình trạng dây đai; vệ sinh bề mặt động cơ; kiểm tra bulong
+- **Hằng quý** — bôi mỡ vòng bi theo hướng dẫn; kiểm tra và vệ sinh cánh (thường xuyên hơn với khí nhiều bụi hoặc dầu mỡ)
+- **Hằng năm** — kiểm tra toàn diện cánh, vòng bi, vỏ và cách điện động cơ
+
+Cần cánh quạt, vòng bi hoặc dây đai thay thế, hay cần tư vấn cho quạt đang vận hành? Nhắn cho chúng tôi qua WhatsApp +84 946 964 669 hoặc dùng form báo giá.`,
+  },
+  {
+    slug: 'kitchen-restaurant-exhaust-centrifugal-fans',
+    title_en: 'Kitchen and Restaurant Exhaust with Centrifugal Fans',
+    title_vi: 'Hút Khói Bếp Nhà Hàng Bằng Quạt Ly Tâm: Những Điều Cần Biết',
+    excerpt_en: 'Why centrifugal fans suit kitchen exhaust, how hoods, ducts and filters affect fan choice, and how to keep grease, odour and noise under control.',
+    excerpt_vi: 'Vì sao quạt ly tâm phù hợp hút khói bếp, chụp hút, ống gió và bộ lọc ảnh hưởng ra sao, và cách kiểm soát dầu mỡ, mùi và tiếng ồn.',
+    category: 'industrial-fan',
+    date: '2026-08-18',
+    readTime: 6,
+    image: '/images/products/industrial-fan/plcf-101-photo-1.jpg',
+    content_en: `A commercial kitchen produces heat, steam, smoke, odour and grease-laden vapour all day. The exhaust fan has to pull all of that through a hood, filters and ductwork and push it outside — reliably, quietly and safely. That combination is why most kitchen exhaust systems use centrifugal fans.
+
+## Why Centrifugal Fans for Kitchens
+
+A kitchen exhaust system is a high-resistance system. Air must pass through grease filters in the hood, along a duct with bends, sometimes through odour-control equipment, and out of a discharge. Each element adds pressure loss.
+
+Axial fans move large volumes in open air but lose performance quickly against resistance. Centrifugal fans build much higher pressure, so they keep pulling the design airflow through filters and long ducts. They also cope better with warm, moist and greasy air.
+
+Our **PLCF 101** centrifugal fan with forward-curved blades is designed for this kind of duty: ventilation and odour extraction in hotels, restaurants, factories and public buildings. It covers **650–57,600 m³/h** at **210–2,960 Pa**, with motors from 0.25 to 55 kW, direct or belt drive, in SS400 steel or SUS 304 stainless.
+
+## The System: Hood, Filters, Duct, Fan
+
+**Hood** — captures smoke and vapour at the source. It should overhang the cooking line so plumes do not escape. Hood size and the type of cooking (frying, grilling, steaming) largely decide the airflow you need, and your local code or hood supplier will give the method.
+
+**Grease filters** — baffle filters in the hood remove much of the grease before it reaches the duct. Clean them frequently; clogged filters cut airflow and become a fire risk.
+
+**Duct** — should be as short and direct as possible, with few bends. Kitchen exhaust ducts are normally made of welded steel, sloped to drain grease, and fitted with access openings for cleaning. Every extra metre and every bend adds pressure the fan must overcome.
+
+**Fan** — sized for the airflow at the total system pressure, including dirty filters and any odour-control equipment.
+
+## Odour Control
+
+In dense urban areas, neighbours may complain about cooking smells. Options include carbon filters, electrostatic precipitators or discharge at roof level well away from windows and air intakes. All of these add resistance — another reason to choose a centrifugal fan with pressure in reserve.
+
+## Grease and Fire Safety
+
+Grease build-up in hoods, ducts and fans is a serious fire hazard. Kitchen exhaust systems are covered by specific fire codes, such as NFPA 96 in many countries, and by local building and fire regulations. These set rules on duct construction, clearances, cleaning access, fire suppression and where the fan and motor may be installed.
+
+Always design and install the system with a qualified contractor and get approval from your local authority. General good practice includes:
+
+- Keeping the motor and wiring out of the grease-laden airstream where possible; belt-drive arrangements help here
+- Providing access to clean the fan and duct
+- Scheduling regular professional cleaning of hood, duct and fan
+- Never installing equipment that traps grease without a way to clean it
+
+## Keeping Noise Down
+
+Restaurants need a quiet dining room, and neighbours expect quiet nights. To reduce noise:
+
+- Choose a larger fan running at lower speed rather than a small fan at high speed; forward-curved centrifugal fans are known for relatively quiet running
+- Mount the fan on anti-vibration mounts
+- Keep duct velocities reasonable and avoid sharp bends near the fan
+- Add a silencer on the discharge or locate the fan away from sensitive areas, where codes allow
+
+## Make-Up Air
+
+Every cubic metre of air you extract must be replaced. Without make-up air, doors become hard to open, the hood stops capturing well and gas burners may not work properly. Plan a supply of fresh air into the kitchen alongside the exhaust.
+
+## Material Choice
+
+Kitchens are warm and humid, and cleaning involves water and detergents. SS400 steel with a protective finish suits many installations; SUS 304 stainless steel gives better corrosion resistance where hygiene and long life matter.
+
+To size a PLCF fan for your kitchen, send us the hood dimensions, duct length and number of bends, and the type of cooking on WhatsApp at +84 946 964 669 or through our quote form.`,
+    content_vi: `Bếp nhà hàng tạo ra nhiệt, hơi nước, khói, mùi và hơi dầu mỡ suốt cả ngày. Quạt hút phải kéo tất cả qua chụp hút, bộ lọc và đường ống rồi đẩy ra ngoài — ổn định, êm và an toàn. Chính vì vậy phần lớn hệ thống hút khói bếp dùng quạt ly tâm.
+
+## Vì Sao Bếp Nên Dùng Quạt Ly Tâm
+
+Hệ thống hút khói bếp là hệ thống có lực cản lớn. Không khí phải đi qua bộ lọc mỡ trong chụp hút, qua đường ống có nhiều co, đôi khi qua thiết bị khử mùi, rồi mới ra miệng xả. Mỗi bộ phận đều gây tổn thất áp suất.
+
+Quạt hướng trục di chuyển lượng gió lớn trong không gian mở nhưng giảm hiệu suất nhanh khi gặp lực cản. Quạt ly tâm tạo áp suất cao hơn nhiều, nên vẫn kéo đủ lưu lượng thiết kế qua bộ lọc và đường ống dài. Quạt ly tâm cũng chịu được khí ấm, ẩm và nhiều dầu mỡ tốt hơn.
+
+Quạt ly tâm cánh cong tiến **PLCF 101** của chúng tôi được thiết kế cho loại công việc này: thông gió và hút mùi tại khách sạn, nhà hàng, nhà xưởng và công trình công cộng. Lưu lượng **650–57.600 m³/h**, áp suất **210–2.960 Pa**, động cơ 0,25–55 kW, truyền động trực tiếp hoặc dây đai, vật liệu thép SS400 hoặc inox SUS 304.
+
+## Hệ Thống: Chụp Hút, Bộ Lọc, Ống Gió, Quạt
+
+**Chụp hút** — thu khói và hơi ngay tại nguồn. Chụp nên trùm rộng hơn dãy bếp để khói không thoát ra ngoài. Kích thước chụp và kiểu nấu (chiên, nướng, hấp) phần lớn quyết định lưu lượng cần thiết, và quy chuẩn địa phương hoặc nhà cung cấp chụp hút sẽ có phương pháp tính.
+
+**Bộ lọc mỡ** — lọc dạng tấm chắn trong chụp hút giữ lại phần lớn dầu mỡ trước khi vào ống. Cần vệ sinh thường xuyên; lọc bị tắc làm giảm lưu lượng và trở thành nguy cơ cháy.
+
+**Ống gió** — nên ngắn và thẳng nhất có thể, ít co. Ống hút khói bếp thường làm bằng thép hàn kín, đặt dốc để thoát mỡ, và có cửa thăm để vệ sinh. Mỗi mét ống và mỗi co đều tăng áp suất mà quạt phải vượt qua.
+
+**Quạt** — chọn theo lưu lượng tại tổng áp suất của hệ thống, tính cả khi bộ lọc bẩn và thiết bị khử mùi (nếu có).
+
+## Kiểm Soát Mùi
+
+Ở khu đô thị đông đúc, hàng xóm có thể phàn nàn về mùi nấu nướng. Các giải pháp gồm lọc than hoạt tính, lọc tĩnh điện, hoặc xả khí ở cao độ mái, xa cửa sổ và cửa lấy gió. Tất cả đều tăng lực cản — thêm một lý do để chọn quạt ly tâm có dư áp suất.
+
+## Dầu Mỡ Và An Toàn Cháy Nổ
+
+Dầu mỡ bám trong chụp hút, ống gió và quạt là nguy cơ cháy nghiêm trọng. Hệ thống hút khói bếp chịu sự điều chỉnh của các quy chuẩn phòng cháy riêng, như NFPA 96 ở nhiều quốc gia, cùng quy định xây dựng và PCCC địa phương. Các quy chuẩn này quy định cấu tạo ống, khoảng cách an toàn, cửa vệ sinh, hệ thống chữa cháy và vị trí lắp quạt, động cơ.
+
+Luôn thiết kế và lắp đặt hệ thống cùng nhà thầu có chuyên môn và xin phê duyệt của cơ quan chức năng địa phương. Một số thực hành tốt chung:
+
+- Đặt động cơ và dây điện ngoài dòng khí nhiễm dầu mỡ khi có thể; kiểu truyền động dây đai hỗ trợ việc này
+- Bố trí cửa thăm để vệ sinh quạt và ống gió
+- Lên lịch vệ sinh chuyên nghiệp định kỳ cho chụp hút, ống gió và quạt
+- Không lắp thiết bị giữ mỡ mà không có cách vệ sinh
+
+## Giảm Tiếng Ồn
+
+Nhà hàng cần phòng ăn yên tĩnh, và hàng xóm cần những đêm yên tĩnh. Để giảm ồn:
+
+- Chọn quạt lớn chạy tốc độ thấp thay vì quạt nhỏ chạy tốc độ cao; quạt ly tâm cánh cong tiến được biết đến với độ ồn tương đối thấp
+- Lắp quạt trên đệm chống rung
+- Giữ vận tốc gió trong ống hợp lý, tránh co gấp sát quạt
+- Lắp bộ tiêu âm ở miệng xả hoặc đặt quạt xa khu vực nhạy cảm, nếu quy chuẩn cho phép
+
+## Cấp Gió Bù
+
+Mỗi mét khối khí hút ra phải được bù lại. Thiếu gió bù, cửa sẽ khó mở, chụp hút thu khói kém và bếp gas có thể cháy không ổn định. Hãy tính cấp gió tươi cho bếp song song với hệ thống hút.
+
+## Lựa Chọn Vật Liệu
+
+Bếp nóng và ẩm, việc vệ sinh dùng nhiều nước và chất tẩy. Thép SS400 có lớp bảo vệ phù hợp nhiều công trình; inox SUS 304 chống ăn mòn tốt hơn khi yêu cầu vệ sinh và tuổi thọ cao.
+
+Để chọn quạt PLCF cho bếp của bạn, hãy gửi kích thước chụp hút, chiều dài ống và số co, cùng kiểu nấu qua WhatsApp +84 946 964 669 hoặc form báo giá.`,
+  },
+  {
+    slug: 'ss400-steel-vs-sus304-stainless-fans',
+    title_en: 'SS400 Steel vs SUS 304 Stainless Fans: Which to Choose',
+    title_vi: 'Quạt Thép SS400 Hay Inox SUS 304: Nên Chọn Loại Nào?',
+    excerpt_en: 'Humid, corrosive, food or chemical environments — how to choose between SS400 carbon steel and SUS 304 stainless for industrial fans.',
+    excerpt_vi: 'Môi trường ẩm, ăn mòn, thực phẩm hay hóa chất — cách chọn giữa thép carbon SS400 và inox SUS 304 cho quạt công nghiệp.',
+    category: 'industrial-fan',
+    date: '2026-10-13',
+    readTime: 5,
+    image: '/images/products/industrial-fan/plax-204-photo-2.jpg',
+    content_en: `Two fans can have identical airflow and pressure and still last very different lengths of time. The difference is often the material. Our centrifugal and axial fans — PLCF 101, PLCF 121, PLCF 152 and PLAX 204 — are available in SS400 steel or SUS 304 stainless steel. Here is how to decide.
+
+## What Is SS400?
+
+SS400 is a general structural carbon steel defined in the Japanese standard JIS G3101, widely used for frames, plates and machinery. It is strong, easy to cut, roll and weld, and cost-effective.
+
+Its weakness is corrosion. Bare carbon steel rusts in the presence of moisture and oxygen, and faster still with salt, acids or other chemicals. That is why SS400 fans are protected with paint or other coatings.
+
+**SS400 is a good choice for:**
+- General ventilation in dry or moderately humid buildings
+- Warehouses, workshops and construction sites
+- Clean or mildly dusty air at normal temperatures
+- Projects where budget is the main constraint
+
+## What Is SUS 304?
+
+SUS 304 is the Japanese designation for type 304 austenitic stainless steel, containing roughly 18% chromium and 8% nickel. The chromium forms a thin, self-repairing oxide layer on the surface that protects the steel from rust without any coating.
+
+**SUS 304 is a good choice for:**
+- Humid or wet environments, such as laundries, swimming pool halls and areas that are washed down
+- Food processing, beverage plants and commercial kitchens, where hygiene matters and paint flakes are unacceptable
+- Mildly corrosive fumes, including many found in drying, pharmaceutical and light chemical processes
+- Installations where long service life and low maintenance justify a higher upfront price
+
+## Know the Limits of 304
+
+Stainless does not mean indestructible. Type 304 can suffer pitting and crevice corrosion in environments with chlorides — sea air, salt spray, swimming pool chemicals and some cleaning agents — particularly at higher temperatures. Strong acids and some chemical fumes can also attack it.
+
+If your fan will handle highly corrosive gases or work in a coastal or chloride-rich environment, tell us exactly what is in the air. A higher-alloy grade, a special coating or a different material may be needed, and we will tell you honestly whether we can supply it.
+
+## Coatings on Carbon Steel
+
+A well-applied coating extends the life of an SS400 fan considerably. When comparing offers, ask:
+
+- How is the surface prepared before painting?
+- What type of paint system and how many coats?
+- Are the inside of the housing and the impeller coated, not just the outside?
+
+Remember that any coating can be damaged by impact, abrasion or cleaning, and rust starts at the damaged spot. Inspect coated fans regularly and touch up chips quickly.
+
+## Cost Trade-Offs
+
+SUS 304 costs more than SS400, both as a raw material and in fabrication. To compare fairly, look at the total cost over the fan's life:
+
+- **Purchase price** — lower for SS400
+- **Maintenance** — repainting and rust repair for SS400; little for SUS 304 in suitable conditions
+- **Replacement** — a corroded impeller or housing means downtime and a new part
+- **Risk** — contamination from rust or paint flakes can be costly in food and pharmaceutical plants
+
+In a dry warehouse, SS400 is usually the sensible choice. In a wet, hygienic or mildly corrosive environment, SUS 304 often pays for itself.
+
+## A Middle Path
+
+In some applications, only the parts in contact with the airstream need stainless steel. Ask whether a stainless impeller and housing with a carbon steel base or frame suits your project.
+
+## Questions We Will Ask
+
+- What does the fan handle: clean air, steam, grease, dust or chemical fumes?
+- What is the temperature and humidity?
+- Is the fan indoors, outdoors or near the coast?
+- Will it be washed down?
+
+Send us those details on WhatsApp at +84 946 964 669 or through our quote form, and we will recommend the material and quote the fan.`,
+    content_vi: `Hai chiếc quạt có thể cùng lưu lượng và áp suất nhưng tuổi thọ lại rất khác nhau. Sự khác biệt thường nằm ở vật liệu. Các dòng quạt ly tâm và hướng trục của chúng tôi — PLCF 101, PLCF 121, PLCF 152 và PLAX 204 — có hai lựa chọn vật liệu: thép SS400 hoặc inox SUS 304. Dưới đây là cách quyết định.
+
+## SS400 Là Gì?
+
+SS400 là thép carbon kết cấu thông dụng theo tiêu chuẩn Nhật Bản JIS G3101, dùng rộng rãi cho khung, tấm và máy móc. Thép bền, dễ cắt, cuốn, hàn và có giá hợp lý.
+
+Điểm yếu của SS400 là ăn mòn. Thép carbon trần bị gỉ khi gặp hơi ẩm và oxy, còn nhanh hơn khi có muối, axit hoặc hóa chất. Vì vậy quạt thép SS400 được bảo vệ bằng sơn hoặc lớp phủ khác.
+
+**SS400 phù hợp với:**
+- Thông gió chung trong nhà xưởng khô hoặc ẩm vừa phải
+- Kho bãi, xưởng sản xuất và công trường
+- Khí sạch hoặc hơi bụi ở nhiệt độ thường
+- Dự án mà ngân sách là yếu tố hàng đầu
+
+## SUS 304 Là Gì?
+
+SUS 304 là ký hiệu theo tiêu chuẩn Nhật Bản của inox austenit loại 304, chứa khoảng 18% crôm và 8% niken. Crôm tạo một lớp oxit mỏng, tự phục hồi trên bề mặt, bảo vệ thép khỏi gỉ mà không cần lớp phủ.
+
+**SUS 304 phù hợp với:**
+- Môi trường ẩm ướt như xưởng giặt là, khu bể bơi và khu vực rửa bằng nước thường xuyên
+- Chế biến thực phẩm, nhà máy đồ uống và bếp công nghiệp, nơi đòi hỏi vệ sinh và không chấp nhận vảy sơn bong tróc
+- Khí ăn mòn nhẹ, gồm nhiều loại trong quy trình sấy, dược phẩm và hóa chất nhẹ
+- Công trình mà tuổi thọ dài và ít bảo trì xứng đáng với giá đầu tư cao hơn
+
+## Giới Hạn Của Inox 304
+
+Inox không có nghĩa là không thể hỏng. Inox 304 có thể bị ăn mòn rỗ và ăn mòn khe trong môi trường có clorua — không khí biển, hơi muối, hóa chất bể bơi và một số chất tẩy rửa — nhất là ở nhiệt độ cao. Axit mạnh và một số khí hóa chất cũng có thể ăn mòn inox 304.
+
+Nếu quạt phải hút khí ăn mòn mạnh hoặc làm việc ở vùng ven biển, môi trường nhiều clorua, hãy cho chúng tôi biết chính xác thành phần khí. Có thể cần mác thép hợp kim cao hơn, lớp phủ đặc biệt hoặc vật liệu khác, và chúng tôi sẽ trả lời thẳng thắn liệu có cung cấp được hay không.
+
+## Lớp Phủ Cho Thép Carbon
+
+Lớp phủ thi công tốt kéo dài đáng kể tuổi thọ quạt thép SS400. Khi so sánh báo giá, hãy hỏi:
+
+- Bề mặt được xử lý thế nào trước khi sơn?
+- Dùng hệ sơn loại gì và bao nhiêu lớp?
+- Mặt trong vỏ quạt và cánh quạt có được phủ không, hay chỉ mặt ngoài?
+
+Lưu ý mọi lớp phủ đều có thể hư hại do va đập, mài mòn hoặc vệ sinh, và gỉ bắt đầu từ chỗ hư hại. Hãy kiểm tra quạt sơn định kỳ và sơn dặm ngay các vết tróc.
+
+## Cân Nhắc Chi Phí
+
+Inox SUS 304 đắt hơn SS400 cả về vật liệu lẫn gia công. Để so sánh công bằng, hãy xét tổng chi phí trong suốt vòng đời quạt:
+
+- **Giá mua** — SS400 thấp hơn
+- **Bảo trì** — SS400 cần sơn lại và xử lý gỉ; SUS 304 gần như không cần trong điều kiện phù hợp
+- **Thay thế** — cánh hoặc vỏ quạt bị ăn mòn đồng nghĩa với dừng máy và thay chi tiết mới
+- **Rủi ro** — nhiễm bẩn do gỉ hoặc vảy sơn có thể gây thiệt hại lớn trong nhà máy thực phẩm và dược phẩm
+
+Trong nhà kho khô ráo, SS400 thường là lựa chọn hợp lý. Trong môi trường ẩm ướt, yêu cầu vệ sinh hoặc ăn mòn nhẹ, SUS 304 thường tự bù đắp được chi phí.
+
+## Giải Pháp Trung Gian
+
+Trong một số ứng dụng, chỉ các bộ phận tiếp xúc với dòng khí mới cần inox. Hãy hỏi chúng tôi xem phương án cánh và vỏ quạt bằng inox, chân đế hoặc khung bằng thép carbon có phù hợp với dự án của bạn không.
+
+## Những Câu Hỏi Chúng Tôi Sẽ Hỏi
+
+- Quạt hút loại khí gì: khí sạch, hơi nước, dầu mỡ, bụi hay khí hóa chất?
+- Nhiệt độ và độ ẩm bao nhiêu?
+- Quạt đặt trong nhà, ngoài trời hay gần biển?
+- Quạt có được rửa bằng nước không?
+
+Gửi các thông tin trên qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ đề xuất vật liệu và báo giá quạt.`,
   },
 ];
