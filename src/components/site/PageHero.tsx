@@ -25,7 +25,7 @@ export default function PageHero({
   const height = size === 'full' ? 'min-h-[620px] lg:h-[calc(100svh-80px)]' : 'min-h-[440px] lg:min-h-[min(64svh,620px)]';
   return (
     <section aria-labelledby="page-title" className={`relative isolate flex flex-col overflow-hidden bg-ink text-white ${height}`}>
-      <Image src={image} alt={alt} fill priority sizes="100vw" className="-z-10 object-cover" />
+      <Image src={image} alt={alt} fill priority fetchPriority="high" sizes="100vw" className="-z-10 object-cover" />
       <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(28,28,30,0.75)_0%,rgba(28,28,30,0.35)_50%,rgba(28,28,30,0.05)_100%)]" />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-2/3 bg-[linear-gradient(0deg,rgba(28,28,30,0.92)_0%,rgba(28,28,30,0.5)_45%,rgba(28,28,30,0)_100%)]" />
       <div aria-hidden="true" className="absolute inset-x-0 top-0 -z-10 h-28 bg-[linear-gradient(180deg,rgba(28,28,30,0.55)_0%,rgba(28,28,30,0)_100%)]" />

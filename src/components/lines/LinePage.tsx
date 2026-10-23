@@ -26,7 +26,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
         className="relative isolate bg-ink text-white lg:flex lg:h-[min(calc(100svh-80px),56.25vw)] lg:min-h-[560px] lg:flex-col lg:overflow-hidden"
       >
         <div className="relative aspect-[16/9] lg:absolute lg:inset-0 lg:-z-10 lg:aspect-auto">
-          <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority sizes="100vw" className="object-cover" />
+          <Image src={`/images/heroes/${line.slug}.jpg`} alt={`${name}, Phu Long Mechanical`} fill priority fetchPriority="high" sizes="100vw" className="object-cover" />
           <div aria-hidden="true" className="absolute inset-0 hidden bg-[linear-gradient(90deg,rgba(28,28,30,0.7)_0%,rgba(28,28,30,0.3)_45%,rgba(28,28,30,0)_100%)] lg:block" />
           <div aria-hidden="true" className="absolute inset-x-0 bottom-0 hidden h-2/3 bg-[linear-gradient(0deg,rgba(28,28,30,0.92)_0%,rgba(28,28,30,0.55)_45%,rgba(28,28,30,0)_100%)] lg:block" />
           <div aria-hidden="true" className="absolute inset-x-0 top-0 h-24 bg-[linear-gradient(180deg,rgba(28,28,30,0.6)_0%,rgba(28,28,30,0)_100%)]" />

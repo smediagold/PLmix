@@ -18,6 +18,7 @@ export function BlogImage({ post, alt, sizes, priority = false }: { post: BlogPo
       alt={alt}
       fill
       priority={priority}
+      fetchPriority={priority ? 'high' : undefined}
       sizes={sizes}
       className={`${cut ? 'multiply object-contain p-[8%]' : 'object-cover'} transition-transform duration-500 group-hover:scale-[1.03]`}
     />

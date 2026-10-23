@@ -63,6 +63,7 @@ async function HeroSection() {
         alt="Phu Long concrete mixers on a construction site"
         fill
         priority
+        fetchPriority="high"
         sizes="100vw"
         className="-z-10 object-cover object-[72%_center] lg:object-center"
       />
