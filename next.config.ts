@@ -4,9 +4,6 @@ import type { NextConfig } from 'next';
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
-  experimental: {
-    inlineCss: true,
-  },
   images: {
     formats: ['image/webp'],
     minimumCacheTTL: 2678400,
