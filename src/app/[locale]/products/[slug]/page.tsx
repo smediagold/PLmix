@@ -8,6 +8,8 @@ import { Link } from '@/i18n/navigation';
 import ProductGallery from '@/components/products/ProductGallery';
 import InquiryToggle from '@/components/inquiry/InquiryToggle';
 import LinePage from '@/components/lines/LinePage';
+import { lineSeo } from '@/data/seo';
+import JsonLd from '@/components/seo/JsonLd';
 import { keyFact } from '@/components/lines/ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 
@@ -28,8 +30,9 @@ export async function generateMetadata({
 
   const line = getLine(slug);
   if (line) {
-    const title = locale === 'vi' ? `${line.name.vi} – Nhà Sản Xuất Việt Nam | Phú Long` : `${line.name.en} Manufacturer in Vietnam | Phu Long`;
-    const description = `${pick(line.tagline, locale)} ${pick(line.intro, locale)}`.slice(0, 160);
+    const seo = lineSeo[line.slug];
+    const title = seo ? pick(seo.title, locale) : locale === 'vi' ? `${line.name.vi} – Nhà Sản Xuất Việt Nam | Phú Long` : `${line.name.en} Manufacturer in Vietnam | Phu Long`;
+    const description = seo ? pick(seo.description, locale) : `${pick(line.tagline, locale)} ${pick(line.intro, locale)}`.slice(0, 160);
     return {
       title: { absolute: title },
       description,
@@ -46,7 +49,12 @@ export async function generateMetadata({
   const moqLine = product.moq ? (vi ? ` MOQ ${product.moq} chiếc.` : ` MOQ ${product.moq} units.`) : '';
   const description = `${desc}${moqLine}`.slice(0, 160);
   return {
-    title: { absolute: `${name.split(' — ')[0]} | Phu Long` },
+    title: {
+      absolute:
+        product.subcategory === 'concrete-mixer'
+          ? `${name.split(' — ')[0].replace(vi ? 'Máy Trộn Bê Tông' : 'Concrete Mixer', product.specifications['Batch Capacity'] ? (vi ? 'Máy Trộn Bê Tông 1 Bao' : '1 Bag Concrete Mixer') : product.id.startsWith('CM-250') ? (vi ? 'Máy Trộn Bê Tông Mini' : 'Mini Concrete Mixer') : vi ? 'Máy Trộn Bê Tông' : 'Concrete Mixer')} ${product.id} | ${vi ? 'Phú Long' : 'Phu Long'}`
+          : `${name.split(' — ')[0]} | Phu Long`,
+    },
     description,
     alternates: { canonical: url, languages },
     openGraph: {
@@ -79,10 +87,40 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
   const name = vi ? product.name_vi : product.name_en;
   const description = vi ? product.description_vi : product.description_en;
   const line = lineOfProduct(product);
+  const base = 'https://www.phulongglobal.com';
+  const url = `${base}/${locale}/products/${product.id.toLowerCase()}`;
+  const ld = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name,
+      sku: product.id,
+      mpn: product.id,
+      description,
+      url,
+      image: product.images.slice(0, 4).map((src) => `${base}${src}`),
+      brand: { '@type': 'Brand', name: 'Phu Long' },
+      manufacturer: { '@type': 'Organization', name: 'Phu Long Global Investment Co., Ltd', url: base },
+      countryOfOrigin: 'VN',
+      category: line ? pick(line.name, 'en') : undefined,
+      additionalProperty: Object.entries(product.specifications).map(([k, v]) => ({ '@type': 'PropertyValue', name: k, value: v })),
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: tl('home'), item: `${base}/${locale}` },
+        { '@type': 'ListItem', position: 2, name: tl('products'), item: `${base}/${locale}/products` },
+        ...(line ? [{ '@type': 'ListItem', position: 3, name: pick(line.name, locale), item: `${base}/${locale}/products/${line.slug}` }] : []),
+        { '@type': 'ListItem', position: line ? 4 : 3, name, item: url },
+      ],
+    },
+  ];
   const related = product.related_skus.map((id) => getProductById(id)).filter((p): p is Product => Boolean(p)).slice(0, 4);
 
   return (
     <>
+      <JsonLd data={ld} />
       <div className="frame">
         <nav aria-label={tl('breadcrumb')} className="pt-4 text-[15px] text-soft">
           <ol className="flex flex-wrap items-center gap-2">

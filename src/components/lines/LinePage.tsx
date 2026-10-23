@@ -5,6 +5,8 @@ import { lines, lineProducts, pick, type ProductLine } from '@/data/lines';
 import ModelGrid from './ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 import ContactCoupon from '@/components/contact/ContactCoupon';
+import JsonLd from '@/components/seo/JsonLd';
+import { lineSeo } from '@/data/seo';
 
 const gap = 'pt-[clamp(64px,8vw,128px)]';
 export default async function LinePage({ line, locale }: { line: ProductLine; locale: string }) {
@@ -18,9 +20,47 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
   );
 
   const custom = items.find((p) => p.customization_options)?.customization_options;
+  const seo = lineSeo[line.slug];
+  const base = 'https://www.phulongglobal.com';
+  const pageUrl = `${base}/${locale}/products/${line.slug}`;
+  const ld: Record<string, unknown>[] = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: t('home'), item: `${base}/${locale}` },
+        { '@type': 'ListItem', position: 2, name: t('products'), item: `${base}/${locale}/products` },
+        { '@type': 'ListItem', position: 3, name, item: pageUrl },
+      ],
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name,
+      url: pageUrl,
+      itemListElement: items.map((p, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        url: `${base}/${locale}/products/${p.id.toLowerCase()}`,
+        name: vi ? p.name_vi : p.name_en,
+      })),
+    },
+  ];
+  if (seo) {
+    ld.push({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: seo.faq.map((f) => ({
+        '@type': 'Question',
+        name: pick(f.q, locale),
+        acceptedAnswer: { '@type': 'Answer', text: pick(f.a, locale) },
+      })),
+    });
+  }
 
   return (
     <>
+      <JsonLd data={ld} />
       <section
         aria-labelledby="line-title"
         className="relative isolate bg-ink text-white lg:flex lg:h-[min(calc(100svh-80px),56.25vw)] lg:min-h-[560px] lg:flex-col lg:overflow-hidden"
@@ -190,6 +230,42 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
                 <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{vi ? 'Logo và tem nhãn riêng (OEM)' : 'Your logo and decals (OEM)'}</dd>
               </div>
             </dl>
+          </div>
+        </section>
+      )}
+
+      {seo && (
+        <section aria-labelledby="seo-about" className={`frame ${gap}`}>
+          <div className="grid gap-10 lg:grid-cols-12">
+            <div className="lg:col-span-5">
+              <h2 id="seo-about" data-reveal className="text-[clamp(28px,2.6vw,40px)] font-bold leading-[1.08] tracking-[-0.02em] text-ink">
+                {pick(seo.aboutTitle, locale)}
+              </h2>
+              {seo.about.map((para, i) => (
+                <p key={i} data-reveal className="mt-5 max-w-[60ch] text-[17px] leading-[1.6] text-ink">
+                  {pick(para, locale)}
+                </p>
+              ))}
+            </div>
+            <div className="lg:col-span-7">
+              <h2 className="text-[clamp(24px,2vw,30px)] font-bold tracking-[-0.01em] text-ink">{pick(seo.faqTitle, locale)}</h2>
+              <div className="mt-6 space-y-3">
+                {seo.faq.map((f, i) => (
+                  <details key={i} className="group rounded-2xl bg-white px-5 open:pb-5" open={i === 0}>
+                    <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between gap-4 text-[17px] font-semibold text-ink">
+                      <h3>{pick(f.q, locale)}</h3>
+                      <span aria-hidden="true" className="text-[22px] leading-none transition-transform group-open:rotate-45">+</span>
+                    </summary>
+                    <p className="max-w-[68ch] text-[17px] leading-[1.6] text-ink">{pick(f.a, locale)}</p>
+                  </details>
+                ))}
+              </div>
+              {seo.guide && (
+                <Link href={`/blog/${seo.guide.slug}`} className="mt-6 inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
+                  {pick(seo.guide.label, locale)}
+                </Link>
+              )}
+            </div>
           </div>
         </section>
       )}

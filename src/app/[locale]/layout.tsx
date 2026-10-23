@@ -11,6 +11,23 @@ import { Suspense } from 'react';
 import { navLines, skuNames } from '@/data/lines';
 import { InquiryProvider } from '@/components/inquiry/InquiryContext';
 import InquiryBar from '@/components/inquiry/InquiryBar';
+import JsonLd from '@/components/seo/JsonLd';
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': 'https://www.phulongglobal.com/#organization',
+  name: 'Phu Long Global Investment Co., Ltd',
+  alternateName: ['Phu Long Mechanical', 'Phú Long'],
+  url: 'https://www.phulongglobal.com',
+  logo: 'https://www.phulongglobal.com/logo-3d.png',
+  description: 'Vietnam manufacturer of concrete mixers (cement mixers), stirrup bending machines, wheelbarrows, rice transplanters, paddy threshers and industrial fans for export.',
+  email: 'Andy@phulongglobal.com',
+  telephone: '+84 946 964 669',
+  address: { '@type': 'PostalAddress', streetAddress: '115 Ke Ve Street, Dong Ngac Ward', addressLocality: 'Hanoi', addressCountry: 'VN' },
+  contactPoint: [{ '@type': 'ContactPoint', telephone: '+84 946 964 669', contactType: 'sales', availableLanguage: ['English', 'Vietnamese'] }],
+  knowsAbout: ['Concrete mixer', 'Cement mixer', '1 bag concrete mixer', 'Mini concrete mixer', 'Stirrup bending machine', 'Industrial fan', 'Rice transplanter', 'Paddy thresher'],
+};
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -45,6 +62,7 @@ export default async function LocaleLayout({
           >
             {locale === 'vi' ? 'Bỏ qua đến nội dung' : 'Skip to content'}
           </a>
+          <JsonLd data={organization} />
           <Header locale={locale} lines={navLines()} />
           <main id="main" className="flex-1">{children}</main>
           <Footer />

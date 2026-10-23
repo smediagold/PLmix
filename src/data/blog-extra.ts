@@ -1916,4 +1916,97 @@ Trong một số ứng dụng, chỉ các bộ phận tiếp xúc với dòng kh
 
 Gửi các thông tin trên qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ đề xuất vật liệu và báo giá quạt.`,
   },
+  {
+    slug: '1-bag-concrete-mixer-guide',
+    title_en: '1 Bag Concrete Mixer: What It Is and Which to Buy',
+    title_vi: 'Máy Trộn Bê Tông 1 Bao: Là Gì Và Nên Chọn Loại Nào',
+    excerpt_en: 'What a 1 bag concrete mixer is, how much concrete one bag of cement makes, and why 350 L drum mixers are the usual one-bag size.',
+    excerpt_vi: 'Máy trộn bê tông 1 bao là gì, một bao xi măng cho ra bao nhiêu bê tông, và vì sao máy trộn thùng 350 L là cỡ 1 bao phổ biến.',
+    category: 'concrete-mixer',
+    date: '2026-10-22',
+    readTime: 6,
+    image: '/images/process/finished.jpg',
+    content_en: `"1 bag concrete mixer" is how many builders, dealers and rental shops describe the size of a drum mixer: a machine that mixes one 50 kg bag of cement, with the sand, stone and water that go with it, in a single batch. It is the most common mixer size on small and medium building sites, and for good reason.
+
+## What "1 bag" means in practice
+
+Concrete is usually measured on site by volume ratios of **cement : sand : stone**. A common general-purpose mix is 1:2:4. As a rule of thumb, a cubic metre of 1:2:4 concrete needs roughly 6.2 to 6.5 bags of 50 kg cement, so **one bag makes about 0.15–0.16 m³ of concrete**.
+
+A one-bag mixer therefore has to turn over roughly 150–170 litres of wet concrete per batch with room to spare, because a drum is never filled to its nominal volume. The usable batch of a drum mixer is about 60–65% of the drum capacity.
+
+## Why 350 L is the classic one-bag size
+
+A 350 L drum gives about 200–220 L of mixed concrete per batch, which covers a one-bag batch comfortably, including richer mixes that produce more volume per bag. That is why our **350 L and 385 L** concrete mixers are sold as one-bag mixers.
+
+- **250 L** — less than one full bag per batch. Good for repairs, small houses and tight sites.
+- **350 L / 385 L** — the one-bag workhorse for houses, small buildings, footings and slabs.
+- **420–500 L** — more than one bag per batch for larger jobs and higher daily output.
+
+The exact batch always depends on your mix design, so treat these figures as a guide, not a specification.
+
+## Choosing a 1 bag mixer
+
+**Wheels and tyres.** Two-wheel models with large pneumatic 5.00-12 tyres tow and move easily on rough ground. Four-wheel models stand more steadily on uneven sites. Solid 4.00-8 tyres never go flat, which matters where tyre repair is hard to find.
+
+**Engine.** Choose by what is available on site:
+- **Electric** (2.2–5.5 kW, 220 V) — quiet and cheap to run where there is reliable power.
+- **Gasoline** (GP160 / GP200) — light and easy to start, the usual choice for mobile work.
+- **Diesel** — for remote sites and long working days.
+
+**Drum steel.** Our 350 L drums use 2 mm steel for the upper drum and 2.5 mm for the lower drum, and the 385 L uses 2.5 mm and 3 mm. Thicker steel can be specified for heavy daily use.
+
+## Getting the most out of each batch
+
+- Add about half of the water first, then the stone, the sand and the cement, then the rest of the water.
+- Do not overload the drum: a one-bag mixer is sized for one bag, and overfilling spills material and strains the drive.
+- Mix until the colour is even, and keep the mixing time the same for every batch.
+- Wash the drum out at the end of every day before concrete sets on the blades.
+
+## Buying 1 bag concrete mixers from Vietnam
+
+Phu Long builds 350 L and 385 L one-bag concrete mixers, also called cement mixers, in our factory in Ninh Binh, Vietnam, along with 250 L and 420–500 L models. Every mixer can be built with the engine, tyres, colour and logo your market needs, and several models can share one container.
+
+Tell us your market, quantity and destination port on WhatsApp at +84 946 964 669 or through our quote form, and we will recommend the right one-bag model and send an FOB or CIF quote.`,
+    content_vi: `"Máy trộn 1 bao" là cách thợ xây, đại lý và cửa hàng cho thuê thường gọi cỡ của máy trộn thùng quay: loại máy trộn được một bao xi măng 50 kg cùng lượng cát, đá và nước tương ứng trong một mẻ. Đây là cỡ máy trộn phổ biến nhất ở các công trình nhỏ và vừa.
+
+## "1 bao" nghĩa là gì trong thực tế
+
+Ở công trường, bê tông thường được đong theo tỷ lệ thể tích **xi măng : cát : đá**. Cấp phối thông dụng là 1:2:4. Theo kinh nghiệm chung, mỗi mét khối bê tông 1:2:4 cần khoảng 6,2 đến 6,5 bao xi măng 50 kg, nên **một bao cho ra khoảng 0,15–0,16 m³ bê tông**.
+
+Vì vậy máy trộn 1 bao cần trộn được khoảng 150–170 lít bê tông ướt mỗi mẻ và còn dư chỗ, vì thùng trộn không bao giờ được đổ đầy tới dung tích danh định. Lượng trộn thực tế mỗi mẻ khoảng 60–65% dung tích thùng.
+
+## Vì sao 350 L là cỡ 1 bao điển hình
+
+Thùng 350 L cho khoảng 200–220 L bê tông mỗi mẻ, đủ cho một mẻ 1 bao, kể cả cấp phối giàu cho nhiều thể tích hơn mỗi bao. Đó là lý do các model **350 L và 385 L** của chúng tôi được bán như máy trộn 1 bao.
+
+- **250 L** — chưa tới một bao mỗi mẻ. Phù hợp sửa chữa, nhà nhỏ và công trường chật.
+- **350 L / 385 L** — máy trộn 1 bao chủ lực cho nhà ở, công trình nhỏ, móng và sàn.
+- **420–500 L** — hơn một bao mỗi mẻ, cho công trình lớn và sản lượng ngày cao.
+
+Lượng thực tế mỗi mẻ luôn phụ thuộc cấp phối, nên hãy coi các con số trên là tham khảo, không phải thông số kỹ thuật.
+
+## Chọn máy trộn 1 bao
+
+**Bánh và lốp.** Model 2 bánh lốp hơi lớn 5.00-12 dễ kéo và di chuyển trên nền gồ ghề. Model 4 bánh đứng vững hơn trên công trường không bằng phẳng. Lốp đặc 4.00-8 không bao giờ xẹp, rất hữu ích ở nơi khó sửa lốp.
+
+**Động cơ.** Chọn theo điều kiện công trường:
+- **Điện** (2,2–5,5 kW, 220 V) — êm, chi phí vận hành thấp khi có điện ổn định.
+- **Xăng** (GP160 / GP200) — nhẹ, dễ khởi động, thường dùng cho công trình di động.
+- **Diesel** — cho công trường xa và ngày làm việc dài.
+
+**Thép thùng.** Thùng 350 L của chúng tôi dùng thép 2 mm cho thùng trên và 2,5 mm cho thùng dưới, model 385 L dùng 2,5 mm và 3 mm. Có thể đặt thép dày hơn cho máy chạy nặng hằng ngày.
+
+## Để mỗi mẻ trộn đạt hiệu quả
+
+- Cho khoảng một nửa lượng nước trước, rồi đến đá, cát và xi măng, sau đó phần nước còn lại.
+- Không đổ quá tải: máy 1 bao được thiết kế cho một bao, đổ quá đầy sẽ rơi vãi vật liệu và làm nặng bộ truyền động.
+- Trộn tới khi màu đồng đều, và giữ thời gian trộn giống nhau cho mọi mẻ.
+- Rửa sạch thùng cuối mỗi ngày trước khi bê tông đông cứng trên cánh trộn.
+
+## Nhập máy trộn 1 bao từ Việt Nam
+
+Phú Long sản xuất máy trộn bê tông 1 bao 350 L và 385 L, còn gọi là máy trộn xi măng, tại nhà máy ở Ninh Bình, Việt Nam, cùng các model 250 L và 420–500 L. Mỗi máy có thể làm theo động cơ, lốp, màu sắc và logo mà thị trường của bạn cần, và có thể ghép nhiều model trong một container.
+
+Cho chúng tôi biết thị trường, số lượng và cảng đến qua WhatsApp +84 946 964 669 hoặc form báo giá, chúng tôi sẽ đề xuất model 1 bao phù hợp và gửi báo giá FOB hoặc CIF.`,
+  },
 ];

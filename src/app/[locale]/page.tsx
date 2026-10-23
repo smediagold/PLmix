@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     : 'Concrete Mixer Manufacturer in Vietnam | Phu Long Mechanical';
   const description = vi
     ? 'Phú Long — nhà sản xuất máy trộn bê tông, máy uốn đai, máy cấy lúa, máy tuốt lúa và quạt công nghiệp tại Việt Nam. 20 năm kinh nghiệm, xuất khẩu 20 quốc gia.'
-    : 'Phu Long — Vietnam manufacturer of concrete mixers, stirrup bending machines, rice transplanters, paddy threshers and industrial fans. 20+ years, 20 countries. OEM orders welcome.';
+    : 'Concrete mixer and cement mixer manufacturer in Vietnam: 250–500 L drum mixers incl. 1 bag models, electric, gasoline or diesel. 20+ years, 20 countries.';
   return {
     title: { absolute: title },
     description,
