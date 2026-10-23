@@ -107,16 +107,6 @@ async function FeatureSection() {
             {t('title')}
           </h2>
           <p data-reveal className="mt-5 max-w-[54ch] text-[17px] leading-[1.55] text-ink">{t('text')}</p>
-          <ul className="mt-8 grid grid-cols-2 gap-3 lg:hidden">
-            {spots.map(({ label, Icon }, i) => (
-              <li key={label} data-reveal style={{ ['--d' as string]: `${i * 70}ms` }} className="flex items-center gap-3 rounded-2xl bg-stone p-3">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-orange text-ink">
-                  <Icon aria-hidden="true" className="h-5 w-5" strokeWidth={2} />
-                </span>
-                <span className="text-[15px] font-semibold leading-snug text-ink">{label}</span>
-              </li>
-            ))}
-          </ul>
           <div data-reveal className="mt-9 flex flex-wrap gap-3">
             <Link
               href="/products/concrete-mixers"
@@ -144,21 +134,30 @@ async function FeatureSection() {
             />
             {spots.map(({ x, y, label, Icon }, i) => (
               <div key={label} className="absolute" style={{ left: `${x}%`, top: `${y}%` }}>
-                <span aria-hidden="true" className="absolute -left-[9px] -top-[9px] block h-[18px] w-[18px] rounded-full bg-ink outline outline-4 outline-white/80" />
+                <span aria-hidden="true" className="absolute -left-4 -top-4 flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange text-ink outline outline-[3px] outline-white lg:-left-5 lg:-top-5 lg:h-10 lg:w-10">
+                  <Icon className="h-4 w-4 lg:h-5 lg:w-5" strokeWidth={2.2} />
+                </span>
                 <div
                   aria-hidden="true"
                   data-reveal
                   style={{ ['--d' as string]: `${200 + i * 120}ms` }}
-                  className="absolute right-[16px] top-0 hidden -translate-y-1/2 items-center gap-2 whitespace-nowrap rounded-full bg-white py-1.5 pl-1.5 pr-4 lg:flex"
+                  className="absolute right-[28px] top-0 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-white px-4 py-2 lg:block"
                 >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-orange text-ink">
-                    <Icon className="h-4 w-4" strokeWidth={2} />
-                  </span>
                   <span className="text-[15px] font-semibold text-ink">{label}</span>
                 </div>
               </div>
             ))}
           </div>
+          <ul className="mt-3 grid grid-cols-2 gap-3 lg:hidden">
+            {spots.map(({ label, Icon }, i) => (
+              <li key={label} data-reveal style={{ ['--d' as string]: `${i * 70}ms` }} className="flex items-center gap-3 rounded-2xl bg-stone p-3">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-orange text-ink">
+                  <Icon aria-hidden="true" className="h-5 w-5" strokeWidth={2} />
+                </span>
+                <span className="text-[15px] font-semibold leading-snug text-ink">{label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>
