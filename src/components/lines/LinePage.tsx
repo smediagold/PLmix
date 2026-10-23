@@ -7,13 +7,14 @@ import LoopVideo from '@/components/site/LoopVideo';
 import ContactCoupon from '@/components/contact/ContactCoupon';
 import JsonLd from '@/components/seo/JsonLd';
 import { lineSeo } from '@/data/seo';
+import { productName, specLabel, customLabel } from '@/data/products';
 
 const gap = 'pt-[clamp(64px,8vw,128px)]';
 export default async function LinePage({ line, locale }: { line: ProductLine; locale: string }) {
   const t = await getTranslations('line');
   const items = lineProducts(line);
   const name = pick(line.name, locale);
-  const vi = locale === 'vi';
+  const tu = await getTranslations('ui');
 
   const specKeys = Array.from(new Set(items.flatMap((p) => Object.keys(p.specifications)))).filter(
     (k) => items.filter((p) => p.specifications[k]).length > 1 || items.length === 1,
@@ -42,7 +43,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
         '@type': 'ListItem',
         position: i + 1,
         url: `${base}/${locale}/products/${p.id.toLowerCase()}`,
-        name: vi ? p.name_vi : p.name_en,
+        name: productName(p, locale),
       })),
     },
   ];
@@ -152,7 +153,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
                 <tr className="bg-ink text-white">
                   <th scope="col" className="sticky left-0 bg-ink px-4 py-3 font-semibold">{t('model')}</th>
                   {specKeys.map((k) => (
-                    <th key={k} scope="col" className="whitespace-nowrap px-4 py-3 font-semibold">{k}</th>
+                    <th key={k} scope="col" className="whitespace-nowrap px-4 py-3 font-semibold">{specLabel(k, locale)}</th>
                   ))}
                 </tr>
               </thead>
@@ -183,7 +184,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
                 {t('factoryTitle')}
               </h2>
               <Link href="/about" className="mt-3 inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
-                {vi ? 'Về nhà máy' : 'About the factory'}
+                {tu('aboutFactory')}
               </Link>
             </div>
             <div className="min-w-0 lg:col-span-9">
@@ -221,13 +222,13 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
             <dl className="grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:col-span-7">
               {Object.entries(custom).map(([k, vals]) => (
                 <div key={k} data-reveal>
-                  <dt className="text-[22px] font-bold text-ink">{k}</dt>
-                  <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{vals.join(' · ')}</dd>
+                  <dt className="text-[22px] font-bold text-ink">{customLabel(k, locale)}</dt>
+                  <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{vals.map((v) => customLabel(v, locale)).join(' · ')}</dd>
                 </div>
               ))}
               <div data-reveal>
-                <dt className="text-[22px] font-bold text-ink">{vi ? 'Thương hiệu' : 'Branding'}</dt>
-                <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{vi ? 'Logo và tem nhãn riêng (OEM)' : 'Your logo and decals (OEM)'}</dd>
+                <dt className="text-[22px] font-bold text-ink">{tu('branding')}</dt>
+                <dd className="mt-2 text-[17px] leading-[1.55] text-ink">{tu('brandingValue')}</dd>
               </div>
             </dl>
           </div>

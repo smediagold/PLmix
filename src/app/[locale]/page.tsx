@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Cylinder, Disc3, Fuel, Layers } from 'lucide-react';
@@ -11,22 +12,7 @@ import { CertificatesSection, MarketsSection, TestimonialsSection, VideoSection,
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const vi = locale === 'vi';
-  const title = vi
-    ? 'Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam | Phú Long'
-    : 'Concrete Mixer Manufacturer in Vietnam | Phu Long Mechanical';
-  const description = vi
-    ? 'Phú Long — nhà sản xuất máy trộn bê tông, máy uốn đai, máy cấy lúa, máy tuốt lúa và quạt công nghiệp tại Việt Nam. 20 năm kinh nghiệm, xuất khẩu 20 quốc gia.'
-    : 'Concrete mixer and cement mixer manufacturer in Vietnam: 250–500 L drum mixers incl. 1 bag models, electric, gasoline or diesel. 20+ years, 20 countries.';
-  return {
-    title: { absolute: title },
-    description,
-    alternates: {
-      canonical: `https://www.phulongglobal.com/${locale}`,
-      languages: { en: 'https://www.phulongglobal.com/en', vi: 'https://www.phulongglobal.com/vi' },
-    },
-    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}` },
-  };
+  return pageMeta(locale, 'home', '');
 }
 
 const gap = sectionGap;

@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
-import { blogPosts, categoryLabels, type BlogCategory } from '@/data/blog';
+import { categoryLabels, postsForLocale, type BlogCategory } from '@/data/blog';
+import { pick } from '@/data/nav';
 import PageHero from '@/components/site/PageHero';
 import BlogCard from '@/components/blog/BlogCard';
 import ContactCoupon from '@/components/contact/ContactCoupon';
@@ -9,22 +11,7 @@ import { sectionGap } from '@/components/site/sections';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const vi = locale === 'vi';
-  const title = vi
-    ? 'Hướng Dẫn Chọn Mua Máy Móc | Phú Long'
-    : 'Machinery Buying Guides & Tips | Phu Long';
-  const description = vi
-    ? 'Hướng dẫn chọn máy trộn bê tông, máy cấy lúa, máy tuốt lúa — kinh nghiệm thực tế từ nhà sản xuất Phú Long 20 năm kinh nghiệm xuất khẩu.'
-    : 'Practical guides on choosing concrete mixers, rice transplanters, paddy threshers and more — from a manufacturer with 20+ years of export experience.';
-  return {
-    title: { absolute: title },
-    description,
-    alternates: {
-      canonical: `https://www.phulongglobal.com/${locale}/blog`,
-      languages: { en: 'https://www.phulongglobal.com/en/blog', vi: 'https://www.phulongglobal.com/vi/blog' },
-    },
-    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/blog` },
-  };
+  return pageMeta(locale, 'blog', '/blog');
 }
 
 export default async function BlogPage({
@@ -39,7 +26,7 @@ export default async function BlogPage({
   setRequestLocale(locale);
   const t = await getTranslations('blog');
   const tl = await getTranslations('line');
-  const vi = locale === 'vi';
+  const blogPosts = postsForLocale(locale);
 
   const cats = (Object.keys(categoryLabels) as BlogCategory[]).filter((c) => blogPosts.some((p) => p.category === c));
   const active = cats.includes(category as BlogCategory) ? (category as BlogCategory) : null;
@@ -75,7 +62,7 @@ export default async function BlogPage({
               aria-current={active === c ? 'page' : undefined}
               className={pill(active === c)}
             >
-              {categoryLabels[c][vi ? 'vi' : 'en']}
+              {pick(categoryLabels[c], locale)}
             </Link>
           ))}
         </nav>

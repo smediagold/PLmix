@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { BadgeCheck, Container, Factory, Fuel, Handshake, Palette, Settings2, ShieldCheck } from 'lucide-react';
@@ -8,22 +9,7 @@ import { CertificatesSection, MarketsSection, VideoSection, sectionGap } from '@
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const vi = locale === 'vi';
-  const title = vi
-    ? 'Về Phú Long – Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam'
-    : 'About Phu Long – Concrete Mixer Manufacturer in Vietnam';
-  const description = vi
-    ? 'Phú Long Global Investment — nhà sản xuất máy xây dựng, máy nông nghiệp và quạt công nghiệp tại Việt Nam. Một nhà máy, 70+ khách hàng, 20 quốc gia xuất khẩu.'
-    : 'Phu Long Global Investment — Vietnam manufacturer of construction and farm machinery and industrial fans. One factory, 70+ clients, exported to 20 countries.';
-  return {
-    title: { absolute: title },
-    description,
-    alternates: {
-      canonical: `https://www.phulongglobal.com/${locale}/about`,
-      languages: { en: 'https://www.phulongglobal.com/en/about', vi: 'https://www.phulongglobal.com/vi/about' },
-    },
-    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/about` },
-  };
+  return pageMeta(locale, 'about', '/about');
 }
 
 const h2 = 'text-[clamp(30px,3vw,44px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink';

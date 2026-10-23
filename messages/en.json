@@ -308,5 +308,46 @@
     "moreTitle": "Other product lines",
     "specs": "Full specs on WhatsApp",
     "waText": "Hello Phu Long, please send me the full specifications of your {name}."
+  },
+  "meta": {
+    "home": {
+      "title": "Concrete Mixer Manufacturer in Vietnam | Phu Long Mechanical",
+      "description": "Concrete mixer and cement mixer manufacturer in Vietnam: 250–500 L drum mixers incl. 1 bag models, electric, gasoline or diesel. 20+ years, 20 countries."
+    },
+    "about": {
+      "title": "About Phu Long – Concrete Mixer Manufacturer in Vietnam",
+      "description": "Phu Long Global Investment — Vietnam manufacturer of construction and farm machinery and industrial fans. One factory, 70+ clients, exported to 20 countries."
+    },
+    "contact": {
+      "title": "Contact & Request a Quote | Phu Long",
+      "description": "Contact Phu Long for product inquiries, export quotes and OEM orders. Concrete mixers, agricultural machinery, engines. We respond within 24 hours."
+    },
+    "products": {
+      "title": "Concrete Mixers, Farm Machines & Fans | Phu Long",
+      "description": "Full range of Phu Long products: concrete mixers 250–500L, stirrup benders, wheelbarrows, rice transplanters, paddy threshers, industrial fans and engines. OEM & export."
+    },
+    "blog": {
+      "title": "Machinery Buying Guides & Tips | Phu Long",
+      "description": "Practical guides on choosing concrete mixers, rice transplanters, paddy threshers and more — from a manufacturer with 20+ years of export experience."
+    },
+    "lineTitle": "{name} Manufacturer in Vietnam | Phu Long",
+    "skuTitle": "{name} | Phu Long",
+    "skuMixerTitle": "{size} {kind} {sku} | Phu Long",
+    "kindOneBag": "1 Bag Concrete Mixer",
+    "kindMini": "Mini Concrete Mixer",
+    "kindMixer": "Concrete Mixer",
+    "moqLine": "MOQ {count} units."
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "unit": "{count, plural, one {# unit} other {# units}}",
+    "pleaseQuote": "Please quote",
+    "standardSpec": "Standard specification. Every machine can be adjusted to your order.",
+    "aboutFactory": "About the factory",
+    "branding": "Branding",
+    "brandingValue": "Your logo and decals (OEM)",
+    "readArticle": "Read the article",
+    "minRead": "{count} min read",
+    "language": "Language"
   }
 }

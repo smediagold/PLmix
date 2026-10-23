@@ -1,0 +1,353 @@
+{
+  "nav": {
+    "products": "Productos",
+    "blog": "Blog",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "getQuote": "Solicitar cotización",
+    "construction": "Maquinaria de construcción",
+    "agriculture": "Maquinaria agrícola",
+    "engines": "Motores",
+    "spareParts": "Repuestos",
+    "main": "Principal",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "models": "{count, plural, one {# modelo} other {# modelos}}",
+    "allProducts": "Todos los productos"
+  },
+  "home": {
+    "hero": {
+      "headline": "Fabricante de hormigoneras en Vietnam",
+      "subtext": "20 años de experiencia en fabricación. Hormigoneras de 250 a 500 L, hechas con su color, motor y logo, y la confianza de socios en 20 países.",
+      "ctaProducts": "Ver productos",
+      "ctaQuote": "Solicitar cotización"
+    },
+    "stats": {
+      "years": "Años de experiencia",
+      "countries": "Países de exportación",
+      "customers": "Clientes en el mundo",
+      "factory": "Fábrica propia"
+    },
+    "categories": {
+      "title": "Nuestras líneas de producto",
+      "subtitle": "De la obra al arrozal: maquinaria confiable para cada trabajo.",
+      "construction": "Maquinaria de construcción",
+      "constructionDesc": "Hormigoneras, carretillas, carretillas de carga",
+      "agriculture": "Maquinaria agrícola",
+      "agricultureDesc": "Trasplantadoras de arroz, trilladoras de arroz",
+      "engines": "Motores",
+      "enginesDesc": "Motores eléctricos, a gasolina y diésel",
+      "spareParts": "Repuestos",
+      "sparePartsDesc": "Repuestos y accesorios",
+      "viewAll": "Ver todo"
+    },
+    "featured": {
+      "title": "Productos destacados",
+      "subtitle": "Nuestras máquinas más vendidas, elegidas por compradores de todo el mundo.",
+      "viewAll": "Ver todos los productos",
+      "requestQuote": "Solicitar cotización"
+    },
+    "factory": {
+      "title": "Una fábrica, todas las máquinas",
+      "description": "Desde una única planta de producción moderna en Vietnam, nuestro equipo de ingenieros y técnicos fabrica una línea completa de maquinaria de construcción y agrícola, todo bajo un mismo techo. Cada máquina pasa un control de calidad antes de salir de fábrica.",
+      "link": "Sobre la empresa",
+      "text": "Phu Long comenzó como un taller mecánico local hace más de veinte años. Hoy, una sola planta en Giao Thuy, Ninh Binh, lo hace todo: desde el corte y rolado del acero hasta la soldadura, la pintura, el ensamblaje y una prueba de funcionamiento antes de embalar cada máquina.",
+      "text2": "Como todo ocurre bajo un mismo techo, podemos cambiar el tamaño del tambor, el color, el motor o el logo en cada pedido, y combinar varios modelos en un mismo contenedor.",
+      "years": "Años de experiencia",
+      "countries": "Países a los que exportamos",
+      "customers": "Clientes empresariales",
+      "factory": "Fábrica propia",
+      "aerial": "Nuestra planta desde el aire",
+      "aerialNote": "Giao Thuy, Ninh Binh",
+      "hall": "Nave de ensamblaje",
+      "hallNote": "Hormigoneras a la espera de motor",
+      "warehouse": "Listas para cargar",
+      "warehouseNote": "Tambores antes de una carga FCL",
+      "showroom": "Sala de exhibición",
+      "showroomNote": "Hormigoneras en cuatro colores"
+    },
+    "customization": {
+      "title": "A la medida de su necesidad",
+      "subtitle": "Cada máquina puede adaptarse exactamente a sus especificaciones.",
+      "item1": "Colores y logo personalizados (OEM disponible)",
+      "item2": "Opciones de motor: eléctrico / gasolina / diésel",
+      "item3": "Capacidad del tambor de 200 L a 500 L",
+      "item4": "Configuración de ruedas: 2 / 3 / 4 ruedas",
+      "cta": "Cuéntenos sus requisitos"
+    },
+    "cta": {
+      "title": "¿Listo para hacer un pedido?",
+      "subtitle": "Hablemos de sus requisitos. Nuestro equipo responde en menos de 24 horas.",
+      "button": "Contáctenos"
+    },
+    "markets": {
+      "title": "Enviamos a 20 países",
+      "text": "Importadores, distribuidores y contratistas en Asia, África, Medio Oriente, el Pacífico y las Américas."
+    },
+    "certs": {
+      "title": "Certificados y probados",
+      "text": "Nuestro sistema de gestión de calidad fue certificado según ISO 9001:2015 por la Vietnam Certification Association, y nuestras hormigoneras fueron probadas por SGS Vietnam.",
+      "iso": "Certificado ISO 9001:2015",
+      "isoNote": "Vietnam Certification Association (VCA), emitido en marzo de 2022",
+      "sgs": "Informe de prueba SGS",
+      "sgsNote": "Muestras de hormigoneras, febrero de 2023"
+    },
+    "orders": {
+      "title": "Contenedores recientes",
+      "text": "Cargas FCL y LCL, embaladas en nuestro patio y revisadas antes de cerrar las puertas."
+    },
+    "reviews": {
+      "title": "Lo que dicen los importadores",
+      "text": "Más de 70 clientes empresariales en 20 países. Algunos de ellos, en sus propias palabras."
+    },
+    "feature": {
+      "title": "Construida alrededor de un tambor robusto",
+      "text": "Fabricada en Vietnam y hecha a pedido para su mercado.",
+      "cta": "Ver todas las hormigoneras",
+      "quote": "Pedir un precio",
+      "drum": "250–500 L",
+      "steel": "Acero de 2–3 mm",
+      "engine": "Eléctrico · Gasolina · Diésel",
+      "wheels": "Llantas macizas o neumáticas"
+    },
+    "colours": {
+      "title": "Su color, su logo",
+      "text": "Amarillo, naranja, rojo, azul, verde, gris o el color de su marca, con su logo y calcomanías. Se pueden combinar varios colores en un mismo contenedor.",
+      "yellow": "Amarillo",
+      "orange": "Naranja",
+      "red": "Rojo",
+      "blackRed": "Rojo y negro",
+      "blue": "Azul"
+    },
+    "video": {
+      "title": "Dentro de nuestra fábrica",
+      "text": "Un recorrido de dos minutos por la planta de Phu Long en Giao Thuy, Ninh Binh: la sala de exhibición, las naves de producción, el taller de maquinado y la planta vista desde el aire.",
+      "label": "Video del recorrido por la fábrica de Phu Long"
+    },
+    "process": {
+      "title": "Cómo se fabrica una hormigonera",
+      "text": "Cada etapa se realiza en una sola fábrica, así controlamos el acero, las soldaduras y el acabado de cada máquina que enviamos.",
+      "cutting": "Corte del acero",
+      "cuttingText": "Las láminas del tambor y las piezas del chasis se cortan en nuestra mesa de corte CNC.",
+      "machining": "Maquinado",
+      "machiningText": "Ejes, bujes y piezas de engranaje se tornean en el torno.",
+      "welding": "Soldadura",
+      "weldingText": "La soldadura robotizada y manual une el tambor y el chasis.",
+      "finishing": "Esmerilado y acabado",
+      "finishingText": "Cada soldadura se esmerila antes de pintar la máquina.",
+      "assembly": "Ensamblaje",
+      "assemblyText": "Tambores, chasis, motores y ruedas se ensamblan en la nave principal.",
+      "finished": "Revisadas y listas",
+      "finishedText": "Las hormigoneras terminadas se prueban en marcha y se alinean para el embalaje.",
+      "loading": "Cargadas para exportación",
+      "loadingText": "Se cargan en contenedores FCL o LCL en nuestro patio y se envían desde Vietnam."
+    }
+  },
+  "products": {
+    "title": "Productos",
+    "subtitle": "Hormigoneras, dobladoras de estribos, carretillas, trasplantadoras de arroz, trilladoras, ventiladores industriales y motores, fabricados con estándares de exportación.",
+    "allProducts": "Todos los productos",
+    "filter": "Filtrar por categoría",
+    "construction": "Construcción",
+    "agriculture": "Agricultura",
+    "engines": "Motores",
+    "spareParts": "Repuestos",
+    "stirrupBending": "Dobladoras de estribos",
+    "vikynoDiesel": "Motores diésel Vikyno",
+    "requestQuote": "Solicitar cotización",
+    "specifications": "Especificaciones",
+    "relatedProducts": "Productos relacionados",
+    "customizationOptions": "Opciones de personalización",
+    "moq": "Pedido mín.",
+    "weight": "Peso",
+    "dimensions": "Dimensiones",
+    "capacity": "Capacidad",
+    "heroAlt": "Trilladoras de arroz en el almacén de Phu Long",
+    "viewLine": "Ver {name}"
+  },
+  "about": {
+    "title": "Sobre Phu Long",
+    "subtitle": "Más de 20 años fabricando máquinas en una fábrica vietnamita, para socios en 20 países.",
+    "storyTitle": "Nuestra historia",
+    "storyText": "Fundada hace más de dos décadas, Phu Long Global Investment Co., Ltd pasó de ser un taller mecánico local a un fabricante exportador confiable con presencia global. Desde una única planta de producción moderna en Vietnam, nuestro equipo de ingenieros, diseñadores y técnicos con experiencia fabrica una línea completa de maquinaria de construcción y agrícola, todo bajo un mismo techo.",
+    "storyText2": "Nos enorgullece nuestra capacidad de personalizar: desde la capacidad del tambor y el color hasta el tipo de motor y la marca, cada máquina puede adaptarse a los requisitos de nuestros socios internacionales. Hoy nuestros productos atienden a clientes en casi 20 países, con el respaldo de más de 70 clientes satisfechos en todo el mundo.",
+    "factoryTitle": "Nuestra fábrica",
+    "factoryText": "Nuestra planta de producción cuenta con maquinaria moderna e ingenieros y técnicos calificados. Desde la fabricación metálica y la soldadura hasta el ensamblaje y el control de calidad, cada etapa se realiza bajo un mismo techo, lo que nos da control total sobre la calidad del producto y los plazos de entrega.",
+    "capabilitiesTitle": "Lo que podemos hacer",
+    "cap1": "Fabricación de línea completa: maquinaria de construcción, maquinaria agrícola y ventiladores industriales",
+    "cap2": "Pedidos OEM y personalizados: colores, logos, especificaciones",
+    "cap3": "Compatibilidad de motores: eléctrico, gasolina, diésel",
+    "cap4": "Control de calidad estricto antes de cada envío",
+    "cap5": "Embalaje de exportación: carga en contenedor FCL y LCL",
+    "exportsTitle": "Alcance global",
+    "exportsText": "Nuestros productos están presentes en casi 20 países de Asia, África y otras regiones. Trabajamos con importadores, distribuidores y compradores directos que confían en Phu Long por su calidad constante y suministro confiable.",
+    "valuesTitle": "Nuestros valores",
+    "value1Title": "Calidad",
+    "value1Text": "Cada máquina está hecha para durar y se prueba antes del envío.",
+    "value2Title": "Personalización",
+    "value2Text": "Nos adaptamos a las necesidades de su mercado: colores, motores, especificaciones.",
+    "value3Title": "Confiabilidad",
+    "value3Text": "20 años de entregas puntuales y soporte posventa.",
+    "cap6": "Ventiladores industriales fabricados según su caudal, presión y material",
+    "statsLabel": "Phu Long en cifras"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Escríbanos para consultas de productos, cotizaciones y oportunidades de asociación. Respondemos en menos de 24 horas.",
+    "formTitle": "Enviar una consulta",
+    "name": "Nombre completo",
+    "namePlaceholder": "Su nombre",
+    "company": "Empresa",
+    "companyPlaceholder": "Nombre de su empresa",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "su@correo.com",
+    "phone": "Teléfono / WhatsApp",
+    "phonePlaceholder": "+1 234 567 890",
+    "product": "Producto de interés",
+    "productPlaceholder": "p. ej. Hormigonera 350 L, trasplantadora de arroz...",
+    "message": "Mensaje",
+    "messagePlaceholder": "Cuéntenos sus requisitos, la cantidad que necesita, el país de destino...",
+    "submit": "Enviar consulta",
+    "submitting": "Enviando...",
+    "successTitle": "¡Mensaje enviado!",
+    "successText": "Gracias por su consulta. Le responderemos en menos de 24 horas.",
+    "infoTitle": "Información de contacto",
+    "phone2": "Teléfono / WhatsApp",
+    "emailLabel": "Correo electrónico",
+    "website": "Sitio web",
+    "officeAddress": "Dirección de oficina",
+    "officeAddressValue": "115 Ke Ve Street, Dong Ngac Ward, Hanoi",
+    "factoryAddress": "Dirección de fábrica",
+    "factoryAddressValue": "Comuna de Giao Thuy, provincia de Ninh Binh, Vietnam",
+    "showroomAlt": "Sala de exhibición de Phu Long con hormigoneras",
+    "formNote": "Los campos marcados con * son obligatorios. Respondemos en menos de 24 horas.",
+    "galleryHall": "Nave de ensamblaje",
+    "galleryLoading": "Tambores de hormigonera listos para cargar",
+    "galleryContainer": "Un contenedor cargado para exportación"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Guías de compra, consejos de mantenimiento y notas técnicas sobre nuestras máquinas, escritas por quienes las fabrican.",
+    "heroAlt": "Nave de ensamblaje en la fábrica de Phu Long",
+    "filter": "Filtrar artículos por tema",
+    "all": "Todos los temas",
+    "latest": "Artículo más reciente",
+    "more": "Más artículos",
+    "related": "Siga leyendo",
+    "relatedLine": "Productos relacionados",
+    "askTitle": "¿Tiene preguntas?",
+    "askText": "Escriba a nuestro equipo de ventas para especificaciones, precios y tiempos de envío."
+  },
+  "footer": {
+    "tagline": "Excelencia en fabricación para un mundo en crecimiento.",
+    "productsTitle": "Productos",
+    "companyTitle": "Empresa",
+    "contactTitle": "Contacto",
+    "construction": "Maquinaria de construcción",
+    "agriculture": "Maquinaria agrícola",
+    "stirrupBending": "Dobladoras de estribos",
+    "engines": "Motores",
+    "vikynoDiesel": "Motores diésel Vikyno",
+    "spareParts": "Repuestos",
+    "blog": "Blog",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "officeAddress": "115 Ke Ve Street, Dong Ngac Ward, Hanoi",
+    "factoryAddress": "Fábrica: comuna de Giao Thuy, provincia de Ninh Binh",
+    "rights": "Todos los derechos reservados.",
+    "top": "Volver arriba"
+  },
+  "inquiry": {
+    "add": "Agregar a la cotización",
+    "added": "En su cotización",
+    "remove": "Quitar de la cotización",
+    "region": "Su lista de cotización",
+    "count": "{count, plural, one {# modelo} other {# modelos}} en su cotización",
+    "whatsapp": "Enviar por WhatsApp",
+    "form": "Enviar con el formulario",
+    "clear": "Borrar",
+    "waIntro": "Hola Phu Long, por favor cotícenme estos modelos:"
+  },
+  "coupon": {
+    "title": "Pida un precio",
+    "text": "Indíquenos los modelos, las cantidades y su puerto de destino. Nuestro equipo de ventas responde en menos de 24 horas con una cotización FOB o CIF.",
+    "name": "Nombre",
+    "namePh": "Su nombre",
+    "email": "Correo electrónico",
+    "emailPh": "usted@empresa.com",
+    "product": "Modelos",
+    "productPh": "Modelos y cantidad, p. ej. CM-350-2W-P × 40",
+    "message": "Mensaje",
+    "messagePh": "Puerto de destino, color, motor, logo…",
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "sentTitle": "Solicitud recibida.",
+    "sentText": "Le responderemos en menos de 24 horas. Para algo urgente, escríbanos por WhatsApp al +84 946 964 669.",
+    "error": "La solicitud no se pudo enviar. Inténtelo de nuevo o escriba a Andy@phulongglobal.com.",
+    "errName": "Ingrese su nombre para saber a quién responder.",
+    "errEmail": "Ingrese un correo electrónico como nombre@empresa.com.",
+    "errMessage": "Agregue algunas palabras sobre lo que necesita (10 caracteres o más)."
+  },
+  "media": {
+    "play": "Reproducir video",
+    "pause": "Pausar video"
+  },
+  "line": {
+    "home": "Inicio",
+    "products": "Productos",
+    "breadcrumb": "Ruta de navegación",
+    "quote": "Solicitar cotización",
+    "modelsTitle": "{count, plural, one {# modelo} other {# modelos}}",
+    "details": "Detalles",
+    "compareTitle": "Comparar modelos",
+    "model": "Modelo",
+    "factoryTitle": "Hecho en nuestra fábrica",
+    "video": "{name} en nuestra fábrica",
+    "customTitle": "Fabricado a su pedido",
+    "customText": "Cada máquina de esta línea puede fabricarse para su mercado. Díganos lo que necesita y lo confirmaremos con la cotización.",
+    "moreTitle": "Otras líneas de producto",
+    "specs": "Especificaciones completas por WhatsApp",
+    "waText": "Hola Phu Long, por favor envíenme las especificaciones completas de su {name}."
+  },
+  "meta": {
+    "home": {
+      "title": "Fabricante de Hormigoneras en Vietnam | Phu Long",
+      "description": "Fabricante de hormigoneras y mezcladoras de concreto en Vietnam: de 250 a 500 L, de 1 saco, eléctricas, a gasolina o diésel. 20+ años, 20 países."
+    },
+    "about": {
+      "title": "Sobre Phu Long – Fabricante de Hormigoneras en Vietnam",
+      "description": "Phu Long Global Investment: fabricante vietnamita de maquinaria de construcción, agrícola y ventiladores industriales. Una fábrica, 70+ clientes, 20 países."
+    },
+    "contact": {
+      "title": "Contacto y Cotización | Phu Long",
+      "description": "Contacte a Phu Long para consultas, cotizaciones de exportación y pedidos OEM de hormigoneras, maquinaria agrícola y motores. Respondemos en 24 horas."
+    },
+    "products": {
+      "title": "Hormigoneras, Maquinaria Agrícola y Ventiladores | Phu Long",
+      "description": "Productos Phu Long: hormigoneras de 250–500 L, dobladoras de estribos, carretillas, trasplantadoras, trilladoras, ventiladores y motores. OEM y exportación."
+    },
+    "blog": {
+      "title": "Guías de Compra de Maquinaria | Phu Long",
+      "description": "Guías prácticas para elegir hormigoneras, trasplantadoras y trilladoras de arroz, de un fabricante con más de 20 años de experiencia exportadora."
+    },
+    "lineTitle": "Fabricante de {name} en Vietnam | Phu Long",
+    "skuTitle": "{name} | Phu Long",
+    "skuMixerTitle": "{kind} {size} {sku} | Phu Long",
+    "kindOneBag": "Hormigonera de 1 Saco",
+    "kindMini": "Mini Hormigonera",
+    "kindMixer": "Hormigonera",
+    "moqLine": "Pedido mínimo: {count} unidades."
+  },
+  "ui": {
+    "skip": "Ir al contenido",
+    "unit": "{count, plural, one {# unidad} other {# unidades}}",
+    "pleaseQuote": "Por favor cotizar",
+    "standardSpec": "Especificación estándar. Cada máquina puede ajustarse a su pedido.",
+    "aboutFactory": "Sobre la fábrica",
+    "branding": "Marca",
+    "brandingValue": "Su logo y calcomanías (OEM)",
+    "readArticle": "Leer el artículo",
+    "minRead": "{count} min de lectura",
+    "language": "Idioma"
+  }
+}

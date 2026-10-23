@@ -3,7 +3,9 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { blogPosts, categoryLabels, categoryLine, getBlogPost } from '@/data/blog';
+import { categoryLabels, categoryLine, getBlogPost, postContent, postInLocale, postsForLocale, postTitle, postExcerpt, blogPosts } from '@/data/blog';
+import { LOCALES } from '@/data/nav';
+import { alternates } from '@/lib/meta';
 import { getLine, pick } from '@/data/lines';
 import BlogCard, { BlogImage, postMeta } from '@/components/blog/BlogCard';
 import ContactCoupon from '@/components/contact/ContactCoupon';
@@ -21,20 +23,17 @@ export async function generateMetadata({
   const { locale, slug } = await params;
   const post = getBlogPost(slug);
   if (!post) return {};
-  const vi = locale === 'vi';
-  const title = vi ? post.title_vi : post.title_en;
-  const description = (vi ? post.excerpt_vi : post.excerpt_en).slice(0, 160);
+  const title = postTitle(post, locale);
+  const description = postExcerpt(post, locale).slice(0, 160);
+  const translated = postInLocale(post, locale);
   const url = `https://www.phulongglobal.com/${locale}/blog/${slug}`;
   return {
     title: { absolute: `${title} | Phu Long` },
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        en: `https://www.phulongglobal.com/en/blog/${slug}`,
-        vi: `https://www.phulongglobal.com/vi/blog/${slug}`,
-      },
-    },
+    alternates: translated
+      ? alternates(`/blog/${slug}`, locale, LOCALES.filter((l) => postInLocale(post, l)))
+      : { canonical: `https://www.phulongglobal.com/en/blog/${slug}` },
+    robots: translated ? undefined : { index: false, follow: true },
     openGraph: {
       type: 'article',
       title,
@@ -55,14 +54,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 
   const t = await getTranslations('blog');
   const tl = await getTranslations('line');
-  const vi = locale === 'vi';
-  const title = vi ? post.title_vi : post.title_en;
-  const content = vi ? post.content_vi : post.content_en;
+  const title = postTitle(post, locale);
+  const content = postContent(post, locale);
+  const pool = postsForLocale(locale);
   const lineSlug = categoryLine[post.category];
   const line = lineSlug ? getLine(lineSlug) : undefined;
   const related = [
-    ...blogPosts.filter((p) => p.slug !== post.slug && p.category === post.category),
-    ...blogPosts.filter((p) => p.slug !== post.slug && p.category !== post.category),
+    ...pool.filter((p) => p.slug !== post.slug && p.category === post.category),
+    ...pool.filter((p) => p.slug !== post.slug && p.category !== post.category),
   ].slice(0, 3);
 
   return (
@@ -76,7 +75,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
             <li aria-hidden="true">/</li>
             <li>
               <Link href={{ pathname: '/blog', query: { category: post.category } }} className="inline-flex min-h-11 items-center hover:text-ink hover:underline">
-                {categoryLabels[post.category][vi ? 'vi' : 'en']}
+                {pick(categoryLabels[post.category], locale)}
               </Link>
             </li>
           </ol>
@@ -84,7 +83,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ local
 
         <header data-reveal className="mt-6 max-w-[900px]">
           <h1 className="text-[clamp(24px,4.4vw,54px)] font-bold leading-[1.08] tracking-[-0.025em] text-ink">{title}</h1>
-          <p className="mt-4 text-[17px] text-soft">{postMeta(post, locale)}</p>
+          <p className="mt-4 text-[17px] text-soft">{await postMeta(post, locale)}</p>
         </header>
 
         <div data-reveal className="group relative mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-[#FBE6C2] lg:aspect-[21/9]">

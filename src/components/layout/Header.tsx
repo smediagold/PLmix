@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Link, usePathname, useRouter } from '@/i18n/navigation';
-import { groups, pick, type NavLine } from '@/data/nav';
+import { groups, pick, LOCALES, localeNames, type Locale, type NavLine } from '@/data/nav';
 
 export default function Header({ locale, lines }: { locale: string; lines: NavLine[] }) {
   const t = useTranslations('nav');
@@ -34,8 +34,8 @@ export default function Header({ locale, lines }: { locale: string; lines: NavLi
     };
   }, [productsOpen]);
 
-  const switchLocale = () => {
-    router.replace(pathname, { locale: locale === 'en' ? 'vi' : 'en' });
+  const switchLocale = (next: Locale) => {
+    router.replace(pathname, { locale: next });
   };
 
   const navLinks = [
@@ -75,15 +75,36 @@ export default function Header({ locale, lines }: { locale: string; lines: NavLi
           </nav>
 
           <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={switchLocale}
-              className="hidden min-h-11 min-w-11 items-center justify-center text-[17px] font-semibold text-ink hover:underline sm:inline-flex"
-              aria-label={locale === 'en' ? 'Tiếng Việt' : 'English'}
-              translate="no"
-            >
-              {locale === 'en' ? 'VI' : 'EN'}
-            </button>
+            <details className="group relative hidden sm:block" translate="no">
+              <summary
+                aria-label={localeNames[locale as Locale]?.long}
+                className="flex min-h-11 min-w-11 cursor-pointer list-none items-center justify-center gap-1 text-[17px] font-semibold text-ink hover:underline [&::-webkit-details-marker]:hidden"
+              >
+                {localeNames[locale as Locale]?.short}
+                <svg aria-hidden="true" viewBox="0 0 12 12" className="h-3 w-3 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" strokeWidth={2}>
+                  <path d="M2 4l4 4 4-4" />
+                </svg>
+              </summary>
+              <ul className="absolute right-0 top-full z-50 mt-1 min-w-40 rounded-2xl bg-white p-1.5 shadow-[0_12px_32px_rgba(28,28,30,0.14)]">
+                {LOCALES.map((l) => (
+                  <li key={l}>
+                    <button
+                      type="button"
+                      lang={l}
+                      aria-current={l === locale ? 'true' : undefined}
+                      onClick={(e) => {
+                        e.currentTarget.closest('details')?.removeAttribute('open');
+                        switchLocale(l);
+                      }}
+                      className={`flex min-h-11 w-full items-center gap-3 rounded-xl px-3 text-left text-[16px] hover:bg-stone ${l === locale ? 'font-semibold text-ink' : 'text-ink'}`}
+                    >
+                      <span className="w-6 text-soft">{localeNames[l].short}</span>
+                      {localeNames[l].long}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </details>
             <Link
               href="/contact"
               className="press hidden min-h-11 items-center bg-brand-orange px-5 text-[17px] font-semibold text-ink hover:bg-[#FFB840] sm:inline-flex"
@@ -174,9 +195,21 @@ export default function Header({ locale, lines }: { locale: string; lines: NavLi
               ))}
             </div>
             <div className="mt-4 flex items-center gap-3">
-              <button type="button" onClick={switchLocale} className="min-h-11 px-1 text-[17px] font-semibold text-ink">
-                {locale === 'en' ? 'Tiếng Việt' : 'English'}
-              </button>
+              <div className="flex items-center" translate="no">
+                {LOCALES.map((l) => (
+                  <button
+                    key={l}
+                    type="button"
+                    lang={l}
+                    aria-label={localeNames[l].long}
+                    aria-current={l === locale ? 'true' : undefined}
+                    onClick={() => switchLocale(l)}
+                    className={`min-h-11 min-w-11 text-[16px] font-semibold ${l === locale ? 'text-ink underline underline-offset-4' : 'text-soft'}`}
+                  >
+                    {localeNames[l].short}
+                  </button>
+                ))}
+              </div>
               <Link
                 href="/contact"
                 className="press ml-auto inline-flex min-h-11 items-center bg-brand-orange px-5 text-[17px] font-semibold text-ink"

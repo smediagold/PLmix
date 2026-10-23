@@ -1,4 +1,6 @@
 import { extraPosts } from './blog-extra';
+import { OVERLAY_LOCALES, type Bi, type OverlayLocale } from './nav';
+import { overlays } from './i18n/overlays';
 
 export type BlogCategory =
   | 'concrete-mixer'
@@ -11,6 +13,7 @@ export type BlogCategory =
   | 'general';
 
 export interface BlogPost {
+  i18n?: Partial<Record<OverlayLocale, { title: string; excerpt: string; content: string }>>;
   slug: string;
   title_en: string;
   title_vi: string;
@@ -413,7 +416,7 @@ All Phu Long concrete mixers can be configured with any of these three engine ty
 
 export const blogPosts: BlogPost[] = [...basePosts, ...extraPosts].sort((a, b) => b.date.localeCompare(a.date));
 
-export const categoryLabels: Record<BlogCategory, { en: string; vi: string }> = {
+export const categoryLabels: Record<BlogCategory, Bi> = {
   'concrete-mixer': { en: 'Concrete mixers', vi: 'Máy trộn bê tông' },
   wheelbarrow: { en: 'Wheelbarrows', vi: 'Xe rùa' },
   'rice-transplanter': { en: 'Rice transplanters', vi: 'Máy cấy lúa' },
@@ -439,3 +442,24 @@ export const getBlogPost = (slug: string) => blogPosts.find((p) => p.slug === sl
 
 export const getBlogPostsByCategory = (category: BlogPost['category']) =>
   blogPosts.filter((p) => p.category === category);
+
+for (const loc of OVERLAY_LOCALES) {
+  const o = overlays[loc];
+  for (const [c, label] of Object.entries(o.blogCategories)) {
+    if (categoryLabels[c as BlogCategory]) categoryLabels[c as BlogCategory][loc] = label;
+  }
+  for (const p of blogPosts) {
+    const t = o.blog[p.slug];
+    if (t) p.i18n = { ...p.i18n, [loc]: t };
+  }
+}
+
+const pickPost = (p: BlogPost, locale: string, f: 'title' | 'excerpt' | 'content') =>
+  locale === 'vi' ? p[`${f}_vi`] : p.i18n?.[locale as OverlayLocale]?.[f] ?? p[`${f}_en`];
+
+export const postTitle = (p: BlogPost, locale: string) => pickPost(p, locale, 'title');
+export const postExcerpt = (p: BlogPost, locale: string) => pickPost(p, locale, 'excerpt');
+export const postContent = (p: BlogPost, locale: string) => pickPost(p, locale, 'content');
+export const postInLocale = (p: BlogPost, locale: string) =>
+  locale === 'en' || locale === 'vi' || Boolean(p.i18n?.[locale as OverlayLocale]);
+export const postsForLocale = (locale: string) => blogPosts.filter((p) => postInLocale(p, locale));

@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { products, getProductById, type Product } from '@/data/products';
+import { products, getProductById, productName, productDescription, specLabel, customLabel, type Product } from '@/data/products';
+import { alternates } from '@/lib/meta';
 import { lines, getLine, lineOfProduct, pick } from '@/data/lines';
 import { Link } from '@/i18n/navigation';
 import ProductGallery from '@/components/products/ProductGallery';
@@ -26,37 +27,38 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale, slug } = await params;
   const url = `${base}/${locale}/products/${slug}`;
-  const languages = { en: `${base}/en/products/${slug}`, vi: `${base}/vi/products/${slug}` };
+  const alt = alternates(`/products/${slug}`, locale);
+  const tm = await getTranslations({ locale, namespace: 'meta' });
 
   const line = getLine(slug);
   if (line) {
     const seo = lineSeo[line.slug];
-    const title = seo ? pick(seo.title, locale) : locale === 'vi' ? `${line.name.vi} – Nhà Sản Xuất Việt Nam | Phú Long` : `${line.name.en} Manufacturer in Vietnam | Phu Long`;
+    const title = seo?.title[locale as 'en'] ?? tm('lineTitle', { name: pick(line.name, locale) });
     const description = seo ? pick(seo.description, locale) : `${pick(line.tagline, locale)} ${pick(line.intro, locale)}`.slice(0, 160);
     return {
       title: { absolute: title },
       description,
-      alternates: { canonical: url, languages },
+      alternates: alt,
       openGraph: { title, description, url, images: [{ url: line.cover }] },
     };
   }
 
   const product = getProductById(slug.toUpperCase()) ?? getProductById(slug);
   if (!product) return {};
-  const vi = locale === 'vi';
-  const name = vi ? product.name_vi : product.name_en;
-  const desc = vi ? product.description_vi : product.description_en;
-  const moqLine = product.moq ? (vi ? ` MOQ ${product.moq} chiếc.` : ` MOQ ${product.moq} units.`) : '';
+  const name = productName(product, locale);
+  const desc = productDescription(product, locale);
+  const moqLine = product.moq ? ` ${tm('moqLine', { count: product.moq })}` : '';
+  const kind = product.specifications['Batch Capacity'] ? tm('kindOneBag') : product.id.startsWith('CM-250') ? tm('kindMini') : tm('kindMixer');
   const description = `${desc}${moqLine}`.slice(0, 160);
   return {
     title: {
       absolute:
         product.subcategory === 'concrete-mixer'
-          ? `${name.split(' — ')[0].replace(vi ? 'Máy Trộn Bê Tông' : 'Concrete Mixer', product.specifications['Batch Capacity'] ? (vi ? 'Máy Trộn Bê Tông 1 Bao' : '1 Bag Concrete Mixer') : product.id.startsWith('CM-250') ? (vi ? 'Máy Trộn Bê Tông Mini' : 'Mini Concrete Mixer') : vi ? 'Máy Trộn Bê Tông' : 'Concrete Mixer')} ${product.id} | ${vi ? 'Phú Long' : 'Phu Long'}`
-          : `${name.split(' — ')[0]} | Phu Long`,
+          ? tm('skuMixerTitle', { size: product.name_en.match(/^\d+\s?L/)?.[0] ?? '', kind, sku: product.id })
+          : tm('skuTitle', { name: name.split(' — ')[0] }),
     },
     description,
-    alternates: { canonical: url, languages },
+    alternates: alt,
     openGraph: {
       title: `${name} | Phu Long Mechanical`,
       description,
@@ -83,9 +85,9 @@ const gap = 'pt-[clamp(64px,8vw,120px)]';
 async function ProductDetail({ product, locale }: { product: Product; locale: string }) {
   const t = await getTranslations('products');
   const tl = await getTranslations('line');
-  const vi = locale === 'vi';
-  const name = vi ? product.name_vi : product.name_en;
-  const description = vi ? product.description_vi : product.description_en;
+  const tu = await getTranslations('ui');
+  const name = productName(product, locale);
+  const description = productDescription(product, locale);
   const line = lineOfProduct(product);
   const base = 'https://www.phulongglobal.com';
   const url = `${base}/${locale}/products/${product.id.toLowerCase()}`;
@@ -155,7 +157,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
             <dl className="mt-8 grid grid-cols-2 gap-x-8 gap-y-5">
               {Object.entries(product.specifications).slice(0, 4).map(([k, v]) => (
                 <div key={k}>
-                  <dt className="text-[15px] text-soft">{k}</dt>
+                  <dt className="text-[15px] text-soft">{specLabel(k, locale)}</dt>
                   <dd className="num mt-1 text-[17px] font-semibold text-ink">{v}</dd>
                 </div>
               ))}
@@ -163,7 +165,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
                 <div>
                   <dt className="text-[15px] text-soft">{t('moq')}</dt>
                   <dd className="num mt-1 text-[17px] font-semibold text-ink">
-                    {product.moq} {vi ? 'chiếc' : product.moq === 1 ? 'unit' : 'units'}
+                    {tu('unit', { count: product.moq })}
                   </dd>
                 </div>
               )}
@@ -178,7 +180,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
               </Link>
               <InquiryToggle sku={product.id} name={name} />
               <a
-                href={`https://wa.me/84946964669?text=${encodeURIComponent(`${vi ? 'Xin báo giá' : 'Please quote'}: ${product.id}`)}`}
+                href={`https://wa.me/84946964669?text=${encodeURIComponent(`${tu('pleaseQuote')}: ${product.id}`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="press inline-flex min-h-12 items-center bg-stone px-5 text-[17px] font-semibold text-ink hover:bg-[#E0D9CE]"
@@ -195,7 +197,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
           <div className="lg:col-span-4">
             <h2 id="spec-title" data-reveal className="text-[clamp(26px,2.4vw,36px)] font-bold tracking-[-0.01em] text-ink">{t('specifications')}</h2>
             <p data-reveal className="mt-4 max-w-[56ch] text-[17px] leading-[1.55] text-ink">
-              {vi ? 'Thông số tiêu chuẩn. Mọi máy có thể điều chỉnh theo đơn hàng.' : 'Standard specification. Every machine can be adjusted to your order.'}
+              {tu('standardSpec')}
             </p>
             <a
               href={`https://wa.me/84946964669?text=${encodeURIComponent(tl('waText', { name }))}`}
@@ -211,7 +213,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
               <tbody>
                 {Object.entries(product.specifications).map(([k, v]) => (
                   <tr key={k} className="border-b border-[#E5E1DA] last:border-0">{/* taste-skill-ignore: real table */}
-                    <th scope="row" className="w-2/5 px-5 py-3.5 font-semibold text-ink">{k}</th>
+                    <th scope="row" className="w-2/5 px-5 py-3.5 font-semibold text-ink">{specLabel(k, locale)}</th>
                     <td className="px-5 py-3.5 text-ink">{v}</td>
                   </tr>
                 ))}
@@ -255,8 +257,8 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
             <dl className="grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:col-span-8">
               {Object.entries(product.customization_options).map(([k, vals]) => (
                 <div key={k}>
-                  <dt className="text-[17px] font-bold text-ink">{k}</dt>
-                  <dd className="mt-1.5 text-[17px] leading-[1.55] text-ink">{vals.join(' · ')}</dd>
+                  <dt className="text-[17px] font-bold text-ink">{customLabel(k, locale)}</dt>
+                  <dd className="mt-1.5 text-[17px] leading-[1.55] text-ink">{vals.map((v) => customLabel(v, locale)).join(' · ')}</dd>
                 </div>
               ))}
             </dl>
@@ -269,7 +271,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
           <h2 id="rel-title" data-reveal className="text-[clamp(26px,2.4vw,36px)] font-bold tracking-[-0.01em] text-ink">{t('relatedProducts')}</h2>
           <ul className={`mt-8 grid grid-cols-2 gap-x-3 gap-y-8 ${related.length >= 3 ? 'lg:grid-cols-4' : ''}`}>
             {related.map((p, i) => {
-              const pname = vi ? p.name_vi : p.name_en;
+              const pname = productName(p, locale);
               return (
                 <li key={p.id} data-reveal data-tone={(['orange', 'graphite', 'field', 'rust'] as const)[i % 4]}>
                   <Link href={`/products/${p.id.toLowerCase()}`} prefetch={false} className="group block">

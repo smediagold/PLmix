@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import { Building2, Factory, Globe, Mail, MessageCircle, Phone } from 'lucide-react';
@@ -9,22 +10,7 @@ import ContactForm from '@/components/contact/ContactForm';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const vi = locale === 'vi';
-  const title = vi
-    ? 'Liên Hệ & Nhận Báo Giá | Phú Long'
-    : 'Contact & Request a Quote | Phu Long';
-  const description = vi
-    ? 'Liên hệ Phú Long để được tư vấn và báo giá máy trộn bê tông, máy nông nghiệp, động cơ. Phản hồi trong 24 giờ. WhatsApp: (+84) 946 964 669.'
-    : 'Contact Phu Long for product inquiries, export quotes and OEM orders. Concrete mixers, agricultural machinery, engines. We respond within 24 hours.';
-  return {
-    title: { absolute: title },
-    description,
-    alternates: {
-      canonical: `https://www.phulongglobal.com/${locale}/contact`,
-      languages: { en: 'https://www.phulongglobal.com/en/contact', vi: 'https://www.phulongglobal.com/vi/contact' },
-    },
-    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/contact` },
-  };
+  return pageMeta(locale, 'contact', '/contact');
 }
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {

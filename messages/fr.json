@@ -1,0 +1,353 @@
+{
+  "nav": {
+    "products": "Produits",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact",
+    "getQuote": "Demander un devis",
+    "construction": "Machines de chantier",
+    "agriculture": "Machines agricoles",
+    "engines": "Moteurs",
+    "spareParts": "Pièces détachées",
+    "main": "Principal",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu",
+    "models": "{count, plural, one {# modèle} other {# modèles}}",
+    "allProducts": "Tous les produits"
+  },
+  "home": {
+    "hero": {
+      "headline": "Fabricant de bétonnières au Vietnam",
+      "subtext": "20 ans d'expérience industrielle. Des bétonnières de 250 à 500 L, fabriquées à votre couleur, avec votre moteur et votre logo, et adoptées par des partenaires dans 20 pays.",
+      "ctaProducts": "Voir les produits",
+      "ctaQuote": "Demander un devis"
+    },
+    "stats": {
+      "years": "Années d'expérience",
+      "countries": "Pays d'exportation",
+      "customers": "Clients dans le monde",
+      "factory": "Usine dédiée"
+    },
+    "categories": {
+      "title": "Nos gammes de produits",
+      "subtitle": "Du chantier à la rizière, des machines fiables pour chaque travail.",
+      "construction": "Machines de chantier",
+      "constructionDesc": "Bétonnières, brouettes, diables",
+      "agriculture": "Machines agricoles",
+      "agricultureDesc": "Repiqueuses de riz, batteuses de paddy",
+      "engines": "Moteurs",
+      "enginesDesc": "Moteurs électriques, essence et diesel",
+      "spareParts": "Pièces détachées",
+      "sparePartsDesc": "Pièces de rechange et accessoires",
+      "viewAll": "Tout voir"
+    },
+    "featured": {
+      "title": "Produits phares",
+      "subtitle": "Nos machines les plus vendues, choisies par des acheteurs du monde entier.",
+      "viewAll": "Voir tous les produits",
+      "requestQuote": "Demander un devis"
+    },
+    "factory": {
+      "title": "Une seule usine, toutes nos machines",
+      "description": "Depuis un site de production unique et moderne au Vietnam, nos ingénieurs et techniciens fabriquent une gamme complète de machines de chantier et agricoles, le tout sous un même toit. Chaque machine est contrôlée avant de quitter l'usine.",
+      "link": "Découvrir l'entreprise",
+      "text": "Phu Long a commencé comme un atelier mécanique local il y a plus de vingt ans. Aujourd'hui, un seul site de production à Giao Thuy, Ninh Binh, assure toutes les étapes : découpe et roulage de l'acier, soudage, peinture, assemblage et essai de fonctionnement avant l'emballage de chaque machine.",
+      "text2": "Comme tout se fait sous un même toit, nous pouvons adapter la taille de la cuve, la couleur, le moteur ou le logo à chaque commande, et regrouper plusieurs modèles dans un même conteneur.",
+      "years": "Années d'expérience",
+      "countries": "Pays d'exportation",
+      "customers": "Clients professionnels",
+      "factory": "Usine dédiée",
+      "aerial": "Notre usine vue du ciel",
+      "aerialNote": "Giao Thuy, Ninh Binh",
+      "hall": "Hall d'assemblage",
+      "hallNote": "Bétonnières en attente de leur moteur",
+      "warehouse": "Prêtes au chargement",
+      "warehouseNote": "Cuves de bétonnières avant un chargement FCL",
+      "showroom": "Showroom",
+      "showroomNote": "Bétonnières en quatre couleurs"
+    },
+    "customization": {
+      "title": "Sur mesure, selon vos besoins",
+      "subtitle": "Chaque machine peut être adaptée à vos spécifications exactes.",
+      "item1": "Couleurs et logo personnalisés (OEM possible)",
+      "item2": "Motorisation : électrique / essence / diesel",
+      "item3": "Capacité de cuve de 200 L à 500 L",
+      "item4": "Configuration des roues : 2 / 3 / 4 roues",
+      "cta": "Parlons de votre projet"
+    },
+    "cta": {
+      "title": "Prêt à passer commande ?",
+      "subtitle": "Parlons de vos besoins. Notre équipe vous répond sous 24 heures.",
+      "button": "Nous contacter"
+    },
+    "markets": {
+      "title": "Exporté dans 20 pays",
+      "text": "Importateurs, distributeurs et entrepreneurs en Asie, en Afrique, au Moyen-Orient, dans le Pacifique et sur le continent américain."
+    },
+    "certs": {
+      "title": "Certifiés et testés",
+      "text": "Notre système de management de la qualité est certifié ISO 9001:2015 par la Vietnam Certification Association, et nos bétonnières ont été testées par SGS Vietnam.",
+      "iso": "Certificat ISO 9001:2015",
+      "isoNote": "Vietnam Certification Association (VCA), délivré en mars 2022",
+      "sgs": "Rapport d'essai SGS",
+      "sgsNote": "Échantillons de bétonnières, février 2023"
+    },
+    "orders": {
+      "title": "Conteneurs récents",
+      "text": "Chargements FCL et LCL, préparés dans notre cour et vérifiés avant la fermeture des portes."
+    },
+    "reviews": {
+      "title": "Ce que disent nos importateurs",
+      "text": "Plus de 70 clients professionnels dans 20 pays. Quelques-uns d'entre eux, avec leurs propres mots."
+    },
+    "feature": {
+      "title": "Conçue autour d'une cuve robuste",
+      "text": "Fabriquée en usine au Vietnam, sur commande, pour votre marché.",
+      "cta": "Voir toutes les bétonnières",
+      "quote": "Demander un prix",
+      "drum": "250–500 L",
+      "steel": "Acier 2–3 mm",
+      "engine": "Électrique · Essence · Diesel",
+      "wheels": "Pneus pleins ou gonflables"
+    },
+    "colours": {
+      "title": "Votre couleur, votre logo",
+      "text": "Jaune, orange, rouge, bleu, vert, gris ou la couleur de votre marque, avec votre logo et vos autocollants. Plusieurs couleurs peuvent partager un même conteneur.",
+      "yellow": "Jaune",
+      "orange": "Orange",
+      "red": "Rouge",
+      "blackRed": "Rouge et noir",
+      "blue": "Bleu"
+    },
+    "video": {
+      "title": "Au cœur de notre usine",
+      "text": "Une visite de deux minutes de l'usine Phu Long à Giao Thuy, Ninh Binh : le showroom, les halls de production, l'atelier d'usinage et le site vu du ciel.",
+      "label": "Vidéo de visite de l'usine Phu Long"
+    },
+    "process": {
+      "title": "Comment une bétonnière est fabriquée",
+      "text": "Chaque étape se déroule dans une seule usine : nous maîtrisons ainsi l'acier, les soudures et la finition de chaque machine expédiée.",
+      "cutting": "Découpe de l'acier",
+      "cuttingText": "Les tôles de cuve et les pièces du châssis sont découpées sur notre table de découpe CNC.",
+      "machining": "Usinage",
+      "machiningText": "Les arbres, bagues et pièces d'engrenage sont tournés sur le tour.",
+      "welding": "Soudage",
+      "weldingText": "Le soudage robotisé et manuel assemble la cuve et le châssis.",
+      "finishing": "Meulage et finition",
+      "finishingText": "Chaque soudure est meulée avant la mise en peinture de la machine.",
+      "assembly": "Assemblage",
+      "assemblyText": "Cuves, châssis, moteurs et roues sont assemblés dans le hall principal.",
+      "finished": "Contrôlée et prête",
+      "finishedText": "Les bétonnières terminées sont testées en fonctionnement puis alignées pour l'emballage.",
+      "loading": "Chargée pour l'export",
+      "loadingText": "Emballées en conteneurs FCL ou LCL dans notre cour et expédiées depuis le Vietnam."
+    }
+  },
+  "products": {
+    "title": "Produits",
+    "subtitle": "Bétonnières, cintreuses d'étriers, brouettes, repiqueuses de riz, batteuses, ventilateurs industriels et moteurs, fabriqués aux normes d'exportation.",
+    "allProducts": "Tous les produits",
+    "filter": "Filtrer par catégorie",
+    "construction": "Chantier",
+    "agriculture": "Agriculture",
+    "engines": "Moteurs",
+    "spareParts": "Pièces détachées",
+    "stirrupBending": "Cintreuses d'étriers",
+    "vikynoDiesel": "Moteurs diesel Vikyno",
+    "requestQuote": "Demander un devis",
+    "specifications": "Caractéristiques techniques",
+    "relatedProducts": "Produits associés",
+    "customizationOptions": "Options de personnalisation",
+    "moq": "Commande min.",
+    "weight": "Poids",
+    "dimensions": "Dimensions",
+    "capacity": "Capacité",
+    "heroAlt": "Batteuses de paddy dans l'entrepôt Phu Long",
+    "viewLine": "Voir {name}"
+  },
+  "about": {
+    "title": "À propos de Phu Long",
+    "subtitle": "Plus de 20 ans à fabriquer des machines dans une usine vietnamienne, pour des partenaires dans 20 pays.",
+    "storyTitle": "Notre histoire",
+    "storyText": "Fondée il y a plus de vingt ans, Phu Long Global Investment Co., Ltd est passée d'un atelier mécanique local à un fabricant exportateur reconnu, présent à l'international. Depuis un site de production unique et moderne au Vietnam, notre équipe d'ingénieurs, de designers et de techniciens expérimentés fabrique une gamme complète de machines de chantier et agricoles, le tout sous un même toit.",
+    "storyText2": "Nous sommes fiers de notre capacité de personnalisation : capacité de cuve, couleur, type de moteur, marquage… chaque machine peut être adaptée aux exigences de nos partenaires internationaux. Aujourd'hui, nos produits sont présents dans près de 20 pays, auprès de plus de 70 clients satisfaits dans le monde.",
+    "factoryTitle": "Notre usine",
+    "factoryText": "Notre site de production est équipé de machines modernes et animé par des ingénieurs et techniciens qualifiés. De la fabrication métallique et du soudage à l'assemblage et au contrôle qualité, chaque étape se déroule sous un même toit, ce qui nous donne une maîtrise totale de la qualité et des délais de livraison.",
+    "capabilitiesTitle": "Notre savoir-faire",
+    "cap1": "Fabrication de gamme complète : machines de chantier, machines agricoles et ventilateurs industriels",
+    "cap2": "Commandes OEM et sur mesure : couleurs, logos, caractéristiques",
+    "cap3": "Motorisations compatibles : électrique, essence, diesel",
+    "cap4": "Contrôle qualité rigoureux avant chaque expédition",
+    "cap5": "Emballage export : chargement en conteneurs FCL et LCL",
+    "exportsTitle": "Présence internationale",
+    "exportsText": "Nos produits sont présents dans près de 20 pays en Asie, en Afrique et au-delà. Nous travaillons avec des importateurs, des distributeurs et des acheteurs directs qui font confiance à Phu Long pour une qualité constante et un approvisionnement fiable.",
+    "valuesTitle": "Nos valeurs",
+    "value1Title": "Qualité",
+    "value1Text": "Chaque machine est construite pour durer et testée avant expédition.",
+    "value2Title": "Personnalisation",
+    "value2Text": "Nous nous adaptons aux besoins de votre marché : couleurs, moteurs, caractéristiques.",
+    "value3Title": "Fiabilité",
+    "value3Text": "20 ans de livraisons dans les délais et de service après-vente.",
+    "cap6": "Ventilateurs industriels fabriqués selon votre débit d'air, votre pression et votre matériau",
+    "statsLabel": "Phu Long en chiffres"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "subtitle": "Contactez-nous pour toute demande produit, devis ou partenariat. Nous répondons sous 24 heures.",
+    "formTitle": "Envoyer une demande",
+    "name": "Nom complet",
+    "namePlaceholder": "Votre nom",
+    "company": "Société",
+    "companyPlaceholder": "Nom de votre société",
+    "email": "E-mail",
+    "emailPlaceholder": "votre@email.com",
+    "phone": "Téléphone / WhatsApp",
+    "phonePlaceholder": "+1 234 567 890",
+    "product": "Produit souhaité",
+    "productPlaceholder": "ex. Bétonnière 350 L, repiqueuse de riz...",
+    "message": "Message",
+    "messagePlaceholder": "Décrivez vos besoins, la quantité souhaitée, le pays de destination...",
+    "submit": "Envoyer la demande",
+    "submitting": "Envoi en cours...",
+    "successTitle": "Message envoyé !",
+    "successText": "Merci pour votre demande. Nous vous répondrons sous 24 heures.",
+    "infoTitle": "Coordonnées",
+    "phone2": "Téléphone / WhatsApp",
+    "emailLabel": "E-mail",
+    "website": "Site web",
+    "officeAddress": "Adresse du bureau",
+    "officeAddressValue": "115 rue Ke Ve, quartier Dong Ngac, Hanoï",
+    "factoryAddress": "Adresse de l'usine",
+    "factoryAddressValue": "Commune de Giao Thuy, province de Ninh Binh, Vietnam",
+    "showroomAlt": "Showroom Phu Long avec bétonnières",
+    "formNote": "Les champs marqués * sont obligatoires. Nous répondons sous 24 heures.",
+    "galleryHall": "Hall d'assemblage",
+    "galleryLoading": "Cuves de bétonnières prêtes au chargement",
+    "galleryContainer": "Un conteneur chargé pour l'export"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Guides d'achat, conseils d'entretien et notes techniques sur nos machines, rédigés par ceux qui les fabriquent.",
+    "heroAlt": "Hall d'assemblage de l'usine Phu Long",
+    "filter": "Filtrer les articles par thème",
+    "all": "Tous les thèmes",
+    "latest": "Dernier article",
+    "more": "Autres articles",
+    "related": "À lire aussi",
+    "relatedLine": "Produits associés",
+    "askTitle": "Des questions à ce sujet ?",
+    "askText": "Écrivez à notre équipe commerciale pour les caractéristiques, les prix et les délais d'expédition."
+  },
+  "footer": {
+    "tagline": "L'excellence industrielle pour un monde qui se construit.",
+    "productsTitle": "Produits",
+    "companyTitle": "Entreprise",
+    "contactTitle": "Contact",
+    "construction": "Machines de chantier",
+    "agriculture": "Machines agricoles",
+    "stirrupBending": "Cintreuses d'étriers",
+    "engines": "Moteurs",
+    "vikynoDiesel": "Moteurs diesel Vikyno",
+    "spareParts": "Pièces détachées",
+    "blog": "Blog",
+    "about": "À propos",
+    "contact": "Contact",
+    "officeAddress": "115 rue Ke Ve, quartier Dong Ngac, Hanoï",
+    "factoryAddress": "Usine : commune de Giao Thuy, province de Ninh Binh",
+    "rights": "Tous droits réservés.",
+    "top": "Retour en haut"
+  },
+  "inquiry": {
+    "add": "Ajouter au devis",
+    "added": "Dans votre devis",
+    "remove": "Retirer du devis",
+    "region": "Votre liste de devis",
+    "count": "{count, plural, one {# modèle} other {# modèles}} dans votre devis",
+    "whatsapp": "Envoyer via WhatsApp",
+    "form": "Envoyer via le formulaire",
+    "clear": "Vider",
+    "waIntro": "Bonjour Phu Long, merci de me faire un devis pour ces modèles :"
+  },
+  "coupon": {
+    "title": "Demander un prix",
+    "text": "Indiquez-nous les modèles, les quantités et votre port de destination. Notre équipe commerciale vous répond sous 24 heures avec un devis FOB ou CIF.",
+    "name": "Nom",
+    "namePh": "Votre nom",
+    "email": "E-mail",
+    "emailPh": "vous@societe.com",
+    "product": "Modèles",
+    "productPh": "Modèles et quantité, ex. CM-350-2W-P × 40",
+    "message": "Message",
+    "messagePh": "Port de destination, couleur, moteur, logo…",
+    "submit": "Envoyer la demande",
+    "sending": "Envoi…",
+    "sentTitle": "Demande reçue.",
+    "sentText": "Nous vous répondrons sous 24 heures. Pour toute urgence, écrivez-nous sur WhatsApp au +84 946 964 669.",
+    "error": "La demande n'a pas pu être envoyée. Veuillez réessayer ou écrire à Andy@phulongglobal.com.",
+    "errName": "Indiquez votre nom pour que nous sachions à qui répondre.",
+    "errEmail": "Indiquez une adresse e-mail du type nom@societe.com.",
+    "errMessage": "Décrivez brièvement votre besoin (10 caractères minimum)."
+  },
+  "media": {
+    "play": "Lire la vidéo",
+    "pause": "Mettre la vidéo en pause"
+  },
+  "line": {
+    "home": "Accueil",
+    "products": "Produits",
+    "breadcrumb": "Fil d'Ariane",
+    "quote": "Demander un devis",
+    "modelsTitle": "{count, plural, one {# modèle} other {# modèles}}",
+    "details": "Détails",
+    "compareTitle": "Comparer les modèles",
+    "model": "Modèle",
+    "factoryTitle": "Fabriqué dans notre usine",
+    "video": "{name} dans notre usine",
+    "customTitle": "Fabriqué selon votre commande",
+    "customText": "Chaque machine de cette gamme peut être adaptée à votre marché. Dites-nous ce dont vous avez besoin, nous le confirmerons avec le devis.",
+    "moreTitle": "Autres gammes de produits",
+    "specs": "Fiche technique complète sur WhatsApp",
+    "waText": "Bonjour Phu Long, merci de m'envoyer les caractéristiques complètes de vos {name}."
+  },
+  "meta": {
+    "home": {
+      "title": "Fabricant de Bétonnières au Vietnam | Phu Long",
+      "description": "Fabricant de bétonnières au Vietnam : malaxeurs à béton de 250 à 500 L, mini bétonnière et bétonnière 1 sac, moteur électrique, essence ou diesel. 20 pays."
+    },
+    "about": {
+      "title": "Phu Long – Fabricant de bétonnières au Vietnam",
+      "description": "Phu Long Global Investment, fabricant vietnamien de machines de chantier, agricoles et de ventilateurs industriels. Une usine, 70+ clients, 20 pays."
+    },
+    "contact": {
+      "title": "Contact et demande de devis | Phu Long",
+      "description": "Contactez Phu Long pour vos demandes produits, devis export et commandes OEM : bétonnières, machines agricoles, moteurs. Réponse sous 24 heures."
+    },
+    "products": {
+      "title": "Bétonnières, machines agricoles et ventilateurs | Phu Long",
+      "description": "Gamme Phu Long : bétonnières 250–500 L, cintreuses d'étriers, brouettes, repiqueuses, batteuses, ventilateurs industriels et moteurs. OEM et export."
+    },
+    "blog": {
+      "title": "Guides d'achat et conseils machines | Phu Long",
+      "description": "Guides pratiques pour choisir bétonnières, repiqueuses de riz, batteuses de paddy et plus, par un fabricant fort de 20 ans d'expérience à l'export."
+    },
+    "lineTitle": "{name} – Fabricant au Vietnam | Phu Long",
+    "skuTitle": "{name} | Phu Long",
+    "skuMixerTitle": "{kind} {size} {sku} | Phu Long",
+    "kindOneBag": "Bétonnière 1 Sac",
+    "kindMini": "Mini Bétonnière",
+    "kindMixer": "Bétonnière",
+    "moqLine": "Commande minimum : {count} unités."
+  },
+  "ui": {
+    "skip": "Aller au contenu",
+    "unit": "{count, plural, one {# unité} other {# unités}}",
+    "pleaseQuote": "Sur devis",
+    "standardSpec": "Caractéristiques standard. Chaque machine peut être adaptée à votre commande.",
+    "aboutFactory": "À propos de l'usine",
+    "branding": "Marquage",
+    "brandingValue": "Votre logo et vos autocollants (OEM)",
+    "readArticle": "Lire l'article",
+    "minRead": "{count} min de lecture",
+    "language": "Langue"
+  }
+}

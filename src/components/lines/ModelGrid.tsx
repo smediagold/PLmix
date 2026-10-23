@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import type { Product } from '@/data/products';
+import { productName, type Product } from '@/data/products';
 import InquiryToggle from '@/components/inquiry/InquiryToggle';
 
 const tileTones = ['orange', 'graphite', 'field', 'rust'] as const;
@@ -15,11 +15,10 @@ const lgCols = (n: number) =>
   n <= 2 ? 'lg:grid-cols-2' : n % 4 === 0 ? 'lg:grid-cols-4' : n % 3 === 0 ? 'lg:grid-cols-3' : n % 5 === 0 ? 'lg:grid-cols-5' : 'lg:grid-cols-4';
 
 export default function ModelGrid({ items, locale }: { items: Product[]; locale: string }) {
-  const vi = locale === 'vi';
   return (
     <ul className={`grid grid-cols-2 gap-x-3 gap-y-10 ${lgCols(items.length)}`}>
       {items.map((p, i) => {
-        const pname = vi ? p.name_vi : p.name_en;
+        const pname = productName(p, locale);
         return (
           <li
             key={p.id}

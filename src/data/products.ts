@@ -1,3 +1,6 @@
+import { OVERLAY_LOCALES, type OverlayLocale } from './nav';
+import { overlays } from './i18n/overlays';
+
 export type Category = 'construction' | 'agriculture' | 'industrial' | 'engine' | 'spare-part';
 export type Subcategory =
   | 'concrete-mixer'
@@ -14,6 +17,7 @@ export type Subcategory =
   | 'spare-part';
 
 export interface Product {
+  i18n?: Partial<Record<OverlayLocale, { name: string; description: string }>>;
   id: string;
   name_en: string;
   name_vi: string;
@@ -1233,3 +1237,19 @@ export const categories = [
   { id: 'engine', label_en: 'Engines & Motors', label_vi: 'Động Cơ' },
   { id: 'spare-part', label_en: 'Spare Parts', label_vi: 'Phụ Kiện' },
 ] as const;
+
+for (const loc of OVERLAY_LOCALES) {
+  for (const p of products) {
+    const t = overlays[loc].products[p.id];
+    if (t) p.i18n = { ...p.i18n, [loc]: t };
+  }
+}
+
+export const productName = (p: Product, locale: string) =>
+  locale === 'vi' ? p.name_vi : p.i18n?.[locale as OverlayLocale]?.name ?? p.name_en;
+export const productDescription = (p: Product, locale: string) =>
+  locale === 'vi' ? p.description_vi : p.i18n?.[locale as OverlayLocale]?.description ?? p.description_en;
+export const specLabel = (key: string, locale: string) =>
+  overlays[locale as OverlayLocale]?.specLabels[key] ?? key;
+export const customLabel = (term: string, locale: string) =>
+  overlays[locale as OverlayLocale]?.customization[term] ?? term;

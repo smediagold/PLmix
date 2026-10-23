@@ -1,4 +1,5 @@
-type Bi = { en: string; vi: string };
+import { OVERLAY_LOCALES, type Bi } from './nav';
+import { overlays } from './i18n/overlays';
 
 export const testimonials: { name: string; company: string; country: Bi; product: string; text: Bi }[] = [
   {
@@ -81,3 +82,16 @@ export const orders: { src: string; caption: Bi; load: Bi; w: number; h: number 
   { src: '/images/orders/order-5.jpg', caption: { en: 'Concrete mixers with diesel engines', vi: 'Máy trộn kèm động cơ diesel' }, load: { en: 'Mixers + diesel', vi: 'Máy trộn + diesel' }, w: 3, h: 4 },
   { src: '/images/orders/order-6.jpg', caption: { en: 'Blue concrete mixers, container IAAU 174407', vi: 'Máy trộn màu xanh, container IAAU 174407' }, load: { en: 'Custom colour', vi: 'Màu theo yêu cầu' }, w: 3, h: 4 },
 ];
+
+for (const loc of OVERLAY_LOCALES) {
+  const o = overlays[loc];
+  for (const m of markets) {
+    if (o.markets[m.region.en]) m.region[loc] = o.markets[m.region.en];
+  }
+  orders.forEach((ord, i) => {
+    if (o.orders[i]) {
+      ord.caption[loc] = o.orders[i].caption;
+      ord.load[loc] = o.orders[i].load;
+    }
+  });
+}

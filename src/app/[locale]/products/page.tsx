@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { pageMeta } from '@/lib/meta';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { groups, lines, lineProducts, pick, type LineGroup } from '@/data/lines';
@@ -9,20 +10,7 @@ import { sectionGap } from '@/components/site/sections';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const vi = locale === 'vi';
-  const title = vi ? 'Sản Phẩm: Máy Trộn, Máy Nông Nghiệp, Quạt | Phú Long' : 'Concrete Mixers, Farm Machines & Fans | Phu Long';
-  const description = vi
-    ? 'Toàn bộ sản phẩm Phú Long: máy trộn bê tông 250–500L, máy uốn đai, xe rùa, máy cấy lúa, máy tuốt lúa, quạt công nghiệp, động cơ. Làm theo đơn OEM, xuất khẩu toàn cầu.'
-    : 'Full range of Phu Long products: concrete mixers 250–500L, stirrup benders, wheelbarrows, rice transplanters, paddy threshers, industrial fans and engines. OEM & export.';
-  return {
-    title: { absolute: title },
-    description,
-    alternates: {
-      canonical: `https://www.phulongglobal.com/${locale}/products`,
-      languages: { en: 'https://www.phulongglobal.com/en/products', vi: 'https://www.phulongglobal.com/vi/products' },
-    },
-    openGraph: { title, description, url: `https://www.phulongglobal.com/${locale}/products` },
-  };
+  return pageMeta(locale, 'products', '/products');
 }
 
 export default async function ProductsPage({

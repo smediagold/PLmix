@@ -1,13 +1,15 @@
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
-import { categoryLabels, type BlogPost } from '@/data/blog';
+import { getTranslations } from 'next-intl/server';
+import { categoryLabels, postExcerpt, postTitle, type BlogPost } from '@/data/blog';
+import { localeNames, pick, type Locale } from '@/data/nav';
 
 export const isCutout = (src: string) => src.endsWith('.png') || src.includes('/lines/');
 
-export function postMeta(post: BlogPost, locale: string) {
-  const vi = locale === 'vi';
-  const date = new Intl.DateTimeFormat(vi ? 'vi-VN' : 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(post.date));
-  return `${categoryLabels[post.category][vi ? 'vi' : 'en']} · ${date} · ${post.readTime} ${vi ? 'phút đọc' : 'min read'}`;
+export async function postMeta(post: BlogPost, locale: string) {
+  const tu = await getTranslations({ locale, namespace: 'ui' });
+  const date = new Intl.DateTimeFormat(localeNames[locale as Locale]?.intl ?? 'en-GB', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(post.date));
+  return `${pick(categoryLabels[post.category], locale)} · ${date} · ${tu('minRead', { count: post.readTime })}`;
 }
 
 export function BlogImage({ post, alt, sizes, priority = false }: { post: BlogPost; alt: string; sizes: string; priority?: boolean }) {
@@ -25,10 +27,10 @@ export function BlogImage({ post, alt, sizes, priority = false }: { post: BlogPo
   );
 }
 
-export default function BlogCard({ post, locale, large = false }: { post: BlogPost; locale: string; large?: boolean }) {
-  const vi = locale === 'vi';
-  const title = vi ? post.title_vi : post.title_en;
-  const excerpt = vi ? post.excerpt_vi : post.excerpt_en;
+export default async function BlogCard({ post, locale, large = false }: { post: BlogPost; locale: string; large?: boolean }) {
+  const tu = await getTranslations({ locale, namespace: 'ui' });
+  const title = postTitle(post, locale);
+  const excerpt = postExcerpt(post, locale);
   return (
     <Link href={`/blog/${post.slug}`} prefetch={false} className={`group block ${large ? 'grid gap-8 lg:grid-cols-12 lg:items-center' : ''}`}>
       <span className={`relative block overflow-hidden rounded-3xl bg-[#FBE6C2] ${large ? 'aspect-[16/10] lg:col-span-7' : 'aspect-[4/3]'}`}>
@@ -38,11 +40,11 @@ export default function BlogCard({ post, locale, large = false }: { post: BlogPo
         <span className={`block font-bold leading-[1.15] tracking-[-0.01em] text-ink underline-offset-4 group-hover:underline ${large ? 'text-[clamp(22px,2.2vw,32px)]' : 'text-[20px] md:text-[22px]'}`}>
           {title}
         </span>
-        <span className="mt-2 block text-[15px] text-soft">{postMeta(post, locale)}</span>
+        <span className="mt-2 block text-[15px] text-soft">{await postMeta(post, locale)}</span>
         <span className={`mt-3 block text-[17px] leading-[1.55] text-ink ${large ? '' : 'line-clamp-3'}`}>{excerpt}</span>
         {large && (
           <span className="mt-6 inline-flex min-h-11 items-center rounded-full bg-ink px-6 text-[17px] font-semibold text-white">
-            {vi ? 'Đọc bài viết' : 'Read the article'}
+            {tu('readArticle')}
           </span>
         )}
       </span>

@@ -308,5 +308,46 @@
     "moreTitle": "Các dòng sản phẩm khác",
     "specs": "Xem thông số chi tiết qua WhatsApp",
     "waText": "Chào Phú Long, vui lòng gửi tôi thông số chi tiết của {name}."
+  },
+  "meta": {
+    "home": {
+      "title": "Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam | Phú Long",
+      "description": "Phú Long — nhà sản xuất máy trộn bê tông, máy uốn đai, máy cấy lúa, máy tuốt lúa và quạt công nghiệp tại Việt Nam. 20 năm kinh nghiệm, xuất khẩu 20 quốc gia."
+    },
+    "about": {
+      "title": "Về Phú Long – Nhà Sản Xuất Máy Trộn Bê Tông Việt Nam",
+      "description": "Phú Long Global Investment — nhà sản xuất máy xây dựng, máy nông nghiệp và quạt công nghiệp tại Việt Nam. Một nhà máy, 70+ khách hàng, 20 quốc gia xuất khẩu."
+    },
+    "contact": {
+      "title": "Liên Hệ & Nhận Báo Giá | Phú Long",
+      "description": "Liên hệ Phú Long để được tư vấn và báo giá máy trộn bê tông, máy nông nghiệp, động cơ. Phản hồi trong 24 giờ. WhatsApp: (+84) 946 964 669."
+    },
+    "products": {
+      "title": "Sản Phẩm: Máy Trộn, Máy Nông Nghiệp, Quạt | Phú Long",
+      "description": "Toàn bộ sản phẩm Phú Long: máy trộn bê tông 250–500L, máy uốn đai, xe rùa, máy cấy lúa, máy tuốt lúa, quạt công nghiệp, động cơ. Làm theo đơn OEM, xuất khẩu toàn cầu."
+    },
+    "blog": {
+      "title": "Hướng Dẫn Chọn Mua Máy Móc | Phú Long",
+      "description": "Hướng dẫn chọn máy trộn bê tông, máy cấy lúa, máy tuốt lúa — kinh nghiệm thực tế từ nhà sản xuất Phú Long 20 năm kinh nghiệm xuất khẩu."
+    },
+    "lineTitle": "{name} – Nhà Sản Xuất Việt Nam | Phú Long",
+    "skuTitle": "{name} | Phú Long",
+    "skuMixerTitle": "{kind} {size} {sku} | Phú Long",
+    "kindOneBag": "Máy Trộn Bê Tông 1 Bao",
+    "kindMini": "Máy Trộn Bê Tông Mini",
+    "kindMixer": "Máy Trộn Bê Tông",
+    "moqLine": "MOQ {count} chiếc."
+  },
+  "ui": {
+    "skip": "Bỏ qua đến nội dung",
+    "unit": "{count} chiếc",
+    "pleaseQuote": "Xin báo giá",
+    "standardSpec": "Thông số tiêu chuẩn. Mọi máy có thể điều chỉnh theo đơn hàng.",
+    "aboutFactory": "Về nhà máy",
+    "branding": "Thương hiệu",
+    "brandingValue": "Logo và tem nhãn riêng (OEM)",
+    "readArticle": "Đọc bài viết",
+    "minRead": "{count} phút đọc",
+    "language": "Ngôn ngữ"
   }
 }

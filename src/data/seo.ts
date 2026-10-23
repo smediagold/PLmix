@@ -1,4 +1,5 @@
-import type { Bi } from './nav';
+import { OVERLAY_LOCALES, type Bi } from './nav';
+import { overlays } from './i18n/overlays';
 
 export type LineSeo = {
   title: Bi;
@@ -96,3 +97,24 @@ export const lineSeo: Record<string, LineSeo> = {
     ],
   },
 };
+
+for (const loc of OVERLAY_LOCALES) {
+  for (const [slug, s] of Object.entries(lineSeo)) {
+    const o = overlays[loc].seo[slug];
+    if (!o) continue;
+    s.title[loc] = o.title;
+    s.description[loc] = o.description;
+    s.aboutTitle[loc] = o.aboutTitle;
+    s.faqTitle[loc] = o.faqTitle;
+    s.about.forEach((p, i) => {
+      if (o.about[i]) p[loc] = o.about[i];
+    });
+    s.faq.forEach((f, i) => {
+      if (o.faq[i]) {
+        f.q[loc] = o.faq[i].q;
+        f.a[loc] = o.faq[i].a;
+      }
+    });
+    if (s.guide && o.guideLabel) s.guide.label[loc] = o.guideLabel;
+  }
+}

@@ -1,5 +1,6 @@
-import { products, type Product, type Subcategory } from './products';
-import { groups, pick, type Bi, type LineGroup, type NavLine, type Tone } from './nav';
+import { products, productName, type Product, type Subcategory } from './products';
+import { groups, pick, OVERLAY_LOCALES, type Bi, type LineGroup, type NavLine, type Tone } from './nav';
+import { overlays } from './i18n/overlays';
 
 export { groups, pick };
 export type { LineGroup, Tone };
@@ -303,5 +304,27 @@ export const lineOfProduct = (p: Product) => lines.find((l) => l.subcategories.i
 export const navLines = (): NavLine[] =>
   lines.map((l) => ({ slug: l.slug, group: l.group, tone: l.tone, cover: l.cover, name: l.name, count: lineProducts(l).length }));
 
-export const skuNames = (): Record<string, Bi> =>
-  Object.fromEntries(products.map((p) => [p.id, { en: p.name_en, vi: p.name_vi }]));
+export const skuNames = (locale: string): Record<string, string> =>
+  Object.fromEntries(products.map((p) => [p.id, productName(p, locale)]));
+
+for (const loc of OVERLAY_LOCALES) {
+  for (const l of lines) {
+    const o = overlays[loc].lines[l.slug];
+    if (!o) continue;
+    l.name[loc] = o.name;
+    l.tagline[loc] = o.tagline;
+    l.intro[loc] = o.intro;
+    l.facts.forEach((f, i) => {
+      if (o.facts[i]) {
+        f.label[loc] = o.facts[i].label;
+        f.value[loc] = o.facts[i].value;
+      }
+    });
+    l.photos.forEach((ph, i) => {
+      if (o.photos[i]) ph.caption[loc] = o.photos[i];
+    });
+    l.banner?.forEach((b, i) => {
+      if (o.banner?.[i]) b.caption[loc] = o.banner[i];
+    });
+  }
+}

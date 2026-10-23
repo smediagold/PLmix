@@ -1,5 +1,5 @@
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
@@ -47,6 +47,7 @@ export default async function LocaleLayout({
   }
 
   setRequestLocale(locale);
+  const tu = await getTranslations('ui');
   const all = await getMessages();
   const clientMessages = Object.fromEntries(
     ['nav', 'inquiry', 'coupon', 'media', 'contact'].map((k) => [k, all[k as keyof typeof all]]),
@@ -60,14 +61,14 @@ export default async function LocaleLayout({
             href="#main"
             className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-ink focus:px-4 focus:py-3 focus:text-white"
           >
-            {locale === 'vi' ? 'Bỏ qua đến nội dung' : 'Skip to content'}
+            {tu('skip')}
           </a>
           <JsonLd data={organization} />
           <Header locale={locale} lines={navLines()} />
           <main id="main" className="flex-1">{children}</main>
           <Footer />
           <FloatingContact />
-          <InquiryBar skuNames={skuNames()} />
+          <InquiryBar skuNames={skuNames(locale)} />
           <Suspense>
             <NavProgress />
           </Suspense>
