@@ -65,6 +65,7 @@ export default async function ProductsPage({
           {groups.map((g) => (
             <Link
               key={g.id}
+              prefetch={false}
               href={{ pathname: '/products', query: { category: g.id } }}
               scroll={false}
               aria-current={active === g.id ? 'page' : undefined}
@@ -85,11 +86,11 @@ export default async function ProductsPage({
             <div className="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
               <div>
                 <h2 id={`l-${l.slug}`} className="text-[clamp(28px,2.6vw,40px)] font-bold leading-[1.05] tracking-[-0.02em] text-ink">
-                  <Link href={`/products/${l.slug}`} className="underline-offset-4 decoration-2 hover:underline">{name}</Link>
+                  <Link href={`/products/${l.slug}`} prefetch={false} className="underline-offset-4 decoration-2 hover:underline">{name}</Link>
                 </h2>
                 <p className="mt-2 max-w-[64ch] text-[17px] leading-[1.5] text-ink">{pick(l.tagline, locale)}</p>
               </div>
-              <Link href={`/products/${l.slug}`} className="press inline-flex min-h-11 items-center bg-stone px-5 text-[17px] font-semibold text-ink hover:bg-[#E0D9CE]">
+              <Link href={`/products/${l.slug}`} prefetch={false} className="press inline-flex min-h-11 items-center bg-stone px-5 text-[17px] font-semibold text-ink hover:bg-[#E0D9CE]">
                 {t('viewLine', { name })}
               </Link>
             </div>

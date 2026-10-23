@@ -27,7 +27,7 @@ export default function ModelGrid({ items, locale }: { items: Product[]; locale:
             data-tone={tileTones[i % tileTones.length]}
             style={{ ['--d' as string]: `${(i % 4) * 70}ms` }}
           >
-            <Link href={`/products/${p.id.toLowerCase()}`} className="group block">
+            <Link href={`/products/${p.id.toLowerCase()}`} prefetch={false} className="group block">
               <span className="tone-tile relative block aspect-square overflow-hidden">
                 {p.images[0] && (
                   <Image

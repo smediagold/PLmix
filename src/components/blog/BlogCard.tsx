@@ -30,7 +30,7 @@ export default function BlogCard({ post, locale, large = false }: { post: BlogPo
   const title = vi ? post.title_vi : post.title_en;
   const excerpt = vi ? post.excerpt_vi : post.excerpt_en;
   return (
-    <Link href={`/blog/${post.slug}`} className={`group block ${large ? 'grid gap-8 lg:grid-cols-12 lg:items-center' : ''}`}>
+    <Link href={`/blog/${post.slug}`} prefetch={false} className={`group block ${large ? 'grid gap-8 lg:grid-cols-12 lg:items-center' : ''}`}>
       <span className={`relative block overflow-hidden rounded-3xl bg-[#FBE6C2] ${large ? 'aspect-[16/10] lg:col-span-7' : 'aspect-[4/3]'}`}>
         <BlogImage post={post} alt={title} sizes={large ? '(min-width: 1024px) 58vw, 100vw' : '(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw'} priority={large} />
       </span>

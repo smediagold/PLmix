@@ -69,6 +69,7 @@ export default async function BlogPage({
           {cats.map((c) => (
             <Link
               key={c}
+              prefetch={false}
               href={{ pathname: '/blog', query: { category: c } }}
               scroll={false}
               aria-current={active === c ? 'page' : undefined}

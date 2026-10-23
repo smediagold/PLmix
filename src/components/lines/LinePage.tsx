@@ -203,7 +203,7 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
             .filter((l) => l.slug !== line.slug)
             .map((l, i) => (
               <li key={l.slug} data-tone={l.tone} data-reveal style={{ ['--d' as string]: `${(i % 2) * 80}ms` }}>
-                <Link href={`/products/${l.slug}`} className="group flex gap-5">
+                <Link href={`/products/${l.slug}`} prefetch={false} className="group flex gap-5">
                   <span className="tone-tile relative block h-16 w-16 shrink-0">
                     <Image src={l.cover} alt="" fill sizes="64px" className="multiply object-contain p-1" />
                   </span>

@@ -19,14 +19,6 @@ export default function Header({ locale, lines }: { locale: string; lines: NavLi
     setProductsOpen(false);
   }, [pathname]);
 
-  useEffect(() => {
-    const warm = () => {
-      ['/products', '/contact', '/about', ...lines.map((l) => `/products/${l.slug}`)].forEach((href) => router.prefetch(href));
-    };
-    const w = window as Window & { requestIdleCallback?: (cb: () => void) => number };
-    if (w.requestIdleCallback) w.requestIdleCallback(warm);
-    else setTimeout(warm, 1500);
-  }, [router, lines]);
 
   useEffect(() => {
     if (!productsOpen) return;

@@ -234,7 +234,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
               const pname = vi ? p.name_vi : p.name_en;
               return (
                 <li key={p.id} data-reveal data-tone={(['orange', 'graphite', 'field', 'rust'] as const)[i % 4]}>
-                  <Link href={`/products/${p.id.toLowerCase()}`} className="group block">
+                  <Link href={`/products/${p.id.toLowerCase()}`} prefetch={false} className="group block">
                     <span className="tone-tile relative block aspect-square">
                       {p.images[0] && (
                         <Image src={p.images[0]} alt={pname} fill sizes="(min-width: 1024px) 25vw, 50vw" className="multiply object-contain p-[10%]" />

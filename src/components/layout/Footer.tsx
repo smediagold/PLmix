@@ -42,7 +42,7 @@ export default function Footer() {
             <ul className="mt-4 space-y-2">
               {lines.map((l) => (
                 <li key={l.slug}>
-                  <Link href={`/products/${l.slug}`} className={linkCls}>
+                  <Link href={`/products/${l.slug}`} prefetch={false} className={linkCls}>
                     {pick(l.name, locale)}
                   </Link>
                 </li>
@@ -52,9 +52,9 @@ export default function Footer() {
           <div className="lg:col-span-3">
             <h2 className="text-[15px] font-semibold text-soft">{t('companyTitle')}</h2>
             <ul className="mt-4 space-y-2">
-              <li><Link href="/about" className={linkCls}>{t('about')}</Link></li>
-              <li><Link href="/blog" className={linkCls}>{t('blog')}</Link></li>
-              <li><Link href="/contact" className={linkCls}>{t('contact')}</Link></li>
+              <li><Link href="/about" prefetch={false} className={linkCls}>{t('about')}</Link></li>
+              <li><Link href="/blog" prefetch={false} className={linkCls}>{t('blog')}</Link></li>
+              <li><Link href="/contact" prefetch={false} className={linkCls}>{t('contact')}</Link></li>
             </ul>
           </div>
           <div className="col-span-2 lg:col-span-5">
