@@ -168,7 +168,7 @@ export const es: ContentOverlay = {
       faq: [
         {
           q: '¿Qué es una hormigonera de 1 saco?',
-          a: 'Es una hormigonera de tambor dimensionada para mezclar un saco de cemento de 50 kg por mezcla, junto con la arena, la grava y el agua que corresponden a ese saco. Con una dosificación de obra típica 1:2:4 esto equivale a unos 0,15–0,2 m³ de concreto, que nuestras hormigoneras de 350 L y 385 L procesan en una sola mezcla. La cantidad exacta depende de su diseño de mezcla.',
+          a: 'Es una hormigonera de tambor dimensionada para mezclar un saco de cemento de 50 kg por mezcla, junto con la arena, la grava y el agua que corresponden a ese saco. Con una dosificación de obra típica 1:2:4 esto equivale a unos 0,15–0.2 m³ de concreto, que nuestras hormigoneras de 350 L y 385 L procesan en una sola mezcla. La cantidad exacta depende de su diseño de mezcla.',
         },
         {
           q: '¿Fabrican una mini hormigonera?',
@@ -184,7 +184,7 @@ export const es: ContentOverlay = {
         },
         {
           q: '¿Qué motores pueden usar las hormigoneras?',
-          a: 'Motores eléctricos de 2,2 a 5,5 kW a 220 V, motores a gasolina GP160 / GP200 o motores diésel. Usted elige el motor para cada pedido y nosotros lo montamos y probamos en la fábrica.',
+          a: 'Motores eléctricos de 2,2 a 5.5 kW a 220 V, motores a gasolina GP160 / GP200 o motores diésel. Usted elige el motor para cada pedido y nosotros lo montamos y probamos en la fábrica.',
         },
         {
           q: '¿Pueden fabricar las hormigoneras en nuestro color y con nuestro logo?',
@@ -474,7 +474,7 @@ Llantas neumáticas o macizas: las neumáticas (5.00-12) absorben mejor los golp
 
 ## 4. Espesor del tambor
 
-En Phu Long usamos 2 mm en el tambor superior y 2,5 mm en el inferior para los modelos de 250–350 L, y 2,5 mm / 3 mm para los de 450–500 L. Un tambor más grueso significa una vida útil más larga, aunque añade peso. Para mercados de exportación con uso intenso, recomendamos especificar la opción más gruesa.
+En Phu Long usamos 2 mm en el tambor superior y 2.5 mm en el inferior para los modelos de 250–350 L, y 2.5 mm / 3 mm para los de 450–500 L. Un tambor más grueso significa una vida útil más larga, aunque añade peso. Para mercados de exportación con uso intenso, recomendamos especificar la opción más gruesa.
 
 ## Resumen
 
@@ -764,7 +764,7 @@ La mezcla exacta siempre depende de su diseño de mezcla, así que tome estas ci
 - **Gasolina** (GP160 / GP200) — ligero y fácil de arrancar, la opción habitual para trabajos móviles.
 - **Diésel** — para obras remotas y jornadas largas.
 
-**Acero del tambor.** Nuestros tambores de 350 L usan acero de 2 mm en el tambor superior y 2,5 mm en el inferior, y el de 385 L usa 2,5 mm y 3 mm. Se puede especificar acero más grueso para uso diario intenso.
+**Acero del tambor.** Nuestros tambores de 350 L usan acero de 2 mm en el tambor superior y 2.5 mm en el inferior, y el de 385 L usa 2.5 mm y 3 mm. Se puede especificar acero más grueso para uso diario intenso.
 
 ## Cómo sacar el máximo provecho de cada mezcla
 

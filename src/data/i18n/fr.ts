@@ -150,7 +150,7 @@ export const fr: ContentOverlay = {
       faq: [
         {
           q: "Qu'est-ce qu'une bétonnière 1 sac ?",
-          a: "Une bétonnière à cuve dimensionnée pour malaxer un sac de ciment de 50 kg par gâchée, avec le sable, le gravier et l'eau correspondants. Pour un dosage courant de chantier 1:2:4, cela représente environ 0,15–0,2 m³ de béton, que nos bétonnières de 350 L et 385 L traitent en une seule gâchée. La gâchée exacte dépend de votre formulation.",
+          a: "Une bétonnière à cuve dimensionnée pour malaxer un sac de ciment de 50 kg par gâchée, avec le sable, le gravier et l'eau correspondants. Pour un dosage courant de chantier 1:2:4, cela représente environ 0,15–0.2 m³ de béton, que nos bétonnières de 350 L et 385 L traitent en une seule gâchée. La gâchée exacte dépend de votre formulation.",
         },
         {
           q: 'Fabriquez-vous une mini bétonnière ?',
