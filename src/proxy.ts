@@ -7,7 +7,7 @@ const intl = createMiddleware(routing);
 const BLOCKED = new Set(['VN']);
 const BYPASS_KEY = process.env.VN_BYPASS_KEY;
 const BYPASS_COOKIE = 'pl_access';
-const VN_SITE = '';
+const VN_SITE = 'https://vi.phulongglobal.com';
 
 export function proxy(req: NextRequest) {
   const key = req.nextUrl.searchParams.get('access');
