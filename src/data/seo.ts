@@ -228,6 +228,66 @@ export const lineSeo: Record<string, LineSeo> = {
       },
     ],
   },
+  'wheelbarrows': {
+    title: {
+      en: 'Wheelbarrow Manufacturer in Vietnam – 70 to 120 L | Phu Long',
+      vi: 'Xe Rùa, Xe Cút Kít 70–120L – Nhà Sản Xuất Việt Nam | Phú Long',
+    },
+    description: {
+      en: 'Wheelbarrows made in Vietnam: 70, 80, 90 and 120 L trays in steel or PP plastic, solid or pneumatic tyres, galvanized or powder-coated frames. OEM, MOQ 20.',
+      vi: 'Xe rùa (xe cút kít) sản xuất tại Việt Nam: thùng 70, 80, 90 và 120 L bằng thép hoặc nhựa PP, bánh đặc hoặc bánh hơi, khung mạ kẽm hoặc sơn tĩnh điện.',
+    },
+    aboutTitle: { en: 'Wheelbarrows from a Vietnam factory', vi: 'Xe rùa từ nhà máy tại Việt Nam' },
+    about: [
+      {
+        en: 'Phu Long is a wheelbarrow manufacturer in Vietnam. We make seven construction and garden wheelbarrows in our own factory, from the economy 80 L model to the 120 L heavy-duty model with a big pneumatic tyre, and supply them to importers, hardware distributors and contractors abroad.',
+        vi: 'Phú Long là nhà sản xuất xe rùa (xe cút kít) tại Việt Nam. Chúng tôi làm bảy mẫu xe rùa cho công trường và làm vườn tại nhà máy riêng, từ mẫu 80 L giá rẻ tới mẫu 120 L bánh hơi to cho việc nặng, cung cấp cho nhà nhập khẩu, nhà phân phối vật liệu và nhà thầu ở nước ngoài.',
+      },
+      {
+        en: 'Trays come in 70, 80 and 120 L steel or 90 L PP plastic. Frames are galvanized or powder-coated, and each model runs on a solid wheel or a pneumatic tyre. Every wheelbarrow is packed knocked-down so more units fit in a container, and can be made in your colour with your logo.',
+        vi: 'Thùng có loại thép 70, 80, 120 L hoặc nhựa PP 90 L. Khung mạ kẽm hoặc sơn tĩnh điện, bánh đặc hoặc bánh hơi tùy mẫu. Mỗi xe được đóng gói tháo rời để xếp được nhiều hơn trong container, và có thể sơn màu, in logo theo yêu cầu.',
+      },
+    ],
+    faqTitle: { en: 'Wheelbarrow FAQ', vi: 'Câu hỏi thường gặp về xe rùa' },
+    guide: { slug: 'wheelbarrow-buying-guide', label: { en: 'Read the wheelbarrow buying guide', vi: 'Đọc hướng dẫn chọn xe rùa' } },
+    faq: [
+      {
+        q: { en: 'Which wheelbarrow sizes do you make?', vi: 'Có những cỡ xe rùa nào?' },
+        a: {
+          en: '70 L, 80 L, 90 L and 120 L. The 80 L comes in three styles (economy, Chinese style and big tyre) and the 120 L with a big or small pneumatic tyre.',
+          vi: '70 L, 80 L, 90 L và 120 L. Mẫu 80 L có ba kiểu (giá rẻ, kiểu Trung Quốc và bánh to), mẫu 120 L có bánh hơi to hoặc nhỏ.',
+        },
+      },
+      {
+        q: { en: 'Steel or plastic tray: which is better?', vi: 'Nên chọn thùng thép hay thùng nhựa?' },
+        a: {
+          en: 'A steel tray is the classic choice for concrete, gravel and rough site work. A PP plastic tray does not rust, is lighter and suits gardens, farms and wet or chemical materials.',
+          vi: 'Thùng thép là lựa chọn quen thuộc cho bê tông, đá sỏi và công trường. Thùng nhựa PP không gỉ, nhẹ hơn, hợp làm vườn, trang trại và vật liệu ướt hoặc hóa chất.',
+        },
+      },
+      {
+        q: { en: 'Solid wheel or pneumatic tyre?', vi: 'Nên chọn bánh đặc hay bánh hơi?' },
+        a: {
+          en: 'A pneumatic tyre rolls more easily over soft and uneven ground and absorbs shocks. A solid wheel never punctures and needs no maintenance, which suits sites with rebar and debris.',
+          vi: 'Bánh hơi lăn nhẹ hơn trên nền mềm, gồ ghề và giảm xóc tốt. Bánh đặc không bao giờ thủng, không cần bảo dưỡng, hợp công trường có nhiều sắt thép và phế liệu.',
+        },
+      },
+      {
+        q: { en: 'What is the minimum order?', vi: 'Đặt hàng tối thiểu bao nhiêu?' },
+        a: {
+          en: '20 units per model. You can mix models in one container, and we ship LCL or FCL on FOB or CIF terms from Vietnam.',
+          vi: '20 chiếc mỗi mẫu. Có thể ghép nhiều mẫu trong một container, giao hàng LCL hoặc FCL theo điều kiện FOB hoặc CIF từ Việt Nam.',
+        },
+      },
+      {
+        q: { en: 'Can you make wheelbarrows with our brand?', vi: 'Có làm xe rùa mang thương hiệu riêng không?' },
+        a: {
+          en: 'Yes. We paint the tray and frame in your colours and apply your logo, so the wheelbarrows arrive ready for your shelves.',
+          vi: 'Có. Chúng tôi sơn thùng và khung theo màu của bạn và in logo, xe đến tay bạn là sẵn sàng bày bán.',
+        },
+      },
+    ],
+  },
 };
 
 for (const loc of OVERLAY_LOCALES) {

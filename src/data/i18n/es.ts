@@ -162,6 +162,21 @@ export const es: ContentOverlay = {
   },
 
   seo: {
+    'wheelbarrows': {
+      title: "Fabricante de Carretillas en Vietnam – 70 a 120 L | Phu Long",
+      description: "Carretillas fabricadas en Vietnam: bateas de 70, 80, 90 y 120 L de acero o plástico PP, llanta maciza o neumática, chasis galvanizado o con pintura en polvo. OEM.",
+      aboutTitle: "Carretillas de una fábrica en Vietnam",
+      about: ["Phu Long es un fabricante de carretillas en Vietnam. Hacemos siete carretillas para obra y jardín en nuestra propia planta, desde el modelo económico de 80 L hasta el de 120 L para trabajo pesado con llanta neumática grande, y las surtimos a importadores, distribuidores de ferretería y constructoras en el extranjero.", "Las bateas son de acero de 70, 80 y 120 L o de plástico PP de 90 L. Los chasis son galvanizados o con pintura en polvo, y cada modelo lleva llanta maciza o neumática. Cada carretilla se empaca desarmada para que quepan más unidades por contenedor, y puede fabricarse en su color y con su logo."],
+      faqTitle: "Preguntas frecuentes sobre carretillas",
+      guideLabel: "Leer la guía de compra de carretillas",
+      faq: [
+        { q: "¿Qué tamaños de carretilla fabrican?", a: "70 L, 80 L, 90 L y 120 L. La de 80 L viene en tres estilos (económica, estilo chino y llanta grande) y la de 120 L con llanta neumática grande o chica." },
+        { q: "¿Batea de acero o de plástico?", a: "La batea de acero es la opción clásica para concreto, grava y trabajo rudo de obra. La de plástico PP no se oxida, es más ligera y conviene para jardín, campo y materiales húmedos o químicos." },
+        { q: "¿Llanta maciza o neumática?", a: "La llanta neumática rueda más fácil en terreno blando o disparejo y amortigua golpes. La maciza nunca se poncha y no requiere mantenimiento, ideal en obras con varilla y escombro." },
+        { q: "¿Cuál es el pedido mínimo?", a: "20 unidades por modelo. Puede combinar modelos en un contenedor; enviamos LCL o FCL en términos FOB o CIF desde Vietnam." },
+        { q: "¿Pueden fabricar carretillas con nuestra marca?", a: "Sí. Pintamos la batea y el chasis en sus colores y aplicamos su logo, para que las carretillas lleguen listas para venta." },
+      ],
+    },
     'mini-concrete-mixers': {
       title: "Hormigonera Mini 250L Fabricada en Vietnam | Phu Long",
       description: "Hormigonera mini de fábrica en Vietnam: tambor de 250 L, 140–150 kg, 2 o 4 ruedas, motor eléctrico, a gasolina o diésel. Color y logo OEM, exportación FOB/CIF.",

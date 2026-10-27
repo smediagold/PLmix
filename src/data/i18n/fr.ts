@@ -144,6 +144,21 @@ export const fr: ContentOverlay = {
   },
 
   seo: {
+    'wheelbarrows': {
+      title: "Fabricant de Brouettes au Vietnam – 70 à 120 L | Phu Long",
+      description: "Brouettes fabriquées au Vietnam : cuves de 70, 80, 90 et 120 L en acier ou plastique PP, roue pleine ou gonflable, châssis galvanisé ou peinture poudre. OEM.",
+      aboutTitle: "Brouettes d'une usine au Vietnam",
+      about: ["Phu Long est un fabricant de brouettes au Vietnam. Nous fabriquons sept brouettes de chantier et de jardin dans notre propre usine, du modèle économique de 80 L au modèle 120 L pour gros travaux avec grand pneu gonflable, et les fournissons à des importateurs, distributeurs de quincaillerie et entreprises du bâtiment à l'étranger.", "Les cuves existent en acier de 70, 80 et 120 L ou en plastique PP de 90 L. Les châssis sont galvanisés ou en peinture poudre, et chaque modèle roule sur une roue pleine ou un pneu gonflable. Chaque brouette est livrée en kit pour charger plus d'unités par conteneur, et peut être fabriquée à vos couleurs avec votre logo."],
+      faqTitle: "Questions fréquentes sur les brouettes",
+      guideLabel: "Lire le guide d'achat des brouettes",
+      faq: [
+        { q: "Quelles tailles de brouettes fabriquez-vous ?", a: "70 L, 80 L, 90 L et 120 L. La 80 L existe en trois versions (économique, style chinois et grande roue) et la 120 L avec grand ou petit pneu gonflable." },
+        { q: "Cuve en acier ou en plastique ?", a: "La cuve en acier est le choix classique pour le béton, le gravier et les chantiers difficiles. La cuve en plastique PP ne rouille pas, est plus légère et convient au jardin, à la ferme et aux matériaux humides ou chimiques." },
+        { q: "Roue pleine ou pneu gonflable ?", a: "Le pneu gonflable roule plus facilement sur sol meuble ou irrégulier et amortit les chocs. La roue pleine ne crève jamais et ne demande aucun entretien, idéale sur les chantiers pleins de ferraille et de gravats." },
+        { q: "Quelle est la commande minimale ?", a: "20 unités par modèle. Vous pouvez mélanger les modèles dans un conteneur ; expédition LCL ou FCL en FOB ou CIF depuis le Vietnam." },
+        { q: "Pouvez-vous fabriquer des brouettes à notre marque ?", a: "Oui. Nous peignons la cuve et le châssis à vos couleurs et posons votre logo : les brouettes arrivent prêtes à la vente." },
+      ],
+    },
     'mini-concrete-mixers': {
       title: "Mini Bétonnière 250L Fabriquée au Vietnam | Phu Long",
       description: "Mini bétonnière d'une usine au Vietnam : cuve de 250 L, 140–150 kg, 2 ou 4 roues, moteur électrique, essence ou diesel. Couleur et logo OEM, export FOB/CIF.",
