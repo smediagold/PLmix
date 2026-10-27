@@ -7,6 +7,7 @@ const intl = createMiddleware(routing);
 const BLOCKED = new Set(['VN']);
 const BYPASS_KEY = 'Dhx1LNYxkl4e';
 const BYPASS_COOKIE = 'pl_access';
+const VN_SITE = '';
 
 export function proxy(req: NextRequest) {
   const key = req.nextUrl.searchParams.get('access');
@@ -20,6 +21,7 @@ export function proxy(req: NextRequest) {
 
   const country = req.headers.get('x-vercel-ip-country');
   if (country && BLOCKED.has(country) && req.cookies.get(BYPASS_COOKIE)?.value !== BYPASS_KEY) {
+    if (VN_SITE) return NextResponse.redirect(VN_SITE, 302);
     return new NextResponse('Access to this website is not available in your region.', {
       status: 403,
       headers: { 'content-type': 'text/plain; charset=utf-8', 'cache-control': 'no-store' },
