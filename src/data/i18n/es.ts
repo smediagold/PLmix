@@ -9,6 +9,13 @@ export const es: ContentOverlay = {
   },
 
   lines: {
+    'mini-concrete-mixers': {
+      name: "Hormigonera Mini",
+      tagline: "Hormigoneras de tambor de 250 L, 140–150 kg, tan ligeras que una persona las empuja. Motor eléctrico, a gasolina o diésel.",
+      intro: "Una hormigonera mini es una mezcladora de tambor pequeña y portátil para trabajos que necesitan concreto o mortero en lotes pequeños: reparaciones, zapatas, andadores, albañilería y azulejo. Las nuestras tienen 250 litros, pesan 140–150 kg y pasan por un portón estándar, con el mismo acero de tambor de 2–2.5 mm que nuestras hormigoneras grandes.",
+      facts: [{ label: "Capacidad del tambor", value: "250 L" }, { label: "Peso", value: "140 – 150 kg" }, { label: "Motor", value: "Eléctrico, gasolina o diésel" }, { label: "Ruedas", value: "2 o 4" }],
+      photos: ["Sala de exhibición, hormigoneras en cuatro colores", "Nave de ensamble", "Tambores listos para un contenedor FCL"],
+    },
     'concrete-mixers': {
       name: 'Hormigoneras',
       tagline: 'Hormigoneras de tambor de 250 a 500 litros, hechas con su color, motor y logo.',
@@ -155,6 +162,21 @@ export const es: ContentOverlay = {
   },
 
   seo: {
+    'mini-concrete-mixers': {
+      title: "Hormigonera Mini 250L Fabricada en Vietnam | Phu Long",
+      description: "Hormigonera mini de fábrica en Vietnam: tambor de 250 L, 140–150 kg, 2 o 4 ruedas, motor eléctrico, a gasolina o diésel. Color y logo OEM, exportación FOB/CIF.",
+      aboutTitle: "¿Qué es una hormigonera mini?",
+      about: ["Una hormigonera mini (mezcladora o revolvedora pequeña) es una máquina de tambor compacta y portátil que convierte cemento, arena, grava y agua en concreto o mortero en lotes pequeños. Es la medida justa para reparaciones, postes de cerca, zapatas, andadores, albañilería, aplanados y azulejo, donde una hormigonera grande pesa demasiado y mezclar a mano es muy lento.", "Phu Long fabrica sus hormigoneras mini en su propia planta en Vietnam. Cada hormigonera de 250 L pesa 140–150 kg, mide 1700 × 860 × 1300 mm y usa llantas macizas 4.00-8, con 2 ruedas para empujarla fácil o 4 ruedas para más estabilidad. Elija motor eléctrico para obra en interiores y en la ciudad, o motor a gasolina o diésel para obras sin corriente, en su color y con su logo."],
+      faqTitle: "Preguntas frecuentes sobre la hormigonera mini",
+      guideLabel: "Leer: cómo elegir una hormigonera",
+      faq: [
+        { q: "¿Qué tamaño tiene una hormigonera mini?", a: "Nuestra hormigonera mini tiene un tambor de 250 L y mide 1700 × 860 × 1300 mm. Pesa 140 kg con 2 ruedas o 150 kg con 4 ruedas." },
+        { q: "¿Para qué se usa una hormigonera mini?", a: "Para lotes pequeños de concreto o mortero en reparaciones, zapatas, postes, andadores, albañilería, aplanados y azulejo, en obras donde una hormigonera grande no cabe o quedaría ociosa." },
+        { q: "Eléctrico, gasolina o diésel: ¿qué motor conviene?", a: "El eléctrico (2.2–5.5 kW) es silencioso y limpio para interiores y ciudad. El de gasolina (GP160/GP200) sirve donde no hay corriente. El diésel es para jornadas largas y obras alejadas." },
+        { q: "¿Hormigonera mini o de un bulto?", a: "Elija la mini de 250 L cuando lo más importante es moverla fácil. Si vacía más concreto al día, nuestros modelos de 350 L y 385 L mezclan un bulto completo de cemento de 50 kg por lote." },
+        { q: "¿Puedo pedir hormigoneras mini con mi marca?", a: "Sí. Pintamos la hormigonera en su color y aplicamos su logo y calcomanías. El pedido mínimo es de 5 unidades por modelo, con envío LCL o FCL en términos FOB o CIF." },
+      ],
+    },
     'stirrup-bending-machines': {
       title: "Dobladora de Estribos Automática de Vietnam | Phu Long",
       description: "Dobladoras de estribos automáticas fabricadas en Vietnam: alimentan, enderezan, doblan y cortan varilla de 6–10 mm. Modelo estándar y servo PLC, 220 V, FOB/CIF.",

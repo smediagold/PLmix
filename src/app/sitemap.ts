@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { lines } from '@/data/lines';
+import { lines, landings } from '@/data/lines';
 import { products } from '@/data/products';
 import { blogPosts, postInLocale } from '@/data/blog';
 import { LOCALES } from '@/data/nav';
@@ -25,6 +25,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...entry('', 1, 'weekly'),
     ...entry('/products/concrete-mixers', 0.95, 'weekly'),
+    ...landings.flatMap((l) => entry(`/products/${l.slug}`, 0.9, 'weekly')),
     ...lines.filter((l) => l.slug !== 'concrete-mixers').flatMap((l) => entry(`/products/${l.slug}`, 0.8, 'weekly')),
     ...entry('/products', 0.7, 'weekly'),
     ...products.flatMap((p) => entry(`/products/${p.id.toLowerCase()}`, p.subcategory === 'concrete-mixer' ? 0.75 : 0.6, 'monthly')),

@@ -261,11 +261,18 @@ export default async function LinePage({ line, locale }: { line: ProductLine; lo
                   </details>
                 ))}
               </div>
-              {seo.guide && (
-                <Link href={`/blog/${seo.guide.slug}`} className="mt-6 inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
-                  {pick(seo.guide.label, locale)}
-                </Link>
-              )}
+              <div className="mt-6 flex flex-wrap gap-x-8">
+                {seo.guide && (
+                  <Link href={`/blog/${seo.guide.slug}`} className="inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
+                    {pick(seo.guide.label, locale)}
+                  </Link>
+                )}
+                {seo.related && (
+                  <Link href={`/products/${seo.related.slug}`} className="inline-flex min-h-11 items-center text-[17px] font-semibold text-ink underline underline-offset-4">
+                    {pick(seo.related.label, locale)}
+                  </Link>
+                )}
+              </div>
             </div>
           </div>
         </section>

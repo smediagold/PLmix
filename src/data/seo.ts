@@ -9,6 +9,7 @@ export type LineSeo = {
   faqTitle: Bi;
   faq: { q: Bi; a: Bi }[];
   guide?: { slug: string; label: Bi };
+  related?: { slug: string; label: Bi };
 };
 
 export const lineSeo: Record<string, LineSeo> = {
@@ -37,6 +38,7 @@ export const lineSeo: Record<string, LineSeo> = {
     ],
     faqTitle: { en: 'Concrete mixer FAQ', vi: 'Câu hỏi thường gặp về máy trộn bê tông' },
     guide: { slug: '1-bag-concrete-mixer-guide', label: { en: 'Read the 1 bag concrete mixer guide', vi: 'Đọc hướng dẫn chọn máy trộn 1 bao' } },
+    related: { slug: 'mini-concrete-mixers', label: { en: 'See our mini concrete mixers', vi: 'Xem máy trộn bê tông mini', es: 'Ver hormigoneras mini', fr: 'Voir les mini bétonnières' } },
     faq: [
       {
         q: { en: 'What is a 1 bag concrete mixer?', vi: 'Máy trộn 1 bao xi măng là gì?' },
@@ -162,6 +164,66 @@ export const lineSeo: Record<string, LineSeo> = {
         a: {
           en: 'You can order a single machine. Each machine weighs 250–270 kg and measures 2200 × 950 × 1280 mm; we ship by LCL or FCL on FOB or CIF terms from Vietnam.',
           vi: 'Có thể đặt từ 1 máy. Mỗi máy nặng 250–270 kg, kích thước 2200 × 950 × 1280 mm; giao hàng LCL hoặc FCL theo điều kiện FOB hoặc CIF từ Việt Nam.',
+        },
+      },
+    ],
+  },
+  'mini-concrete-mixers': {
+    title: {
+      en: 'Mini Concrete Mixer 250L – Made in Vietnam | Phu Long',
+      vi: 'Máy Trộn Bê Tông Mini 250L – Sản Xuất Tại Việt Nam | Phú Long',
+    },
+    description: {
+      en: 'Mini concrete mixer from a Vietnam factory: 250 L drum, 140–150 kg, 2 or 4 wheels, electric, gasoline or diesel engine. OEM colour and logo, export FOB/CIF.',
+      vi: 'Máy trộn bê tông mini từ nhà máy Việt Nam: thùng 250 L, nặng 140–150 kg, 2 hoặc 4 bánh, động cơ điện, xăng hoặc diesel. Làm theo màu và logo, xuất khẩu.',
+    },
+    aboutTitle: { en: 'What is a mini concrete mixer?', vi: 'Máy trộn bê tông mini là gì?' },
+    about: [
+      {
+        en: 'A mini concrete mixer is a compact, portable drum mixer that turns cement, sand, stone and water into concrete or mortar in small batches. It is the right size for house repairs, fence posts, footings, garden paths, brickwork, plastering and tiling, where a full-size mixer is too heavy to move and hand mixing is too slow.',
+        vi: 'Máy trộn bê tông mini là máy trộn thùng quay nhỏ gọn, dễ di chuyển, trộn xi măng, cát, đá và nước thành bê tông hoặc vữa theo mẻ nhỏ. Máy vừa với sửa nhà, chôn cột hàng rào, đổ móng nhỏ, lối đi, xây gạch, trát và ốp lát, những việc mà máy lớn thì quá nặng để di chuyển còn trộn tay thì quá chậm.',
+      },
+      {
+        en: 'Phu Long builds its mini concrete mixers in our own factory in Vietnam. Each 250 L mixer weighs 140–150 kg, measures 1700 × 860 × 1300 mm and runs on solid 4.00-8 tyres, with 2 wheels for easy pushing or 4 wheels for stability. Choose an electric motor for indoor and urban work, or a gasoline or diesel engine for sites without power, in your colour and with your logo.',
+        vi: 'Phú Long sản xuất máy trộn bê tông mini tại nhà máy riêng ở Việt Nam. Mỗi máy 250 L nặng 140–150 kg, kích thước 1700 × 860 × 1300 mm, dùng lốp đặc 4.00-8, loại 2 bánh dễ đẩy hoặc 4 bánh vững chắc. Chọn động cơ điện cho công trình trong nhà và đô thị, hoặc động cơ xăng, diesel cho nơi không có điện, sơn màu và in logo theo yêu cầu.',
+      },
+    ],
+    faqTitle: { en: 'Mini concrete mixer FAQ', vi: 'Câu hỏi thường gặp về máy trộn bê tông mini' },
+    guide: { slug: 'how-to-choose-concrete-mixer', label: { en: 'Read: how to choose a concrete mixer', vi: 'Đọc: cách chọn máy trộn bê tông' } },
+    faq: [
+      {
+        q: { en: 'What size is a mini concrete mixer?', vi: 'Máy trộn bê tông mini có kích thước bao nhiêu?' },
+        a: {
+          en: 'Our mini concrete mixer has a 250 L drum and measures 1700 × 860 × 1300 mm. It weighs 140 kg with 2 wheels or 150 kg with 4 wheels.',
+          vi: 'Máy trộn bê tông mini của chúng tôi có thùng 250 L, kích thước 1700 × 860 × 1300 mm. Nặng 140 kg với bản 2 bánh hoặc 150 kg với bản 4 bánh.',
+        },
+      },
+      {
+        q: { en: 'What is a mini concrete mixer used for?', vi: 'Máy trộn bê tông mini dùng để làm gì?' },
+        a: {
+          en: 'Small batches of concrete or mortar for repairs, footings, fence posts, paths, brickwork, plastering and tiling, on sites where a large mixer cannot fit or would sit idle.',
+          vi: 'Trộn bê tông hoặc vữa theo mẻ nhỏ để sửa chữa, đổ móng nhỏ, chôn cột, làm lối đi, xây gạch, trát và ốp lát, ở những nơi máy lớn không vào được hoặc không cần dùng hết công suất.',
+        },
+      },
+      {
+        q: { en: 'Electric, gasoline or diesel: which engine is best?', vi: 'Nên chọn động cơ điện, xăng hay diesel?' },
+        a: {
+          en: 'Electric (2.2–5.5 kW) is quiet and clean for indoor and city work. Gasoline (GP160/GP200) suits sites without power. Diesel is the choice for long daily runs and remote sites.',
+          vi: 'Động cơ điện (2,2–5,5 kW) êm và sạch, hợp công trình trong nhà và đô thị. Động cơ xăng (GP160/GP200) hợp nơi không có điện. Diesel phù hợp khi chạy nhiều giờ mỗi ngày và ở công trường xa.',
+        },
+      },
+      {
+        q: { en: 'Mini mixer or 1 bag concrete mixer?', vi: 'Nên chọn máy trộn mini hay máy trộn 1 bao?' },
+        a: {
+          en: 'Choose the 250 L mini mixer when portability matters most. If you pour more concrete per day, our 350 L and 385 L models take a full 50 kg bag of cement per batch.',
+          vi: 'Chọn máy mini 250 L khi cần gọn nhẹ, dễ di chuyển. Nếu đổ nhiều bê tông mỗi ngày, các model 350 L và 385 L trộn trọn một bao xi măng 50 kg mỗi mẻ.',
+        },
+      },
+      {
+        q: { en: 'Can I order mini mixers with my own brand?', vi: 'Có thể đặt máy trộn mini mang thương hiệu riêng không?' },
+        a: {
+          en: 'Yes. We paint the mixer in your colour and apply your logo and decals. The minimum order is 5 units per model, shipped LCL or FCL on FOB or CIF terms.',
+          vi: 'Có. Chúng tôi sơn máy theo màu và dán logo, tem nhãn của bạn. Đặt tối thiểu 5 chiếc mỗi model, giao hàng LCL hoặc FCL theo điều kiện FOB hoặc CIF.',
         },
       },
     ],

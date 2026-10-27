@@ -9,6 +9,13 @@ export const fr: ContentOverlay = {
   },
 
   lines: {
+    'mini-concrete-mixers': {
+      name: "Mini Bétonnière",
+      tagline: "Bétonnières à cuve de 250 L, 140–150 kg, assez légères pour être poussées par une seule personne. Moteur électrique, essence ou diesel.",
+      intro: "Une mini bétonnière est une petite bétonnière à cuve, facile à déplacer, pour les travaux qui demandent du béton ou du mortier en petites gâchées : réparations, semelles, allées, maçonnerie et carrelage. Les nôtres ont une cuve de 250 litres, pèsent 140–150 kg et passent par un portail standard, avec la même tôle de cuve de 2–2.5 mm que nos grandes bétonnières.",
+      facts: [{ label: "Capacité de la cuve", value: "250 L" }, { label: "Poids", value: "140 – 150 kg" }, { label: "Moteur", value: "Électrique, essence ou diesel" }, { label: "Roues", value: "2 ou 4" }],
+      photos: ["Showroom, bétonnières en quatre couleurs", "Hall d'assemblage", "Cuves prêtes pour un chargement FCL"],
+    },
     'concrete-mixers': {
       name: 'Bétonnières',
       tagline: 'Bétonnières à cuve de 250 à 500 litres, fabriquées à votre couleur, avec votre moteur et votre logo.',
@@ -137,6 +144,21 @@ export const fr: ContentOverlay = {
   },
 
   seo: {
+    'mini-concrete-mixers': {
+      title: "Mini Bétonnière 250L Fabriquée au Vietnam | Phu Long",
+      description: "Mini bétonnière d'une usine au Vietnam : cuve de 250 L, 140–150 kg, 2 ou 4 roues, moteur électrique, essence ou diesel. Couleur et logo OEM, export FOB/CIF.",
+      aboutTitle: "Qu'est-ce qu'une mini bétonnière ?",
+      about: ["Une mini bétonnière est une bétonnière à cuve compacte et mobile qui transforme ciment, sable, gravier et eau en béton ou en mortier par petites gâchées. C'est la bonne taille pour les réparations, les poteaux de clôture, les semelles, les allées, la maçonnerie, l'enduit et le carrelage, là où une grande bétonnière est trop lourde à déplacer et le malaxage à la main trop lent.", "Phu Long fabrique ses mini bétonnières dans sa propre usine au Vietnam. Chaque bétonnière de 250 L pèse 140–150 kg, mesure 1700 × 860 × 1300 mm et roule sur des pneus pleins 4.00-8, avec 2 roues pour la pousser facilement ou 4 roues pour plus de stabilité. Choisissez un moteur électrique pour l'intérieur et la ville, ou un moteur essence ou diesel pour les chantiers sans courant, à votre couleur et avec votre logo."],
+      faqTitle: "Questions fréquentes sur la mini bétonnière",
+      guideLabel: "Lire : comment choisir une bétonnière",
+      faq: [
+        { q: "Quelle est la taille d’une mini bétonnière ?", a: "Notre mini bétonnière a une cuve de 250 L et mesure 1700 × 860 × 1300 mm. Elle pèse 140 kg avec 2 roues ou 150 kg avec 4 roues." },
+        { q: "À quoi sert une mini bétonnière ?", a: "À préparer de petites gâchées de béton ou de mortier pour les réparations, semelles, poteaux, allées, la maçonnerie, l'enduit et le carrelage, sur les chantiers où une grande bétonnière ne passe pas ou resterait inutilisée." },
+        { q: "Électrique, essence ou diesel : quel moteur choisir ?", a: "L'électrique (2.2–5.5 kW) est silencieux et propre pour l'intérieur et la ville. L'essence (GP160/GP200) convient aux chantiers sans courant. Le diesel est fait pour les longues journées et les chantiers isolés." },
+        { q: "Mini bétonnière ou bétonnière 1 sac ?", a: "Choisissez la mini 250 L quand la mobilité compte le plus. Si vous coulez plus de béton par jour, nos modèles 350 L et 385 L malaxent un sac complet de ciment de 50 kg par gâchée." },
+        { q: "Puis-je commander des mini bétonnières à ma marque ?", a: "Oui. Nous peignons la bétonnière à votre couleur et posons votre logo et vos autocollants. Commande minimale de 5 unités par modèle, expédition LCL ou FCL en FOB ou CIF." },
+      ],
+    },
     'stirrup-bending-machines': {
       title: "Cintreuse d'Étriers Automatique du Vietnam | Phu Long",
       description: "Cintreuses d'étriers automatiques fabriquées au Vietnam : alimentent, dressent, cintrent et coupent le fer à béton de 6–10 mm. Modèle standard et servo PLC, 220 V.",

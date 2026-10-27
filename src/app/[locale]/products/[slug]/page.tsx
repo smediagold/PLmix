@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { products, getProductById, productName, productDescription, specLabel, customLabel, type Product } from '@/data/products';
 import { alternates } from '@/lib/meta';
-import { lines, getLine, lineOfProduct, pick } from '@/data/lines';
+import { lines, landings, getLine, lineOfProduct, pick } from '@/data/lines';
 import { Link } from '@/i18n/navigation';
 import ProductGallery from '@/components/products/ProductGallery';
 import InquiryToggle from '@/components/inquiry/InquiryToggle';
@@ -15,7 +15,7 @@ import { keyFact } from '@/components/lines/ModelGrid';
 import LoopVideo from '@/components/site/LoopVideo';
 
 export function generateStaticParams() {
-  return [...lines.map((l) => ({ slug: l.slug })), ...products.map((p) => ({ slug: p.id.toLowerCase() }))];
+  return [...lines.map((l) => ({ slug: l.slug })), ...landings.map((l) => ({ slug: l.slug })), ...products.map((p) => ({ slug: p.id.toLowerCase() }))];
 }
 
 const base = 'https://www.phulongglobal.com';
@@ -91,6 +91,7 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
   const name = productName(product, locale);
   const description = productDescription(product, locale);
   const line = lineOfProduct(product);
+  const landing = landings.find((l) => l.ids?.includes(product.id));
   const base = 'https://www.phulongglobal.com';
   const url = `${base}/${locale}/products/${product.id.toLowerCase()}`;
   const ld = [
@@ -155,6 +156,11 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
           </div>
           <div className="flex flex-col lg:col-start-2 lg:row-start-2">
             <p className="max-w-[68ch] text-[17px] leading-[1.55] text-ink">{description}</p>
+            {landing && (
+              <Link href={`/products/${landing.slug}`} className="mt-3 inline-flex min-h-11 w-fit items-center text-[17px] font-semibold text-ink underline underline-offset-4">
+                {pick(landing.name, locale)}
+              </Link>
+            )}
 
             <dl className="mt-8 grid grid-cols-2 gap-x-8 gap-y-5">
               {Object.entries(product.specifications).slice(0, 4).map(([k, v]) => (

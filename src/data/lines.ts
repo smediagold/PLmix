@@ -13,6 +13,7 @@ export interface ProductLine {
   group: LineGroup;
   main: boolean;
   subcategories: Subcategory[];
+  ids?: string[];
   name: Bi;
   tagline: Bi;
   intro: Bi;
@@ -290,13 +291,47 @@ export const lines: ProductLine[] = [
 ];
 
 
+export const landings: ProductLine[] = [
+  {
+    slug: 'mini-concrete-mixers',
+    group: 'construction',
+    main: false,
+    subcategories: [],
+    ids: ['CM-250-2W', 'CM-250-4W'],
+    name: { en: 'Mini Concrete Mixer', vi: 'Máy Trộn Bê Tông Mini' },
+    tagline: {
+      en: 'Compact 250 L drum mixers, 140–150 kg, light enough for one person to push. Electric, gasoline or diesel.',
+      vi: 'Máy trộn thùng quay 250 L gọn nhẹ, 140–150 kg, một người đẩy được. Động cơ điện, xăng hoặc diesel.',
+    },
+    intro: {
+      en: 'A mini concrete mixer is a small, portable drum mixer for jobs that need concrete or mortar in small batches: repairs, footings, garden paths, brickwork and tiling. Ours hold 250 litres, weigh 140–150 kg and fit through a standard gate, yet use the same 2–2.5 mm drum steel as our larger mixers.',
+      vi: 'Máy trộn bê tông mini là máy trộn thùng quay cỡ nhỏ, dễ di chuyển, dùng cho các việc cần bê tông hoặc vữa theo mẻ nhỏ: sửa chữa, móng nhỏ, lối đi, xây gạch và ốp lát. Máy của chúng tôi dung tích 250 lít, nặng 140–150 kg, lọt qua cổng tiêu chuẩn, nhưng dùng cùng loại thép thùng 2–2,5 mm như các máy lớn.',
+    },
+    facts: [
+      f('Drum capacity', 'Dung tích thùng', '250 L', '250 L'),
+      f('Weight', 'Trọng lượng', '140 – 150 kg', '140 – 150 kg'),
+      f('Engine', 'Động cơ', 'Electric, gasoline or diesel', 'Điện, xăng hoặc diesel'),
+      f('Wheels', 'Số bánh', '2 or 4', '2 hoặc 4'),
+    ],
+    cover: '/images/products/concrete-mixer/cm-250-2w-1.png',
+    photos: [
+      { src: '/images/factory/showroom.jpg', caption: { en: 'Showroom, mixers in four colours', vi: 'Phòng trưng bày, máy trộn bốn màu' } },
+      { src: '/images/factory/factory-3.jpg', caption: { en: 'Assembly hall', vi: 'Xưởng lắp ráp' } },
+      { src: '/images/factory/loading-fcl.jpg', caption: { en: 'Drums ready for an FCL load', vi: 'Thùng trộn chờ đóng container FCL' } },
+    ],
+    video: '/videos/cm-250l.mp4',
+    poster: '/images/posters/concrete-mixers.jpg',
+    tone: 'orange',
+  },
+];
+
 export const mainLines = lines.filter((l) => l.main);
 export const otherLines = lines.filter((l) => !l.main);
 
-export const getLine = (slug: string) => lines.find((l) => l.slug === slug);
+export const getLine = (slug: string) => [...lines, ...landings].find((l) => l.slug === slug);
 
 export const lineProducts = (line: ProductLine): Product[] =>
-  products.filter((p) => line.subcategories.includes(p.subcategory));
+  line.ids ? products.filter((p) => line.ids!.includes(p.id)) : products.filter((p) => line.subcategories.includes(p.subcategory));
 
 export const lineOfProduct = (p: Product) => lines.find((l) => l.subcategories.includes(p.subcategory));
 
@@ -308,7 +343,7 @@ export const skuNames = (locale: string): Record<string, string> =>
   Object.fromEntries(products.map((p) => [p.id, productName(p, locale)]));
 
 for (const loc of OVERLAY_LOCALES) {
-  for (const l of lines) {
+  for (const l of [...lines, ...landings]) {
     const o = overlays[loc].lines[l.slug];
     if (!o) continue;
     l.name[loc] = o.name;
