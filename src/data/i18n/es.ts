@@ -155,6 +155,22 @@ export const es: ContentOverlay = {
   },
 
   seo: {
+    'stirrup-bending-machines': {
+      title: "Dobladora de Estribos Automática de Vietnam | Phu Long",
+      description: "Dobladoras de estribos automáticas fabricadas en Vietnam: alimentan, enderezan, doblan y cortan varilla de 6–10 mm. Modelo estándar y servo PLC, 220 V, FOB/CIF.",
+      aboutTitle: "Dobladoras de estribos automáticas de Vietnam",
+      about: ["Phu Long fabrica dobladoras de estribos automáticas en su propia planta en Vietnam. Una sola máquina alimenta la varilla desde el rollo, la endereza, dobla cada esquina al ángulo programado y corta el estribo terminado, así un operador sustituye a una cuadrilla de dobladores manuales.", "Ambos modelos trabajan varilla lisa y corrugada de 6 a 10 mm con corriente monofásica de 220 V. El modelo de motor estándar hace 14–15 estribos por minuto (14 × 14 cm) en medidas de hasta 110 cm. El modelo servo con PLC y pantalla táctil HMI dobla con más precisión, llega a estribos de 1,200 mm, produce 2.5–5 toneladas al día y se detiene solo cuando se acaba el acero."],
+      faqTitle: "Preguntas frecuentes sobre la dobladora de estribos",
+      guideLabel: "Leer: motor estándar o servo PLC",
+      faq: [
+        { q: "¿Qué hace una dobladora de estribos automática?", a: "Alimenta la varilla, la endereza, la dobla con la forma que usted programa en la pantalla táctil y la corta, en un solo ciclo continuo. Hace estribos cuadrados, rectangulares, triangulares, hexagonales, en C, espirales y a medida." },
+        { q: "¿Qué diámetros de varilla puede doblar?", a: "Varilla lisa y corrugada de 6 a 10 mm en ambos modelos. El estribo más pequeño mide unos 7 cm en el modelo estándar y 55 mm en el modelo servo." },
+        { q: "¿Motor estándar o servo: cuál elijo?", a: "Elija el motor estándar para alta producción de estribos comunes de hasta 110 cm. Elija el servo PLC si necesita más precisión, estribos grandes de hasta 1,200 mm y paro automático cuando se acaba la varilla." },
+        { q: "¿Qué alimentación eléctrica necesita?", a: "220 V monofásico de serie, por lo que funciona con la mayoría de generadores de obra y talleres. Bajo pedido hay versión trifásica del modelo estándar." },
+        { q: "¿Cuántos operadores necesita?", a: "Uno. El operador coloca el rollo, elige la forma en la pantalla y recoge los estribos terminados. La mayoría de los compradores recupera la inversión con el ahorro de mano de obra y de acero." },
+        { q: "¿Cuál es el pedido mínimo y cómo se envía?", a: "Puede pedir una sola máquina. Cada una pesa 250–270 kg y mide 2200 × 950 × 1280 mm; enviamos en LCL o FCL con términos FOB o CIF desde Vietnam." },
+      ],
+    },
     'concrete-mixers': {
       title: 'Hormigoneras y Revolvedoras de Vietnam | Phu Long',
       description:
@@ -297,7 +313,7 @@ export const es: ContentOverlay = {
     'SBM-SERVO': {
       name: 'Dobladora de Estribos — Servomotor',
       description:
-        'Dobladora de estribos de alta precisión con servomotor. Mayor velocidad (mínimo 5–6 estribos/min), estribos de hasta 1200 mm. Programación PLC con pantalla táctil HMI. Se detiene automáticamente cuando se acaba el acero.',
+        "Dobladora de estribos automática de alta precisión con servomotor. Dobla varilla lisa y corrugada de 6–10 mm en estribos de 55 mm hasta 1200 mm, 2.5–5 toneladas al día. Programación PLC con pantalla táctil HMI. Se detiene automáticamente cuando se acaba el acero.",
     },
     'PLSP-06': {
       name: 'Trasplantadora de Arroz PLSP-06 (6 Surcos)',

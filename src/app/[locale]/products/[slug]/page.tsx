@@ -55,7 +55,9 @@ export async function generateMetadata({
       absolute:
         product.subcategory === 'concrete-mixer'
           ? tm('skuMixerTitle', { size: product.name_en.match(/^\d+\s?L/)?.[0] ?? '', kind, sku: product.id })
-          : tm('skuTitle', { name: name.split(' — ')[0] }),
+          : product.subcategory === 'stirrup-bending-machine'
+            ? tm('skuTitle', { name })
+            : tm('skuTitle', { name: `${name.split(' — ')[0]} ${product.id}` }),
     },
     description,
     alternates: alt,

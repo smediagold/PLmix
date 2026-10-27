@@ -137,6 +137,22 @@ export const fr: ContentOverlay = {
   },
 
   seo: {
+    'stirrup-bending-machines': {
+      title: "Cintreuse d'Étriers Automatique du Vietnam | Phu Long",
+      description: "Cintreuses d'étriers automatiques fabriquées au Vietnam : alimentent, dressent, cintrent et coupent le fer à béton de 6–10 mm. Modèle standard et servo PLC, 220 V.",
+      aboutTitle: "Cintreuses d'étriers automatiques du Vietnam",
+      about: ["Phu Long fabrique des cintreuses d'étriers automatiques dans sa propre usine au Vietnam. Une seule machine alimente le fer depuis la bobine, le dresse, cintre chaque angle selon le programme et coupe l'étrier fini : un opérateur remplace une équipe de cintrage manuel.", "Les deux modèles acceptent le fer lisse et haute adhérence de 6 à 10 mm et fonctionnent en 220 V monophasé. Le modèle à moteur standard produit 14–15 étriers par minute (14 × 14 cm) jusqu'à 110 cm. Le modèle servo avec PLC et écran tactile HMI cintre plus précisément, atteint des étriers de 1 200 mm, produit 2.5–5 tonnes par jour et s'arrête seul quand l'acier est épuisé."],
+      faqTitle: "Questions fréquentes sur la cintreuse d'étriers",
+      guideLabel: "Lire : moteur standard ou servo PLC",
+      faq: [
+        { q: "Que fait une cintreuse d'étriers automatique ?", a: "Elle alimente le fer, le dresse, le cintre selon la forme réglée sur l'écran tactile et le coupe, en un seul cycle continu. Étriers carrés, rectangulaires, triangulaires, hexagonaux, en C, en spirale ou sur mesure." },
+        { q: "Quels diamètres de fer peut-elle cintrer ?", a: "Fer lisse et haute adhérence de 6 à 10 mm sur les deux modèles. Le plus petit étrier mesure environ 7 cm sur le modèle standard et 55 mm sur le modèle servo." },
+        { q: "Moteur standard ou servo : lequel choisir ?", a: "Le moteur standard pour une forte production d'étriers courants jusqu'à 110 cm. Le servo PLC pour plus de précision, des étriers jusqu'à 1 200 mm et l'arrêt automatique en fin de fer." },
+        { q: "Quelle alimentation électrique faut-il ?", a: "220 V monophasé en standard, compatible avec la plupart des groupes électrogènes de chantier et des ateliers. Une version triphasée du modèle standard existe sur demande." },
+        { q: "Combien d'opérateurs faut-il ?", a: "Un seul. Il installe la bobine, choisit la forme sur l'écran et récupère les étriers finis. La plupart des clients amortissent la machine grâce à la main-d'œuvre et à l'acier économisés." },
+        { q: "Quelle est la commande minimale et comment est-elle expédiée ?", a: "Vous pouvez commander une seule machine. Chacune pèse 250–270 kg et mesure 2200 × 950 × 1280 mm ; expédition en LCL ou FCL, conditions FOB ou CIF depuis le Vietnam." },
+      ],
+    },
     'concrete-mixers': {
       title: 'Bétonnière Vietnam – Fabricant de bétonnières | Phu Long',
       description:
@@ -279,7 +295,7 @@ export const fr: ContentOverlay = {
     'SBM-SERVO': {
       name: "Cintreuse d'étriers — servomoteur",
       description:
-        "Cintreuse d'étriers de haute précision à servomoteur. Vitesse supérieure (5–6 étriers/min minimum), étriers jusqu'à 1200mm. Programmation PLC avec écran tactile HMI. Arrêt automatique quand l'acier est épuisé.",
+        "Cintreuse d'étriers automatique de haute précision à servomoteur. Cintre le fer lisse et haute adhérence de 6–10 mm en étriers de 55 mm à 1200 mm, 2.5–5 tonnes par jour. Programmation PLC avec écran tactile HMI. Arrêt automatique quand l'acier est épuisé.",
     },
     'PLSP-06': {
       name: 'Repiqueuse de riz PLSP-06 (6 rangs)',

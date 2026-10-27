@@ -96,6 +96,76 @@ export const lineSeo: Record<string, LineSeo> = {
       },
     ],
   },
+  'stirrup-bending-machines': {
+    title: {
+      en: 'Automatic Stirrup Bending Machine Manufacturer | Phu Long',
+      vi: 'Máy Uốn Đai, Máy Bẻ Đai Tự Động Việt Nam | Phú Long',
+    },
+    description: {
+      en: 'Automatic stirrup bending machines made in Vietnam: feed, straighten, bend and cut 6–10 mm rebar. Normal-motor and servo PLC models, 220 V, export FOB/CIF.',
+      vi: 'Máy uốn đai (máy bẻ đai) thép tự động sản xuất tại Việt Nam: nạp, nắn, uốn và cắt thép 6–10 mm. Bản động cơ thường và servo PLC, điện 220 V.',
+    },
+    aboutTitle: {
+      en: 'Automatic stirrup benders from Vietnam',
+      vi: 'Máy uốn đai thép tự động từ Việt Nam',
+    },
+    about: [
+      {
+        en: 'Phu Long builds automatic stirrup bending machines in our own factory in Vietnam. One machine feeds rebar from the coil, straightens it, bends every corner at the programmed angle and cuts the finished stirrup, so a single operator replaces a team of hand benders.',
+        vi: 'Phú Long sản xuất máy uốn đai thép tự động tại nhà máy riêng ở Việt Nam. Một máy tự nạp thép từ cuộn, nắn thẳng, uốn từng góc theo chương trình và cắt thành đai hoàn chỉnh, một người vận hành thay được cả tổ uốn đai bằng tay.',
+      },
+      {
+        en: 'Both models take plain and deformed bar from 6 to 10 mm and run on 220 V single-phase power. The normal-motor model makes 14–15 stirrups a minute (14 × 14 cm) for sizes up to 110 cm. The servo model with PLC and HMI touchscreen bends more precisely, reaches stirrups up to 1,200 mm, produces 2.5–5 tonnes a day and stops itself when the steel runs out.',
+        vi: 'Cả hai model uốn được thép trơn và thép gân từ 6 đến 10 mm, chạy điện 220 V một pha. Bản động cơ thường làm 14–15 đai/phút (đai 14 × 14 cm), kích thước đai tới 110 cm. Bản servo có PLC và màn hình cảm ứng HMI uốn chính xác hơn, làm đai tới 1.200 mm, năng suất 2,5–5 tấn/ngày và tự dừng khi hết thép.',
+      },
+    ],
+    faqTitle: { en: 'Stirrup bending machine FAQ', vi: 'Câu hỏi thường gặp về máy uốn đai' },
+    guide: { slug: 'stirrup-bending-machine-normal-vs-servo', label: { en: 'Read: normal motor vs servo PLC', vi: 'Đọc: động cơ thường hay servo PLC' } },
+    faq: [
+      {
+        q: { en: 'What does an automatic stirrup bending machine do?', vi: 'Máy uốn đai tự động làm được gì?' },
+        a: {
+          en: 'It feeds rebar, straightens it, bends it into the shape you set on the touchscreen and cuts it, in one continuous cycle. Square, rectangular, triangular, hexagonal, C-shape, spiral and custom stirrups are all possible.',
+          vi: 'Máy nạp thép, nắn thẳng, uốn theo hình đã cài trên màn hình cảm ứng và cắt, trong một chu trình liên tục. Uốn được đai vuông, chữ nhật, tam giác, lục giác, chữ C, xoắn ốc và hình tùy chỉnh.',
+        },
+      },
+      {
+        q: { en: 'Which rebar sizes can it bend?', vi: 'Máy uốn được thép cỡ nào?' },
+        a: {
+          en: 'Plain and deformed bar from 6 mm to 10 mm on both models. The smallest stirrup is about 7 cm on the normal model and 55 mm on the servo model.',
+          vi: 'Thép trơn và thép gân từ 6 mm đến 10 mm ở cả hai model. Đai nhỏ nhất khoảng 7 cm với bản thường và 55 mm với bản servo.',
+        },
+      },
+      {
+        q: { en: 'Normal motor or servo: which should I choose?', vi: 'Nên chọn động cơ thường hay servo?' },
+        a: {
+          en: 'Choose the normal-motor model for high output of standard stirrups up to 110 cm. Choose the servo PLC model when you need tighter tolerances, large stirrups up to 1,200 mm and automatic stop when the bar runs out.',
+          vi: 'Chọn bản động cơ thường khi cần năng suất cao với đai tiêu chuẩn tới 110 cm. Chọn bản servo PLC khi cần độ chính xác cao hơn, đai lớn tới 1.200 mm và tự dừng khi hết thép.',
+        },
+      },
+      {
+        q: { en: 'What power supply does it need?', vi: 'Máy dùng nguồn điện gì?' },
+        a: {
+          en: '220 V single-phase as standard, so it runs on most site generators and workshop supplies. A three-phase version of the normal model is available on request.',
+          vi: 'Tiêu chuẩn là điện 220 V một pha, chạy được với đa số máy phát công trường và điện xưởng. Bản động cơ thường có tùy chọn điện 3 pha theo yêu cầu.',
+        },
+      },
+      {
+        q: { en: 'How many operators does it need?', vi: 'Máy cần bao nhiêu người vận hành?' },
+        a: {
+          en: 'One. The operator loads the coil, picks the shape on the touchscreen and collects finished stirrups. Most buyers see the machine pay back through saved labour and less steel waste.',
+          vi: 'Một người. Người vận hành lắp cuộn thép, chọn hình trên màn hình và gom đai thành phẩm. Đa số khách hàng hoàn vốn nhờ tiết kiệm nhân công và giảm hao hụt thép.',
+        },
+      },
+      {
+        q: { en: 'What is the minimum order and how is it shipped?', vi: 'Đặt tối thiểu bao nhiêu và giao hàng thế nào?' },
+        a: {
+          en: 'You can order a single machine. Each machine weighs 250–270 kg and measures 2200 × 950 × 1280 mm; we ship by LCL or FCL on FOB or CIF terms from Vietnam.',
+          vi: 'Có thể đặt từ 1 máy. Mỗi máy nặng 250–270 kg, kích thước 2200 × 950 × 1280 mm; giao hàng LCL hoặc FCL theo điều kiện FOB hoặc CIF từ Việt Nam.',
+        },
+      },
+    ],
+  },
 };
 
 for (const loc of OVERLAY_LOCALES) {

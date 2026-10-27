@@ -495,7 +495,7 @@ export const products: Product[] = [
     name_vi: 'Máy Uốn Đai Thép — Động Cơ Thường',
     category: 'construction',
     subcategory: 'stirrup-bending-machine',
-    description_en: 'Automatic stirrup bending machine with normal motor. Bends plain and deformed steel 6–10mm into V-shape, rectangle, triangle, hexagon, spiral, or custom shapes. Touchscreen control panel, 14–15 stirrups/min output.',
+    description_en: 'Automatic rebar stirrup bending machine with normal motor. Bends plain and deformed steel 6–10mm into V-shape, rectangle, triangle, hexagon, spiral, or custom shapes. Touchscreen control panel, 14–15 stirrups/min output.',
     description_vi: 'Máy uốn đai thép tự động động cơ thường. Uốn thép trơn và thép gai 6–10mm thành hình chữ V, chữ nhật, tam giác, lục giác, xoắn ốc, hoặc hình tùy chỉnh. Bảng điều khiển cảm ứng, năng suất 14–15 đai/phút.',
     specifications: {
       'Steel Diameter': '6mm – 10mm',
@@ -530,7 +530,7 @@ export const products: Product[] = [
     name_vi: 'Máy Uốn Đai Thép — Động Cơ Servo',
     category: 'construction',
     subcategory: 'stirrup-bending-machine',
-    description_en: 'High-precision stirrup bending machine with servo motor. Higher speed (5–6 stirrups/min minimum), up to 1200mm max stirrup size. PLC programming with HMI touchscreen. Auto stop when steel runs out.',
+    description_en: 'High-precision automatic stirrup bending machine with servo motor. Bends 6–10mm plain and deformed bar into stirrups from 55mm up to 1200mm, 2.5–5 tons/day. PLC programming with HMI touchscreen. Auto stop when steel runs out.',
     description_vi: 'Máy uốn đai thép độ chính xác cao với động cơ servo. Kích thước đai tối đa 1200mm, PLC lập trình với màn hình HMI cảm ứng. Tự dừng khi hết thép.',
     specifications: {
       'Steel Diameter': '6mm – 10mm',
