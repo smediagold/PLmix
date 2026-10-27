@@ -5,13 +5,13 @@ import { routing } from './i18n/routing';
 const intl = createMiddleware(routing);
 
 const BLOCKED = new Set(['VN']);
-const BYPASS_KEY = 'Dhx1LNYxkl4e';
+const BYPASS_KEY = process.env.VN_BYPASS_KEY;
 const BYPASS_COOKIE = 'pl_access';
 const VN_SITE = '';
 
 export function proxy(req: NextRequest) {
   const key = req.nextUrl.searchParams.get('access');
-  if (key === BYPASS_KEY) {
+  if (BYPASS_KEY && key === BYPASS_KEY) {
     const url = req.nextUrl.clone();
     url.searchParams.delete('access');
     const res = NextResponse.redirect(url);
@@ -20,7 +20,7 @@ export function proxy(req: NextRequest) {
   }
 
   const country = req.headers.get('x-vercel-ip-country');
-  if (country && BLOCKED.has(country) && req.cookies.get(BYPASS_COOKIE)?.value !== BYPASS_KEY) {
+  if (country && BLOCKED.has(country) && (!BYPASS_KEY || req.cookies.get(BYPASS_COOKIE)?.value !== BYPASS_KEY)) {
     if (VN_SITE) return NextResponse.redirect(VN_SITE, 302);
     return new NextResponse('Access to this website is not available in your region.', {
       status: 403,
