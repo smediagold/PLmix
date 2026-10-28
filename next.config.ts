@@ -5,8 +5,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   images: {
-    formats: ['image/webp'],
-    minimumCacheTTL: 2678400,
+    loader: 'custom',
+    loaderFile: './src/lib/image-loader.ts',
     deviceSizes: [640, 750, 828, 1080, 1440, 1920, 2560],
     qualities: [70],
     imageSizes: [64, 96, 128, 256, 384],

@@ -31,6 +31,13 @@ function legacyTarget(pathname: string) {
 }
 
 export function proxy(req: NextRequest) {
+  if (req.nextUrl.hostname === 'phulongglobal.com') {
+    const url = req.nextUrl.clone();
+    url.hostname = 'www.phulongglobal.com';
+    url.port = '';
+    return NextResponse.redirect(url, 308);
+  }
+
   const key = req.nextUrl.searchParams.get('access');
   if (BYPASS_KEY && key === BYPASS_KEY) {
     const url = req.nextUrl.clone();
@@ -43,7 +50,7 @@ export function proxy(req: NextRequest) {
   const legacy = legacyTarget(req.nextUrl.pathname);
   if (legacy) return NextResponse.redirect(new URL(legacy, req.url), 301);
 
-  const country = req.headers.get('x-vercel-ip-country');
+  const country = req.headers.get('cf-ipcountry') ?? req.headers.get('x-vercel-ip-country');
   if (country && BLOCKED.has(country) && (!BYPASS_KEY || req.cookies.get(BYPASS_COOKIE)?.value !== BYPASS_KEY)) {
     if (VN_SITE) return NextResponse.redirect(VN_SITE, 302);
     return new NextResponse('Access to this website is not available in your region.', {

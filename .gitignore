@@ -42,3 +42,8 @@ next-env.d.ts
 
 # taste-skill inspector output
 /.taste-skill/
+
+# generated
+/public/_img
+.open-next
+.wrangler
