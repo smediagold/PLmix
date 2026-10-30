@@ -6,4 +6,6 @@ Set-Location $dst
 if (-not (Test-Path node_modules)) { npm ci --no-audit --no-fund }
 npx opennextjs-cloudflare build
 if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+node scripts/extract-html.mjs
+if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 npx wrangler deploy
