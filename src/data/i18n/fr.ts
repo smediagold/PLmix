@@ -144,6 +144,36 @@ export const fr: ContentOverlay = {
   },
 
   seo: {
+    'industrial-fans': {
+      title: "Fabricant de Ventilateurs Industriels au Vietnam | Phu Long",
+      description: "Ventilateurs industriels fabriqués au Vietnam : centrifuges jusqu'à 15 034 Pa, hélicoïdes jusqu'à 90 075 m³/h, ventilateurs mobiles et extracteurs muraux.",
+      aboutTitle: "Ventilateurs industriels d'une usine au Vietnam",
+      about: ["Phu Long fabrique des ventilateurs industriels au Vietnam pour la ventilation, le désenfumage, le tirage forcé et le refroidissement. La gamme comprend des ventilateurs centrifuges (pales à action, pales plates renforcées et haute pression), des ventilateurs hélicoïdes, de grands ventilateurs mobiles et des extracteurs muraux carrés.", "Les volutes sont roulées et soudées en acier SS400 ou en inox SUS 304, et chaque turbine est équilibrée en usine avant expédition. Les centrifuges et hélicoïdes fonctionnent en 380 V triphasé, en entraînement direct ou par courroie, de 180 W à 410 kW, pour s'adapter au débit et à la pression de votre réseau de gaines."],
+      faqTitle: "Questions fréquentes sur les ventilateurs industriels",
+      guideLabel: "Lire : ventilateur centrifuge ou hélicoïde ?",
+      faq: [
+        { q: "Quels ventilateurs industriels fabriquez-vous ?", a: "Ventilateurs centrifuges PLCF 101, 121 et 152, ventilateur hélicoïde PLAX 204, ventilateur mobile PLPF à pales de 1.5–2 m et extracteur mural carré PLQF." },
+        { q: "Ventilateur centrifuge ou hélicoïde ?", a: "L'hélicoïde déplace de grands volumes d'air à faible résistance, jusqu'à 90 075 m³/h sous 877 Pa. Le centrifuge convient quand l'air traverse des gaines, filtres ou hottes, avec une pression jusqu'à 15 034 Pa sur le PLCF 152." },
+        { q: "Volute en acier ou en inox ?", a: "L'acier SS400 convient à la ventilation générale et à l'air sec. L'inox SUS 304 résiste à la corrosion en cuisine, en zone humide, avec des vapeurs chimiques et dans l'agroalimentaire." },
+        { q: "Quelle alimentation électrique ?", a: "Centrifuges, hélicoïdes et extracteurs muraux en 380 V triphasé. Le ventilateur mobile PLPF fonctionne en 220 V monophasé, 450–550 W." },
+        { q: "Fabriquez-vous des ventilateurs sur mesure ?", a: "Oui. Indiquez-nous débit, pression, alimentation et installation : nous dimensionnons le ventilateur, choisissons l'entraînement et chiffrons en FOB ou CIF depuis le Vietnam." },
+      ],
+    },
+    'paddy-threshers': {
+      title: "Batteuse de Riz du Vietnam – 500 à 2 700 kg/h | Phu Long",
+      description: "Batteuses de riz (batteuses de paddy) fabriquées au Vietnam : PL800, PL1200 et PL2000, de 500 à 2 700 kg/h, 98 % ou plus de grain battu. Export FOB/CIF.",
+      aboutTitle: "Batteuses de riz du Vietnam",
+      about: ["Phu Long fabrique des batteuses de riz (batteuses de paddy) dans sa propre usine au Vietnam, l'un des plus grands producteurs de riz au monde. Chaque machine sépare le grain de la paille en un seul passage, avec 98 % ou plus du paddy battu.", "Trois tailles partagent le même batteur tournant à 900 tr/min : la PL800 de 75 kg produit 500–600 kg/h pour une exploitation, la PL1200 de 290 kg produit 1 800–1 900 kg/h pour les exploitations moyennes et la PL2000 de 490 kg produit 2 500–2 700 kg/h pour les coopératives et les entreprises de battage."],
+      faqTitle: "Questions fréquentes sur la batteuse de riz",
+      guideLabel: "Lire : choisir la capacité de la batteuse",
+      faq: [
+        { q: "Quelle batteuse de riz choisir ?", a: "Selon votre récolte : la PL800 (500–600 kg/h) pour les petites parcelles isolées, la PL1200 (1 800–1 900 kg/h) pour les exploitations moyennes et la PL2000 (2 500–2 700 kg/h) pour les coopératives et le battage à façon." },
+        { q: "Quel pourcentage du grain est battu ?", a: "Les trois modèles battent 98 % ou plus du paddy, batteur à 900 tr/min." },
+        { q: "Quels sont le poids et les dimensions ?", a: "PL800 : 75 kg, 1000 × 700 × 1000 mm. PL1200 : 290 kg, 1700 × 1100 × 1500 mm. PL2000 : 490 kg, 2700 × 1100 × 1650 mm." },
+        { q: "La batteuse convient-elle à d'autres cultures que le riz ?", a: "Les batteuses sont conçues et testées pour le paddy. Indiquez-nous votre culture et nous vous dirons si un modèle convient." },
+        { q: "Quelle est la commande minimale ?", a: "Vous pouvez commander une seule machine. Expédition en LCL ou FCL, conditions FOB ou CIF depuis le Vietnam." },
+      ],
+    },
     'wheelbarrows': {
       title: "Fabricant de Brouettes au Vietnam – 70 à 120 L | Phu Long",
       description: "Brouettes fabriquées au Vietnam : cuves de 70, 80, 90 et 120 L en acier ou plastique PP, roue pleine ou gonflable, châssis galvanisé ou peinture poudre. OEM.",

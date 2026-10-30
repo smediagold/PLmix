@@ -162,6 +162,36 @@ export const es: ContentOverlay = {
   },
 
   seo: {
+    'industrial-fans': {
+      title: "Ventiladores Industriales de Vietnam | Phu Long",
+      description: "Ventiladores industriales fabricados en Vietnam: centrífugos hasta 15,034 Pa, axiales hasta 90,075 m³/h, ventiladores portátiles y extractores de pared.",
+      aboutTitle: "Ventiladores industriales de una fábrica en Vietnam",
+      about: ["Phu Long fabrica ventiladores industriales en Vietnam para ventilación, extracción de humo, tiro forzado y enfriamiento. La gama incluye ventiladores centrífugos (álabes curvados hacia adelante, álabes planos de trabajo pesado y alta presión), ventiladores axiales, ventiladores portátiles grandes y extractores cuadrados de pared.", "Las carcasas se rolan y sueldan en acero SS400 o acero inoxidable SUS 304, y cada rodete se balancea en nuestra planta antes del envío. Los centrífugos y axiales trabajan a 380 V trifásico con transmisión directa o por banda, de 180 W a 410 kW, para ajustarse al caudal y la presión de su sistema de ductos."],
+      faqTitle: "Preguntas frecuentes sobre ventiladores industriales",
+      guideLabel: "Leer: ¿ventilador centrífugo o axial?",
+      faq: [
+        { q: "¿Qué ventiladores industriales fabrican?", a: "Ventiladores centrífugos PLCF 101, 121 y 152, ventilador axial PLAX 204, ventilador portátil PLPF con aspas de 1.5–2 m y extractor cuadrado de pared PLQF." },
+        { q: "¿Ventilador centrífugo o axial?", a: "Elija un axial para mover grandes volúmenes de aire con poca resistencia, hasta 90,075 m³/h a 877 Pa. Elija un centrífugo cuando el aire debe pasar por ductos, filtros o campanas, con presión de hasta 15,034 Pa en el PLCF 152." },
+        { q: "¿Carcasa de acero o de inoxidable?", a: "El acero SS400 sirve para ventilación general y aire seco. El inoxidable SUS 304 resiste la corrosión en cocinas, zonas húmedas, vapores químicos y procesamiento de alimentos." },
+        { q: "¿Qué alimentación eléctrica usan?", a: "Los centrífugos, axiales y extractores de pared usan 380 V trifásico. El portátil PLPF usa 220 V monofásico, 450–550 W." },
+        { q: "¿Fabrican ventiladores a la medida?", a: "Sí. Indíquenos caudal, presión, alimentación e instalación; seleccionamos el ventilador, el tipo de transmisión y cotizamos FOB o CIF desde Vietnam." },
+      ],
+    },
+    'paddy-threshers': {
+      title: "Trilladora de Arroz de Vietnam – 500 a 2,700 kg/h | Phu Long",
+      description: "Trilladoras de arroz fabricadas en Vietnam: PL800, PL1200 y PL2000, de 500 a 2,700 kg/h, 98% o más de grano trillado. Exportación FOB/CIF, desde 1 unidad.",
+      aboutTitle: "Trilladoras de arroz de Vietnam",
+      about: ["Phu Long fabrica trilladoras de arroz (desgranadoras de arroz en cáscara) en su propia planta en Vietnam, uno de los mayores productores de arroz del mundo. Cada máquina separa el grano de la paja en una sola pasada, con 98% o más del arroz trillado.", "Tres tamaños comparten un mismo tambor que gira a 900 RPM: la PL800 de 75 kg produce 500–600 kg/h para una parcela, la PL1200 de 290 kg produce 1,800–1,900 kg/h para fincas medianas y la PL2000 de 490 kg produce 2,500–2,700 kg/h para cooperativas y servicios de trilla."],
+      faqTitle: "Preguntas frecuentes sobre la trilladora de arroz",
+      guideLabel: "Leer: cómo elegir la capacidad de la trilladora",
+      faq: [
+        { q: "¿Qué trilladora de arroz me conviene?", a: "Según su cosecha: la PL800 (500–600 kg/h) para parcelas pequeñas y lejanas, la PL1200 (1,800–1,900 kg/h) para fincas medianas y la PL2000 (2,500–2,700 kg/h) para cooperativas y trilla por contrato." },
+        { q: "¿Qué porcentaje del grano se trilla?", a: "Los tres modelos trillan 98% o más del arroz, con el tambor a 900 RPM." },
+        { q: "¿Cuánto pesan y miden?", a: "PL800: 75 kg, 1000 × 700 × 1000 mm. PL1200: 290 kg, 1700 × 1100 × 1500 mm. PL2000: 490 kg, 2700 × 1100 × 1650 mm." },
+        { q: "¿Sirve para otros cultivos además del arroz?", a: "Las trilladoras están diseñadas y probadas para arroz. Indíquenos su cultivo y le diremos si algún modelo es adecuado." },
+        { q: "¿Cuál es el pedido mínimo?", a: "Puede pedir una sola máquina. Enviamos en LCL o FCL con términos FOB o CIF desde Vietnam." },
+      ],
+    },
     'wheelbarrows': {
       title: "Fabricante de Carretillas en Vietnam – 70 a 120 L | Phu Long",
       description: "Carretillas fabricadas en Vietnam: bateas de 70, 80, 90 y 120 L de acero o plástico PP, llanta maciza o neumática, chasis galvanizado o con pintura en polvo. OEM.",

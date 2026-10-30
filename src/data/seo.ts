@@ -288,6 +288,42 @@ export const lineSeo: Record<string, LineSeo> = {
       },
     ],
   },
+  'industrial-fans': {
+    title: { en: "Industrial Fan Manufacturer in Vietnam | Phu Long", vi: "Quạt Công Nghiệp Ly Tâm, Hướng Trục | Phú Long" },
+    description: { en: "Industrial fans made in Vietnam: centrifugal fans up to 15,034 Pa, axial fans up to 90,075 m³/h, portable and wall exhaust fans. SS400 steel or SUS 304.", vi: "Quạt công nghiệp sản xuất tại Việt Nam: quạt ly tâm áp tới 15.034 Pa, quạt hướng trục lưu lượng tới 90.075 m³/giờ, quạt di động, quạt hút vuông." },
+    aboutTitle: { en: "Industrial fans from a Vietnam factory", vi: "Quạt công nghiệp từ nhà máy tại Việt Nam" },
+    about: [
+      { en: "Phu Long manufactures industrial fans in Vietnam for ventilation, smoke extraction, forced draught and cooling. The range covers centrifugal fans (forward-curved, heavy-duty flat-blade and high-pressure), axial fans, large portable fans and square wall exhaust fans.", vi: "Phú Long sản xuất quạt công nghiệp tại Việt Nam cho thông gió, hút khói, cấp gió cưỡng bức và làm mát. Dải sản phẩm gồm quạt ly tâm (cánh cong trước, cánh phẳng tải nặng và áp cao), quạt hướng trục, quạt di động cỡ lớn và quạt hút vuông gắn tường." },
+      { en: "Housings are rolled and welded from SS400 steel or SUS 304 stainless steel, and every impeller is balanced in our factory before shipping. Centrifugal and axial fans run on 380 V three-phase power with direct or belt drive, from 180 W up to 410 kW, so each fan can be matched to the airflow and pressure of your duct system.", vi: "Vỏ quạt được cuốn và hàn từ thép SS400 hoặc inox SUS 304, cánh quạt được cân bằng tại nhà máy trước khi xuất. Quạt ly tâm và hướng trục chạy điện 380 V ba pha, truyền động trực tiếp hoặc dây đai, công suất từ 180 W tới 410 kW, chọn theo lưu lượng và áp suất của hệ thống ống gió." },
+    ],
+    faqTitle: { en: "Industrial fan FAQ", vi: "Câu hỏi thường gặp về quạt công nghiệp" },
+    guide: { slug: 'centrifugal-vs-axial-industrial-fans', label: { en: "Read: centrifugal or axial fan?", vi: "Đọc: quạt ly tâm hay quạt hướng trục?" } },
+    faq: [
+      { q: { en: "Which industrial fans do you make?", vi: "Phú Long sản xuất những loại quạt nào?" }, a: { en: "Centrifugal fans PLCF 101, 121 and 152, axial fan PLAX 204, portable fan PLPF with 1.5–2 m blades and square wall exhaust fan PLQF.", vi: "Quạt ly tâm PLCF 101, 121 và 152, quạt hướng trục PLAX 204, quạt di động PLPF cánh 1,5–2 m và quạt hút vuông PLQF." } },
+      { q: { en: "Centrifugal or axial fan: which do I need?", vi: "Nên chọn quạt ly tâm hay quạt hướng trục?" }, a: { en: "Choose an axial fan to move large volumes of air against low resistance, up to 90,075 m³/h at up to 877 Pa. Choose a centrifugal fan when the air must push through ducts, filters or hoods, with pressure up to 15,034 Pa on the PLCF 152.", vi: "Chọn quạt hướng trục khi cần lưu lượng lớn với trở lực thấp, tới 90.075 m³/giờ ở áp tới 877 Pa. Chọn quạt ly tâm khi gió phải đi qua ống, lọc hoặc chụp hút, áp tới 15.034 Pa với PLCF 152." } },
+      { q: { en: "Steel or stainless steel housing?", vi: "Nên chọn vỏ thép hay inox?" }, a: { en: "SS400 steel suits general ventilation and dry air. SUS 304 stainless steel resists corrosion for kitchens, humid areas, chemical fumes and food processing.", vi: "Thép SS400 phù hợp thông gió thông thường, không khí khô. Inox SUS 304 chống ăn mòn cho bếp, nơi ẩm, khí hóa chất và chế biến thực phẩm." } },
+      { q: { en: "What power supply do the fans use?", vi: "Quạt dùng nguồn điện gì?" }, a: { en: "Centrifugal, axial and wall fans run on 380 V three-phase. The portable PLPF fan runs on 220 V single phase at 450–550 W.", vi: "Quạt ly tâm, hướng trục và quạt hút tường dùng điện 380 V ba pha. Quạt di động PLPF dùng điện 220 V một pha, 450–550 W." } },
+      { q: { en: "Can you build a fan to our specification?", vi: "Có làm quạt theo thông số riêng không?" }, a: { en: "Yes. Tell us the airflow, pressure, power supply and installation. We size the fan, choose direct or belt drive and quote FOB or CIF from Vietnam.", vi: "Có. Cho chúng tôi biết lưu lượng, áp suất, nguồn điện và cách lắp đặt. Chúng tôi chọn cỡ quạt, kiểu truyền động và báo giá." } },
+    ],
+  },
+  'paddy-threshers': {
+    title: { en: "Paddy Thresher Manufacturer in Vietnam | Phu Long", vi: "Máy Tuốt Lúa 500–2.700 kg/giờ | Phú Long" },
+    description: { en: "Paddy threshers (rice threshing machines) made in Vietnam: PL800, PL1200 and PL2000, 500 to 2,700 kg/h, 98% or more threshed. Export FOB/CIF, MOQ 1.", vi: "Máy tuốt lúa sản xuất tại Việt Nam: PL800, PL1200 và PL2000, năng suất 500 đến 2.700 kg/giờ, tỷ lệ tuốt từ 98%. Bán lẻ từ 1 máy, xuất khẩu." },
+    aboutTitle: { en: "Rice threshing machines from Vietnam", vi: "Máy tuốt lúa từ Việt Nam" },
+    about: [
+      { en: "Phu Long builds paddy threshers, also called rice threshers or rice threshing machines, in our own factory in Vietnam, a country with one of the largest rice harvests in the world. Each machine separates grain from the straw in one pass, with at least 98% of the paddy threshed.", vi: "Phú Long sản xuất máy tuốt lúa tại nhà máy riêng ở Việt Nam, một trong những nước có sản lượng lúa lớn nhất thế giới. Mỗi máy tách hạt khỏi rơm trong một lần chạy, tỷ lệ tuốt từ 98% trở lên." },
+      { en: "Three sizes share one drum design running at 900 RPM: the 75 kg PL800 makes 500–600 kg/h for a single farm, the 290 kg PL1200 makes 1,800–1,900 kg/h for medium holdings, and the 490 kg PL2000 makes 2,500–2,700 kg/h for co-operatives and harvest contractors.", vi: "Ba cỡ máy dùng chung thiết kế trống quay 900 vòng/phút: PL800 nặng 75 kg, năng suất 500–600 kg/giờ cho hộ gia đình; PL1200 nặng 290 kg, 1.800–1.900 kg/giờ cho trang trại vừa; PL2000 nặng 490 kg, 2.500–2.700 kg/giờ cho hợp tác xã và dịch vụ tuốt thuê." },
+    ],
+    faqTitle: { en: "Paddy thresher FAQ", vi: "Câu hỏi thường gặp về máy tuốt lúa" },
+    guide: { slug: 'choosing-paddy-thresher-capacity', label: { en: "Read: choosing thresher capacity", vi: "Đọc: chọn công suất máy tuốt" } },
+    faq: [
+      { q: { en: "Which paddy thresher should I choose?", vi: "Nên chọn máy tuốt lúa nào?" }, a: { en: "Match it to your harvest: the PL800 (500–600 kg/h) for small farms and remote fields, the PL1200 (1,800–1,900 kg/h) for medium farms, and the PL2000 (2,500–2,700 kg/h) for co-operatives and contract threshing.", vi: "Chọn theo sản lượng: PL800 (500–600 kg/giờ) cho ruộng nhỏ và nơi xa, PL1200 (1.800–1.900 kg/giờ) cho trang trại vừa, PL2000 (2.500–2.700 kg/giờ) cho hợp tác xã và dịch vụ tuốt thuê." } },
+      { q: { en: "How much grain is threshed?", vi: "Tỷ lệ tuốt sạch bao nhiêu?" }, a: { en: "All three models thresh 98% or more of the paddy, with the drum running at 900 RPM.", vi: "Cả ba model tuốt sạch từ 98% trở lên, trống quay 900 vòng/phút." } },
+      { q: { en: "How heavy and how big are the machines?", vi: "Máy nặng và kích thước bao nhiêu?" }, a: { en: "PL800: 75 kg, 1000 × 700 × 1000 mm. PL1200: 290 kg, 1700 × 1100 × 1500 mm. PL2000: 490 kg, 2700 × 1100 × 1650 mm.", vi: "PL800: 75 kg, 1000 × 700 × 1000 mm. PL1200: 290 kg, 1700 × 1100 × 1500 mm. PL2000: 490 kg, 2700 × 1100 × 1650 mm." } },
+      { q: { en: "Can the thresher handle crops other than rice?", vi: "Máy có tuốt được cây trồng khác ngoài lúa không?" }, a: { en: "The threshers are designed and tested for paddy. Tell us your crop and we will advise whether a model suits it.", vi: "Máy được thiết kế và chạy thử cho lúa. Cho chúng tôi biết loại cây trồng, chúng tôi sẽ tư vấn model phù hợp." } },
+      { q: { en: "What is the minimum order?", vi: "Đặt hàng tối thiểu bao nhiêu?" }, a: { en: "You can order a single machine. We ship by LCL or FCL on FOB or CIF terms from Vietnam.", vi: "Có thể đặt từ 1 máy. Giao hàng LCL hoặc FCL theo điều kiện FOB hoặc CIF từ Việt Nam." } },
+    ],
+  },
 };
 
 for (const loc of OVERLAY_LOCALES) {
