@@ -6,6 +6,7 @@ import { LOCALES } from '@/data/nav';
 import { alternates } from '@/lib/meta';
 
 const base = 'https://www.phulongglobal.com';
+const CONTENT_UPDATED = '2026-11-10';
 const entry = (
   path: string,
   priority: number,
@@ -15,7 +16,7 @@ const entry = (
 ) =>
   locales.map((l) => ({
     url: `${base}/${l}${path}`,
-    lastModified: lastModified ? new Date(lastModified) : new Date(),
+    lastModified: new Date(lastModified ?? CONTENT_UPDATED),
     changeFrequency,
     priority: l === 'en' ? priority : Math.max(0.1, priority - 0.1),
     alternates: { languages: alternates(path, l, locales).languages },
