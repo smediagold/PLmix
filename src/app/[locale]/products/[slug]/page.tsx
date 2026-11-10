@@ -97,21 +97,6 @@ async function ProductDetail({ product, locale }: { product: Product; locale: st
   const ld = [
     {
       '@context': 'https://schema.org',
-      '@type': 'Product',
-      name,
-      sku: product.id,
-      mpn: product.id,
-      description,
-      url,
-      image: product.images.slice(0, 4).map((src) => `${base}${src}`),
-      brand: { '@type': 'Brand', name: 'Phu Long' },
-      manufacturer: { '@type': 'Organization', name: 'Phu Long Global Investment Co., Ltd', url: base },
-      countryOfOrigin: 'VN',
-      category: line ? pick(line.name, 'en') : undefined,
-      additionalProperty: Object.entries(product.specifications).map(([k, v]) => ({ '@type': 'PropertyValue', name: k, value: v })),
-    },
-    {
-      '@context': 'https://schema.org',
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: tl('home'), item: `${base}/${locale}` },
